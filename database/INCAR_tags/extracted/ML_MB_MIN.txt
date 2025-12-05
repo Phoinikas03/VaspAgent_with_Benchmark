@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_MB_MIN</a> = [integer]<br/> Default: <b>ML_MB_MIN</b> = 3 
+</p>
+<p>Description: <a class="mw-selflink selflink">ML_MB_MIN</a> sets the minimum number of local reference configurations required for generation of a machine-learned force field. 
+</p>
+<p>Machine-learned force fields based on the kernel method require a reasonable amount of reference atomic environments in order to provide meaningful predictions. Typically, the on-the-fly algorithm in VASP collects these local reference configurations (also called kernel basis functions) during an MD simulation (<code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = train</code>). However, at the start of the trajectory usually only very few local reference configurations are available. How many depends on the system size, symmetry and number of atoms (per type). This tag controls how many local reference configurations are required <b>for each atom type</b> before training of a force field is allowed. Setting a higher value may yield a more robust initial force field at the cost of  more <i>ab initio</i> calculations during the first few MD steps.
+</p>
+<p>If a training is scheduled in the current step, i.e., the <code>STATUS</code> line in the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a> shows <code>learning</code> or <code>critical</code>, but not enough atomic environments were collected, a text message will be emitted in the <code>MSG</code> line. Here is an example:
+</p>
+<p>Here, in the first two steps the <a class="mw-selflink selflink">ML_MB_MIN</a> threshold prevents training of an MLFF, even if the Bayesian error estimation signals a <code>critical</code> step. The force field is then only generated in the third step, after the minimum number of three local reference configurations have been collected.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_MB" title="ML MB">ML_MB</a>, <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>, <a href="/wiki/index.php/ML_MCONF" title="ML MCONF">ML_MCONF</a>, <a href="/wiki/index.php/ML_LBASIS_DISCARD" title="ML LBASIS DISCARD">ML_LBASIS_DISCARD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_MB_MIN%22_incategory:%22Examples%22" title='Special:Search/"ML MB MIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

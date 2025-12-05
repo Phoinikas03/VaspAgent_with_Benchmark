@@ -1,0 +1,642 @@
+<p><a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> = [logical][logical][logical] 
+</p>
+<p>Description: Sets three boolean to selectively allow changes in the lattice vectors.
+</p>
+<p>The lattice vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1855a58e43081f2f17cb69861a3c69cd&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{2}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ea7949e925ba367315f5b28cc73403cc&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0c910430585ae95d17a59015e871d235&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span>
+defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file can be represented by following matrix:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; a_{12} &amp; a_{13} \\
+     a_{21} &amp; a_{22} &amp; a_{23} \\
+     a_{31} &amp; a_{32} &amp; a_{33}
+  \end{bmatrix}.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>11</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>12</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>13</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>21</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>23</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>31</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>32</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>33</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>]</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; a_{12} &amp; a_{13} \\
+     a_{21} &amp; a_{22} &amp; a_{23} \\
+     a_{31} &amp; a_{32} &amp; a_{33}
+  \end{bmatrix}.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; a_{12} &amp; a_{13} \\
+     a_{21} &amp; a_{22} &amp; a_{23} \\
+     a_{31} &amp; a_{32} &amp; a_{33}
+  \end{bmatrix}.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=30b7a706fcb049193961a25186fe39bd&amp;mode=mathml" style="vertical-align: -4.005ex; height: 9.176ex; width: 23.967ex;"/></span>
+</p>
+<p><a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is used to constrain certain entries of this matrix during an MD run.
+</p>
+<h2><span class="mw-headline" id="Orthorhombic_case">Orthorhombic case</span></h2>
+<p>For orthorhombic unit cells <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{A}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{A}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;"/></span> is of diagonal form:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; 0      &amp; 0 \\
+      0     &amp; a_{22} &amp; 0 \\
+      0     &amp; 0      &amp; a_{33}
+  \end{bmatrix},
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>11</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>33</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>]</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; 0      &amp; 0 \\
+      0     &amp; a_{22} &amp; 0 \\
+      0     &amp; 0      &amp; a_{33}
+  \end{bmatrix},
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; 0      &amp; 0 \\
+      0     &amp; a_{22} &amp; 0 \\
+      0     &amp; 0      &amp; a_{33}
+  \end{bmatrix},
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=182013630ed6df0bfee2725344058475&amp;mode=mathml" style="vertical-align: -4.005ex; height: 9.176ex; width: 23.967ex;"/></span>
+</p>
+<p>Therefore by setting one of the entries of <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> to FALSE the lattice parameter in this direction will not be allowed to change.                                                     
+For <a class="mw-redirect" href="/wiki/index.php/MD" title="MD">MD simulations</a> (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0), we recommend using <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> for (orthorhombic) liquids in the isobaric-isothermal (<a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT</a>) ensemble in the following way:
+</p>
+<p>Here, the first two lattice constants are not allowed to change. The third lattice constant needs to be free to allow volume changes for the barostat. The system is then like a piston. The constraints are necessary for liquids in <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT</a> simulations because if all lattice degrees of freedom are allowed to relax, irreversible deformations of the cell are very likely to happen. This can lead to undesirable results like a very flat supercell, which cannot be used to obtain valid MD trajectories.
+</p>
+<p>For <a class="mw-redirect" href="/wiki/index.php/Ionic_minimization" title="Ionic minimization">structure relaxation</a> (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1,2), <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is useful to relax the lattice constants of 2D materials. In case of a slab in the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4671bf394f59f7b599064f9f555d2fa3&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span>-<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fc5a01b028c4747f953d1d46b872b3ea&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span> plane, add vacuum padding along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mn>3</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9bc53f027409d9d4f95794c3f5ca645&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;"/></span> and set
+</p>
+<h2><span class="mw-headline" id="Non-orthorhombic_case">Non-orthorhombic case</span></h2>
+<p>For non-orthorhombic boxes <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is more complicated to use. The tag will set certain rows and columns of the stress tensor
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     xx &amp; xy &amp; xz \\
+     yx &amp; yy &amp; yz \\
+     zx &amp; zy &amp; zz
+  \end{bmatrix},
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<mi>x</mi>
+<mi>x</mi>
+</mtd>
+<mtd>
+<mi>x</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mi>x</mi>
+<mi>z</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>y</mi>
+<mi>x</mi>
+</mtd>
+<mtd>
+<mi>y</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mi>y</mi>
+<mi>z</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>z</mi>
+<mi>x</mi>
+</mtd>
+<mtd>
+<mi>z</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mi>z</mi>
+<mi>z</mi>
+</mtd>
+</mtr>
+</mtable>
+<mo>]</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     xx &amp; xy &amp; xz \\
+     yx &amp; yy &amp; yz \\
+     zx &amp; zy &amp; zz
+  \end{bmatrix},
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     xx &amp; xy &amp; xz \\
+     yx &amp; yy &amp; yz \\
+     zx &amp; zy &amp; zz
+  \end{bmatrix},
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f8628f9fbff4ed7a8b0ccd464b2d1c39&amp;mode=mathml" style="vertical-align: -4.171ex; height: 9.509ex; width: 21.522ex;"/></span>
+</p>
+<p>to zero. By setting certain entries of the stress tensor to zero the corresponding entries of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{A}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{A}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;"/></span> will not be updated.
+For example when setting <a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .FALSE. .TRUE. .TRUE. the used stress tensor will look like
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0 &amp; 0 \\
+     0 &amp; yy &amp; yz \\
+     0 &amp; zy &amp; zz
+  \end{bmatrix},
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mi>y</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mi>y</mi>
+<mi>z</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mi>z</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mi>z</mi>
+<mi>z</mi>
+</mtd>
+</mtr>
+</mtable>
+<mo>]</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0 &amp; 0 \\
+     0 &amp; yy &amp; yz \\
+     0 &amp; zy &amp; zz
+  \end{bmatrix},
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0 &amp; 0 \\
+     0 &amp; yy &amp; yz \\
+     0 &amp; zy &amp; zz
+  \end{bmatrix},
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=75c14af30404be17e0a2394705d2f849&amp;mode=mathml" style="vertical-align: -4.171ex; height: 9.509ex; width: 19.676ex;"/></span>
+</p>
+<p>and therefore the first row and the first column of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{A}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{A}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;"/></span> will not change.
+Another example would be to set <a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .FALSE. .TRUE. .FALSE. resulting in the following
+stress tensor
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0  &amp; 0 \\
+     0 &amp; yy &amp; 0 \\
+     0 &amp; 0  &amp; 0
+  \end{bmatrix}
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mi>y</mi>
+<mi>y</mi>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+</mtable>
+<mo>]</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0  &amp; 0 \\
+     0 &amp; yy &amp; 0 \\
+     0 &amp; 0  &amp; 0
+  \end{bmatrix}
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0  &amp; 0 \\
+     0 &amp; yy &amp; 0 \\
+     0 &amp; 0  &amp; 0
+  \end{bmatrix}
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61e1f24065ad657efe94a0bdb042c118&amp;mode=mathml" style="vertical-align: -4.171ex; height: 9.509ex; width: 17.561ex;"/></span>
+</p>
+<p>So only the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle yy}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>y</mi>
+<mi>y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle yy}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle yy}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2fb1c5cf58867b5bbc9a1b145a86f3a0&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.311ex;"/></span>/<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{22}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a_{22}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f0742941894eb318ac076c8ffb880b4&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 3.106ex;"/></span> entry of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{A}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">A</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{A}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;"/></span> will change. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>, <a href="/wiki/index.php/Category:Interface_pinning" title="Category:Interface pinning">Interface pinning</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LATTICE_CONSTRAINTS%22_incategory:%22Examples%22" title='Special:Search/"LATTICE CONSTRAINTS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

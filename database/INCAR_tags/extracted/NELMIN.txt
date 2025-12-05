@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">NELMIN</a> = [integer]<br/> Default: <b>NELMIN</b> = 2 
+</p>
+<p>Description: <a class="mw-selflink selflink">NELMIN</a> specifies the minimum number of electronic self-consistency steps. 
+</p>
+<p>It is rarely necessary to change the value of the <a class="mw-selflink selflink">NELMIN</a> tag. In some cases, e.g., in <a href="/wiki/index.php/Category:Molecular_dynamics" title="Category:Molecular dynamics">molecular-dynamics</a> runs, or <a href="/wiki/index.php/Category:Ionic_minimization" title="Category:Ionic minimization">ionic-minimization</a> methods, we recommend increasing the <a class="mw-selflink selflink">NELMIN</a> tag to a value between 4 and 8.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NELM" title="NELM">NELM</a>,
+<a href="/wiki/index.php/NELMDL" title="NELMDL">NELMDL</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NELMIN%22_incategory:%22Examples%22" title='Special:Search/"NELMIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

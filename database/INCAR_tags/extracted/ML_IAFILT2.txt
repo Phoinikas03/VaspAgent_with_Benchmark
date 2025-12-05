@@ -1,0 +1,154 @@
+<p><a class="mw-selflink selflink">ML_IAFILT2</a> = [integer]<br/> Default: <b>ML_IAFILT2</b> = 2 
+</p>
+<p>Description: This tag specifies the type of angular filtering used in the machine learning force field method.
+</p>
+<p>This tag is only used if <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a>=<i>.TRUE.</i> is set.
+</p>
+<p>Following cases are possible for the angular filtering function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>η<!-- η --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ffe9f913124f345732e9f00fa258552e&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.169ex;"/></span> (see also <a class="mw-redirect" href="/wiki/index.php/On-the-fly_machine_learning_force_field_generation_using_Bayesian_linear_regression#Basis_set_expansion" title="On-the-fly machine learning force field generation using Bayesian linear regression">here</a>):
+</p>
+<ul><li><a class="mw-selflink selflink">ML_IAFILT2</a>=1: The angular filtering function is described as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta_{l}=\frac{1}{(2l+1)^{1/4}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>η<!-- η --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>2</mn>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>4</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta_{l}=\frac{1}{(2l+1)^{1/4}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta_{l}=\frac{1}{(2l+1)^{1/4}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=93e36b63bc5a1fef9590e6124d14c0ac&amp;mode=mathml" style="vertical-align: -2.838ex; height: 6.176ex; width: 16.179ex;"/></span>.</li>
+<li><a class="mw-selflink selflink">ML_IAFILT2</a>=2: The angular filtering function<sup class="reference" id="cite_ref-boyd:book:2000_1-0"><a href="#cite_note-boyd:book:2000-1">[1]</a></sup> is described as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>η<!-- η --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mo>,</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">[</mo>
+<mi>l</mi>
+<mo stretchy="false">(</mo>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<msup>
+<mo stretchy="false">]</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d2fbdcbf841b97fb3fb7676882956d27&amp;mode=mathml" style="vertical-align: -2.671ex; height: 6.009ex; width: 29.347ex;"/></span>. Using this function the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{\mathrm{FILT}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{\mathrm{FILT}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a_{\mathrm{FILT}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=839d3eca48595523133797e197e454c0&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 5.343ex;"/></span> has to be defined too. It is set in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file by setting <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>. This option is the default.</li></ul>
+<p>In the case of the angular descriptor two radial basis functions are multiplied by each other (see <a class="mw-redirect" href="/wiki/index.php/On-the-fly_machine_learning_force_field_generation_using_Bayesian_linear_regression#Basis_set_expansion" title="On-the-fly machine learning force field generation using Bayesian linear regression">here</a>). Both basis functions use the same filtering function and hence the filtering is done by the square of the filtering function. This is plotted in Fig. 1 for the two different functions used for <a class="mw-selflink selflink">ML_IAFILT2</a>=1 and 2 (labeled as TYPE1 and TYPE2, respectively). In the case of <a class="mw-selflink selflink">ML_IAFILT2</a>=2 it can be seen that for the filtering parameter <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>=0.002 and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>=5 the function has only a contribution of 0.15. Using this filtering parameter the maximum cut-off for the angular quantum number can be reduced to <a href="/wiki/index.php/ML_LMAX2" title="ML LMAX2">ML_LMAX2</a>=4. 
+</p>
+<p><br/>
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a>, <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IAFILT2%22_incategory:%22Examples%22" title='Special:Search/"ML IAFILT2" incategory:"Examples"'>Examples that use this tag</a>
+</p>

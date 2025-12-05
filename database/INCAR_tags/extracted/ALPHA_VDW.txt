@@ -1,0 +1,33 @@
+<p><a class="mw-selflink selflink">ALPHA_VDW</a> = [real] 
+</p>
+<p>Description: Specify <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span> in vdW-DF3-opt1/vdW-DF3-opt2.
+</p>
+<p>The <a class="mw-selflink selflink">ALPHA_VDW</a> tag allows to specify the value of the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span> in the kernel of the vdW-DF3-opt1/vdW-DF3-opt2 nonlocal van der Waals functionals.<sup class="reference" id="cite_ref-chakraborty:jctc:2020_1-0"><a href="#cite_note-chakraborty:jctc:2020-1">[1]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/GAMMA_VDW" title="GAMMA VDW">GAMMA_VDW</a>,
+<a href="/wiki/index.php/PARAM1" title="PARAM1">PARAM1</a>,
+<a href="/wiki/index.php/PARAM2" title="PARAM2">PARAM2</a>,
+<a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ALPHA_VDW%22_incategory:%22Examples%22" title='Special:Search/"ALPHA VDW" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

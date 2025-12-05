@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">ML_LEATOM</a> = [logical]<br/> Default: <b>ML_LEATOM</b> = .FALSE. 
+</p>
+<p>Description: This term specifies whether the total atomic energy is written out or not. 
+</p>
+<p>This tag specifies whether the total atomic energy (potential energy plus kinetic energy) for each MD step is written out to the  <a href="/wiki/index.php/ML_EATOM" title="ML EATOM">ML_EATOM</a> file. It also writes the atomic positions and lattice parameters at every MD step to this file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LEATOM%22_incategory:%22Examples%22" title='Special:Search/"ML LEATOM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

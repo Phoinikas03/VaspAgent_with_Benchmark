@@ -1,0 +1,64 @@
+<p><a class="mw-selflink selflink">LPEAD</a> = .TRUE. | .FALSE<br/> Default: <b>LPEAD</b> = .FALSE. 
+</p>
+<p>Description: for <a class="mw-selflink selflink">LPEAD</a>=.TRUE., the derivative of the cell-periodic part of the orbitals w.r.t. <b>k</b>, |∇<sub><b>k</b></sub>u<sub>n<b>k</b></sub>⟩, is calculated using finite differences ("perturbation expansion after discretization" (PEAD)<sup class="reference" id="cite_ref-nunes:prb:01_1-0"><a href="#cite_note-nunes:prb:01-1">[1]</a></sup><sup class="reference" id="cite_ref-souza:prl:02_2-0"><a href="#cite_note-souza:prl:02-2">[2]</a></sup>).
+</p>
+<p>The derivative of the cell-periodic part of the orbitals w.r.t. <b>k</b>, <b>k</b>, |∇<sub><b>k</b></sub>u<sub>n<b>k</b></sub>⟩, may be written as:
+</p>
+<p>where H(<b>k</b>) and S(<b>k</b>) are the Hamiltonian and overlap operator for the cell-periodic part of the orbitals, and the sum over <i>n</i>´ must include a sufficiently large number of unoccupied states.
+</p>
+<p>It may also be found as the solution to the following linear Sternheimer equation (see <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>):
+</p>
+<p>Alternatively one may compute <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>u</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=11df6fc9a62b0ceb8718d4ebe21fad76&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.712ex;"/></span> from finite differences (<a class="mw-selflink selflink">LPEAD</a>=.TRUE.):
+</p>
+<p>where <i>m</i> runs over the <i>N</i> occupied bands of the system, Δ<i>k</i>=<b>k</b><sub>j+1</sub>-<b>k</b><sub>j</sub>, and
+</p>
+<p>As mentioned in the context of <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#Self-consistent_response_to_finite_electric_fields" title="Berry phases and finite electric fields">the self-consistent response to finite electric fields</a> one may derive analoguous expressions for |∇<sub><b>k</b></sub>u<sub>n<b>k</b></sub>⟩ using higher-order finite difference approximations.
+</p>
+<p>When <a class="mw-selflink selflink">LPEAD</a>=.TRUE., VASP will compute |∇<sub><b>k</b></sub>u<sub>n<b>k</b></sub>⟩ using the aforementioned finite difference scheme. The order of the finite difference approximation can be specified by means of the <a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>-tag (default: <a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>=4).
+</p>
+<p>These tags may be used in combination with <a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE. and <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>=.TRUE..
+</p>
+<ul><li>N.B. Please note that <a class="mw-selflink selflink">LPEAD</a> = .TRUE. <b>is not supported for metallic systems</b>.</li></ul>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>,
+<a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>,
+<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPEAD%22_incategory:%22Examples%22" title='Special:Search/"LPEAD" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

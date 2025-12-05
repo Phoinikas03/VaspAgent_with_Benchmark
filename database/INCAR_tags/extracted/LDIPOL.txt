@@ -1,0 +1,23 @@
+<p><a class="mw-selflink selflink">LDIPOL</a> = .TRUE. | .FALSE.<br/> Default: <b>LDIPOL</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LDIPOL</a> switches on corrections to the potential and forces. Can be applied for charged molecules and slabs with a net dipole moment.
+</p>
+<p>The presence of a dipole in combination with periodic boundary conditions leads to a slow convergence of the total energy with the size of the supercell.
+Furthermore, finite-size errors affect the potential and the forces.
+This effect can be counterbalanced by setting <a class="mw-selflink selflink">LDIPOL</a>=.TRUE. in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file. 
+For <a class="mw-selflink selflink">LDIPOL</a>=.TRUE., a linear correction, and for charged cells, a quadratic electrostatic potential is added to the local potential in order to correct the errors introduced by the periodic boundary conditions. When activating this tag the tag <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a> has to be specified, and optionally the tag <a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a> as well. 
+</p>
+<p>The biggest advantage of this mode is that leading errors in the forces are corrected and that the work function can be evaluated for asymmetric slabs. The disadvantage is that the convergence to the electronic ground state might slow down considerably, i.e., more electronic iterations might be required to obtain the required precision.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>,
+<a href="/wiki/index.php/EPSILON" title="EPSILON">EPSILON</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/LMONO" title="LMONO">LMONO</a>,
+<a href="/wiki/index.php/EFIELD" title="EFIELD">EFIELD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDIPOL%22_incategory:%22Examples%22" title='Special:Search/"LDIPOL" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

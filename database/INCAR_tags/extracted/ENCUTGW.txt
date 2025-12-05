@@ -1,0 +1,401 @@
+<p><a class="mw-selflink selflink">ENCUTGW</a> = [real]<br/> Default: <b>ENCUTGW</b> =  2/3 <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> 
+</p>
+<p><br/>
+Description: The tag <a class="mw-selflink selflink">ENCUTGW</a> sets the energy cutoff for the response function. It controls the basis set for the response functions
+in exactly the same manner as <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> does for the orbitals.
+</p>
+<p><br/>
+</p>
+<p>In GW and random-phase-approximation (RPA) calculations,  storing and manipulating the response function dominates the computational work load:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)=\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}
+ (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta }. }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+<mn>0</mn>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>,</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi mathvariant="normal">Ω<!-- Ω --></mi>
+</mfrac>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>,</mo>
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</munder>
+<mn>2</mn>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+<mo>×<!-- × --></mo>
+<mfrac>
+<mrow>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>i</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+</mrow>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</mrow>
+</mrow>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mrow>
+<mrow>
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<mi>ω<!-- ω --></mi>
+<mo>−<!-- − --></mo>
+<mi>i</mi>
+<mi>η<!-- η --></mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)=\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}
+ (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta }. }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)=\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}
+ (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta }. }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=745b4c95e00fdb6783c86a01a07147e2&amp;mode=mathml" style="vertical-align: -3.505ex; height: 8.009ex; width: 90.753ex;"/></span>
+</p>
+<p><a class="mw-selflink selflink">ENCUTGW</a>  controls how many <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=527acb137a08b95c9f663e8d60297de7&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.101ex;"/></span> vectors are included in the 
+the response function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+<mn>0</mn>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>,</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=69f92cbd1e711125a3080eb8abfc7f26&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.176ex; width: 12.898ex;"/></span>.
+</p>
+<p>Our experience suggests that choosing <a class="mw-selflink selflink">ENCUTGW</a>= 2/3 <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> yields reasonable results at fairly modest computational cost, although, the response function contains contributions up to twice the plane wave cutoff <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G_{\rm cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G_{\rm cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G_{\rm cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=034ce40e717ff011f3fe575cf1cb816f&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.343ex;"/></span>, see <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> tag. Furthermore, RPA correlation energies are reported using an internal extrapolation of the correlation energy by varying the value of <a class="mw-selflink selflink">ENCUTGW</a> inside VASP between the largest value given in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file and smaller values <sup class="reference" id="cite_ref-harl:prb:08_1-0"><a href="#cite_note-harl:prb:08-1">[1]</a></sup>. Mind: The extrapolated value is only reliable, if <a class="mw-selflink selflink">ENCUTGW</a> is smaller then <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>. The cutoff extrapolation with respect to <a class="mw-selflink selflink">ENCUTGW</a> would be precise if the plane wave basis for the orbitals were infinite. Again, the VASP defaults yield very reasonable values for the extrapolated correlation energy. In fact, it is unwise to increase <a class="mw-selflink selflink">ENCUTGW</a> only, without increasing <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>. To converge RPA correlation energies, simply increase <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and the number of orbitals, and use the VASP default for <a class="mw-selflink selflink">ENCUTGW</a>.
+</p>
+<p>For quasiparticle (QP) bandgaps, it is sometimes possible to set <a class="mw-selflink selflink">ENCUTGW</a> to values between 150 to 200 eV, and even 100 eV can yield
+gaps that are accurate to within a few tens of an eV for main group elements. Be aware, however, that the absolute values of the QP energies depend inverse proportionally on the number of plane waves. Thus, the convergence of absolute QP energies is very slow, although QP gaps might seem converged.
+</p>
+<p>The recommended procedure to obtain accurate QP energies is discussed in the reference below. Specifically,  for reference type calculations we recommend the following procedure: 
+</p>
+<ul><li>Use the default for <a class="mw-selflink selflink">ENCUTGW</a>, or even decrease <a class="mw-selflink selflink">ENCUTGW</a> to half the value of <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>.</li>
+<li>Calculate all orbitals that the plane-wave basis set allows to calculate. This number can be determined by searching for "maximum number of plane-waves" in the ground-state DFT <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file, and setting <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> to this value.</li>
+<li>Increase <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> systematically and plot the QP energies versus the number of plane-wave coefficients, which equals the number of orbitals. This means <a class="mw-selflink selflink">ENCUTGW</a> and <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> increase as <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> increases.</li></ul>
+<p>This procedure can be carried out using few k points. Other commonly applied methods can yield less accurate results and are not considered to be reliable.
+</p>
+<h2><span class="mw-headline" id="FFT_grid_and_PRECFOCK">FFT grid and <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a></span></h2>
+<p>The <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> tag determines the fast Fourier transformation (FFT) grid in all GW (and Hartree-Fock) related routines. For small systems, the computational time is often dominated by FFT operations. Therefore, the <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> tag can have a significant impact on the compute time for QP calculations. For large systems, the FFT's usually do not dominate the computational workload, and savings are expected to be small for <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> = <i>fast</i>. 
+QP shifts are usually not very sensitive to the setting of <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> and therefore there is no harm in setting <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> = <i>fast</i>), whereas for RPA calculations we recommend to set <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> = <i>normal</i> to avoid numerical errors.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/ENCUTGWSOFT" title="ENCUTGWSOFT">ENCUTGWSOFT</a>,
+<a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>,
+<a href="/wiki/index.php/ACFDT/RPA_calculations#Basis_set_convergence" title="ACFDT/RPA calculations">Basis set convergence</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ENCUTGW%22_incategory:%22Examples%22" title='Special:Search/"ENCUTGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<ul><li>Generally, QP energies converge like one over the number of orbitals and one over the number of plane waves in the response function. For basis set converged calculations, we recommend using the strategies outlined in Ref. <sup class="reference" id="cite_ref-klimes:prb:14_2-0"><a href="#cite_note-klimes:prb:14-2">[2]</a></sup>, which contains a comprehensive study of the performance of the convergence of GW calculations.</li></ul>
+<h2><span class="mw-headline" id="References">References</span></h2>

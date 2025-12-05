@@ -1,0 +1,39 @@
+<p><a class="mw-selflink selflink">LVGVAPPL</a> = .TRUE. | .FALSE.<br/> Default: <b>LVGVAPPL</b> =  .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LVGVAPPL</a> determines whether the <i>vGv</i> orbital magnetic susceptibility is applied in the calculation of the CSA tensor.
+</p>
+<p><a class="mw-selflink selflink">LVGVAPPL</a> is available as of VASP.6.4.0.
+</p>
+<p>When performing a chemical shift calculation the standard <i>pGv</i> susceptibility is used to calculate the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution to the CSA tensor by default.
+This can be overruled with <a class="mw-selflink selflink">LVGVAPPL</a>.
+In case <a class="mw-selflink selflink">LVGVAPPL</a> is true, the <i>vGv</i> susceptibility is applied for the calculation of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution to the CSA tensor. For details see <a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>, <a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a>
+</p>

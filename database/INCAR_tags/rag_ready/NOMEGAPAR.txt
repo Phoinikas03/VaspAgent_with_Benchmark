@@ -1,0 +1,1 @@
+NOMEGAPAR =  Description: NOMEGAPAR available as of VASP.6, specifies the number of processor groups sharing the same imaginary frequency grid points. Related tags and articles NTAUPAR , NOMEGA Examples that use this tag

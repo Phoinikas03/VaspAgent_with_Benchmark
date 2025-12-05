@@ -1,0 +1,1 @@
+TEEND =  Default: TEEND = TEBEG Description: TEEND sets the final temperature (in K) for an ab-initio molecular-dynamics run ( IBRION =0; SMASS =−1). Related tags and articles TEBEG , IBRION , SMASS Examples that use this tag

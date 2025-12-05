@@ -1,0 +1,31 @@
+<p><a class="mw-selflink selflink">LPLANE</a> = [logical]<br/> Default: <b>LPLANE</b> = .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LPLANE</a> switches on the plane-wise data distribution in real space. 
+</p>
+<p>For <a class="mw-selflink selflink">LPLANE</a>=.TRUE., the data distribution in real space is done plane wise.
+Any combination of <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a> and <a class="mw-selflink selflink">LPLANE</a> can be used.
+</p>
+<p>Generally, <a class="mw-selflink selflink">LPLANE</a>=.TRUE. reduces the communication band width during the FFT's, but at the same time it unfortunately worsens the load balancing on massively parallel machines.
+<a class="mw-selflink selflink">LPLANE</a>=.TRUE. should only be used if <a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a> is at least 3×(number of nodes)/<a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>, and optimal load balancing is achieved if <a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>=<i>n</i>×<a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>, where <i>n</i> is an arbitrary integer.
+</p>
+<p>If <a class="mw-selflink selflink">LPLANE</a>=.TRUE. and if the real space projector functions (<a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=.TRUE. or ON or AUTO) are used, it might be necessary to check the lines following
+</p>
+<p>The <tt>max/ min</tt> values should not differ too much, otherwise the load balancing might worsen as well.
+</p>
+<p>The optimum settings for <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a> and <a class="mw-selflink selflink">LPLANE</a> depend strongly on the type of machine you are using.
+Some recommended setups:
+</p>
+<ul><li>LINUX cluster linked by Infiniband, modern multicore machines:</li></ul>
+<ul><li>LINUX cluster linked by 1 Gbit Ethernet, and LINUX clusters with single cores:</li></ul>
+<ul><li>Massively parallel machines (Cray, Blue Gene):</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>,
+<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>,
+<a href="/wiki/index.php/NSIM" title="NSIM">NSIM</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>,
+<a href="/wiki/index.php/LSCAAWARE" title="LSCAAWARE">LSCAAWARE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPLANE%22_incategory:%22Examples%22" title='Special:Search/"LPLANE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

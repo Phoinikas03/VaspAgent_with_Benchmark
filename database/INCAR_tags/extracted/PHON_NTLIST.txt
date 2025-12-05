@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">PHON_NTLIST</a> = [integer]<br/> Default: <b>PHON_NTLIST</b> = none 
+</p>
+<p>Description: This flag sets the number of temperatures for that the electron-phonon interactions using the ZG configuration<sup class="reference" id="cite_ref-zacharias:prb:2016_1-0"><a href="#cite_note-zacharias:prb:2016-1">[1]</a></sup> is evaluated. 
+</p>
+<p>This feature is only available from VASP version 6.0 or higher.
+</p>
+<p>Also, a list of temperatures defined in <a href="/wiki/index.php/PHON_TLIST" title="PHON TLIST">PHON_TLIST</a> has to be defined together with this tag
+</p>
+<p>For further usage of this tag see: <a href="/wiki/index.php/Electron-phonon_interactions_from_Monte-Carlo_sampling" title="Electron-phonon interactions from Monte-Carlo sampling">Electron-phonon interactions from Monte-Carlo sampling</a>.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PHON_LMC" title="PHON LMC">PHON_LMC</a>, <a href="/wiki/index.php/PHON_NSTRUCT" title="PHON NSTRUCT">PHON_NSTRUCT</a>, <a href="/wiki/index.php/PHON_TLIST" title="PHON TLIST">PHON_TLIST</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PHON_NTLIST%22_incategory:%22Examples%22" title='Special:Search/"PHON NTLIST" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

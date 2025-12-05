@@ -1,0 +1,1 @@
+TRANSPORT_RELAXATION_TIME =  Default: TRANSPORT_RELAXATION_TIME = 1E-14 Description: Value of the constant relaxation time in unit of seconds. This value is only used when ELPH_SCATTERING_APPROX = CRTA , so for the constant relaxation-time approximation. Related tags and articles Transport calculations ELPH_RUN ELPH_TRANSPORT ELPH_SCATTERING_APPROX

@@ -1,0 +1,432 @@
+<p><a class="mw-selflink selflink">LOCPROJ</a> =  <b>&lt;sites&gt;</b> : <b>&lt;functions-Ylm-specs&gt;</b> : <b>&lt;functions-radial-specs&gt;</b><br/> Default: <b>LOCPROJ</b> =  None 
+</p>
+<p>Description: The <a class="mw-selflink selflink">LOCPROJ</a> tag specifies local functions on which the orbitals are projected. These projections are written to the <a href="/wiki/index.php/PROJCAR" title="PROJCAR">PROJCAR</a> file, <a href="#LOCPROJ_file">LOCPROJ file</a>, and <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> file.
+</p>
+<p>When the <a class="mw-selflink selflink">LOCPROJ</a> tag is set, VASP performs the projection of the Kohn-Sham orbitals <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |\psi_{n\mathbf{k}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |\psi_{n\mathbf{k}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |\psi_{n\mathbf{k}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a0c432ebef1830db4a05407346f9f86f&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 5.281ex;"/></span> onto a localized orbitals basis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |\beta^\alpha_{lm}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mi>α<!-- α --></mi>
+</msubsup>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |\beta^\alpha_{lm}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |\beta^\alpha_{lm}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7e5fb4c6bfbf8164ff786d6ec36fa165&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 5.033ex;"/></span> which can be written as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+P^\alpha_{lmn\mathbf{k}} 
+\equiv \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle
+= \underbrace{\langle \beta_{lm}^{\alpha}|\psi_{n\mathbf{k}}\rangle}_{P^{\text{SOFT},\alpha}_{lmn\mathbf{k}}} + 
+\underbrace{\sum_{ij} \langle \beta^\alpha_{lm}|\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j | \psi_{n\mathbf{k}}\rangle}_{P^{\text{AUG},\alpha}_{lmn\mathbf{k}}}.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mi>α<!-- α --></mi>
+</msubsup>
+<mo>≡<!-- ≡ --></mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo>=</mo>
+<munder>
+<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+<munder>
+<mrow>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mrow>
+<mo>⏟<!-- ⏟ --></mo>
+</munder>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>SOFT</mtext>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+</mrow>
+</munder>
+<mo>+</mo>
+<munder>
+<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+<munder>
+<mrow>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</munder>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mi>α<!-- α --></mi>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>i</mi>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<msub>
+<mi>Q</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>j</mi>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mrow>
+<mo>⏟<!-- ⏟ --></mo>
+</munder>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>AUG</mtext>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+</mrow>
+</munder>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+P^\alpha_{lmn\mathbf{k}} 
+\equiv \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle
+= \underbrace{\langle \beta_{lm}^{\alpha}|\psi_{n\mathbf{k}}\rangle}_{P^{\text{SOFT},\alpha}_{lmn\mathbf{k}}} + 
+\underbrace{\sum_{ij} \langle \beta^\alpha_{lm}|\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j | \psi_{n\mathbf{k}}\rangle}_{P^{\text{AUG},\alpha}_{lmn\mathbf{k}}}.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+P^\alpha_{lmn\mathbf{k}} 
+\equiv \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle
+= \underbrace{\langle \beta_{lm}^{\alpha}|\psi_{n\mathbf{k}}\rangle}_{P^{\text{SOFT},\alpha}_{lmn\mathbf{k}}} + 
+\underbrace{\sum_{ij} \langle \beta^\alpha_{lm}|\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j | \psi_{n\mathbf{k}}\rangle}_{P^{\text{AUG},\alpha}_{lmn\mathbf{k}}}.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87ccf13d1003cf8e4f66f482c1dca79c&amp;mode=mathml" style="vertical-align: -8.171ex; height: 10.676ex; width: 60.026ex;"/></span>
+</p>
+<p>Here, the two terms on the right-hand side are called soft and augmentation part, respectively. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle S}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>S</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle S}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle S}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5dbc98dcc983a70728bd082d1a47546e&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.499ex;"/></span> is the overlap matrix,
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle S = 1+\sum_{ij} |\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j|.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>S</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>+</mo>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</munder>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>i</mi>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<msub>
+<mi>Q</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>j</mi>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle S = 1+\sum_{ij} |\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j|.}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle S = 1+\sum_{ij} |\tilde{p}_i\rangle Q_{ij} \langle \tilde{p}_j|.}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4d58f54ad93a72296046203019c6fff7&amp;mode=mathml" style="vertical-align: -3.338ex; height: 5.843ex; width: 23.836ex;"/></span>
+</p>
+<p>The radial and the angular part of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta^\alpha_{lm}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mi>α<!-- α --></mi>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta^\alpha_{lm}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta^\alpha_{lm}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73ddce9dd022a146e48be4011f47638d&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 6.392ex;"/></span> are described by the <a class="mw-selflink selflink">LOCPROJ</a> tag, which comprises three parts separated by colons that are denoted as <b>&lt;sites&gt;</b>, <b>&lt;functions-Ylm-specs&gt;</b>, and <b>&lt;functions-radial-specs&gt;</b>. For instance, to perform the projection onto a hydrogen-like <i>1s</i> function on the first ionic position specified in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, the tag reads
+</p>
+<h2><span class="mw-headline" id="Specifying_the_local_basis">Specifying the local basis</span></h2>
+<ul><li><b>&lt;sites&gt;</b>: The sites on which the local functions are centered.</li></ul>
+<ul><li><b>&lt;functions-Ylm-specs&gt;</b>: The angular character of the local functions on the specified sites.</li></ul>
+<ul><li><b>&lt;functions-radial-specs&gt;</b>: The radial dependency of the local functions.</li></ul>
+<p><br/>
+</p>
+<p><br/>
+</p>
+<p><br/>
+</p>
+<p>  For instance,
+</p>
+<p>performs the projection onto a hydrogen-like <i>2s</i> function and a <i>d</i><sub>xy</sub> pseudo partial wave (2<sup>nd</sup> <i>d</i> channel of atomic species 3) on ionic site 1, and a <i>d</i><sub>xy</sub> pseudo partial wave (identical type) on site 3.
+</p>
+<p>For other tags, the second instance of a tag in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> is normally ignored. However, here
+</p>
+<p>is possible.
+</p>
+<h2><span class="mw-headline" id="Example_for_LOCPROJ_tag">Example for LOCPROJ tag</span></h2>
+<p>As mentioned above, to put a hydrogen-like <i>1s</i> function on the first ionic position specified in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, the tag reads
+</p>
+<p>in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file. To change this into a <i>2s</i> function, specify
+</p>
+<p>To project the orbitals onto the PAW projectors of the valence atomic <i>d</i><sub>xy</sub>-states of the atoms on sites 1 and 3, write
+</p>
+<p>This will only work if the atoms on these sites have valence atomic <i>d</i>-states. Otherwise, the necessary projectors will not be available in the relevant PAW datasets, and the code will exit in error at startup.
+</p>
+<p>To forcibly use the radial function of the second <i>d</i> channel, write
+</p>
+<p>Again, provided the PAW dataset(s) contain more than one <i>d</i> channel.
+Similarly, one can project onto the pseudo partial waves of the second <i>d</i> channel in the PAW dataset(s) by writing 
+</p>
+<p>To project onto the functions of the third PAW dataset in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file, specify
+</p>
+<h2><span class="mw-headline" id="LOCPROJ_file"><a class="mw-selflink selflink">LOCPROJ</a> file</span></h2>
+<p>The <a class="mw-selflink selflink">LOCPROJ</a> file contains information about the projections of the Bloch states onto the localized orbitals specified with the <a class="mw-selflink selflink">LOCPROJ</a> tag described above.
+</p>
+<p>The file contains a header with the information about all projections:
+</p>
+<ul><li>ISITE: Index of the site in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.</li>
+<li>R: Position in fractional coordinates.</li>
+<li>Radial type: Is one of "PAW projector","PS partial wave", "Hydrogen-like" depending on the choice of <b>Pr</b>, <b>Ps</b> or <b>Hy</b>, respectively.</li>
+<li>Angular type: Angular character of the local functions, as presented in the table above in <b>&lt;functions-Ylm-specs&gt;</b>.</li></ul>
+<p>Each Kohn-Sham orbital is identified by the spin, k point, band index, eigenvalue, and occupation.
+For each of these Kohn-Sham orbitals, VASP writes the real and imaginary part of the projection onto localized orbitals <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \langle \beta_{lm}^{\alpha}|S|\psi_{n\mathbf{k}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=634bf51f2733425bb766c8a7b944a391&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 11.813ex;"/></span>. Note that for <b>vasp_gam</b> only the real part exists.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a>, <a href="/wiki/index.php/PROJCAR" title="PROJCAR">PROJCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MYTAG%22_incategory:%22Examples%22" title='Special:Search/"MYTAG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>

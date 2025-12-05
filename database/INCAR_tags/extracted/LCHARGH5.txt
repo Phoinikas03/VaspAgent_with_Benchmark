@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">LCHARGH5</a> = [logical]<br/> Default: <b>LCHARGH5</b> = <a href="/wiki/index.php/LH5" title="LH5">LH5</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LCHARGH5</a> determines whether the charge densities are written to <a href="/wiki/index.php/Vaspwave.h5" title="Vaspwave.h5">vaspwave.h5</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWAVE" title="LWAVE">LWAVE</a>, <a href="/wiki/index.php/LWAVEH5" title="LWAVEH5">LWAVEH5</a>, <a href="/wiki/index.php/LCHARG" title="LCHARG">LCHARG</a>, <a href="/wiki/index.php/LH5" title="LH5">LH5</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LCHARGH5%22_incategory:%22Examples%22" title='Special:Search/"LCHARGH5" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,82 @@
+<p><a class="mw-selflink selflink">MAGMOM</a> = [real array] 
+</p>
+<p>Description: Initial magnetic moment for each atom if no magnetization density is present. Considered when symmetry is determined.
+</p>
+<ul><li>For a <b>magnetic calculation from scratch</b> (<a href="/wiki/index.php/ISTART" title="ISTART">ISTART</a>=0), <a class="mw-selflink selflink">MAGMOM</a> specifies (i) the initial on-site magnetic moment for each atom, and (ii) lowers the symmetry of the system (as of VASP.4.4.4). A magnetic calculation could be either a spin-polarized calculation (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2) or noncollinear calculation (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T). If the <a class="mw-selflink selflink">MAGMOM</a> line breaks a symmetry of the crystal, the corresponding symmetry operation is removed and not applied during the symmetrization of, e.g., charges and forces.</li></ul>
+<ul><li>When <b>restarting a magnetic calculation</b>, <a class="mw-selflink selflink">MAGMOM</a> is only used to determine the symmetry of the system and not to set the on-site magnetic moment. Therefore, if you remove the <a class="mw-selflink selflink">MAGMOM</a> tag before restarting from a converged <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> or <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>, the magnetization is likely to be symmetrized away.</li></ul>
+<ul><li><a class="mw-selflink selflink">MAGMOM</a> also specifies the initial on-site magnetic moments when a <b>magnetic calculation</b> (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2 or <a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T) is <b>started from a non-spin-polarized calculation</b> (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=1 and <a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=F). This implies restarting with <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=1 while the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file contains no magnetization density. Starting magnetic calculations from a non-spin-polarized calculation can improve convergence.</li></ul>
+<p>The <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a> tag can constrain the on-site magnetic moments.
+</p>
+<h2><span class="mw-headline" id="Format_and_basis">Format and basis</span></h2>
+<ul><li>For a spin-polarized calculation (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2), <a class="mw-selflink selflink">MAGMOM</a> is a list of NIONS positive or negative values that specify the magnitude and relative orientation of the magnetization on each ion. The on-site magnetic moments have no direction in real space, i.e., no orientation in the lattice.</li></ul>
+<ul><li>For noncollinear calculation (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T), the on-site magnetic moment is specified by three components for each ion. Without spin-orbit coupling (<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>=False), the total energy depends only on the relative direction of the on-site magnetic moments. Hence, you can give the desired magnetic structure in Cartesian coordinates without considering how the lattice matrix or <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a> is defined.</li></ul>
+<ul><li>With spin-orbit coupling (<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>=True), the three components must be specified in the basis of spinor space that is defined by <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>. The default is  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1=\hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1=\hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1=\hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73849afedcda56194a8d21c6ba04bfab&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.81ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2 =\hat y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2 =\hat y}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2 =\hat y}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e92fcd0bce2cbaaa66970287e376a42&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.782ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3 = \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3 = \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3 = \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61c76ccb9d30d7b60ef441452afda149&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.776ex;"/></span>, such that <a class="mw-selflink selflink">MAGMOM</a> can be given in Cartesian coordinates. The orientation of <a class="mw-selflink selflink">MAGMOM</a> with respect to the lattice only matters if spin-orbit coupling is included (<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>).</li></ul>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<ul><li>The most simple input for a bcc cell with antiferromagnetic (AFM) spin alignment would be the following.</li></ul>
+<ul><li>If you have problems converging to a desired magnetic solution, try to calculate first the non-magnetic ground state and continue from the generated <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> and <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>. To restart, e.g., a calculation with two atoms that have equally large and antiferromagnetically coupled on-site magnetic moments, you need to set the following in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file:</li></ul>
+<ul><li>For systems containing many atoms, <a class="mw-selflink selflink">MAGMOM</a> input on a single line can be hard to read, especially in the noncollinear case. It is possible to provide <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> input on <a href="/wiki/index.php/INCAR#Format" title="INCAR">multiple lines</a> using backslashes (<b>\</b>) as linebreaks. E.g. for a noncollinear system with AFM alignment and 16 atoms (the first 8 of them magnetic), the multi-line input could look like this:</li></ul>
+<h2><span class="mw-headline" id="Related_Tags_and_Sections">Related Tags and Sections</span></h2>
+<p><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>,
+<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>, <a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>, <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>,
+<a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a>,
+<a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MAGMOM%22_incategory:%22Examples%22" title='Special:Search/"MAGMOM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

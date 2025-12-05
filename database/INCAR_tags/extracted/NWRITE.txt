@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">NWRITE</a> = 0 | 1 | 2 | 3 | 4<br/> Default: <b>NWRITE</b> = 2 
+</p>
+<p>Description: This tag determines how much will be written to the file <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> ('verbosity tag').
+</p>
+<p>The options for <a class="mw-selflink selflink">NWRITE</a> are given in detail as
+</p>
+<p>where the following abbreviations have been used
+</p>
+<p><a class="mw-selflink selflink">NWRITE</a>=4 is for debugging only.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>, <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>, <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>, <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>, <a href="/wiki/index.php/ISYM" title="ISYM">ISYM</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NWRITE%22_incategory:%22Examples%22" title='Special:Search/"NWRITE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

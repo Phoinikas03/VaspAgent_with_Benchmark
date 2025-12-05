@@ -1,0 +1,33 @@
+<p><a class="mw-selflink selflink">IGPAR</a> = 1 | 2 | 3 
+</p>
+<p>Description: This tag specifies the socalled parallel or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{\parallel}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∥<!-- ∥ --></mo>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{\parallel}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{\parallel}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bb3142c3a54ee1931763157d8b1f0160&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.009ex; width: 3.155ex;"/></span> direction in the integration over the reciprocal space unit cell needed for <a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>,
+<a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>,
+<a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>,
+<a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>,
+<a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IGPAR%22_incategory:%22Examples%22" title='Special:Search/"IGPAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

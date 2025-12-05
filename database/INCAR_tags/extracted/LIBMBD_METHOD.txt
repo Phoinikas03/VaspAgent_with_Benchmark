@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">LIBMBD_METHOD</a> = [string]<br/> Default: <b>LIBMBD_METHOD</b> = mbd-rsscs (default in libMBD) 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_METHOD</a> selects one of the methods available in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_METHOD</a> can be set to a label (string) corresponding to one of the methods listed on the libMBD website (see <b>method</b> at the page <sup class="reference" id="cite_ref-libmbd_input_4-0"><a href="#cite_note-libmbd_input-4">[4]</a></sup>).
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a>,
+<a href="/wiki/index.php/LIBMBD_TS_D" title="LIBMBD TS D">LIBMBD_TS_D</a>,
+<a href="/wiki/index.php/LIBMBD_TS_SR" title="LIBMBD TS SR">LIBMBD_TS_SR</a>,
+<a href="/wiki/index.php/LIBMBD_MBD_A" title="LIBMBD MBD A">LIBMBD_MBD_A</a>,
+<a href="/wiki/index.php/LIBMBD_MBD_BETA" title="LIBMBD MBD BETA">LIBMBD_MBD_BETA</a>,
+<a href="/wiki/index.php/LIBMBD_VDW_PARAMS_KIND" title="LIBMBD VDW PARAMS KIND">LIBMBD_VDW_PARAMS_KIND</a>,
+<a href="/wiki/index.php/LIBMBD_ALPHA" title="LIBMBD ALPHA">LIBMBD_ALPHA</a>,
+<a href="/wiki/index.php/LIBMBD_C6AU" title="LIBMBD C6AU">LIBMBD_C6AU</a>,
+<a href="/wiki/index.php/LIBMBD_R0AU" title="LIBMBD R0AU">LIBMBD_R0AU</a>,
+<a href="/wiki/index.php/LIBMBD_N_OMEGA_GRID" title="LIBMBD N OMEGA GRID">LIBMBD_N_OMEGA_GRID</a>,
+<a href="/wiki/index.php/LIBMBD_K_GRID" title="LIBMBD K GRID">LIBMBD_K_GRID</a>,
+<a href="/wiki/index.php/LIBMBD_K_GRID_SHIFT" title="LIBMBD K GRID SHIFT">LIBMBD_K_GRID_SHIFT</a>,
+<a href="/wiki/index.php/LIBMBD_PARALLEL_MODE" title="LIBMBD PARALLEL MODE">LIBMBD_PARALLEL_MODE</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_METHOD%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD METHOD" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

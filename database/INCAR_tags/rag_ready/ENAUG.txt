@@ -1,0 +1,1 @@
+ENAUG =  Default: ENAUG = largest EAUG read from the POTCAR file Description: Specifies the cutoff energy of the plane-wave representation of the augmentation charges in eV. ENAUG determines NGXF , NGYF , and NGZF in accordance with the PREC tag. Related tags and articles NGXF , NGYF , NGZF , ENCUT , PREC , PRECFOCK Examples that use this tag

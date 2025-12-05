@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">IMAGES</a> = [integer]<br/> Default: <b>IMAGES</b> = 0 
+</p>
+<p>Description: Defines the number of VASP calculations in separate directories, (e.g., 01, 02, 03, etc.) for <a href="/wiki/index.php/Nudged_elastic_bands" title="Nudged elastic bands">nudged elastic band</a> calculations, <a href="/wiki/index.php/LTEMPER" title="LTEMPER">parallel tempering</a>, and <a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">thermodynamic integration</a>.
+</p>
+<p><a class="mw-selflink selflink">IMAGES</a> sets the number of independent VASP calculations in separate directories. The primary <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file should be located in the root directory.
+Other files such as <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a>, <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>, and <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> can be placed in subdirectories, e.g., 01, 02, 03, etc., or in the root directory. Files in subdirectories take precedence over those in the root directory.
+</p>
+<p>See <a href="#Use_cases">use cases</a> described below.
+</p>
+<h2><span class="mw-headline" id="File_handling">File handling</span></h2>
+<p>When VASP starts, it reads the file <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> in the root directory.
+Subsequently, VASP splits the MPI communicator into subgroups for each image.
+If an <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file is present in the subdirectories 01, 02, 03, ..., VASP will process those afterward.
+Otherwise, VASP continues reading from the root <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file. 
+You can also provide image-specific data in the root <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>  file if the files are very similar
+</p>
+<p>Here, images 3 and 4 would use <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>=600 because the value is not specified for the image.
+The files <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> and <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> will be read from the subdirectory if available and from the root directory otherwise.
+The <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file and all other input files are always read from the subdirectories.
+All <a href="/wiki/index.php/Category:Output_files" title="Category:Output files">output files</a> (including <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> and <a href="/wiki/index.php/OSZICAR" title="OSZICAR">OSZICAR</a>) are always written to the subdirectories.
+</p>
+<p>To summarize, to run a calculation with <a class="mw-selflink selflink">IMAGES</a>, you provide:
+</p>
+<ul><li>an <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file in the root directory</li>
+<li>optionally an overwriting <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file in the subdirectories</li>
+<li><a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> files in the subdirectories</li>
+<li><a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> and <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> either in the root or in the subdirectories</li></ul>
+<h2><span class="mw-headline" id="Use_cases">Use cases</span></h2>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">VCAIMAGES</a>,
+<a href="/wiki/index.php/LTEMPER" title="LTEMPER">LTEMPER</a>,
+<a href="/wiki/index.php/Nudged_elastic_bands" title="Nudged elastic bands">nudged-elastic-bands how-to</a>,
+<a href="/wiki/index.php/SPRING" title="SPRING">SPRING</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IMAGES%22_incategory:%22Examples%22" title='Special:Search/"IMAGES" incategory:"Examples"'>Examples that use this tag</a>
+</p>

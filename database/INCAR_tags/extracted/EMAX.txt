@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">EMAX</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">EMAX</a> specifies the  upper boundary of the energy range for the evaluation of the electronic <a class="mw-redirect" href="/wiki/index.php/Density_of_states" title="Density of states">density of states</a> (DOS).
+</p>
+<p>The DOS is evaluated each <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a> steps, <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>  is updated each  <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>*<a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a> steps.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/EMIN" title="EMIN">EMIN</a>, <a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a>,
+<a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EMAX%22_incategory:%22Examples%22" title='Special:Search/"EMAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

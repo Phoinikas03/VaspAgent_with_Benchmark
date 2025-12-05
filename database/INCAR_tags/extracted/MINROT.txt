@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">MINROT</a> = [real]<br/> Default: <b>MINROT</b> = 0.01 
+</p>
+<p>Description: The flag <a class="mw-selflink selflink">MINROT</a> defines the value for which the dimer is rotated only if the predicted rotation angle is greater than <a class="mw-selflink selflink">MINROT</a> (rad.) in the <a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved Dimer Method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved Dimer Method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MINROT%22_incategory:%22Examples%22" title='Special:Search/"MINROT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

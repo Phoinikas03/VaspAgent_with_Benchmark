@@ -1,0 +1,123 @@
+<p><a class="mw-selflink selflink">NBSEBLOCKV</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBSEBLOCKV</a> specifies the blocking factor for the unoccupied states when setting up the BSE Hamiltonian.
+</p>
+<p>By default, the construction of the BSE Hamiltonian in VASP is parallelized over <b>k</b>-points, such that each MPI rank can compute a pair of <b>k</b>-points. This way the BSE Hamiltonian setup can be parallelized with
+</p>
+<p>or for spin-polarized case
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{NKPTS}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">S</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{NKPTS}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{NKPTS}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=51fce610f54ccf188b5fb056c3879526&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 8.105ex;"/></span> is the total number of <b>k</b>-points in the full Brillouin zone. However, if a large number of MPI ranks is used in a calculation with too few <b>k</b>-point, this leads to load imbalance, where some of the MPI ranks will have no data to compute. In such cases, it is recommended to use parallelization over bands. If the parallelization over bands is used, all occupied (unoccupied) bands are divided into
+</p>
+<p>and 
+</p>
+<p>blocks, respectively.
+</p>
+<p>Such a band blocking allows VASP to parallelize the setup of the matrix with
+</p>
+<p>or for spin-polarized case
+</p>
+<p>If neither <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{NBSEBLOCKV}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">V</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{NBSEBLOCKV}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{NBSEBLOCKV}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=59f7f8a372bb456bd63fa79f71bdc676&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 16.4ex;"/></span> nor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{NBSEBLOCKO}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">O</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{NBSEBLOCKO}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{NBSEBLOCKO}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=98fb72392ed73a8f2d9d4402831bf516&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 16.465ex;"/></span> is specified, no paralliziation over bands is used and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{NBLKO=1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">O</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{NBLKO=1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{NBLKO=1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=438c27a44cc64ba9cc0e6f395ccf75a6&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 12.719ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{NBLKV=1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">B</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">V</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{NBLKV=1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{NBLKV=1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=798b10751470d7ee7ba7b09446b9f3ff&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 12.654ex;"/></span>.
+</p>
+<p>We recommend using parallelization over bands only if the number of MPI ranks in the calculation exceeds <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \text{total ranks}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext>total ranks</mtext>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \text{total ranks}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \text{total ranks}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=edc146e01ad6bd7a025bcaae0462e713&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 10.872ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE" title="BSE">BSE</a>, <a href="/wiki/index.php/NBSEBLOCKO" title="NBSEBLOCKO">NBSEBLOCKO</a>, <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>, <a class="mw-redirect" href="/wiki/index.php/TDDFT_calculations" title="TDDFT calculations">TDDFT calculations</a>
+</p>

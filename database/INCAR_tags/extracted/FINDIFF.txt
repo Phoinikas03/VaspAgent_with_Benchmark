@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">FINDIFF</a> = [integer]<br/> Default: <b>FINDIFF</b> = 1 
+</p>
+<p>Description: Defines whether a forward (<a class="mw-selflink selflink">FINDIFF</a>=1) or a central (<a class="mw-selflink selflink">FINDIFF</a>=2) difference formula for the numerical differentiation to compute the curvature along the dimer direction is used in the <a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">improved dimer method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved dimer method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22FINDIFF%22_incategory:%22Examples%22" title='Special:Search/"FINDIFF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

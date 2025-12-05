@@ -1,0 +1,94 @@
+<p><a class="mw-selflink selflink">DIPOL</a> = [real array] 
+</p>
+<p>Description: specifies the center of the cell in direct lattice coordinates with respect to which the total dipole-moment in the cell is calculated.
+</p>
+<p>The center of the cell w.r.t. which the total dipole-moment in the cell is calculated is specified as
+</p>
+<p>where <b>R</b><sub>x</sub>, <b>R</b><sub>y</sub> and <b>R</b><sub>z</sub> are given in direct lattice coordinates.
+</p>
+<p>Calculations using the dipole correction, i.e. using tags <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a> or <a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>, require a definition of the center of the cell. Results of the computed dipole moment might differ for different positions. The reason for this difference is that the definition of the dipole 'destroys' the translational symmetry, i.e., the dipole is defined as
+</p>
+<p>This measure will provide consistent values only if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \rho_{\rm ions+valence}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">s</mi>
+<mo>+</mo>
+<mi mathvariant="normal">v</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">l</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">e</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \rho_{\rm ions+valence}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \rho_{\rm ions+valence}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bdc138095bc2d606e6aed2615b79814c&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 10.805ex;"/></span> drops to zero at some distance from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf R_{\rm center}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">r</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf R_{\rm center}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf R_{\rm center}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=974e7e24d472dc5564d81121497c7ce5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.624ex;"/></span>. If this is 
+not the case, the values are extremely sensitive with respect to changes in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf R_{\rm center}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">r</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf R_{\rm center}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf R_{\rm center}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=974e7e24d472dc5564d81121497c7ce5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.624ex;"/></span>. In such cases, it might be beneficial to increase the size of the cell along the vacuum dimension (for surfaces) or for the entire cell (for isolated molecules). For practical purposes this means that for slab calculations or surfaces the position specified by <a class="mw-selflink selflink">DIPOL</a> should roughly correspond to the center of mass of the atoms in the cell, so that there is enough vacuum for the field to dissipate. See the <a href="/wiki/index.php/Electrostatic_corrections" title="Electrostatic corrections">Electrostatic corrections</a> page for an example.  
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>,
+<a href="/wiki/index.php/EPSILON" title="EPSILON">EPSILON</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/LMONO" title="LMONO">LMONO</a>,
+<a href="/wiki/index.php/EFIELD" title="EFIELD">EFIELD</a>,
+<a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole, Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/Electrostatic_corrections" title="Electrostatic corrections">Electrostatic corrections</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22DIPOL%22_incategory:%22Examples%22" title='Special:Search/"DIPOL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

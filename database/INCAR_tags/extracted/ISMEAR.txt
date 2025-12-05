@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">ISMEAR</a> = -15 | -14 | -5 | -4 | -3 | -2 | -1 | 0 | [integer]&gt;0<br/> Default: <b>ISMEAR</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">ISMEAR</a> determines how the partial occupancies <i>f</i><sub>n<b>k</b></sub> are set for each orbital. <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a> determines the width of the smearing in eV.
+</p>
+<p>Please consider how-to guide to choose the optimal <a href="/wiki/index.php/Smearing_technique" title="Smearing technique">smearing technique</a>.
+</p>
+<h2><span class="mw-headline" id="Tag_options">Tag options</span></h2>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> &gt; 0</code>: method of Methfessel-Paxton order <a class="mw-selflink selflink">ISMEAR</a> with width <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = 0</code>: Gaussian smearing with width <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -1</code>: Fermi smearing with width <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -2</code>: Partial occupancies are read in from the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> and kept fixed throughout run. Alternatively, you can also choose occupancies in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file with the tag <a href="/wiki/index.php/FERWE" title="FERWE">FERWE</a> (and <a href="/wiki/index.php/FERDO" title="FERDO">FERDO</a> for <code style="padding: 2px"><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2</code> calculations).</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -3</code>: perform a loop over <a href="/wiki/index.php/SMEARINGS" title="SMEARINGS">SMEARINGS</a> parameters supplied in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -4</code>: Tetrahedron method without smearing.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -5</code>: Tetrahedron method with Blöchl corrections without smearing.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -14</code>: Tetrahedron method with Fermi-Dirac smearing <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.</li></ul>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ISMEAR</a> = -15</code>: Tetrahedron method with Blöchl corrections with Fermi-Dirac smearing <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>,
+<a href="/wiki/index.php/EFERMI" title="EFERMI">EFERMI</a>,
+<a href="/wiki/index.php/FERWE" title="FERWE">FERWE</a>,
+<a href="/wiki/index.php/FERDO" title="FERDO">FERDO</a>,
+<a href="/wiki/index.php/SMEARINGS" title="SMEARINGS">SMEARINGS</a>,
+<a href="/wiki/index.php/Smearing_technique" title="Smearing technique">Smearing technique</a>,
+<a class="mw-redirect" href="/wiki/index.php/K-point_integration" title="K-point integration">K-point integration</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ISMEAR%22_incategory:%22Examples%22" title='Special:Search/"ISMEAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

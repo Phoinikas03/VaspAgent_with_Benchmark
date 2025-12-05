@@ -1,0 +1,38 @@
+<p><a class="mw-selflink selflink">IRC_DELTA0</a> = real<br/> Default: <b>IRC_DELTA0</b> =  0.0015 
+</p>
+<p>Description: Defines the tolerance factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Delta_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Delta_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Delta_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=58165f0a18e26109e201e1af275fce32&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.99ex;"/></span> in  Å used in the <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>.  
+</p>
+<p>The smaller the value of <a class="mw-selflink selflink">IRC_DELTA0</a>, the closer the computed IRC trajectory follows the true IRC pathway. However, a small tolerance factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Delta_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Delta_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Delta_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=58165f0a18e26109e201e1af275fce32&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.99ex;"/></span> necessitates more time steps and, thus, computational effort.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a href="/wiki/index.php/IRC_DIRECTION" title="IRC DIRECTION">IRC_DIRECTION </a>,
+<a href="/wiki/index.php/IRC_STOP" title="IRC STOP">IRC_STOP</a>,
+<a href="/wiki/index.php/IRC_MINSTEP" title="IRC MINSTEP">IRC_MINSTEP</a>,
+<a href="/wiki/index.php/IRC_MAXSTEP" title="IRC MAXSTEP">IRC_MAXSTEP</a>,
+<a href="/wiki/index.php/IRC_VNORM0" title="IRC VNORM0">IRC_VNORM0</a>
+</p>

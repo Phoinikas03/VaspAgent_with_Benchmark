@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">NLSPLINE</a> = .TRUE. | .FALSE.<br/> Default: <b>NLSPLINE</b> =  .FALSE. 
+</p>
+<p>Description: construct the PAW projectors in reciprocal space using spline interpolation so that they are <i>k</i>-differentiable.
+</p>
+<p>For <a class="mw-selflink selflink">NLSPLINE</a>=.TRUE., the PAW projectors in reciprocal space (<a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=.FALSE.) are set up using a spline interpolation so that they are <i>k</i> differentiable. This improves the susceptibility contribution to the chemical shifts. It only slightly affects the other contributions to the chemical shifts.
+</p>
+<p>It is advised to set <a class="mw-selflink selflink">NLSPLINE</a>=.TRUE. if and only if PAW projectors are applied in reciprocal space and chemical shifts are calculated, i.e., if and only if <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=.FALSE. and <a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>=.TRUE. As this option also gives slightly different total energies, it is advised to use the default <a class="mw-selflink selflink">NLSPLINE</a>=.FALSE. in all other calculations for reasons of compatibility.
+</p>
+<p>Real-space projectors are <i>k</i> differentiable by construction, hence do not require to set <a class="mw-selflink selflink">NLSPLINE</a>=.TRUE.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>,
+<a href="/wiki/index.php/DQ" title="DQ">DQ</a>,
+<a href="/wiki/index.php/ICHIBARE" title="ICHIBARE">ICHIBARE</a>,
+<a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NLSPLINE%22_incategory:%22Examples%22" title='Special:Search/"NLSPLINE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

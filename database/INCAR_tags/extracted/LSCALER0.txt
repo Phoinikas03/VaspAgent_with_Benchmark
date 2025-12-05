@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">LSCALER0</a> = .TRUE. | .FALSE.<br/> Default: <b>LSCALER0</b> = .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCALER0</a>  decides whether to re-scale the van der Waals radii <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_{0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_{0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_{0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8a826f776103126e610a820a56d5e102&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> (<a class="mw-selflink selflink">LSCALER0</a>=<i>.TRUE.</i>) or not.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/LVDWEXPANSION" title="LVDWEXPANSION">LVDWEXPANSION</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVDWEXPANSION%22_incategory:%22Examples%22" title='Special:Search/"LVDWEXPANSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

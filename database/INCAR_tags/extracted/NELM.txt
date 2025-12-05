@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">NELM</a> = [integer]<br/> Default: <b>NELM</b> = 60 
+</p>
+<p>Description: <a class="mw-selflink selflink">NELM</a> sets the maximum number of electronic SC (self-consistency) steps. 
+</p>
+<p>Normally, there is no need to change the default value: if the self-consistency loop does not converge within 40 steps, it will probably not converge at all. In this case you should reconsider the tags <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a> or <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>, <a href="/wiki/index.php/LSUBROT" title="LSUBROT">LSUBROT</a>, and the <a href="/wiki/index.php/Category:Density_mixing" title="Category:Density mixing">mixing parameters</a>.
+</p>
+<p>The same stands for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = TIMEEV, as the value is set to be sufficient to ensure numerical stability when propagating in time. If you wish to set it by yourself, be advised that the input value must be greater than 100, otherwise VASP will ignore it and fall to the default settings. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NELMDL" title="NELMDL">NELMDL</a>,
+<a href="/wiki/index.php/NELMIN" title="NELMIN">NELMIN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NELM%22_incategory:%22Examples%22" title='Special:Search/"NELM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

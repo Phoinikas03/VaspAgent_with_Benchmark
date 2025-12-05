@@ -1,0 +1,1 @@
+NWRITE = 0 | 1 | 2 | 3 | 4 Default: NWRITE = 2 Description: This tag determines how much will be written to the file OUTCAR ('verbosity tag'). The options for NWRITE are given in detail as where the following abbreviations have been used NWRITE =4 is for debugging only. Related tags and articles OUTCAR , IALGO , IBRION , MDALGO , ISIF , ISYM Examples that use this tag

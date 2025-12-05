@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">NTAUPAR</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NTAUPAR</a> available as of VASP.6, specifies the number of MPI groups sharing same imaginary time grid points. The default value of NTAUPAR is set to the largest possible value supported on the compute nodes to speed up the GW or RPA calculation.
+</p>
+<p>NTAUPAR has the biggest impact on memory usage as well as total runtime for low-scaling GW and RPA calculations. If not found in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>, NTAUPAR is set automatically based on the value of <a href="/wiki/index.php/MAXMEM" title="MAXMEM">MAXMEM</a> (the available memory for each rank on each compute node), such that the GW and RPA job fits in the RAM on each compute node. 
+</p>
+<p>If <a href="/wiki/index.php/MAXMEM" title="MAXMEM">MAXMEM</a> is not set, VASP looks in "/proc/meminfo" for "MemAvailable" to set <a href="/wiki/index.php/MAXMEM" title="MAXMEM">MAXMEM</a> internally, otherwise the code uses the value provided in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>. 
+</p>
+<p>NTAUPAR=<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> is the maximum value possible, while NTAUPAR=1 is the smallest possible value. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGAPAR" title="NOMEGAPAR">NOMEGAPAR</a>, 
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NTAUPAR%22_incategory:%22Examples%22" title='Special:Search/"NTAUPAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

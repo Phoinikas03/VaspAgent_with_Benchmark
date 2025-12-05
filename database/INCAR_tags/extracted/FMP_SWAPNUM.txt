@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">FMP_SWAPNUM</a> = integer<br/> Default: <b>FMP_SWAPNUM</b> =  1 
+</p>
+<p>Description: Number of pairs that are exchanged in a single swapping event in the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>.
+</p>
+<p><a class="mw-selflink selflink">FMP_SWAPNUM</a> defines the number of pairs of particles exchanged in a single swapping event of the reverse nonequilibrium molecular dynamics run using the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>. Only the particles of the same type are selected. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>,
+<a href="/wiki/index.php/FMP_DIRECTION" title="FMP DIRECTION">FMP_DIRECTION</a>,
+<a href="/wiki/index.php/FMP_ACTIVE" title="FMP ACTIVE">FMP_ACTIVE</a>,
+<a href="/wiki/index.php/FMP_SNUMBER" title="FMP SNUMBER">FMP_SNUMBER</a>,
+<a href="/wiki/index.php/FMP_PERIOD" title="FMP PERIOD">FMP_PERIOD</a>
+</p>

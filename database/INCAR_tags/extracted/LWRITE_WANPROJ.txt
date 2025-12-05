@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">LWRITE_WANPROJ</a> = [logical]<br/> Default: <b>LWRITE_WANPROJ</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWRITE_WANPROJ</a> determines whether the Wannier projection file <a href="/wiki/index.php/WANPROJ" title="WANPROJ">WANPROJ</a> is written.
+</p>
+<p>If <a href="/wiki/index.php/WANPROJ" title="WANPROJ">WANPROJ</a> is present, VASP skips the Wannier projection and reads the effective projectors U<sub>nk</sub> from the <a href="/wiki/index.php/WANPROJ" title="WANPROJ">WANPROJ</a> file for each k point. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>,
+<a class="new" href="/wiki/index.php?title=LDOWNSAMPLE&amp;action=edit&amp;redlink=1" title="LDOWNSAMPLE (page does not exist)">LDOWNSAMPLE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWRITE_WANPROJ%22_incategory:%22Examples%22" title='Special:Search/"LWRITE WANPROJ" incategory:"Examples"'>Examples that use this tag</a>
+</p>

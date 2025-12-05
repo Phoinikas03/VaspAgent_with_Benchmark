@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">POMASS</a> = [real array]<br/> Default: <b>POMASS</b> = values read from <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> 
+</p>
+<p>Description: Array of masses of the atoms in atomic units.
+</p>
+<p><a class="mw-selflink selflink">POMASS</a> determines the atomic mass of each atomic species. For standard calculations this tag should be omitted since the atomic masses for each species are read from the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file (they are also called <a class="mw-selflink selflink">POMASS</a> there). However if one needs to change the atomic mass of some species, e.g., the mass of Hydrogen atoms in <a class="mw-redirect" href="/wiki/index.php/Molecular_dynamics" title="Molecular dynamics">molecular dynamics</a> calculations, the atomic masses of all species need to be set with this tag in the order they appear on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file. After setting <a class="mw-selflink selflink">POMASS</a> to different values in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file than on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file the following message will occur on stdout when running VASP, informing the user that the mass has changed:
+</p>
+<p><code>
+WARNING: mass on POTCAR and INCAR are incompatible.
+</code>
+</p>
+<p>If any incompatibilities exist, e.g. the number of entries doesn't agree with that on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>, VASP will stop.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a href="/wiki/index.php/ZVAL" title="ZVAL">ZVAL</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22POMASS%22_incategory:%22Examples%22" title='Special:Search/"POMASS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

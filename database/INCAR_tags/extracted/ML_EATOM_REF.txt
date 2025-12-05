@@ -1,0 +1,23 @@
+<p><a class="mw-selflink selflink">ML_EATOM_REF</a> = [real array]<br/> Default: <b>ML_EATOM_REF</b> = 0.0 
+</p>
+<p>Description: Reference total energies of isolated atoms used in the machine learning force field method.
+</p>
+<p>This tag is only used if <code style="padding: 2px"><a href="/wiki/index.php/ML_ISCALE_TOTEN" title="ML ISCALE TOTEN">ML_ISCALE_TOTEN</a> = 1</code>.
+</p>
+<p>If <a class="mw-selflink selflink">ML_EATOM_REF</a> is not provided in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file then 0.0 is assumed for all species in the system.
+</p>
+<p>By default this tag is not used since all energies are scaled to the average of the training data (<code style="padding: 2px"><a href="/wiki/index.php/ML_ISCALE_TOTEN" title="ML ISCALE TOTEN">ML_ISCALE_TOTEN</a> = 2</code>).
+</p>
+<p>If this tag is used, each reference energy should be obtained from a VASP calculation of an isolated atoms in a sufficiently large simulation box. The reference is then simply taken from the Helmholtz free energy from the <a href="/wiki/index.php/OSZICAR" title="OSZICAR">OSZICAR</a> file (value following "1 F=" in that file). 
+</p>
+<p>The reference energies are simply set in one line as a list for each species, i.e. like the following
+</p>
+<p>where E_1, E_2, E_2 etc. are the energies for species 1, 2, 3 etc. (corresponding to the order they occur in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file).
+</p>
+<p>The unit of the energies is eV/atom. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_ISCALE_TOTEN" title="ML ISCALE TOTEN">ML_ISCALE_TOTEN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_EATOM_REF%22_incategory:%22Examples%22" title='Special:Search/"ML EATOM REF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">NOMEGA_DUMP</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NOMEGA_DUMP</a> selects the imaginary frequency point of screened potential in <a href="/wiki/index.php/Practical_guide_to_GW_calculations#Low_scaling_GW_algorithms" title="Practical guide to GW calculations">low-scaling GW calculations</a> that is written to file. 
+</p>
+<p><a class="mw-selflink selflink">NOMEGA_DUMP</a> selects the imaginary frequency point of the screened Coulomb kernel that is written to <a href="/wiki/index.php/WFULLxxxx.tmp" title="WFULLxxxx.tmp">WFULLxxxx.tmp</a> in <a href="/wiki/index.php/Practical_guide_to_GW_calculations#Low_scaling_GW_algorithms" title="Practical guide to GW calculations">low-scaling GW calculations</a>. 
+If set to 0, <a href="/wiki/index.php/WFULLxxxx.tmp" title="WFULLxxxx.tmp">WFULLxxxx.tmp</a> contains the screened Coulomb interaction W at <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \omega=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ω<!-- ω --></mi>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \omega=0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \omega=0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3727c0529ba47668695332ff25d4b289&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 5.707ex;"/></span>.
+For positive values, these files contain the screened Coulomb interaction at the corresponding imaginary frequency point. 
+For negative values, <a href="/wiki/index.php/WFULLxxxx.tmp" title="WFULLxxxx.tmp">WFULLxxxx.tmp</a> is not written.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>,
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NOMEGA_DUMP%22_incategory:%22Examples%22" title='Special:Search/"NOMEGA DUMP" incategory:"Examples"'>Examples that use this tag</a>
+</p>

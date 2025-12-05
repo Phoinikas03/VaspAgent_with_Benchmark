@@ -1,0 +1,44 @@
+<p><a class="mw-selflink selflink">BMIX</a> = [real]<br/> Default: <b>BMIX</b> = 1.0 
+</p>
+<p>Description: <a class="mw-selflink selflink">BMIX</a> sets the cutoff wave vector for Kerker mixing scheme  (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=1 and/or <a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>=1).
+</p>
+<p>The mixed density is given by
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle A}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>A</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle A}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7fc56270e7a70fa81a5935b72eacbe29&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.743ex;"/></span>=<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>B</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9d5ed678fe57bcca610140957afab571&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.764ex;"/></span>=<a class="mw-selflink selflink">BMIX</a>
+</p>
+<p>In VASP the eigenvalue spectrum of the charge dielectric matrix is calculated and written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file at each electronic step. This allows a rather easy optimization of the mixing parameters, if required. Search in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file for
+</p>
+<p>The parameters for the mixing are optimal if the mean eigenvalue Γ<sub>mean</sub>=1, and if the width of the eigenvalue spectrum is minimal. For an initial linear mixing (<a class="mw-selflink selflink">BMIX</a>≈0) an optimal setting for <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> can be found easily by setting <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a><sub>optimal</sub>=<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a><sub>current</sub>*Γ<sub>mean</sub>. For the Kerker scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=1) either <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> or <a class="mw-selflink selflink">BMIX</a> can be optimized, but we recommend to change only <a class="mw-selflink selflink">BMIX</a> and keep <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> fixed (you must decrease <a class="mw-selflink selflink">BMIX</a> if the mean eigenvalue is larger than one, and increase <a class="mw-selflink selflink">BMIX</a> if the mean eigenvalue Γ<sub>mean</sub>&lt;1).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22BMIX%22_incategory:%22Examples%22" title='Special:Search/"BMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

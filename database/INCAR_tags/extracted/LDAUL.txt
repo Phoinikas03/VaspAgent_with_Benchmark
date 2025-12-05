@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">LDAUL</a> = [integer array]<br/> Default: <b>LDAUL</b> = NTYP*2 
+</p>
+<p>Description: <a class="mw-selflink selflink">LDAUL</a> specifies the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>-quantum number for which the on-site interaction is added.
+</p>
+<p>For <a class="mw-selflink selflink">LDAUL</a>=-1 no on-site interaction is added.
+</p>
+<p><b>Mind</b>: one <i>has</i> to specify one number for each atomic species.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LDAU" title="LDAU">LDAU</a>,
+<a href="/wiki/index.php/LDAUTYPE" title="LDAUTYPE">LDAUTYPE</a>,
+<a href="/wiki/index.php/LDAUU" title="LDAUU">LDAUU</a>,
+<a href="/wiki/index.php/LDAUJ" title="LDAUJ">LDAUJ</a>,
+<a href="/wiki/index.php/LDAUPRINT" title="LDAUPRINT">LDAUPRINT</a>,
+<a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDAUL%22_incategory:%22Examples%22" title='Special:Search/"LDAUL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

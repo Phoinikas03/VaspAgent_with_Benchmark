@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">AGGAX</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">AGGAX</a> is a parameter that multiplies the gradient correction in the GGA exchange functional.
+</p>
+<p><a class="mw-selflink selflink">AGGAX</a> can be used as the fraction of gradient correction in the GGA exchange in a Hartree-Fock/GGA hybrid functional.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22AGGAX%22_incategory:%22Examples%22" title='Special:Search/"AGGAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

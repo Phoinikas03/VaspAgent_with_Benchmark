@@ -1,0 +1,1 @@
+CLL =  Description: CLL selects the angular quantum number {\displaystyle l} {\displaystyle l} of the excited core electron when using ICORELEVEL >0. Related tags and articles ICORELEVEL , CLZ CLNT , CLN , CLL LADDER , LHARTREE , NBANDSV , NBANDSO , OMEGAMAX , ANTIRES Examples that use this tag

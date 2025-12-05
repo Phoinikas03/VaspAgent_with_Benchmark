@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">ML_MCONF_NEW</a> = [integer]<br/> Default: <b>ML_MCONF_NEW</b> = 5 
+</p>
+<p>Description: This tag sets the number of configurations that are stored temporarily as candidates for the training data in the machine learning force field method.
+</p>
+<p>The use of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field_calculations:_Basics#Sampling_of_training_data_and_local_reference_configurations" title="Machine learning force field calculations: Basics">here</a>.
+If force fields are reparameterized (<code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = select</code>), calculations are usually more efficient if this parameter is increased to values around 10-16 and setting <code style="padding: 2px"><a href="/wiki/index.php/ML_CDOUB" title="ML CDOUB">ML_CDOUB</a> = 4</code>. This is particularly relevant if the ML_AB file is large.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Special:Search/%22ML_MCONF_NEW%22_incategory:%22Examples%22" title='Special:Search/"ML MCONF NEW" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MCONF" title="ML MCONF">ML_MCONF</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>, <a href="/wiki/index.php/ML_CDOUB" title="ML CDOUB">ML_CDOUB</a>
+</p>

@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">LHFCALC</a> = .TRUE. | .FALSE.<br/> Default: <b>LHFCALC</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LHFCALC</a> specifies whether a Hartree-Fock/DFT hybrid functional type calculation is performed.
+</p>
+<p>If one does not specifically request a particular hybrid functional (see <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>, <a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>, <a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>, <a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>, <a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>, <a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>, <a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>, and the <a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">list_of_hybrid_functionals</a>) VASP will default to the <a href="/wiki/index.php/List_of_hybrid_functionals#PBE0" title="List of hybrid functionals">PBE0 hybrid functional</a>.
+</p>
+<p>It is recommended to select a "direct optimization" algorithm for HF/DFT hybrid functonal type calculations, i.e., <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Damped (<a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>=53) or <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=All (<a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>=58) in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<p>The blocked-Davidson algorithm <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Normal is, with certain caveat, also supported, whereas calculations for the other algorithms (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Fast) are not properly supported (note: no warning is printed). The blocked-Davidson algorithm (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Normal) is generally rather slow, and in many cases the Pulay mixer will be unable to determine the proper ground-state. We hence recommend to select the blocked-Davidson algorithm only in combination with straight mixing or a Kerker like mixing (see the <a class="mw-redirect" href="/wiki/index.php/Density_mixing" title="Density mixing">section on mixing</a>). The following combination have been successfully applied for small and medium sized systems
+</p>
+<p>Decrease the parameter a until convergence is reached.
+</p>
+<p>In most cases, however, it is recommended to use the "Damped" algorithm with suitably chosen timestep. The following setup for the electronic optimization works reliably in most cases:
+</p>
+<p>If convergence is not obtained, it is recommended to reduce the timestep <a href="/wiki/index.php/TIME" title="TIME">TIME</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>,
+<a href="/wiki/index.php/LTHOMAS" title="LTHOMAS">LTHOMAS</a>,
+<a href="/wiki/index.php/LRHFCALC" title="LRHFCALC">LRHFCALC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LHFCALC%22_incategory:%22Examples%22" title='Special:Search/"LHFCALC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">ML_IERR</a> = [integer]<br/> Default: <b>ML_IERR</b> = 0 
+</p>
+<p>Description: Calculation and output frequency of error estimates for <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>RUN</i> computations.
+</p>
+<p>This tag sets the interval in units of molecular-dynamics steps at which the error estimates are written to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a>. The error estimate is computed by utilizing the <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Spilling_factor" title="Machine learning force field: Theory">spilling factor</a> if a refit with <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>REFIT</i> was done. The <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Spilling_factor" title="Machine learning force field: Theory">spilling factor</a> is calculated for each atom in the current structure and the maximum among all atoms is written to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a> file marked with <code>SFF</code>. 
+</p>
+<p>The <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Spilling_factor" title="Machine learning force field: Theory">spilling factor</a> measures the similarity of the local environment of each atom in the current structure to that of the local reference configurations of the force field. The values of the spilling factor are in the range <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [0,1]}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo stretchy="false">]</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [0,1]}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle [0,1]}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ccfcd347d0bf65dc77afe01a3306a96b&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.653ex;"/></span>. If the atomic environment is "properly" represented by the local reference configurations the spilling factor approaches 0. Vice versa the <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Spilling_factor" title="Machine learning force field: Theory">spilling factor</a> quickly approaches 1, if the force field is extrapolating.
+</p>
+<p>The calculation of the spilling factor scales quadratically with the number of local reference configurations and linearly with the number of species. For force fields containing many species and/or local reference configurations, the evaluation time of the spilling factor becomes of the order of the evaluation of a single force field step or more. Since it is sufficient to monitor the error every  <a class="mw-selflink selflink">ML_IERR</a> MD steps, the total time consumed by the evaluation of the spilling factor can become insignificantly compared to the total time. 
+</p>
+<p>In long molecular dynamics calculations, we recommend to use at least <a class="mw-selflink selflink">ML_IERR</a>=20-100.
+</p>
+<p><a class="mw-selflink selflink">ML_IERR</a> can be freely chosen only if <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>RUN</i>. In any other calculation mode, if <a class="mw-selflink selflink">ML_IERR</a> is not equal to 1, the code will exit with an error and provide an error description.
+</p>
+<p>For calculations using force fields obtained by <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>REFITBAYESIAN</i> or without any refitting, the Bayesian error estimates of energy, forces and stress (<code>BEFF</code>) are additionally written out to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a> file and their output frequency is also controlled by <a class="mw-selflink selflink">ML_IERR</a>. Albeit having the advantage of an additional error estimate we still do not recommend using these force fields, since they are significantly slower than force fields obtained by <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>REFIT</i>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_LFAST" title="ML LFAST">ML_LFAST</a>, <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>, <a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a>, <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>
+</p>

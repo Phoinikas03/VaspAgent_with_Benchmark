@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">SCISSOR</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">SCISSOR</a> specifies the shift for the scissor operator in eV.
+</p>
+<p>The scissor operator in <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE</a> and <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW</a> calculations shifts the unoccupied states relative to the valence states<sup class="reference" id="cite_ref-vincenzo:prb:1995_1-0"><a href="#cite_note-vincenzo:prb:1995-1">[1]</a></sup>. For example, the scissor operator can be used in the BSE calculations to match the band gap to the known experimental value, thus achieving the right offset in the calculated spectrum. Notably, unlike the self-energy operator in GW, the scissor operator applies a universal shift to all conduction states, i.e., the shift is independent of energy or momentum and leaves the valence states unchanged. The scissor operator only shifts empty states, thus partially occupied orbitals are not affected by it.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

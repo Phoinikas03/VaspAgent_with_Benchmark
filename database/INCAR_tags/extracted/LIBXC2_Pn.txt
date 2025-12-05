@@ -1,0 +1,39 @@
+<p><a class="mw-selflink selflink">LIBXC2_Pn</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBXC2_Pn</a>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n=1, 2, \ldots}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n=1, 2, \ldots}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n=1, 2, \ldots}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3c9d8d9ab2bc60bb31c9f8419a5edace&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 11.609ex;"/></span> allows to specify the values of the parameters of the functional implemented in Libxc that is called with <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>.
+</p>
+<p>A detailed explanation on how to use <a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a> and <a class="mw-selflink selflink">LIBXC2_Pn</a> and an example can be found at the <a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a> page.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a>,
+<a href="/wiki/index.php/LTBOUNDLIBXC" title="LTBOUNDLIBXC">LTBOUNDLIBXC</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LIBXC2_Pn%22_incategory:%22Examples%22" title='Special:Search/"LIBXC2 Pn" incategory:"Examples"'>Examples that use this tag</a>
+</p>

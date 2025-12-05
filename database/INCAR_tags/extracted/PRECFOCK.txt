@@ -1,0 +1,46 @@
+<p><a class="mw-selflink selflink">PRECFOCK</a> = Normal | Accurate | Fast  | Medium | Single | Low 
+</p>
+<p>Description: <a class="mw-selflink selflink">PRECFOCK</a> controls the FFT grids used in the exact exchange routines (Hartree-Fock and hybrid functionals).
+</p>
+<p>The FFT grid used for the exact exchange contributions can be chose to be different from the one used for the Hartree and DFT potentials. Information on the  FFT grid that is used in the exact Fock exchange routines is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file after the lines
+</p>
+<p>We recommend to set <a class="mw-selflink selflink">PRECFOCK</a>=Normal for routine calculations.
+If speed is an issue, you can also use <a class="mw-selflink selflink">PRECFOCK</a>=Fast (e.g. use this to pre-converge the orbitals). For very high precision, in particular for phonon calculations, <a class="mw-selflink selflink">PRECFOCK</a>=Accurate is recommended.
+The two setting, <a class="mw-selflink selflink">PRECFOCK</a>=Medium and <a class="mw-selflink selflink">PRECFOCK</a>=Low are not recommended, but have been kept to maintain compatibility with older VASP versions.
+</p>
+<p>Generally, as opposed to gradient corrected density functionals, the exact exchange energy is rather insensitive to the FFT grids, and in many cases a rather coarse grid can be used to calculate the overlap densities and the exact exchange (Fock) potential. <a class="mw-redirect" href="/wiki/index.php/Hybrid_functionals" title="Hybrid functionals">Exact exchange</a> requires one to evaluation the overlap density
+</p>
+<p>between two orbitals. Strictly speaking, errors in the convolution (aliasing errors) are only avoided, if the FFT grid contains all Fourier components up to twice the plane wave with the largest wave vector, 2|G<sub>cut</sub>|. As usual, |G<sub>cut</sub>| is determined by the plane wave cutoff (<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>). 
+A grid avoiding aliasing errors is chosen by setting <a class="mw-selflink selflink">PRECFOCK</a>=Accurate. In this case, the FFT grid for the exact exchange is identical to the FFT grid used for the orbitals for <a href="/wiki/index.php/PREC" title="PREC">PREC</a>=Accurate in the DFT part. <a class="mw-selflink selflink">PRECFOCK</a>=Accurate is the recommended setting for very accurate calculations.
+</p>
+<p>For <a class="mw-selflink selflink">PRECFOCK</a>=Low and Fast, the smallest possible FFT grid that just encloses the cutoff sphere (G<sub>cut</sub>|) is used. This accelerates the calculations by roughly a factor two to three, but causes slight errors in the total energies and some noise in the calculated forces. To reduce the noise, the augmentation charges
+are made very soft for <a class="mw-selflink selflink">PRECFOCK</a>=Fast (whereas <a class="mw-selflink selflink">PRECFOCK</a>=Low uses the standard augmentation charges also used for DFT).
+</p>
+<p>For <a class="mw-selflink selflink">PRECFOCK</a>=Normal, the FFT grid for the exact exchange is identical to the FFT grid used for the orbitals for <a href="/wiki/index.php/PREC" title="PREC">PREC</a>=Normal in the DFT part. In this case, the grid density is between the ones for
+<a class="mw-selflink selflink">PRECFOCK</a>=Accurate and <a class="mw-selflink selflink">PRECFOCK</a>=Fast. This is often a very reasonable comprise and hence recommended for most routine calculations.
+</p>
+<p>For <a class="mw-selflink selflink">PRECFOCK</a>=Fast, Normal and Accurate, the augmentation charges (required to restore the norm and dipoles of the overlap density on the plane wave grid) are softened, such that an accurate presentation on the plane wave grid is possible even for relatively coarse FFT grids. The sphere size is printed out after
+</p>
+<p>Since VASP always uses one-center terms to correct for the difference between all-electron and pseudo orbitals, the precise shape of the augmentation charges matters little for exchange 
+energies. Still it is recommended to keep PRECFOCK and PREC the same if relative energies are calculated (for instance adsorption energies, energies differences between different phases, etc.).
+</p>
+<p>The following table summarizes the possible setting:
+</p>
+<p>Medium and Single are synonyms. They are useful the select the same treatment for the Hartree  and exchange term. This can be advantageously for correlated wave function calculations to obtain a numerically exact balance and compensation between Hartree and exchange (for instance for the upcoming auxiliary field Monte-Carlo module in VASP). For conventional Hartree-Fock or hybrid functional calculations, Normal or Accurate should be used. 
+</p>
+<p>In this table, G<sub>cut</sub> is determined by the relation 
+</p>
+<p>with E<sub>cut</sub>=<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>. 
+</p>
+<p>Even <a class="mw-selflink selflink">PRECFOCK</a>=Fast yields fairly low noise in the forces and virtually no egg-box effects (aliasing errors). In the forces, the noise is usually below 0.01 eV/Å. For <a class="mw-selflink selflink">PRECFOCK</a>=N and <a class="mw-selflink selflink">PRECFOCK</a>=A, noise is usually not an issue, and the accuracy is sufficient even for phonon calculations in large supercells.
+</p>
+<p>Any combination of <a href="/wiki/index.php/PREC" title="PREC">PREC</a> and <a class="mw-selflink selflink">PRECFOCK</a> is allowed by the code. Useful settings of increasing precision are however:
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PRECFOCK%22_incategory:%22Examples%22" title='Special:Search/"PRECFOCK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

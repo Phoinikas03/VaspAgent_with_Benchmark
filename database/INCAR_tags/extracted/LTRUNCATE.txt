@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">KERNEL_TRUNCATION/LTRUNCATE</a> =  .True. | .False.<br/> Default: <b>KERNEL_TRUNCATION/LTRUNCATE</b> = .False. 
+</p>
+<p>Description: <a class="mw-selflink selflink">KERNEL_TRUNCATION/LTRUNCATE</a> truncates the coulomb kernel to remove electrostatic interactions along non-periodic dimensions
+</p>
+<p>Setting <a class="mw-selflink selflink">KERNEL_TRUNCATION/LTRUNCATE</a> = T  switches on coulomb kernel truncation methods. These methods removes interactions with periodic replicas in non-periodic directions, i.e. along the surface normal for 2D materials and along all directions for 0D systems such as atoms and molecules.
+</p>
+<h2><span class="mw-headline" id="Default_settings">Default settings</span></h2>
+<p>The following default settings are assumed when setting <a class="mw-selflink selflink">KERNEL_TRUNCATION/LTRUNCATE</a> = T,
+</p>
+<p>which translates to 0D coulomb truncation which is suitable for a molecule using the coarsen before pad strategy<sup class="reference" id="cite_ref-vijay:arxiv:2024_1-0"><a href="#cite_note-vijay:arxiv:2024-1">[1]</a></sup>. Detailed information is available on the respective pages of the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> tags.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KERNEL_TRUNCATION/LCOARSEN" title="KERNEL TRUNCATION/LCOARSEN">KERNEL_TRUNCATION/LCOARSEN</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/IDIMENSIONALITY" title="KERNEL TRUNCATION/IDIMENSIONALITY">KERNEL_TRUNCATION/IDIMENSIONALITY</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/ISURFACE" title="KERNEL TRUNCATION/ISURFACE">KERNEL_TRUNCATION/ISURFACE</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

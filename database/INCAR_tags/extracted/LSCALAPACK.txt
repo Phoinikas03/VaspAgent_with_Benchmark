@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">LSCALAPACK</a> = [logical] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCALAPACK</a> controls the use of scaLAPACK. 
+</p>
+<p>For <a class="mw-selflink selflink">LSCALAPACK</a>=.TRUE., VASP uses scaLAPACK routines for the orthonormalization of the wave functions and subspace diagonalizations.
+</p>
+<p>The use of scaLAPACK for the LU decomposition in the orthonormalization of the wave functions may be independently switched off (<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>=.FALSE.). 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>,
+<a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a>,
+<a href="/wiki/index.php/NSIM" title="NSIM">NSIM</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>,
+<a href="/wiki/index.php/LSCAAWARE" title="LSCAAWARE">LSCAAWARE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSCALAPACK%22_incategory:%22Examples%22" title='Special:Search/"LSCALAPACK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

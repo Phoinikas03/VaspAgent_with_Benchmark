@@ -1,0 +1,17 @@
+<p>Description: This flag sets the threshold for the error estimation in the machine learning force field method.
+</p>
+<p>The use of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field_calculations:_Basics#Sampling_of_training_data_and_local_reference_configurations" title="Machine learning force field calculations: Basics">here</a>. Generally, first principles calculations are only performed if the error estimate of one force exceeds the threshold. 
+</p>
+<p>The initial threshold is set to the value provided by the tag <a class="mw-selflink selflink">ML_CTIFOR</a> (units of eV/Angstrom for <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>=0 and unitless for <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>=1). 
+</p>
+<p>For <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>=0, the threshold can be updated dynamically during ML. The details of the update are controlled by <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>. Typically, after extensive training, attainable values for ML_CTIFOR are 0.02 around 300-500 K, and 0.06 around 1000-2000 K, so temperature but also system dependent. The initial default 0.002 is only sensible, if <a class="mw-selflink selflink">ML_CTIFOR</a>  is automatically updated (<a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a> = 1 or 2). If  <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a> = 0 is used, it is necessary to use significantly larger values around 0.02-0.06 for <a class="mw-selflink selflink">ML_CTIFOR</a>.
+</p>
+<p>For <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>=1, only a constant threshold during the calculation is available (<a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=0).
+</p>
+<p>The related tag <a href="/wiki/index.php/ML_SCLC_CTIFOR" title="ML SCLC CTIFOR">ML_SCLC_CTIFOR</a> determines how many local reference configurations are chosen from each first principles calculations.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_CALGO" title="ML CALGO">ML_CALGO</a>, <a href="/wiki/index.php/ML_SCLC_CTIFOR" title="ML SCLC CTIFOR">ML_SCLC_CTIFOR</a> , <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>, <a href="/wiki/index.php/ML_CSIG" title="ML CSIG">ML_CSIG</a>, <a href="/wiki/index.php/ML_CSLOPE" title="ML CSLOPE">ML_CSLOPE</a>, <a href="/wiki/index.php/ML_CDOUB" title="ML CDOUB">ML_CDOUB</a>, <a href="/wiki/index.php/ML_CX" title="ML CX">ML_CX</a>, <a href="/wiki/index.php/ML_NMDINT" title="ML NMDINT">ML_NMDINT</a>, <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_CTIFOR%22_incategory:%22Examples%22" title='Special:Search/"ML CTIFOR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

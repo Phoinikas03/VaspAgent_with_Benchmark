@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">VCUTOFF</a> = [real]<br/> Default: <b>VCUTOFF</b> =  1.1 <a href="/wiki/index.php/ENCUTGW" title="ENCUTGW">ENCUTGW</a> 
+</p>
+<p><br/>
+Description: The parameter <a class="mw-selflink selflink">VCUTOFF</a> sets the energy cutoff for bare Coulomb matrix elements and controls the basis set for the bare Coulomb interaction.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ENCUTGW" title="ENCUTGW">ENCUTGW</a>,
+<a class="new" href="/wiki/index.php?title=CRPA_calculations&amp;action=edit&amp;redlink=1" title="CRPA calculations (page does not exist)">CRPA calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VCUTOFF%22_incategory:%22Examples%22" title='Special:Search/"VCUTOFF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

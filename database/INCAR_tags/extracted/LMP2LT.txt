@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">LMP2LT</a> = .FALSE. | .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMP2LT</a> selects a Laplace transformed MP2 algorithm.
+</p>
+<p>If <a class="mw-selflink selflink">LMP2LT</a>=.TRUE. and <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=ACFTDRK is set, a quartic scaling Laplace transformed MP2 algorithm is selected.<sup class="reference" id="cite_ref-schaefer:JCP2017_1-0"><a href="#cite_note-schaefer:JCP2017-1">[1]</a></sup>
+</p>
+<p>This tag should be used in combination with <a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a> to tweak parallelization as described in this <a href="/wiki/index.php/LTMP2_-_Tutorial#Parallelization" title="LTMP2 - Tutorial">tutorial</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>,
+<a href="/wiki/index.php/LSMP2LT" title="LSMP2LT">LSMP2LT</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMP2LT%22_incategory:%22Examples%22" title='Special:Search/"LMP2LT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

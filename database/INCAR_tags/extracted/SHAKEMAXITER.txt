@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">SHAKEMAXITER</a> = [Integer]<br/> Default: <b>SHAKEMAXITER</b> = 1000 
+</p>
+<p>Description: <a class="mw-selflink selflink">SHAKEMAXITER</a> specifies the maximum number of iterations in the SHAKE algorithm (in case VASP was compiled with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>).
+</p>
+<p>Constrained molecular dynamics (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=1 | 2) are performed using a <a href="/wiki/index.php/MDALGO#SHAKE" title="MDALGO">SHAKE algorithm</a>.<sup class="reference" id="cite_ref-Ryckaert77_1-0"><a href="#cite_note-Ryckaert77-1">[1]</a></sup>
+</p>
+<p>If the error for all geometric constraints does not decrease below a predefined tolerance (<a href="/wiki/index.php/SHAKETOL" title="SHAKETOL">SHAKETOL</a>) within the allowed number of iterations, VASP terminates with an error message. 
+The aforementioned maximum number of iterations is set by means of the <a class="mw-selflink selflink">SHAKEMAXITER</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/SHAKETOL" title="SHAKETOL">SHAKETOL</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SHAKEMAXITER%22_incategory:%22Examples%22" title='Special:Search/"SHAKEMAXITER" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

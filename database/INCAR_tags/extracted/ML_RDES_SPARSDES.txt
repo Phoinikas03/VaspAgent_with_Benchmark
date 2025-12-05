@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">ML_RDES_SPARSDES</a> = [real]<br/> Default: <b>ML_RDES_SPARSDES</b> = 0.5 
+</p>
+<p>Description: Sets the ratio of descriptors kept during angular-descriptor sparsification.
+</p>
+<p>During <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sparsification_of_angular_descriptors" title="Machine learning force field: Theory">angular-descriptor sparsification</a> (<a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>=T), insignificant angular descriptors are removed based on a leverage scoring. The percentage of angular descriptors that are kept is determined by the value of <a class="mw-selflink selflink">ML_RDES_SPARSDES</a>, which must be chosen between <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 0 &lt; r \leq 1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>0</mn>
+<mo>&lt;</mo>
+<mi>r</mi>
+<mo>≤<!-- ≤ --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 0 &lt; r \leq 1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 0 &lt; r \leq 1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d1d235239586f960dd8d21e256555e30&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.343ex; width: 9.57ex;"/></span>. In practice, we recommend scanning a range between 0.1 to 0.9. Removing angular descriptors increases the performance of a force field, but it decreases accuracy at the same time. One method of finding the optimal tradeoff between accuracy and performance is to do a Pareto front with run time on the x-axis and accuracy on the y-axis.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>, <a href="/wiki/index.php/ML_NRANK_SPARSDES" title="ML NRANK SPARSDES">ML_NRANK_SPARSDES</a>, <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_EPS_LOW%22_incategory:%22Examples%22" title='Special:Search/"ML EPS LOW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

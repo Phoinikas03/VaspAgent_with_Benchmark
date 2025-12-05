@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">TRANSPORT_RELAXATION_TIME</a> = [real]<br/> Default: <b>TRANSPORT_RELAXATION_TIME</b> =  1E-14 
+</p>
+<p>Description: Value of the constant relaxation time in unit of seconds.
+</p>
+<p>This value is only used when <code style="padding: 2px"><a href="/wiki/index.php/ELPH_SCATTERING_APPROX" title="ELPH SCATTERING APPROX">ELPH_SCATTERING_APPROX</a> = CRTA</code>, so for the constant relaxation-time approximation.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<ul><li><a href="/wiki/index.php/Transport_coefficients_including_electron-phonon_scattering" title="Transport coefficients including electron-phonon scattering">Transport calculations</a></li>
+<li><a href="/wiki/index.php/ELPH_RUN" title="ELPH RUN">ELPH_RUN</a></li>
+<li><a href="/wiki/index.php/ELPH_TRANSPORT" title="ELPH TRANSPORT">ELPH_TRANSPORT</a></li>
+<li><a href="/wiki/index.php/ELPH_SCATTERING_APPROX" title="ELPH SCATTERING APPROX">ELPH_SCATTERING_APPROX</a></li></ul>

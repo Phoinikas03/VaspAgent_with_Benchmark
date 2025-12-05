@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">NUPDOWN</a> = [positive real]<br/> Default: <b>NUPDOWN</b> = not set 
+</p>
+<p>Description: Sets the difference between the number of electrons in the up and down spin components.
+</p>
+<p><br/>
+Allows calculations for a specific spin multiplet, i.e. the difference of the number of electrons in the up and down spin component will be kept fixed to the specified value. There is a word of caution required: If <a class="mw-selflink selflink">NUPDOWN</a> is set in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file the initial moment for the charge density should be the same. Otherwise convergence can slow down. When starting from atomic charge densities (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=2), VASP will try to do this automatically by setting <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> to <a class="mw-selflink selflink">NUPDOWN</a>/<a class="new" href="/wiki/index.php?title=NIONS&amp;action=edit&amp;redlink=1" title="NIONS (page does not exist)">NIONS</a>. The user can of course overwrite this default by specifying a different <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> (which should still result in the correct total moment). If one initializes the charge density from the one-electron wavefunctions, the initial moment is always correct, because VASP "pushes" the required number of electrons from the down to the up component. Initializing the charge density from the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=1), however, the initial moment is usually incorrect!
+</p>
+<p>If no value is set (or <a class="mw-selflink selflink">NUPDOWN</a>=-1) a full relaxation will be performed. This is also the default.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a>,<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NUPDOWN%22_incategory:%22Examples%22" title='Special:Search/"NUPDOWN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,350 @@
+<p><a class="mw-selflink selflink">LCHIMAG</a> = .TRUE. | .FALSE.<br/> Default: <b>LCHIMAG</b> =  .FALSE. 
+</p>
+<p>Description: calculate the chemical shifts by means of linear response.
+</p>
+<p>For <a class="mw-selflink selflink">LCHIMAG</a>=.TRUE., VASP calculates the chemical shift tensors.
+</p>
+<p>The chemical shielding tensor is defined as:
+</p>
+<p>Here <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{R}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{R}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{R}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e1fd601dbae82a538d518550acb1af19&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.003ex;"/></span> denotes the atomic nuclear site, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=363b122c528f54df4a0446b6bab05515&amp;mode=mathml" style="vertical-align: -0.671ex; margin-left: -0.027ex; height: 2.509ex; width: 0.985ex;"/></span> denote cartesian indices, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B^{\mathrm{ext}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">x</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B^{\mathrm{ext}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B^{\mathrm{ext}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3d327992f0ea1fa7f972a299c338c5bd&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.509ex; width: 4.234ex;"/></span> an applied DC external magnetic field and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B^{\mathrm{in}}(\mathbf{R})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">n</mi>
+</mrow>
+</mrow>
+</msup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B^{\mathrm{in}}(\mathbf{R})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B^{\mathrm{in}}(\mathbf{R})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=36550c72d489fa06cfec9b97dafd7444&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 7.18ex;"/></span> the induced magnetic field at the nucleus.
+NMR experiments yield information on the symmetric part of the tensor. Typical NMR experiments yield information on the shielding relative to that of a reference compound:
+</p>
+<p>In this (approximate) formula <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_{ij}^{\mathrm{ref}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">f</mi>
+</mrow>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_{ij}^{\mathrm{ref}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_{ij}^{\mathrm{ref}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ace8743a917ba5b36b3166dd8d2e8dde&amp;mode=mathml" style="vertical-align: -1.338ex; height: 3.509ex; width: 3.549ex;"/></span> is the isotropic shielding of the nucleus in the reference compound.  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \delta_{ij}(\mathbf{R})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \delta_{ij}(\mathbf{R})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \delta_{ij}(\mathbf{R})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0effeb20100fc0683278f3344da2bdc3&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 6.322ex;"/></span> is the chemical shift tensor.
+</p>
+<p>In VASP the chemical "shift" tensor is calculated as:
+</p>
+<p>This is minus the shielding tensor. It is not the true chemical shift tensor. To convert it to the real shift tensor one should add the
+reference shielding:
+</p>
+<p>VASP calculates chemical "shifts" for non-metallic crystalline systems using the linear response method of Yates, Pickard, and Mauri <sup class="reference" id="cite_ref-pickard:prb:2001_1-0"><a href="#cite_note-pickard:prb:2001-1">[1]</a></sup><sup class="reference" id="cite_ref-yates:prb:2007_2-0"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Input">Input</span></h2>
+<p>A typical <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> could look like this:
+</p>
+<h3><span class="mw-headline" id="General_tags">General tags</span></h3>
+<p>The first block of tags in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> above expresses the fact that the calculations of chemical shifts by means of linear response often require a high accuracy:
+</p>
+<ul><li><a href="/wiki/index.php/PREC" title="PREC">PREC</a> = Accurate</li>
+<li><a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a> = 1E-8</li>
+<li>Large <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>).</li></ul>
+<p>The chemical shifts are calculated from the orbital magnetic response under the assumption that the system is an insulator. Smearing schemes intended for metals can generate nonsense.
+</p>
+<ul><li>Use <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>=0 and make <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a> so small that states have no fractional occupancies.</li></ul>
+<h3><span class="mw-headline" id="NMR_specific_tags">NMR specific tags</span></h3>
+<p>The second block of tags switches on the calculation of the chemical shifts (<a class="mw-selflink selflink">LCHIMAG</a>=.TRUE.), and controls several aspects of the finite difference <i>k</i>-space derivatives (Eqs. 38, 40, and 47 in the work of Yates <i>et al.</i> <sup class="reference" id="cite_ref-yates:prb:2007_2-1"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>):
+</p>
+<ul><li><a href="/wiki/index.php/DQ" title="DQ">DQ</a> is the step size for the finite difference k-space derivative.
+<ul><li>Typical values are in the range [0.001 - 0.003]. The default (<a href="/wiki/index.php/DQ" title="DQ">DQ</a>=0.001) is often sufficient.</li></ul></li>
+<li><a href="/wiki/index.php/ICHIBARE" title="ICHIBARE">ICHIBARE</a> determines the order of the finite difference stencil used to calculate the magnetic susceptibility (second order derivative in Eq. 47 of Yates <i>et al.</i> <sup class="reference" id="cite_ref-yates:prb:2007_2-2"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>). Note that magnetic susceptibility is a bulk property, while chemical shift is for each nucleus <sup class="reference" id="cite_ref-yates:prb:2007_2-3"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>.
+<ul><li>A higher <a href="/wiki/index.php/ICHIBARE" title="ICHIBARE">ICHIBARE</a> results in a substantial increase of the computational load.</li></ul></li>
+<li>For <a href="/wiki/index.php/NLSPLINE" title="NLSPLINE">NLSPLINE</a>=.TRUE., the PAW projectors in reciprocal space (<a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=.FALSE.) are set up using a spline interpolation so that they are <i>k</i>-differentiable.
+<ul><li>This improves the susceptibility contribution to the shifts (via the aforementioned Eq. 47). Other contributions to the shifts (Eqs. 38 and 40) are only slightly affected.</li></ul></li>
+<li><a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>=.TRUE. is recommended. The star on which the <i>k</i>-space derivative is calculated is oriented along the cartesian directions in <i>k</i>-space. If the symmetry operations in <i>k</i>-space do not map this star onto itself, erroneous results can be obtained. <a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>=.TRUE. checks for such operations, discarding them, resulting in a larger IBZ.</li></ul>
+<p>There are also some additional tags relevant to <a class="mw-selflink selflink">LCHIMAG</a> that are not used in the example <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> that should be considered in special cases:
+</p>
+<ul><li><a href="/wiki/index.php/LBONE" title="LBONE">LBONE</a> adds the small B-component to the chemical shift tensor <sup class="reference" id="cite_ref-dewijs:laskowski:jcp:2017_3-0"><a href="#cite_note-dewijs:laskowski:jcp:2017-3">[3]</a></sup>.</li>
+<li><a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a> uses the vGv expression when calculating the orbital magnetic susceptibility <sup class="reference" id="cite_ref-avezac:prb:2007_4-0"><a href="#cite_note-avezac:prb:2007-4">[4]</a></sup><sup class="reference" id="cite_ref-dewijs:havenith:jcp:2021_5-0"><a href="#cite_note-dewijs:havenith:jcp:2021-5">[5]</a></sup>.</li>
+<li><a href="/wiki/index.php/LVGVAPPL" title="LVGVAPPL">LVGVAPPL</a> uses vGv orbital magnetic susceptibility when calculating the chemical shift anisotropy (CSA) tensor.</li>
+<li><a href="/wiki/index.php/LLRAUG" title="LLRAUG">LLRAUG</a> calculates the two-center contributions to the chemical shielding tensor .</li></ul>
+<p>The chemical shift is calculated via the induced current (cf. <a class="new" href="/wiki/index.php?title=LWRTCUR&amp;action=edit&amp;redlink=1" title="LWRTCUR (page does not exist)">LWRTCUR</a>) <sup class="reference" id="cite_ref-pickard:prb:2001_1-1"><a href="#cite_note-pickard:prb:2001-1">[1]</a></sup> <sup class="reference" id="cite_ref-yates:prb:2007_2-4"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>.
+It has contributions from the plane wave grid and one-center contributions (the induced field
+at the center of a PAW sphere due to the augmentation current inside that sphere). Two-center contributions (induced fields due to augmentation currents in
+other PAW spheres) are standard neglected. These contributions can be switched on using <a href="/wiki/index.php/LLRAUG" title="LLRAUG">LLRAUG</a>.
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>The isotropic chemical shieldings are printed towards the end of the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file, after the self-consistent calculation has finished. The chemical shift tensors both before and after space group symmetrization. These are the absolute tensors for the infinite lattice, excluding core contributions. They can be searched for under the <code>UNSYMMETRIZED TENSORS</code> and <code>SYMMETRIZED TENSORS</code> after <code>Absolute Chemical Shift tensors</code>. Additionally, the magnetic susceptibility is printed shortly after and found under <code>ORBITAL MAGNETIC SUSCEPTIBILITY</code>. 
+</p>
+<p>To obtain the full absolute tensors requires adding both the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution and the contributions due to the core electrons. The latter consist of contributions for each chemical species separately (depending on <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>) and a global <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> susceptibility contribution.
+</p>
+<p>The reference shift experienced by the core is given first: 
+</p>
+<p>Finally the tensor is processed and its (CSA) characteristics are printed in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>. The tensor is symmetrized (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_{ij} = \sigma_{ji}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_{ij} = \sigma_{ji}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_{ij} = \sigma_{ji}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3a61f8c31469d9e135071770df6a626c&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.343ex; width: 8.707ex;"/></span> is enforced) and diagonalized. From the three diagonal values the isotropic chemical "shift" <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \delta_{\mathrm{iso}}\mathrm{[VASP]}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">o</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">V</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">P</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \delta_{\mathrm{iso}}\mathrm{[VASP]}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \delta_{\mathrm{iso}}\mathrm{[VASP]}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f6917429521d0a679398958403623439&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 10.847ex;"/></span>, span <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Omega}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Ω<!-- Ω --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Omega}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Omega}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2e9ef3d6ef62a48d70720728d3e90e31&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.678ex;"/></span> and skew <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> are calculated and printed see Ref. <sup class="reference" id="cite_ref-mason:ssn:1993_6-0"><a href="#cite_note-mason:ssn:1993-6">[6]</a></sup> for unambiguous definitions. Note that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> is ill-defined if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Omega = 0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Ω<!-- Ω --></mi>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Omega = 0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Omega = 0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f25352d90699ecd9964372e37b7ce41e&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 5.939ex;"/></span>. Units are ppm, except for the skew. A typical output is given below:
+</p>
+<p>The isotropic chemical shielding for each atom, excluding and including G=0 contributions, as well as the span and skew (descriptions of asymmetry), follow. Finally, core contributions are taken into account for the <code>ISO_SHIFT</code>, <code>SPAN</code>, and <code>SKEW</code>. 
+</p>
+<p>By default the orbital <b>magnetic susceptibility</b> is calculated using the so-called <i>pGv</i>-approximation, i.e. Eqs. 46-48 of Yates <i> et al.</i> <sup class="reference" id="cite_ref-yates:prb:2007_2-5"><a href="#cite_note-yates:prb:2007-2">[2]</a></sup>. As of vasp.6.4.0 also the <i>vGv</i>-approximation of the susceptibility is calculated. By default, the <i>pGv</i> result
+is applied for the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution to the shifts. With <a href="/wiki/index.php/LVGVAPPL" title="LVGVAPPL">LVGVAPPL</a> one can force VASP to use the <i>vGv</i> result for the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution instead. With <a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a> one can suppress calculation of the <i>vGv</i> susceptibility. For details see <a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a>.
+</p>
+<h2><span class="mw-headline" id="Advice_and_recommendations">Advice and recommendations</span></h2>
+<h3><span class="mw-headline" id="Input_parameters">Input parameters</span></h3>
+<ul><li>A larger <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> value than usual, generally much higher than the value given by ENMAX in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file, e.g. 800 eV for C.</li>
+<li>A small <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a> is typically required to provide converged chemical shifts, e.g. <code>1E-8</code> eV.</li>
+<li>Tighter precision, e.g. <a href="/wiki/index.php/PREC" title="PREC">PREC</a> = Accurate.</li></ul>
+<p>Two additional terms may make a difference depending on your system, which should be tested with and without to determine their importance: 
+</p>
+<ul><li>Non-spherical contributions to the gradient of the density inside PAW spheres, i.e. <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> = .TRUE.</li>
+<li>Occasionally, e.g. for systems containing H or first-row elements, and short bonds, the two-center contributions are important. In this case, <a href="/wiki/index.php/LLRAUG" title="LLRAUG">LLRAUG</a> = .TRUE. should be used <sup class="reference" id="cite_ref-dewijs:jcp:2013_8-0"><a href="#cite_note-dewijs:jcp:2013-8">[8]</a></sup><sup class="reference" id="cite_ref-dewijs:jcp:2021_9-0"><a href="#cite_note-dewijs:jcp:2021-9">[9]</a></sup>.</li></ul>
+<h3><span class="mw-headline" id="PAW_pseudopotentials">PAW pseudopotentials</span></h3>
+<p>No special <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files are necessary. The GIPAW is applied using the projectors functions and partial waves that are stored in the regular <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files. A few remarks, however, on accuracy in relation to the different <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> flavours:
+</p>
+<ul><li>Results sensitively depend on the quality, <i>i.e.</i>, completeness of the partial wave/projector function set in the energy range needed for good chemical transferability. Result obtained with different <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> flavours can differ a few ppm for first and second row <i>sp</i>-bonded elements (except for H).</li>
+<li>Use <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files generated with a consistent exchange-correlation functional. The PAW reconstruction with AE partial waves is crucial as the field on the nucleus needs to be calculated. So avoid, if possible, overriding <tt>LEXCH</tt> from <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> with an explicit <a href="/wiki/index.php/GGA" title="GGA">GGA</a>-tag in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>.</li></ul>
+<h3><span class="mw-headline" id="Insufficient_memory">Insufficient memory</span></h3>
+<p>In the case of insufficient memory, there are a few options. Speed has been favored over saving memory. Since the linear response calculation is parallel over <i>k</i>-points, this can be used to economize on memory:
+</p>
+<ul><li>First, do a regular self-consistent calculation at high accuracy for the full <i>k</i>-point mesh. Save the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file.</li>
+<li>Second, do a chemical shift calculation for each <i>k</i>-point in the IBZ separately, starting from <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>, <i>i.e.</i>, using <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11.</li>
+<li>Finally, calculate the shifts as a <i>k</i>-point weighted average of the symmetrized shifts of the individual <i>k</i>-points.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DQ" title="DQ">DQ</a>,
+<a href="/wiki/index.php/ICHIBARE" title="ICHIBARE">ICHIBARE</a>,
+<a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>,
+<a href="/wiki/index.php/NLSPLINE" title="NLSPLINE">NLSPLINE</a>,
+<a href="/wiki/index.php/LLRAUG" title="LLRAUG">LLRAUG</a>,
+<a href="/wiki/index.php/LBONE" title="LBONE">LBONE</a>,
+<a href="/wiki/index.php/LVGVCALC" title="LVGVCALC">LVGVCALC</a>,
+<a href="/wiki/index.php/LVGVAPPL" title="LVGVAPPL">LVGVAPPL</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LCHIMAG%22_incategory:%22Examples%22" title='Special:Search/"LCHIMAG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,37 @@
+<p><a class="mw-selflink selflink">NBMOD</a> = -3 | -2 | -1 | 0 | [positive integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBMOD</a> controls how bands are selected when computing <a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">partial charge densities</a>. 
+</p>
+<p><a class="mw-selflink selflink">NBMOD</a> is used with other tags to define the mode of band selection for partial charge densities in <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>, <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>, or <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> files. There are several ways to set this tag. 
+</p>
+<ul><li><a class="mw-selflink selflink">NBMOD</a> = n: Use n bands</li></ul>
+<ul><li><a class="mw-selflink selflink">NBMOD</a> = 0: Use all bands</li></ul>
+<ul><li><a class="mw-selflink selflink">NBMOD</a> = -1: Use all occupied bands</li></ul>
+<ul><li><a class="mw-selflink selflink">NBMOD</a> = -2: Use an absolute energy interval to select contributing bands</li></ul>
+<ul><li><a class="mw-selflink selflink">NBMOD</a> = -3: Use an energy interval to select contributing bands and add the Fermi energy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \epsilon_f}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mi>f</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \epsilon_f}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \epsilon_f}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1f36ebce3eaac0caabf2ddde80878f26&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.343ex; width: 2.08ex;"/></span> to the passed values</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a>,
+<a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>,
+<a href="/wiki/index.php/EINT" title="EINT">EINT</a>,
+<a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>,
+<a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>,
+<a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>,
+<a href="/wiki/index.php/LPARDH5" title="LPARDH5">LPARDH5</a>,
+<a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>,
+<a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>,
+<a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">Band-decomposed charge densities</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBMOD%22_incategory:%22Examples%22" title='Special:Search/"NBMOD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

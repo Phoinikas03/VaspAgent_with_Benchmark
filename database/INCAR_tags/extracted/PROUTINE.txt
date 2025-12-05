@@ -1,0 +1,8 @@
+<p><a class="mw-selflink selflink">PROUTINE</a> = [integer] 
+</p>
+<p>Description: Control flag for the output of the profiling routines.
+</p>
+<p>If specified only the routine with the name <a class="mw-selflink selflink">PROUTINE</a>=<i>routine</i> is taken into account.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PROUTINE%22_incategory:%22Examples%22" title='Special:Search/"PROUTINE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

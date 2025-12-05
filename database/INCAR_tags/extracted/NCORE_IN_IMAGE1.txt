@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">NCORE_IN_IMAGE1</a> = [integer]<br/> Default: <b>NCORE_IN_IMAGE1</b> = 0 
+</p>
+<p>Description: This tag specifies the number of cores in the first image.
+</p>
+<p>This tag works for two images, specifically, if <a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">VCAIMAGES</a> is set (this also sets <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>=2).
+<a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">VCAIMAGES</a> splits the available cores into two groups both working independently in the subdirectories
+01 and 02.
+The tag <a class="mw-selflink selflink">NCORE_IN_IMAGE1</a> defines how many of cores are used for the first image (01). The remainder of the cores is used for the second image (working in the subdirectory 02).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">VCAIMAGES</a>, <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>, <a href="/wiki/index.php/SCALEE" title="SCALEE">SCALEE</a>
+</p>

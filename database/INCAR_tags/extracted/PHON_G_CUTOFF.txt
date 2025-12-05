@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">PHON_G_CUTOFF</a> =  [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">PHON_G_CUTOFF</a> sets the cutoff radius in reciprocal space used to determine the number of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=527acb137a08b95c9f663e8d60297de7&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.101ex;"/></span> vectors involved in the Ewald sum in polar phonon calculations.
+</p>
+<p>The Ewald sum that accounts for the long-range electrostatic interactions in phonon calculations runs over all G-vectors inside a cutoff sphere.
+The radius of this sphere is given by <a class="mw-selflink selflink">PHON_G_CUTOFF</a> as a multiple of the longest reciprocal lattice vector of the primitive cell (as detected by VASP).
+Specifying the cutoff this way (as opposed to an absolute length or energy) ensures a default value that is relatively system-independent.
+</p>
+<p>The default value of <a class="mw-selflink selflink">PHON_G_CUTOFF</a> is a safe choice in most cases.
+Lowering <a class="mw-selflink selflink">PHON_G_CUTOFF</a> can result in faster phonon calculations.
+However, ensure that the phonon spectrum is properly converged.
+If you run into convergence problems, try raising the value until the phonon dispersion converges.
+</p>
+<p>For more information on polar phonon calculations, see <a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/LPHON_DISPERSION" title="LPHON DISPERSION">LPHON_DISPERSION</a>,
+<a href="/wiki/index.php/PHON_NWRITE" title="PHON NWRITE">PHON_NWRITE</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PHON_G_CUTOFF%22_incategory:%22Examples%22" title='Special:Search/"PHON G CUTOFF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

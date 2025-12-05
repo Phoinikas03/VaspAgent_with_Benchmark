@@ -1,0 +1,855 @@
+<p><a class="mw-selflink selflink">ML_LHEAT</a> = [logical]<br/> Default: <b>ML_LHEAT</b> = .FALSE. 
+</p>
+<p>Description: This tag specifies whether the heat flux is calculated or not in the machine learning force field method.
+</p>
+<p>The heat flux within machine learning force fields is decomposed into atomic contributions written as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \frac{d}{dt} \left( \mathbf{r}_{i} E_{i} \right),
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \frac{d}{dt} \left( \mathbf{r}_{i} E_{i} \right),
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \frac{d}{dt} \left( \mathbf{r}_{i} E_{i} \right),
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61ea68d2f9559abc8dee8f9a99617d4a&amp;mode=mathml" style="vertical-align: -3.005ex; height: 7.343ex; width: 21.057ex;"/></span>
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+E_{i}=\frac{m_{i} \left|\mathbf{v}_{i} \right|^{2}}{2} + U_{i}
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msup>
+<mrow>
+<mo>|</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>+</mo>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+E_{i}=\frac{m_{i} \left|\mathbf{v}_{i} \right|^{2}}{2} + U_{i}
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+E_{i}=\frac{m_{i} \left|\mathbf{v}_{i} \right|^{2}}{2} + U_{i}
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e53ba9a1a60801ddfc6f18ec982687d2&amp;mode=mathml" style="vertical-align: -1.838ex; height: 6.009ex; width: 19.076ex;"/></span>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{r}_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{r}_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{r}_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2668507a9c768c2e7d0cc92e11596c26&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 1.902ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{v}_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{v}_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{v}_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f33c3aed9bd00d1d1fad03b26d1f4fd2&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.211ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=82deb5e05e05a48f33fea4dd071e001d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.515ex;"/></span> denote the position vector, velocity and energy of atom <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span>, respectively. The number of atoms in the system is denoted by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{a}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{a}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{a}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=48e9b1fb9472180b4ecea4ff24c56487&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.968ex;"/></span>. The heat flux can be further rewritten as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \mathbf{r}_{i} \left( m_{i} \mathbf{v}_{i} \cdot \frac{d\mathbf{v}_{i}}{dt} + \sum\limits_{j=1}^{N_{a}} \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>+</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mfrac>
+<mo>+</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \mathbf{r}_{i} \left( m_{i} \mathbf{v}_{i} \cdot \frac{d\mathbf{v}_{i}}{dt} + \sum\limits_{j=1}^{N_{a}} \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \mathbf{r}_{i} \left( m_{i} \mathbf{v}_{i} \cdot \frac{d\mathbf{v}_{i}}{dt} + \sum\limits_{j=1}^{N_{a}} \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=84728ee257ad00b044cc89de22677886&amp;mode=mathml" style="vertical-align: -3.338ex; height: 7.676ex; width: 56.025ex;"/></span>
+</p>
+<p>Using the equation of motions
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+m_{i} \frac{d \mathbf{v}_{i}}{dt} = - \sum\limits_{j=1}^{N_{a}} \nabla_{i} U_{j}
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mfrac>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+m_{i} \frac{d \mathbf{v}_{i}}{dt} = - \sum\limits_{j=1}^{N_{a}} \nabla_{i} U_{j}
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+m_{i} \frac{d \mathbf{v}_{i}}{dt} = - \sum\limits_{j=1}^{N_{a}} \nabla_{i} U_{j}
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e748333ade1367729664788deadea45d&amp;mode=mathml" style="vertical-align: -3.338ex; height: 7.676ex; width: 21.371ex;"/></span>
+</p>
+<p>the heat flux can be simplified to
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} - \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{i} \cdot \nabla_{i} U_{j} \right) + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \left( \mathbf{r}_{i} - \mathbf{r}_{j} \right) \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>+</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">v</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} - \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{i} \cdot \nabla_{i} U_{j} \right) + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \left( \mathbf{r}_{i} - \mathbf{r}_{j} \right) \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\mathbf{q}(t) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} - \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{i} \cdot \nabla_{i} U_{j} \right) + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \mathbf{r}_{i} \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right) = \sum\limits_{i=1}^{N_{a}} \mathbf{v}_{i} E_{i} + \sum\limits_{i=1}^{N_{a}} \sum\limits_{j=1}^{N_{a}} \left( \mathbf{r}_{i} - \mathbf{r}_{j} \right) \left( \mathbf{v}_{j} \cdot \nabla_{j} U_{i} \right). 
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=709ba0d5701d88c15f130c7455112498&amp;mode=mathml" style="vertical-align: -3.338ex; height: 7.676ex; width: 105.748ex;"/></span>
+</p>
+<p>Finally (in a post-processing step), the thermal conductivity at temperature <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b9ece18c950afbfa6b0fdbfa4ff731d3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.636ex;"/></span> in the Green-Kubo formalism can be calculated from the correlation of the heat flux <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{q}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{q}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{q}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f7a0cb4a478010e6d3f9adbc28eeedf1&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 1.416ex;"/></span> as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\kappa = \frac{1}{3Vk_{b}T^{2}} \int\limits_{0}^{\infty} \langle \mathbf{q}(t) \cdot \mathbf{q}(0) \rangle dt,
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>3</mn>
+<mi>V</mi>
+<msub>
+<mi>k</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>b</mi>
+</mrow>
+</msub>
+<msup>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<munderover>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</munderover>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>⋅<!-- ⋅ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo stretchy="false">)</mo>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mi>d</mi>
+<mi>t</mi>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\kappa = \frac{1}{3Vk_{b}T^{2}} \int\limits_{0}^{\infty} \langle \mathbf{q}(t) \cdot \mathbf{q}(0) \rangle dt,
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\kappa = \frac{1}{3Vk_{b}T^{2}} \int\limits_{0}^{\infty} \langle \mathbf{q}(t) \cdot \mathbf{q}(0) \rangle dt,
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c7b26b1e2e85d1f51d74000135153cc6&amp;mode=mathml" style="vertical-align: -4.005ex; height: 8.843ex; width: 30.68ex;"/></span>
+</p>
+<p><br/>
+where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>V</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5206560a306a2e085a437fd258eb57ce&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.787ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle k_{b}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>k</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>b</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle k_{b}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle k_{b}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fd9c0ea4b72b6ddc3af49a3b6329fbaf&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.149ex;"/></span> denotes the volume of the system and the Boltzmann constant, respectively.
+</p>
+<p><br/>
+</p>
+<p>The heat flux is written to the file <a href="/wiki/index.php/ML_HEAT" title="ML HEAT">ML_HEAT</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LEATOM" title="ML LEATOM">ML_LEATOM</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LHEAT%22_incategory:%22Examples%22" title='Special:Search/"ML LHEAT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

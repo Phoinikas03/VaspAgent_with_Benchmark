@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">LWRITE_SPN</a> = .TRUE. | .FALSE.<br/> Default: <b>LWRITE_SPN</b> = .FALSE. 
+</p>
+<p>Description: Write <b>wannier90.spn</b> file for noncollinear calculations.
+</p>
+<p>For noncollinear calculations (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T using vasp_ncl) the <b>wannier90.spn</b> file is written when 
+</p>
+<p>The file is formatted, and the appropriate line (<code>spn_formatted = .true.</code>) is automatically added to the <b>wannier90.win</b> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWRITE_UNK" title="LWRITE UNK">LWRITE_UNK</a>,
+<a href="/wiki/index.php/LWRITE_MMN_AMN" title="LWRITE MMN AMN">LWRITE_MMN_AMN</a>,
+<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>,
+<a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWANNIER90%22_incategory:%22Examples%22" title='Special:Search/"LWANNIER90" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">IRC_DIRECTION</a> = -1 | 1<br/> Default: <b>IRC_DIRECTION</b> =  1 
+</p>
+<p>Description: Defines the direction of the initial displacement of the initial transition-state structure in <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>. 
+</p>
+<p>Defines the direction of the initial displacement of the initial transition-state structure along the unstable direction (corresponding to Hesse matrix eigenmode with negative force constant) used in <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>. Only the values 1 and -1 are allowed, corresponding to the parallel and the antiparallel directions, respectively.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a href="/wiki/index.php/IRC_STOP" title="IRC STOP">IRC_STOP</a>,
+<a href="/wiki/index.php/IRC_DELTA0" title="IRC DELTA0">IRC_DELTA0</a>,
+<a href="/wiki/index.php/IRC_MINSTEP" title="IRC MINSTEP">IRC_MINSTEP</a>,
+<a href="/wiki/index.php/IRC_MAXSTEP" title="IRC MAXSTEP">IRC_MAXSTEP</a>,
+<a href="/wiki/index.php/IRC_VNORM0" title="IRC VNORM0">IRC_VNORM0</a>
+</p>

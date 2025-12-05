@@ -1,0 +1,23 @@
+<p><br/>
+<a class="mw-selflink selflink">QUAD_EFG</a> = [real array]<br/> Default: <b>QUAD_EFG</b> = NTYP*1.0 
+</p>
+<p>Description: nuclear quadrupole moment (in millbarn) for the atomic types on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file.
+</p>
+<p>Setting the <a class="mw-selflink selflink">QUAD_EFG</a>-tag allows the conversion of the <i>V</i><sub>zz</sub> (see <a href="/wiki/index.php/LEFG" title="LEFG">LEFG</a>) values into the quadrupole coupling constants <i>C</i><sub>q</sub> often encountered in NMR literature.
+The conversion formula is as follows (<i>Q</i> is the element and isotope specific quadrupole moment):
+</p>
+<p>The <a class="mw-selflink selflink">QUAD_EFG</a>-tag specifies the nuclear quadrupole moment in millibarns for each atomic species, in the same
+order as in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file. The output <i>C</i><sub>q</sub> is in MHz. An online compilation of nuclear quadrupole moments can be found <a class="external text" href="http://www.chem.helsinki.fi/~pyykko/Q2008.pdf" rel="nofollow">here</a> or in Ref. <sup class="reference" id="cite_ref-pyykko:molphys:2008_1-0"><a href="#cite_note-pyykko:molphys:2008-1">[1]</a></sup> (updated numbers in Ref. <sup class="reference" id="cite_ref-pyykko:molphys:2017_2-0"><a href="#cite_note-pyykko:molphys:2017-2">[2]</a></sup>).
+</p>
+<p>Suppose a solid contains Al, C, and Si, then the <a class="mw-selflink selflink">QUAD_EFG</a>-tag could read:
+</p>
+<p><sup>27</sup>Al is the stable isotope of Al with a natural abundance of 100% and <i>Q</i>=146.6.
+The stable isotopes <sup>12</sup>C and <sup>13</sup>C are not quadrupolar nuclei, however, the radioactive
+<sup>11</sup>C is. It has <i>Q</i>=33.27. For Si, all stable isotopes have I≤1/2, making it redundant to calculate a <i>C</i><sub>q</sub>. No moments are known for the other isotopes.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LEFG" title="LEFG">LEFG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22QUAD_EFG%22_incategory:%22Examples%22" title='Special:Search/"QUAD EFG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

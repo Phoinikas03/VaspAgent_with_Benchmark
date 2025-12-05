@@ -1,0 +1,48 @@
+<p><a class="mw-selflink selflink">RWIGS</a> = [real array]<br/> Default: <b>RWIGS</b> = -1 
+</p>
+<p>Description: <a class="mw-selflink selflink">RWIGS</a> specifies the Wigner-Seitz radius (in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>) for each atom type.
+</p>
+<ul><li><a class="mw-selflink selflink">RWIGS</a> <i>has</i> to be supplied for each atom type if <a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a> is set to &lt;10. In this case,  the <i>spd</i>- and site projected wave function character of each band is evaluated, and the local partial DOS (see sections <a href="/wiki/index.php/PROCAR" title="PROCAR">PROCAR</a> and <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>) and local magnetic moments are calculated.</li></ul>
+<ul><li>If  <a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a> &gt;= 10, <a class="mw-selflink selflink">RWIGS</a> is ignored</li></ul>
+<ul><li><a class="mw-selflink selflink">RWIGS</a> <i>must</i>  be set in calculations with constraining the local magnetic moments (see <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>)</li></ul>
+<p>For <b>mono-atomic systems</b> <a class="mw-selflink selflink">RWIGS</a> can be defined
+unambiguously. The sum of the volume of the spheres around each atom should be
+the same as the total volume of the cell (assuming that you do not have a
+vacuum region within your cell).  This is in the spirit of atomic sphere calculations.
+VASP writes a line
+</p>
+<p>to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. You should use a <a class="mw-selflink selflink">RWIGS</a> value which yields a
+volume of approximately 100%.
+</p>
+<p>For systems consisting of <b>more than one atom type</b>, there is no unambiguous way to define <a class="mw-selflink selflink">RWIGS</a> and
+several choices are possible.  In all cases, the sum of
+the volume of the spheres should be close to the total
+volume of the cell (i.e the sum of the values given by VASP should be
+around 100%).
+</p>
+<ul><li>One possible choice is to set <a class="mw-selflink selflink">RWIGS</a> such that the overlap between the spheres is minimized.</li></ul>
+<ul><li>a more elaborate way is to apply a Bader-type charge analysis to estimate the radius of an atom in a specific compound.</li></ul>
+<ul><li>in most cases, it is simplest to choose the radius of each sphere such that they are close to the covalent radius as tabulated in most periodic tables. This simple criterion can be used in most cases, and it relies at least on some ``physical intuition<i>.</i></li></ul>
+<p>Please keep in mind that results are <b>qualitative</b> i.e. there is no unambiguous way to determine the location of an electron
+(and hence the local magnetic moments). With the current implementation, it is for instance
+hardly possible to determine charge transfer. What can be derived from the partial DOS is the typical character of a peak in a DOS.
+Quantitative results can be obtained only by careful comparison with a reference system  (e.g. bulk versus surface).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a>,
+<a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>,
+<a href="/wiki/index.php/Spin_spirals" title="Spin spirals">Spin spirals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22RWIGS%22_incategory:%22Examples%22" title='Special:Search/"RWIGS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

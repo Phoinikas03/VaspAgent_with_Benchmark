@@ -1,0 +1,85 @@
+<p><a class="mw-selflink selflink">PARAM2</a> = [real]<br/> Default: <b>PARAM2</b> = 1.0 
+</p>
+<p>Description: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> for <a href="/wiki/index.php/GGA" title="GGA">GGA</a>=MK, or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> for <a href="/wiki/index.php/GGA" title="GGA">GGA</a>=BO.
+</p>
+<p>The <a class="mw-selflink selflink">PARAM2</a> tag determines the value corresponding to different parameters depending on the <a href="/wiki/index.php/GGA" title="GGA">GGA</a> functional that is chosen:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> in the optB86b<sup class="reference" id="cite_ref-klimes:prb:2011_1-0"><a href="#cite_note-klimes:prb:2011-1">[1]</a></sup> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> is not shown in this work since implicitly set to 1.0), B86R<sup class="reference" id="cite_ref-hamada:prb:2014_2-0"><a href="#cite_note-hamada:prb:2014-2">[2]</a></sup>, and DF3-opt2<sup class="reference" id="cite_ref-chakraborty:jctc:2020_3-0"><a href="#cite_note-chakraborty:jctc:2020-3">[3]</a></sup> exchange functionals, which have the same analytical form and correspond to <a href="/wiki/index.php/GGA" title="GGA">GGA</a>=MK. <a class="mw-selflink selflink">PARAM2</a> should in principle be set to 1.0 for the nonlocal optB86b-vdW functional<sup class="reference" id="cite_ref-klimes:prb:2011_1-1"><a href="#cite_note-klimes:prb:2011-1">[1]</a></sup>, to 0.711357 for the nonlocal rev-vdW-DF2<sup class="reference" id="cite_ref-hamada:prb:2014_2-1"><a href="#cite_note-hamada:prb:2014-2">[2]</a></sup> functional, or to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 0.58}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>0.58</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 0.58}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 0.58}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=237948a6273348f192e40fd34740354c&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 4.134ex;"/></span> for the vdW-DF3-opt2 nonlocal functional<sup class="reference" id="cite_ref-chakraborty:jctc:2020_3-1"><a href="#cite_note-chakraborty:jctc:2020-3">[3]</a></sup>.</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> in the optB88<sup class="reference" id="cite_ref-klimes:jpcm:2010_4-0"><a href="#cite_note-klimes:jpcm:2010-4">[4]</a></sup> and DF3-opt1<sup class="reference" id="cite_ref-chakraborty:jctc:2020_3-2"><a href="#cite_note-chakraborty:jctc:2020-3">[3]</a></sup> exchange functionals, which have the same analytical form and correspond to <a href="/wiki/index.php/GGA" title="GGA">GGA</a>=BO. <a class="mw-selflink selflink">PARAM2</a> should in principle be set to 0.22 for the nonlocal optB88-vdW functional<sup class="reference" id="cite_ref-klimes:jpcm:2010_4-1"><a href="#cite_note-klimes:jpcm:2010-4">[4]</a></sup> or to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 10/81\approx0.1234568}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>81</mn>
+<mo>≈<!-- ≈ --></mo>
+<mn>0.1234568</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 10/81\approx0.1234568}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 10/81\approx0.1234568}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b8891731125d42d2d745875b08f7339d&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 18.857ex;"/></span> for the vdW-DF3-opt1<sup class="reference" id="cite_ref-chakraborty:jctc:2020_3-3"><a href="#cite_note-chakraborty:jctc:2020-3">[3]</a></sup> nonlocal functional.</li></ul>
+<p>The complete <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file for the nonlocal van der Waals functionals mentioned above can be found at <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PARAM1" title="PARAM1">PARAM1</a>, <a href="/wiki/index.php/GGA" title="GGA">GGA</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PARAM2%22_incategory:%22Examples%22" title='Special:Search/"PARAM2" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

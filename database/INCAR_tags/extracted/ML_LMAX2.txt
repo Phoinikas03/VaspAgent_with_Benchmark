@@ -1,0 +1,318 @@
+<p><a class="mw-selflink selflink">ML_LMAX2</a> = [integer] 
+</p>
+<p>Description: This tag specifies the maximum angular momentum quantum number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle L_\max}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>L</mi>
+<mo form="prefix" movablelimits="true">max</mo>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle L_\max}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle L_\max}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0a3ba59c2c8365859475f9f7b8af1d80&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.874ex;"/></span> of spherical harmonics used to expand atomic distributions within the machine learning force field method.
+</p>
+<p>To construct an atomic environment descriptor the atomic probability density
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho_{i}\left(\mathbf{r}\right) = \sum\limits_{j=1}^{N_{\mathrm{a}}} f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right),
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">a</mi>
+</mrow>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<msub>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>)</mo>
+</mrow>
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho_{i}\left(\mathbf{r}\right) = \sum\limits_{j=1}^{N_{\mathrm{a}}} f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right),
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho_{i}\left(\mathbf{r}\right) = \sum\limits_{j=1}^{N_{\mathrm{a}}} f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right),
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=075ef306eb98fce834149151240dc660&amp;mode=mathml" style="vertical-align: -3.338ex; height: 7.676ex; width: 31.773ex;"/></span>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g\left(\mathbf{r}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g\left(\mathbf{r}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g\left(\mathbf{r}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a3a21ffaf3d6fa2e9bef79efc6360523&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.414ex;"/></span> is an approximation of the delta function, is expanded in terms of radial basis functions <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{nl}(r)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>r</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{nl}(r)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{nl}(r)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2937862f88b77016f4e065ed3a7e5bec&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 6.022ex;"/></span> and spherical harmonics <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y_{lm}\left(\hat{\mathbf{r}}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y_{lm}\left(\hat{\mathbf{r}}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle Y_{lm}\left(\hat{\mathbf{r}}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ef5b313e10a5c5b7db020673293f5aab&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 6.875ex;"/></span> (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Basis_set_expansion" title="Machine learning force field: Theory">this section</a> for more details):
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho_{i} \left( \mathbf{r} \right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{m=-l}^{l} \sum\limits_{n=1}^{N^{l}_{ \mathrm{R}}} c_{nlm}^{i}\chi_{nl} \left( r \right) Y_{lm} \left( \hat{\mathbf{r}} \right),
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>L</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">x</mi>
+</mrow>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">R</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msubsup>
+</mrow>
+</munderover>
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msubsup>
+<msub>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mi>r</mi>
+<mo>)</mo>
+</mrow>
+<msub>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho_{i} \left( \mathbf{r} \right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{m=-l}^{l} \sum\limits_{n=1}^{N^{l}_{ \mathrm{R}}} c_{nlm}^{i}\chi_{nl} \left( r \right) Y_{lm} \left( \hat{\mathbf{r}} \right),
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho_{i} \left( \mathbf{r} \right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{m=-l}^{l} \sum\limits_{n=1}^{N^{l}_{ \mathrm{R}}} c_{nlm}^{i}\chi_{nl} \left( r \right) Y_{lm} \left( \hat{\mathbf{r}} \right),
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ae7c261f444d84b3256144f53a164700&amp;mode=mathml" style="vertical-align: -3.171ex; height: 8.343ex; width: 40.035ex;"/></span>
+</p>
+<p>The tag <a class="mw-selflink selflink">ML_LMAX2</a> specifies the maximum angular momentum quantum number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle L_\max}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>L</mi>
+<mo form="prefix" movablelimits="true">max</mo>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle L_\max}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle L_\max}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0a3ba59c2c8365859475f9f7b8af1d80&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.874ex;"/></span> of spherical harmonics used in this expansion.
+</p>
+<p>By default an angular filtering (see <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a> and <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>) with a filtering parameter of <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>=0.002 is used where a value of <a class="mw-selflink selflink">ML_LMAX2</a>=3 is perfectly safe for most applications. If you need to improve the accuracy, you might also try to increase it to <a class="mw-selflink selflink">ML_LMAX2</a>=4. If the angular filter is switched off, we recommend to use a value of <a class="mw-selflink selflink">ML_LMAX2</a>=6 (this is then the default value).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MRB1" title="ML MRB1">ML_MRB1</a>, <a href="/wiki/index.php/ML_MRB2" title="ML MRB2">ML_MRB2</a>, <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a>, <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>, <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LMAX2%22_incategory:%22Examples%22" title='Special:Search/"ML LMAX2" incategory:"Examples"'>Examples that use this tag</a>
+</p>

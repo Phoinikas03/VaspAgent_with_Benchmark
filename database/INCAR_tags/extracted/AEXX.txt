@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">AEXX</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">AEXX</a> specifies the fraction of exact exchange in a Hartree-Fock-type/hybrid-functional calculation.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22AEXX%22_incategory:%22Examples%22" title='Special:Search/"AEXX" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>

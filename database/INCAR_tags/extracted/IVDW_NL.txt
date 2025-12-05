@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">IVDW_NL</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">IVDW_NL</a> allows to select the kernel of the nonlocal van der Waals part of a functional (available as of VASP.6.4.0).
+</p>
+<p><a class="mw-selflink selflink">IVDW_NL</a>=1 corresponds to the kernel of Dion <i>et al.</i><sup class="reference" id="cite_ref-dion:prl:2004_1-0"><a href="#cite_note-dion:prl:2004-1">[1]</a></sup> and <a class="mw-selflink selflink">IVDW_NL</a>=2 to the kernel rVV10<sup class="reference" id="cite_ref-sabatini:prb:2013_2-0"><a href="#cite_note-sabatini:prb:2013-2">[2]</a></sup>. Note that the kernel of Dion <i>et al.</i> contains one adjustable parameter (<a href="/wiki/index.php/ZAB_VDW" title="ZAB VDW">ZAB_VDW</a>), while the rVV10 kernel contains two such parameters (<a href="/wiki/index.php/BPARAM" title="BPARAM">BPARAM</a> and <a href="/wiki/index.php/CPARAM" title="CPARAM">CPARAM</a>).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/GGA" title="GGA">GGA</a>, <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>, <a href="/wiki/index.php/LUSE_VDW" title="LUSE VDW">LUSE_VDW</a>, <a href="/wiki/index.php/ZAB_VDW" title="ZAB VDW">ZAB_VDW</a>, <a href="/wiki/index.php/BPARAM" title="BPARAM">BPARAM</a>, <a href="/wiki/index.php/CPARAM" title="CPARAM">CPARAM</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IVDW_NL%22_incategory:%22Examples%22" title='Special:Search/"IVDW NL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

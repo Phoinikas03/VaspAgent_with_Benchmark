@@ -1,0 +1,18 @@
+<p><br/>
+<a class="mw-selflink selflink">WANNIER90_WIN</a> = [string] 
+</p>
+<p>Description: <a class="mw-selflink selflink">WANNIER90_WIN</a> sets the content of the <b>wannier90.win</b> file.
+</p>
+<p>The <a class="mw-selflink selflink">WANNIER90_WIN</a> tag is a multiline string, where the content of the <b>wannier90.win</b> file can be specified. For instance,
+</p>
+<p>Additionally, the value of some <a class="external text" href="https://github.com/wannier-developers/wannier90/raw/v3.1.0/doc/compiled_docs/user_guide.pdf" rel="nofollow">Wannier90 tags</a>  is set automatically based on the VASP calculation, e.g., <i>kpoints</i>, <i>atoms</i>, <i>unit_cell</i>, <i>mp_grid</i>, <i>spinors</i>, <i>num_bands</i>, <i>num_wann</i>. 
+</p>
+<p>Available as of VASP 6.2.0.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a>,
+<a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22WANNIER90_WIN%22_incategory:%22Examples%22" title='Special:Search/"WANNIER90 WIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

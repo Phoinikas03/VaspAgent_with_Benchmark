@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">LANGEVIN_GAMMA_L</a> = [Real]<br/> Default: <b>LANGEVIN_GAMMA_L</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">LANGEVIN_GAMMA_L</a> specifies the friction coefficient (in ps<sup>-1</sup>) for lattice degrees-of-freedom in case of Parrinello-Rahman dynamics (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>When running <i>NpT</i> simulations with a <a href="/wiki/index.php/MDALGO#LangevinEOM" title="MDALGO">Langevin thermostat</a><sup class="reference" id="cite_ref-Allen91_1-0"><a href="#cite_note-Allen91-1">[1]</a></sup> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=3), using the method of <a href="/wiki/index.php/MDALGO#ParrinelloRahman" title="MDALGO">Parrinello and Rahman</a>,<sup class="reference" id="cite_ref-Parrinello80_2-0"><a href="#cite_note-Parrinello80-2">[2]</a></sup><sup class="reference" id="cite_ref-Parrinello81_3-0"><a href="#cite_note-Parrinello81-3">[3]</a></sup> the friction coefficient for lattice degrees-of-freedom have to be specified (in ps<sup>-1</sup>) by means of the <a class="mw-selflink selflink">LANGEVIN_GAMMA_L</a>-tag.
+A fictitious mass for the lattice degrees-of-freedom has to be assigned using the <a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a> tag.
+</p>
+<p>The friction coefficients γ for the atomic degrees-of-freedom are specified using the <a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>-tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>,
+<a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LANGEVIN_GAMMA_L%22_incategory:%22Examples%22" title='Special:Search/"LANGEVIN GAMMA L" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

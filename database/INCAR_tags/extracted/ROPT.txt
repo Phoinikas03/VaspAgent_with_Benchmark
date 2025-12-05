@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">ROPT</a> = [real array], one entry for each species on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file 
+</p>
+<p><br/>
+Description: <a class="mw-selflink selflink">ROPT</a> determines how accurately the projectors are represented in real space. With <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=On, the real space projectors are optimized using an algorithm proposed by King-Smith et al.<sup class="reference" id="cite_ref-king-smith:prb:1991_1-0"><a href="#cite_note-king-smith:prb:1991-1">[1]</a></sup> <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=Auto<sup class="reference" id="cite_ref-kresse:tobepublished_2-0"><a href="#cite_note-kresse:tobepublished-2">[2]</a></sup> is the recommended scheme since it is considerably more accurate, resulting in more localized projector functions than with the King-Smith et al. method.
+</p>
+<p><br/>
+</p>
+<p>Depending on their value, VASP interprets <a class="mw-selflink selflink">ROPT</a> entries in one of two ways:
+</p>
+<ul><li>ABS|<a class="mw-selflink selflink">ROPT</a>| ≥ 0.1: "conventional"-mode:</li></ul>
+<ul><li>ABS|<a class="mw-selflink selflink">ROPT</a>| &lt; 0.1 : "precision"-mode:</li></ul>
+<p>The "precision" and "conventional" modes may be intermixed, i.e., it is possible to specify
+</p>
+<p>In this case, the number of real space points within the cutoff sphere for the first species will be approximately 700, whereas the real space projector functions for the second species are optimized for an accuracy of approximately 1 meV. We recommend to use the "precision" mode with a target accuracy of around 2x10<sup>-4</sup> - 10<sup>-3</sup> eV/atom.
+</p>
+<p>If you use the "conventional" mode, in which the number of grid points in the real space projection sphere is specified, you have to select <a class="mw-selflink selflink">ROPT</a> carefully, especially if a hard species is mixed with a soft species. In that case the following lines in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file must be checked (here is the output for <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=Auto, however, the one for <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=On is quite similar)
+</p>
+<p><a class="new" href="/wiki/index.php?title=QCUT&amp;action=edit&amp;redlink=1" title="QCUT (page does not exist)">QCUT</a> and <a class="new" href="/wiki/index.php?title=QGAM&amp;action=edit&amp;redlink=1" title="QGAM (page does not exist)">QGAM</a> are parameters chosen for the generation of this particular PAW dataset (or ultrasoft pseudopotential). The most important information is given in the columns <tt>W(low)/X(q)</tt> and <tt>W(high)/X(q)</tt> for <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=Auto). In these columns, the values  must be as small as possible. If these values are too large increase the <a class="mw-selflink selflink">ROPT</a> value from the default value (or decrease it if it smaller than 0.1). As a rule of thumb, the maximum allowed value in this column is 10<sup>-3</sup> for <a href="/wiki/index.php/PREC" title="PREC">PREC</a>=Normal. (For <a href="/wiki/index.php/PREC" title="PREC">PREC</a>=Low errors might be around 10<sup>-2</sup>. If W(q)/X(q) is larger than 10<sup>-2</sup> the errors introduced by the real space projections can be substantial. In this case <a class="mw-selflink selflink">ROPT</a> must be specified in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file to avoid incorrect results. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ROPT%22_incategory:%22Examples%22" title='Special:Search/"ROPT" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

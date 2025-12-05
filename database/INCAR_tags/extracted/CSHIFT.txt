@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">CSHIFT</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">CSHIFT</a> sets a Lorentzian broadening in eV of the dielectric tensor via the complex shift η in the <a href="/wiki/index.php/LOPTICS#kramerskronig" title="LOPTICS">Kramers-Kronig transformation</a> of the response function.
+</p>
+<p>The default <a class="mw-selflink selflink">CSHIFT</a>=0.1 is perfectly acceptable for most calculations and causes a slight smoothing of the real part of the dielectric function. If the gap is very small (i.e. approaching two times <a class="mw-selflink selflink">CSHIFT</a>), slight inaccuracies in the static dielectric constant are possible, which can be remedied by decreasing <a class="mw-selflink selflink">CSHIFT</a>. If <a class="mw-selflink selflink">CSHIFT</a> is further decreased, it is strongly recommended to increase the frequency grid by setting <a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a> to values around 2000.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OMEGAMIN" title="OMEGAMIN">OMEGAMIN</a>,
+<a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>,
+<a href="/wiki/index.php/Special:Search/%22CSHIFT%22_incategory:%22Examples%22" title='Special:Search/"CSHIFT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

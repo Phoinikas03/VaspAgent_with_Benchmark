@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">LTHOMAS</a> = .TRUE. | .FALSE.<br/> Default: <b>LTHOMAS</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LTHOMAS</a> selects a decomposition of the exchange functional based on Thomas-Fermi exponential screening.
+</p>
+<p>If <a class="mw-selflink selflink">LTHOMAS</a>=.TRUE. the decomposition of the exchange operator (in a <a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">range-separated hybrid functional</a>) into a short range and a long range part will be based on Thomas-Fermi exponential screening.
+The Thomas-Fermi screening length <i>k</i><sub>TF</sub> is specified by means of the <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> tag.
+</p>
+<p>For typical semiconductors, a Thomas-Fermi screening length of about 1.8 Å<sup>-1</sup> yields reasonable band gaps. In principle, however, the Thomas-Fermi screening length depends on the valence electron density; VASP determines this parameter from the number of valence electrons (read from the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file) and the volume and writes the corresponding value to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file:
+</p>
+<p>Since, VASP counts the semi-core states and <i>d</i>-states as valence electrons, although these states do not contribute to the screening, the values reported by VASP are often incorrect.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>,
+<a href="/wiki/index.php/LRHFCALC" title="LRHFCALC">LRHFCALC</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism#Thomas-Fermi_exponential_screening_with_short-range_Hartree-Fock_exchange" title="Hybrid functionals: formalism">Thomas-Fermi screening</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LTHOMAS%22_incategory:%22Examples%22" title='Special:Search/"LTHOMAS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

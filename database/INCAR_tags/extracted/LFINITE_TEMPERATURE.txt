@@ -1,0 +1,41 @@
+<p><a class="mw-selflink selflink">LFINITE_TEMPERATURE</a> = [logical]<br/> Default: <b>LFINITE_TEMPERATURE</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LFINITE_TEMPERATURE</a> switches on the finite-temperature formalism of many-body perturbation theory for adiabatic-connection-fluctuation-dissipation-theorem (ACFDT)/GW calculations.
+</p>
+<p>This feature is available as of VASP.6.1.0 for ACFDT/random-phase-approximation (RPA), i.e., <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=ACFDT, ACFDTR, ACFDTRK, and low-scaling <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>, i.e., <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=EVGW0R, GWR[K]. 
+</p>
+<p>For <a class="mw-selflink selflink">LFINITE_TEMPERATURE</a>=.TRUE., a compressed <a href="/wiki/index.php/Matsubara_formalism" title="Matsubara formalism">Matsubara-frequency</a> grid is used (instead of the zero-temperature formalism of many-body perturbation theory). This allows for GW and RPA calculations for metallic systems. <sup class="reference" id="cite_ref-Kaltak:PRB:2020_1-0"><a href="#cite_note-Kaltak:PRB:2020-1">[1]</a></sup> 
+To this end, the electronic temperature is set with the k-point smearing parameter <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a> in units of eV, e.g. a value of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma=1 eV}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+<mo>=</mo>
+<mn>1</mn>
+<mi>e</mi>
+<mi>V</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma=1 eV}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma=1 eV}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=41f96b5d802cb20d49c1e66baca27c2f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 8.461ex;"/></span> corresponds to a electronic temperature of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T\approx 11 604 K}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo>≈<!-- ≈ --></mo>
+<mn>11</mn>
+<mn>604</mn>
+<mi>K</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T\approx 11 604 K}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T\approx 11 604 K}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=beca95f308ac72eb51d50d36bc8c7b24&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 12.613ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>,
+<a href="/wiki/index.php/NOMEGAPAR" title="NOMEGAPAR">NOMEGAPAR</a>, 
+<a href="/wiki/index.php/NTAUPAR" title="NTAUPAR">NTAUPAR</a>,
+<a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>
+</p>

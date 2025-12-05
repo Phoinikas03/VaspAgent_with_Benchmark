@@ -1,0 +1,31 @@
+<p><a class="mw-selflink selflink">BPARAM</a> = [real]<br/> Default: <b>BPARAM</b> = 6.3 
+</p>
+<p>Description: The tag <a class="mw-selflink selflink">BPARAM</a> specifies the value of the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>b</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle b}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=92eb5ffee6ae2fec3ad71c777531578f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.998ex;"/></span> in the kernel of the nonlocal rVV10 correlation functional.
+</p>
+<p><a class="mw-selflink selflink">BPARAM</a> should be set to 6.3, 15.7, 10, or 11.95 for the rVV10,<sup class="reference" id="cite_ref-sabatini:prb:2013_1-0"><a href="#cite_note-sabatini:prb:2013-1">[1]</a></sup>  SCAN+rVV10,<sup class="reference" id="cite_ref-peng:prx:2016_2-0"><a href="#cite_note-peng:prx:2016-2">[2]</a></sup> PBE+rVV10L,<sup class="reference" id="cite_ref-peng:prb:2017_3-0"><a href="#cite_note-peng:prb:2017-3">[3]</a></sup> and r<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle ^2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi></mi>
+<mn>2</mn>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle ^2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle ^2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b37b69605d183ba16f9c11dd872bcf50&amp;mode=mathml" style="vertical-align: -0.171ex; height: 2.509ex; width: 1.054ex;"/></span>SCAN+rVV10 <sup class="reference" id="cite_ref-ning:prb:2022_4-0"><a href="#cite_note-ning:prb:2022-4">[4]</a></sup> functionals, respectively.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CPARAM" title="CPARAM">CPARAM</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

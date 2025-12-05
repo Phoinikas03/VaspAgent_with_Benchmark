@@ -1,0 +1,336 @@
+<p><a class="mw-selflink selflink">LHYPERFINE</a> = .TRUE. | .FALSE.<br/> Default: <b>LHYPERFINE</b> =  .FALSE. 
+</p>
+<p>Description: compute the hyperfine tensors at the atomic sites (available as of vasp.5.3.2).
+</p>
+<p>To have VASP compute the hyperfine tensors at the atomic sites, set
+</p>
+<p>The hyperfine tensor A<sup>I</sup> describes the interaction between a nuclear spin S<sup>I</sup> (located at site <b>R</b><sub>I</sub>) and the electronic spin distribution S<sup>e</sup> (in most cases associated with a paramagnetic defect state) <sup class="reference" id="cite_ref-szasz:prb:2013_1-0"><a href="#cite_note-szasz:prb:2013-1">[1]</a></sup>:
+</p>
+<p>In general it is written as the sum of an isotropic part, the so-called Fermi contact term, and an anisotropic (dipolar) part.
+</p>
+<p>The Fermi contact term is given by
+</p>
+<p>where ρ<sub>s</sub> is the spin density, μ<sub>0</sub> is the magnetic susceptibility of free space,
+γ<sub>e</sub> the electron gyromagnetic ratio, γ<sub>I</sub> the nuclear gyromagnetic ratio of the nucleus at <b>R</b><sub>I</sub>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \langle S_z \rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>S</mi>
+<mi>z</mi>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \langle S_z \rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \langle S_z \rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4e719e2fd50e9f4c93a0ee0f383ffd2d&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.236ex;"/></span> the expectation value of the <i>z</i>-component of the total electronic spin.
+</p>
+<p>δ<sub>T</sub>(<b>r</b>) is a smeared out δ function, as described in
+the Appendix of Ref. <sup class="reference" id="cite_ref-bloechl:prb:2000_2-0"><a href="#cite_note-bloechl:prb:2000-2">[2]</a></sup>.
+</p>
+<p>The dipolar contributions to the hyperfine tensor are given by
+</p>
+<p>In the equations above <i>r</i>=|<b>r</b>|, <i>r</i><sub>i</sub> the i-th component of <b>r</b>, and <b>r</b> is
+taken relative to the position of the nucleus <b>R</b><sub>I</sub>.
+</p>
+<p>The nuclear gyromagnetic ratios should be specified by means of the <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>-tag:
+</p>
+<p>where one should specify one number for each of the <i>N</i> species on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, i.e. if C, H, N, and O are listed as species in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, then there should be four numbers in <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>, regardless of how many total atoms there are. 
+</p>
+<h2><span class="mw-headline" id="Input">Input</span></h2>
+<p>An example <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> is presented below used for a Nitrogen-vacancy (NV) center in diamond:
+</p>
+<p>Change the values of <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a> to your corresponding system. <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> is commented out. For crystals, it is not generally important; however, for molecules, it is very important.
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>As usual, all output is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. VASP writes three blocks of data. The first is for the Fermi contact coupling parameter:
+</p>
+<p>with an entry for each ion on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+A<sub>pw</sub>, A<sub>1PS</sub>, A<sub>1AE</sub>, and A<sub>1c</sub> are the plane wave, pseudo one-center, all-electron one-center, and one-center core contributions to the Fermi contact term, respectively.
+The total Fermi contact term is given by A<sub>tot</sub>. 
+</p>
+<p>The dipolar contributions are listed next:
+</p>
+<p>Again one line per ion in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<p>The total hyperfine tensors are written as:
+</p>
+<p>i.e., the tensors have been diagonalized and rearranged.
+</p>
+<h2><span class="mw-headline" id="Units">Units</span></h2>
+<p>The Fermi contact term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle A}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>A</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle A}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7fc56270e7a70fa81a5935b72eacbe29&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.743ex;"/></span> is measured in following units
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [A]=
+\left[\mu_0\right]\times 
+\left[g_e \mu_e\right]\times 
+\left[g_j \mu_j\right]\times
+\left[|\psi(0)|^2\right] = 
+\frac{T^2m^3}{J}\times 
+\frac{J}{T}\times 
+\frac{MHz}{T}\times
+\frac{1}{m^3} = MHz
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<msub>
+<mi>μ<!-- μ --></mi>
+<mn>0</mn>
+</msub>
+<mo>]</mo>
+</mrow>
+<mo>×<!-- × --></mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msub>
+<mi>g</mi>
+<mi>e</mi>
+</msub>
+<msub>
+<mi>μ<!-- μ --></mi>
+<mi>e</mi>
+</msub>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>×<!-- × --></mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msub>
+<mi>g</mi>
+<mi>j</mi>
+</msub>
+<msub>
+<mi>μ<!-- μ --></mi>
+<mi>j</mi>
+</msub>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>×<!-- × --></mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>ψ<!-- ψ --></mi>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo stretchy="false">)</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi>T</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>m</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+<mi>J</mi>
+</mfrac>
+<mo>×<!-- × --></mo>
+<mfrac>
+<mi>J</mi>
+<mi>T</mi>
+</mfrac>
+<mo>×<!-- × --></mo>
+<mfrac>
+<mrow>
+<mi>M</mi>
+<mi>H</mi>
+<mi>z</mi>
+</mrow>
+<mi>T</mi>
+</mfrac>
+<mo>×<!-- × --></mo>
+<mfrac>
+<mn>1</mn>
+<msup>
+<mi>m</mi>
+<mn>3</mn>
+</msup>
+</mfrac>
+<mo>=</mo>
+<mi>M</mi>
+<mi>H</mi>
+<mi>z</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [A]=
+\left[\mu_0\right]\times 
+\left[g_e \mu_e\right]\times 
+\left[g_j \mu_j\right]\times
+\left[|\psi(0)|^2\right] = 
+\frac{T^2m^3}{J}\times 
+\frac{J}{T}\times 
+\frac{MHz}{T}\times
+\frac{1}{m^3} = MHz
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle [A]=
+\left[\mu_0\right]\times 
+\left[g_e \mu_e\right]\times 
+\left[g_j \mu_j\right]\times
+\left[|\psi(0)|^2\right] = 
+\frac{T^2m^3}{J}\times 
+\frac{J}{T}\times 
+\frac{MHz}{T}\times
+\frac{1}{m^3} = MHz
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8106e90df6247e41c42dc11722e33dd3&amp;mode=mathml" style="vertical-align: -2.171ex; height: 6.009ex; width: 78.709ex;"/></span>
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>μ<!-- μ --></mi>
+<mn>0</mn>
+</msub>
+<mo>=</mo>
+<mn>4</mn>
+<mi>π<!-- π --></mi>
+<mo>×<!-- × --></mo>
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>7</mn>
+</mrow>
+</msup>
+<msup>
+<mi>T</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>m</mi>
+<mn>3</mn>
+</msup>
+<msup>
+<mi>J</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2abf4e8feb75e12518bf6f20196be4e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 25.274ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>g</mi>
+<mi>e</mi>
+</msub>
+<msub>
+<mi>μ<!-- μ --></mi>
+<mi>e</mi>
+</msub>
+<mo>=</mo>
+<mn>9.28476377</mn>
+<mo>×<!-- × --></mo>
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>24</mn>
+</mrow>
+</msup>
+<mi>J</mi>
+<msup>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>ψ<!-- ψ --></mi>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo stretchy="false">)</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>30</mn>
+</mrow>
+</msup>
+<msup>
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2246f4e0ff20350d6d4065504cb59967&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.343ex; width: 52.099ex;"/></span>. 
+<a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a> is given in units of MHz/T.
+</p>
+<h2><span class="mw-headline" id="Advice">Advice</span></h2>
+<h3><span class="mw-headline" id="PAW_pseudopotentials">PAW pseudopotentials</span></h3>
+<ul><li><a href="/wiki/index.php/Choosing_pseudopotentials" title="Choosing pseudopotentials">Choice of PAW potentials</a>: The hyperfine coupling parameter can be sensitive to the specific <a href="/wiki/index.php/Category:Pseudopotentials" title="Category:Pseudopotentials">PAW potential</a> used, as different <a href="/wiki/index.php/Category:Pseudopotentials" title="Category:Pseudopotentials">pseudopotentials</a> include a varying number of electrons in the valence (i.e. _sv, _pv). It is important to match the all-electron (AE) wavefunction.</li>
+<li><a href="/wiki/index.php/Available_pseudopotentials" title="Available pseudopotentials">GW pseudopotentials</a> (i.e. _GW) often offer a better description than standard potentials.</li></ul>
+<h3><span class="mw-headline" id="Core_contributions_and_hybrid_functionals">Core contributions and hybrid functionals</span></h3>
+<ul><li>Make sure to include core contributions when reporting Fermi contact terms <sup class="reference" id="cite_ref-yazyev:prb:2005_3-1"><a href="#cite_note-yazyev:prb:2005-3">[3]</a></sup>. These are very important and their inclusion improves comparison to experiment <sup class="reference" id="cite_ref-szasz:prb:2013_1-2"><a href="#cite_note-szasz:prb:2013-1">[1]</a></sup>.</li>
+<li>The use of hybrid functionals can also improve the hyperfine coupling constants when compared to experiment. E.g., for defects in silicon, HSE06 localizes the defect relative to PBE, significantly improving the description <sup class="reference" id="cite_ref-szasz:prb:2013_1-3"><a href="#cite_note-szasz:prb:2013-1">[1]</a></sup>.</li></ul>
+<h3><span class="mw-headline" id="Input_parameters">Input parameters</span></h3>
+<ul><li>We recommend using tightly converged settings:</li></ul>
+<ul><li>Additionally, we recommend performing convergence tests with respect to the plane-wave energy cutoff <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and k-point mesh <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> to ensure convergence has been achieved for your system.
+<ul><li>Convergence is generally quick with respect to energy cutoff.</li>
+<li>Convergence can be very dependent on k-point mesh density. In some cases, e.g. if your cell is too small, then increasing the k-point mesh can result in convergence to a non-magnetic solution, eliminating the hyperfine coupling.</li></ul></li>
+<li>Test your system with <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> = .TRUE. and .FALSE. In some cases, non-spherical contributions may be important.</li></ul>
+<h3><span class="mw-headline" id="Converging_to_non-magnetic_states">Converging to non-magnetic states</span></h3>
+<ul><li>It is possible that your system relaxes to a non-magnetic solution, causing the hyperfine splitting to disappear (i.e. all zeros). If you think your system should be magnetic, you can enforce it using <a href="/wiki/index.php/NUPDOWN" title="NUPDOWN">NUPDOWN</a>, which will return the hyperfine splitting, cf. forum post: <a class="external free" href="https://vasp.at/forum/viewtopic.php?t=16921" rel="nofollow">https://vasp.at/forum/viewtopic.php?t=16921</a>. <a href="/wiki/index.php/NUPDOWN" title="NUPDOWN">NUPDOWN</a> will change the <code>Total magnetic moment S=</code> at the start of the hyperfine coupling section in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LHYPERFINE%22_incategory:%22Examples%22" title='Special:Search/"LHYPERFINE" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

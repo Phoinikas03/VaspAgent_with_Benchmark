@@ -1,0 +1,1 @@
+LAMBDA =  Default: LAMBDA = 0 Description: LAMBDA sets the weight with which the penalty terms of the constrained local moment approach enter into the total energy expression and the Hamiltonian. See the explanation given in the description of the I_CONSTRAINED_M tag. Related tags and articles I_CONSTRAINED_M , M_CONSTR , RWIGS , LNONCOLLINEAR Examples that use this tag

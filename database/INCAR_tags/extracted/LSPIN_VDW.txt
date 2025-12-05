@@ -1,0 +1,8 @@
+<p><a class="mw-selflink selflink">LSPIN_VDW</a> = [logical]<br/> Default: <b>LSPIN_VDW</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSPIN_VDW</a>=.TRUE. switches on the use of the spin-polarized formulation<sup class="reference" id="cite_ref-thonhauser:prl:2015_1-0"><a href="#cite_note-thonhauser:prl:2015-1">[1]</a></sup> for the nonlocal part of a van der Waals functional (available as of VASP.6.4.0).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LUSE_VDW" title="LUSE VDW">LUSE_VDW</a>, <a href="/wiki/index.php/IVDW_NL" title="IVDW NL">IVDW_NL</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

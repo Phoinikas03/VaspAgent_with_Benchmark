@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">GGA</a> = PE | RP | PS | AM | LIBXC | ... 
+</p>
+<p>Default: The functional specified by <a href="/wiki/index.php/LEXCH" title="LEXCH">LEXCH</a> in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> if <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> and <a href="/wiki/index.php/XC" title="XC">XC</a> are also not specified.
+</p>
+<p>Description: Selects a LDA or GGA <a class="mw-redirect" href="/wiki/index.php/Exchange-correlation_functionals" title="Exchange-correlation functionals">exchange-correlation functional</a>.
+</p>
+<h2><span class="mw-headline" id="Available_functionals">Available functionals</span></h2>
+<p>This table lists the LDA and GGA functionals available in VASP. The names of functionals which end with "_X" and "_C" correspond to exchange-only and correlation functionals, respectively. 
+</p>
+<p><span style="color:blue">(1)</span> The Slater LDA exchange includes relativistic effects.<sup class="reference" id="cite_ref-macdonald:jpc:1979_27-0"><a href="#cite_note-macdonald:jpc:1979-27">[27]</a></sup>
+</p>
+<p><span style="color:blue">(2)</span> The exchange component was designed in particular to be used as the exchange component of <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a> and with <a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>=0 such that only LDA is used for the local correlation, see <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals#List_of_nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">list of nonlocal vdW-DF functionals</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/XC" title="XC">XC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22GGA%22_incategory:%22Examples%22" title='Special:Search/"GGA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

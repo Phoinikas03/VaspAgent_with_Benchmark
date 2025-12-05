@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">EDIFFG</a> = [real]<br/> Default: <b>EDIFFG</b> = <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>×10 
+</p>
+<p>Description: <a class="mw-selflink selflink">EDIFFG</a> defines the break condition for the ionic relaxation loop.
+</p>
+<p>When <a class="mw-selflink selflink">EDIFFG</a> is positive, the relaxation is stopped when the change of the total energy is smaller than <a class="mw-selflink selflink">EDIFFG</a> between two ionic steps.
+</p>
+<p>When <a class="mw-selflink selflink">EDIFFG</a> is negative, the relaxation is stopped when the norms of all the forces are smaller than |<a class="mw-selflink selflink">EDIFFG</a>|. This is usually a more convenient setting.
+</p>
+<p>If <a class="mw-selflink selflink">EDIFFG</a> = 0, the ionic relaxation is stopped after <a href="/wiki/index.php/NSW" title="NSW">NSW</a> steps.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EDIFFG%22_incategory:%22Examples%22" title='Special:Search/"EDIFFG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

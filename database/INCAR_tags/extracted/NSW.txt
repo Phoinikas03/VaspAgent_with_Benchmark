@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">NSW</a> = [integer]<br/> Default: <b>NSW</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">NSW</a> sets the maximum number of ionic steps.
+</p>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> = 0:
+</p>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> != 0: 
+</p>
+<p>Within each ionic step at most <a href="/wiki/index.php/NELM" title="NELM">NELM</a> electronic steps are performed. It is fewer if the convergence criterium set by <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a> is met before. Forces and stresses are calculated according to the setting of <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a> for each ionic step.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Structure_optimization" title="Structure optimization">structure optimization</a>, <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>, <a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a>, <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NSW%22_incategory:%22Examples%22" title='Special:Search/"NSW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

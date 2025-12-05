@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">HFRCUT</a> = [real]<br/> Default: <b>HFRCUT</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">HFRCUT</a> specifies how the <a href="/wiki/index.php/Coulomb_singularity" title="Coulomb singularity">Coulomb kernel is approximated at G=0</a> when the Fock energy and the exchange potential are evaluated.
+</p>
+<p>In systems with periodic boundary conditions, the Coulomb energy and the Coulomb potential are usually evaluated under the assumption of a compensating background by introducing a compensation charge density. This is well-justified for the Hartree energy, where the compensation charge density stems from the ions. Yet, this assumption is not valid for the Fock exchange, which causes an error. For the Fock exchange potential and energy, one can correct the resulting error by assuming that the density matrix is local. The leading order correction is given by the difference between the electrostatic energy of a localized model charge density in a homogeneous background periodically repeated and the same model charge density in isolation. For details we refer to J. Paier <i>et al.,</i><sup class="reference" id="cite_ref-paier:jcp:05_1-0"><a href="#cite_note-paier:jcp:05-1">[1]</a></sup> Section II. D. 4.  
+</p>
+<ul><li><a class="mw-selflink selflink">HFRCUT</a> = 0: Ewald summation <i>or</i> method of Massida, Posternak, and Baldereschi depending on k-mesh<sup class="reference" id="cite_ref-gygi:prb:86_2-0"><a href="#cite_note-gygi:prb:86-2">[2]</a></sup><sup class="reference" id="cite_ref-massidda:prb:93_3-0"><a href="#cite_note-massidda:prb:93-3">[3]</a></sup></li></ul>
+<ul><li><a class="mw-selflink selflink">HFRCUT</a> = -1: Automated cutoff radius<sup class="reference" id="cite_ref-spenceralavi:prb:08_4-0"><a href="#cite_note-spenceralavi:prb:08-4">[4]</a></sup></li></ul>
+<ul><li><a class="mw-selflink selflink">HFRCUT</a> = [cutoff radius]: Manually set cutoff radius in Ångström.</li></ul>
+<p>In the limit of many k-points, both methods (<a class="mw-selflink selflink">HFRCUT</a>=-1 and <a class="mw-selflink selflink">HFRCUT</a>=0) should yield identical results. In our experience, the <a class="mw-selflink selflink">HFRCUT</a>=-1 converges more rapidly for systems with a gap, as well as molecules and atoms, whereas <a class="mw-selflink selflink">HFRCUT</a>=0 converges faster for metallic systems. It is expedient to first converge the energies with respect to the number of k-points for both methods and then select for subsequent calculations the method that converges more rapidly. A detailed comparison of the convergence of the different methods for metallic and gapped materials was made by Sundararaman and Arias<sup class="reference" id="cite_ref-sundararamanarias:prb:13_5-0"><a href="#cite_note-sundararamanarias:prb:13-5">[5]</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/HFALPHA" title="HFALPHA">HFALPHA</a>,
+<a href="/wiki/index.php/LTHOMAS" title="LTHOMAS">LTHOMAS</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>,
+<a href="/wiki/index.php/Coulomb_singularity" title="Coulomb singularity">Coulomb singularity</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HFRCUT%22_incategory:%22Examples%22" title='Special:Search/"HFRCUT" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

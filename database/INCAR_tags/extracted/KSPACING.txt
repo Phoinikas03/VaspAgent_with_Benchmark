@@ -1,0 +1,282 @@
+<p><a class="mw-selflink selflink">KSPACING</a> = [real]<br/> Default: <b>KSPACING</b> = 0.5 
+</p>
+<p>Description: The tag  <a class="mw-selflink selflink">KSPACING</a> determines the number of k points if the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file
+is not present.
+</p>
+<p><a class="mw-selflink selflink">KSPACING</a> is the smallest allowed spacing between k points in units of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA^{-1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA^{-1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA^{-1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0b729dc1ab50e7ddf172c5124a23ea63&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.843ex; width: 3.749ex;"/></span>. The number of k points increases when the spacing is decreased.
+The number of k points in the direction of the first, second and third reciprocal lattice vector is determined by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  N_i= \mathrm{max}(1, \mathrm{ceiling}( | \mathbf{b}_i| 2\pi / \mathrm{KSPACING} ))}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">x</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">l</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">g</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">b</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mn>2</mn>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">G</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  N_i= \mathrm{max}(1, \mathrm{ceiling}( | \mathbf{b}_i| 2\pi / \mathrm{KSPACING} ))}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  N_i= \mathrm{max}(1, \mathrm{ceiling}( | \mathbf{b}_i| 2\pi / \mathrm{KSPACING} ))}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0253ab05ba9467d19c2cfaccb121f800&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 42.113ex;"/></span>
+with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{ceiling}( x )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">l</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">g</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{ceiling}( x )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{ceiling}( x )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8a15e0eb229d6a9b73886f6c42c501c7&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 9.599ex;"/></span> being the ceiling function which returns the least integer that is equal or larger than <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9dd4e461268c8034f5c8564e155c67a6&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span>. In this equation, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \mathbf{b}_i  }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">b</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \mathbf{b}_i  }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \mathbf{b}_i  }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a70aecd1dddf0da8582cf9b38289cf80&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.285ex;"/></span> are the reciprocal lattice vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \mathbf{b}_i \mathbf{a}_j = \delta_{ij} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">b</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mi>j</mi>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \mathbf{b}_i \mathbf{a}_j = \delta_{ij} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \mathbf{b}_i \mathbf{a}_j = \delta_{ij} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ee10ba5cb1cdb1824ab4943479b03841&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 10.102ex;"/></span>.
+The generated grid is centered at the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point if <a href="/wiki/index.php/KGAMMA" title="KGAMMA">KGAMMA</a>=True (default), i.e., includes the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point. For <a href="/wiki/index.php/KGAMMA" title="KGAMMA">KGAMMA</a>=False, the grid is shifted away from the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point as done for Monkhorst-Pack grids. 
+</p>
+<p>If the k points are generated using the <a href="/wiki/index.php/KPOINTS#Automatic_k-point_mesh" title="KPOINTS">automatic mode</a> in the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  N_i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mi>i</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  N_i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  N_i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=00c91d4e3ddd4a273fe8af6a44db4c1b&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.666ex;"/></span>  is calculated as
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  N_i= \mathrm{int}(\mathrm{max}(1, R_k| \mathbf{b}_i| + 0.5)) }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">x</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<msub>
+<mi>R</mi>
+<mi>k</mi>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">b</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>+</mo>
+<mn>0.5</mn>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  N_i= \mathrm{int}(\mathrm{max}(1, R_k| \mathbf{b}_i| + 0.5)) }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  N_i= \mathrm{int}(\mathrm{max}(1, R_k| \mathbf{b}_i| + 0.5)) }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bd21dce923a6dd1192c441bdd971f6b2&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 30.993ex;"/></span> with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_k=2\pi/\mathrm{KSPACING}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mi>k</mi>
+</msub>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">K</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">G</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_k=2\pi/\mathrm{KSPACING}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_k=2\pi/\mathrm{KSPACING}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=964b4a49116e8517f0f2c713d1c7faa1&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 22.12ex;"/></span>
+and rounding it to the nearest integer.  We recommend using the <a class="mw-selflink selflink">KSPACING</a> tag in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file 
+and avoiding the automatic mode via the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file.  
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KGAMMA" title="KGAMMA">KGAMMA</a>, <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22KSPACING%22_incategory:%22Examples%22" title='Special:Search/"KSPACING" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,67 @@
+<p><a class="mw-selflink selflink">LTRIPLET</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LTRIPLET</a> selects a triplet ansatz for <a href="/wiki/index.php/Category:Bethe-Salpeter_equations" title="Category:Bethe-Salpeter equations">Bethe-Salpeter-equations</a> (BSE) calculations. This is synonymous to  <a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a> = .FALSE.
+</p>
+<p>For a usual BSE calculation (<a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>=.TRUE.; <a class="mw-selflink selflink">LTRIPLET</a> = .FALSE.), the excited state corresponds to a singlet if the ground state is not spin-polarized (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=1) or anti-ferromagnetic (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2, total magnetic moment 0). This is so because the ansatz for the BSE calculation involves a hole and an electron pair prepared within each spin channel. For instance, an electron with up spin is removed from the ground-state determinant and placed with the same spin into a previously unoccupied orbital. If there are no separate spin channels this ansatz results in a net spin-zero, which corresponds to a singlet state.
+</p>
+<p>If <a class="mw-selflink selflink">LTRIPLET</a>=.TRUE., VASP assumes that an <i>up</i> electron is removed from the ground-state determinant and placed as a <i>down</i> electron into a previously unoccupied orbital (spin flip). This ansatz corresponds to a triplet state as it has a net spin of one. Without spin-orbit coupling (<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a> = .FALSE.), the transition probability from the singlet ground state to the triplet solutions will be exactly zero. These excitations correspond to dark, potentially long-lived triplet excitons. However, VASP calculates the transition probabilities incorrectly, by assuming that a spin-flip excitation has the same transition probabilities as a usual singlet excitation.
+The reported transition probabilities ("optical transitions" in <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a>) are hence incorrect; they should be all zero. Likewise, the contributions to the dielectric function are zero for triplet excitations,
+and incorrectly reported in the <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> file.
+</p>
+<p>If a non-magnetic material is calculated using <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2 for both the groundstate and BSE calculation, and a usual BSE calculation is performed (<a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>=.TRUE.; <a class="mw-selflink selflink">LTRIPLET</a> = .FALSE.), all
+singlet transitions as well as one set of the triplet excitations (those with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  m_S=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>m</mi>
+<mi>S</mi>
+</msub>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  m_S=0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  m_S=0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2f0cfbf42dd9784bb8b6a22224398fd8&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 7.594ex;"/></span> ) are calculated. All triplet transitions will have zero transition probabilities. If <a class="mw-selflink selflink">LTRIPLET</a> = .TRUE. is set for the BSE calculation, the other two sets of triplet excitations (those with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  m_S=1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>m</mi>
+<mi>S</mi>
+</msub>
+<mo>=</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  m_S=1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  m_S=1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0ec6fb4c391a0c05d42ab1f00ca4a467&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 7.594ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  m_S=-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>m</mi>
+<mi>S</mi>
+</msub>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  m_S=-1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  m_S=-1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a4cdd8ef5775cde144a71cdf6b27c9ac&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 9.402ex;"/></span>) are determined. Note that as for <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=1 for <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2 and  <a class="mw-selflink selflink">LTRIPLET</a> = .FALSE., incorrect non-zero transition probabilities are reported in the <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> file (they should be all exactly zero, since the underlying pair states fed into the BSE can not be excited by light).
+</p>
+<p>To obtain meaningful transition probabilities for the singlet and triplet excitations, include spin-orbit coupling by setting <a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a> = .TRUE. in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file throughout the calculation, i.e., for the ground-state and BSE calculation.  In this case, the singlet and all three sets of triplet excitations are calculated simultaneously, and proper transition probabilities are assigned to each transition. Small transition probabilities might be observed even for triplet excitations as a result of spin-orbit coupling. <a class="mw-selflink selflink">LTRIPLET</a> = .TRUE. should not be used for calculations including spin-orbit coupling.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>,
+<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>,
+<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>,
+<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LTRIPLET%22_incategory:%22Examples%22" title='Special:Search/"LTRIPLET" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

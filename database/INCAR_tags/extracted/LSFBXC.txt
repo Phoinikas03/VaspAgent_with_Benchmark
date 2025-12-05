@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LSFBXC </a> = .TRUE. | .FALSE.<br/> Default: <b> LSFBXC </b> = .FALSE. 
+</p>
+<p>Description: Removes sources and drains from the exchange-correlation B field.
+</p>
+<p>With <a class="mw-selflink selflink">LSFBXC</a>=T, the sources and drains are removed from the exchange-correlation (XC) B field<sup class="reference" id="cite_ref-sharma:jctc:2018_1-0"><a href="#cite_note-sharma:jctc:2018-1">[1]</a></sup> at each step of the electronic minimization. Thus, any <a class="mw-redirect" href="/wiki/index.php/XC_functional" title="XC functional">XC potential</a> can be constrained to correspond to a Maxwellian magnetic field at the cost of becoming a potential-only <a class="mw-redirect" href="/wiki/index.php/XC_functional" title="XC functional">XC functional</a>, since there is no correction applied to the XC energy.
+</p>
+<p>Moore et al. implemented the same feature in a parallel work<sup class="reference" id="cite_ref-guy:patch:2024_2-0"><a href="#cite_note-guy:patch:2024-2">[2]</a></sup><sup class="reference" id="cite_ref-guy:arxiv:2024_3-0"><a href="#cite_note-guy:arxiv:2024-3">[3]</a></sup> and performed more extensive applications. Whether the two implementations are identical has not been tested, and no publication is associated with the present implementation (by Marie-Therese Huebsch) using <a class="mw-selflink selflink">LSFBXC</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/XC" title="XC">XC</a>, <a href="/wiki/index.php/GGA" title="GGA">GGA</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

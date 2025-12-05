@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">EPSILON</a> = [real]<br/> Default: <b>EPSILON</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">EPSILON</a> sets the dielectric constant of the medium.
+</p>
+<p>VASP uses this flag only to scale the calculated <a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">monopole and dipole corrections</a>. <a class="mw-selflink selflink">EPSILON</a> defaults to 1, which is the proper value for isolated atoms and molecules. For solids, the screening properties can and should be determined using the linear response routines of VASP (see <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a> and/or <a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>). Ionic contributions to the dielectric tensor should be included, if the ions are allowed to relax. Ionic contributions to the dielectric tensor can be calculated using <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=8.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/LMONO" title="LMONO">LMONO</a>,
+<a href="/wiki/index.php/EFIELD" title="EFIELD">EFIELD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EPSILON%22_incategory:%22Examples%22" title='Special:Search/"EPSILON" incategory:"Examples"'>Examples that use this tag</a>
+</p>

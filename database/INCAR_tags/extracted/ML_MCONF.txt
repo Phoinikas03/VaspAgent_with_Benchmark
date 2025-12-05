@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">ML_MCONF</a> = [integer]<br/> Default: <b>ML_MCONF</b> = see below 
+</p>
+<p>Description: This tag sets the maximum number of structures stored in memory that are used for training in the machine learning force field method.
+</p>
+<p>The defaults for <a class="mw-selflink selflink">ML_MCONF</a> are different for each different <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> setting. Here are the defaults for each mode:
+</p>
+<ul><li><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>='TRAIN':
+<ul><li>No <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (learning from scratch): min(1500, max(1,<a href="/wiki/index.php/NSW" title="NSW">NSW</a>))</li>
+<li><a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (continuation of learning): MCONF_AB + min(1500, max(1,<a href="/wiki/index.php/NSW" title="NSW">NSW</a>))</li></ul></li>
+<li><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>='SELECT': MCONF_AB + 1</li>
+<li><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>='REFIT': MCONF_AB + 1</li>
+<li><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>='REFITBAYESIAN': MCONF_AB + 1</li>
+<li><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>='RUN': 1</li></ul>
+<p>using the following definition:
+</p>
+<ul><li>MCONF_AB = Number of training structures read from the <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> file.</li></ul>
+<p><br/>
+The default value for <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>TRAIN</i> is usually a safe value for solids and easy-to-learn liquids but should be set to a higher value as soon as it is reached. When this happens the code stops and gives an error instructing to increase <a class="mw-selflink selflink">ML_MCONF</a>. 
+</p>
+<p>This flag sets also the maximum number of rows for the design matrix, which is usually a huge matrix. The design matrix is to be allocated statically at the beginning of the program since several parts of the code use MPI shared memory and dynamic reallocation of these arrays can cause severe problems on some systems. So most of the main arrays are statically allocated in the code. 
+</p>
+<p>An estimate of the design matrix and all other large arrays are printed out to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a> before allocation. The design matrix is fully distributed in a block cyclic fashion for scaLAPACK and should almost perfectly linearly scale with the number of used processors.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Special:Search/%22ML_FF_MCONF%22_incategory:%22Examples%22" title='Special:Search/"ML FF MCONF" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>, <a href="/wiki/index.php/ML_MB" title="ML MB">ML_MB</a>
+</p>

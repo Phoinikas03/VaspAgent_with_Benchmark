@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">ICHARG</a> = 0 | 1 | 2 | 4 | 5 
+</p>
+<p>Description: <a class="mw-selflink selflink">ICHARG</a> determines how VASP constructs the <i>initial</i> charge density.
+</p>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=0</li></ul>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=1</li></ul>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=2</li></ul>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=4</li></ul>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=5</li></ul>
+<ul><li><a class="mw-selflink selflink">ICHARG</a>=10</li></ul>
+<p>The initial charge density is of importance in the following cases:
+</p>
+<ul><li>If <a class="mw-selflink selflink">ICHARG</a>≥10 the charge density remains constant during the run.</li></ul>
+<ul><li>For all algorithms except <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>=5X the initial charge density is used to set up the initial Hamiltonian that is used in the first few non-selfconsistent steps, c.f., <a href="/wiki/index.php/NELMDL" title="NELMDL">NELMDL</a> tag.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>, <a href="/wiki/index.php/ISTART" title="ISTART">ISTART</a>, <a href="/wiki/index.php/LCHARG" title="LCHARG">LCHARG</a>, <a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>, <a href="/wiki/index.php/NELMDL" title="NELMDL">NELMDL</a>, <a href="/wiki/index.php/INIWAV" title="INIWAV">INIWAV</a>, <a href="/wiki/index.php/GAMMA" title="GAMMA">GAMMA</a>, <a href="/wiki/index.php/Vaspgamma.h5" title="Vaspgamma.h5">vaspgamma.h5</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ICHARG%22_incategory:%22Examples%22" title='Special:Search/"ICHARG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

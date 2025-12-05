@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">IPEAD</a> = 1 | 2 | 3 | 4<br/> Default: <b>IPEAD</b> = 4 
+</p>
+<p>Description: <a class="mw-selflink selflink">IPEAD</a> specifies the order of the finite difference stencil used to compute the derivative of the cell-periodic part of the orbitals w.r.t. <b>k</b>, |∇<sub><b>k</b></sub>u<sub>n<b>k</b></sub>⟩ (<a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>=.TRUE.), and the derivative of the polarization w.r.t. the orbitals, δ<b>P</b>/δ⟨ψ<sub>n<b>k</b></sub>| for (<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>=.TRUE., or <a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>≠<b>0</b>).
+</p>
+<p>A central finite differences formula or order <a class="mw-selflink selflink">IPEAD</a> is used to compute the first-order derivative of the cell-periodic part of the orbitals w.r.t. <b>k</b>.
+The coefficients for the different orders can be found <a class="external text" href="https://en.wikipedia.org/wiki/Finite_difference_coefficient#Central_finite_difference" rel="nofollow">here</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IPEAD%22_incategory:%22Examples%22" title='Special:Search/"IPEAD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

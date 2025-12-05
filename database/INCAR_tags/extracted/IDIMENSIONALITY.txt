@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> =  0 | 2 | 3<br/> Default: <b>KERNEL_TRUNCATION/IDIMENSIONALITY</b> =  3 
+</p>
+<p>Description: <a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> specifies the boundary condition used to compute the hartree and ionic potential. 
+</p>
+<p>If <a href="/wiki/index.php/KERNEL_TRUNCATION/LTRUNCATE" title="KERNEL TRUNCATION/LTRUNCATE">KERNEL_TRUNCATION/LTRUNCATE</a> = T, <a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> determines the boundary condition that is used to compute the local potential.
+The default value of 3 implies that the system is periodic in all dimensions, i.e. there is no influence of kernel truncation on the resulting energies and forces.
+Setting <a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> to either 0 or 2 uses the 0D and 2D truncated kernel respectively.<sup class="reference" id="cite_ref-vijay:arxiv:2024_1-0"><a href="#cite_note-vijay:arxiv:2024-1">[1]</a></sup><sup class="reference" id="cite_ref-rozzi:prb:2006_2-0"><a href="#cite_note-rozzi:prb:2006-2">[2]</a></sup><sup class="reference" id="cite_ref-sohier:prb:2017_3-0"><a href="#cite_note-sohier:prb:2017-3">[3]</a></sup>
+These kernels create 0D (i.e. no periodic interactions, as is the case of molecules) and 2D (i.e. periodic interactions only in two dimensions, as in the case for surfaces).
+</p>
+<h2><span id="KERNEL_TRUNCATION.2FIDIMENSIONALITY_.3D_0"></span><span class="mw-headline" id="KERNEL_TRUNCATION/IDIMENSIONALITY_=_0"><a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> = 0</span></h2>
+<p>Consider using the option when computing energies and forces of atoms and molecules.
+Recommended <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> tags to be used with option are
+</p>
+<h2><span id="KERNEL_TRUNCATION.2FIDIMENSIONALITY_.3D_2"></span><span class="mw-headline" id="KERNEL_TRUNCATION/IDIMENSIONALITY_=_2"><a class="mw-selflink selflink">KERNEL_TRUNCATION/IDIMENSIONALITY</a> = 2</span></h2>
+<p>Use this option when computing the energies and forces of 2D and quasi-2D systems, such as 2D materials and surfaces. We suggest setting the following <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> tags for a surface that is oriented along the z-axis
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KERNEL_TRUNCATION/LTRUNCATE" title="KERNEL TRUNCATION/LTRUNCATE">KERNEL_TRUNCATION/LTRUNCATE</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/LCOARSEN" title="KERNEL TRUNCATION/LCOARSEN">KERNEL_TRUNCATION/LCOARSEN</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/ISURFACE" title="KERNEL TRUNCATION/ISURFACE">KERNEL_TRUNCATION/ISURFACE</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

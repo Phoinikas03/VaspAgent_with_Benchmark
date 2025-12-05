@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">NSIM</a> = [integer]<br/> Default: <b>NSIM</b> = 4 
+</p>
+<p>Description: <a class="mw-selflink selflink">NSIM</a> sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm.
+</p>
+<p>The RMM-DIIS algorithm (<a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>=48) works in a blocked mode. <a class="mw-selflink selflink">NSIM</a> bands are optimized at the same time. This allows to use matrix-matrix operations instead of matrix-vector operation for the evaluations of the non local projection operators in real space, and might speed up calculations on some machines. There should be no difference in the total energy and the convergence behavior between <a class="mw-selflink selflink">NSIM</a>=1 and <a class="mw-selflink selflink">NSIM</a>&gt;1, only the performance should improve.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>,
+<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>,
+<a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a>,
+<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>,
+<a href="/wiki/index.php/LSCAAWARE" title="LSCAAWARE">LSCAAWARE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NSIM%22_incategory:%22Examples%22" title='Special:Search/"NSIM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

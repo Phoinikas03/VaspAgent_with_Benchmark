@@ -1,0 +1,1 @@
+LUSE_VDW =  Default: LUSE_VDW = .FALSE. Description: LUSE_VDW =.TRUE. switches on the use of a nonlocal vdW-DF functional. These functionals depend on the electron density at two points in space and model long-range van der Waals (dispersion) correlation effects. Related tags and articles GGA , METAGGA , IVDW_NL , LSPIN_VDW , Nonlocal vdW-DF functionals Examples that use this tag

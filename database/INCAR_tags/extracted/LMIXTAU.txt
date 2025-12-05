@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LMIXTAU</a> = .TRUE. | .FALSE.<br/> Default: <b>LMIXTAU</b> = .FALSE. 
+</p>
+<p>Description: send the kinetic-energy density through the <a class="mw-redirect" href="/wiki/index.php/Density_mixing" title="Density mixing">density mixer</a> as well.
+</p>
+<p>In many cases, the <a class="mw-redirect" href="/wiki/index.php/Density_mixing" title="Density mixing">density-mixing scheme</a> works well enough without passing the kinetic-energy density through the mixer. Therefore VASP uses <a class="mw-selflink selflink">LMIXTAU</a>=.FALSE. per default. However, when the self-consistency cycle fails to converge for one of the algorithms exploiting <a class="mw-redirect" href="/wiki/index.php/Density_mixing" title="Density mixing">density mixing</a>, e.g, <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>=38 or 48, we recommend setting <a class="mw-selflink selflink">LMIXTAU</a>=.TRUE..
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/LMAXTAU" title="LMAXTAU">LMAXTAU</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMIXTAU%22_incategory:%22Examples%22" title='Special:Search/"LMIXTAU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

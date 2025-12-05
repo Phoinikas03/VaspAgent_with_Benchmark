@@ -1,0 +1,43 @@
+<p><a class="mw-selflink selflink">NTEMPER</a> = [integer]<br/> Default: <b>NTEMPER</b> =  200 
+</p>
+<p>Description: <a class="mw-selflink selflink">NTEMPER</a> specifies how often temperature swaps are attempted during parallel tempering. The flag must be used in combination with  <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a> and <a href="/wiki/index.php/LTEMPER" title="LTEMPER">LTEMPER</a>. <a class="mw-selflink selflink">NTEMPER</a>=0, allows to perform several completely independent calculations.
+</p>
+<p><a class="mw-selflink selflink">NTEMPER</a> must be a positive integer or zero. Swaps are on average attempted after <a class="mw-selflink selflink">NTEMPER</a> molecular dynamics steps.
+Specifically, a random number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  r }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>r</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  r }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  r }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1af9dcecc465950e25f7153943970180&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.049ex;"/></span> between [0,1[ is drawn. The next temperature swaps are attempted after 
+<a class="mw-selflink selflink">NTEMPER</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \times  2~ r -1 }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>×<!-- × --></mo>
+<mn>2</mn>
+<mtext> </mtext>
+<mi>r</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \times  2~ r -1 }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \times  2~ r -1 }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=966d5c3af9a055b101b11eb758a1e0d5&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.343ex; width: 8.603ex;"/></span>  steps. Obviously, for <a class="mw-selflink selflink">NTEMPER</a>=1 swaps are attempted at every MD step. In the present code version, temperature swaps are alternatively performed between images 1,2 and 3,4 and 5,6 etc., or upon the next swap between images 2,3 and 4,5 and 6,7 etc.
+This implies that many swaps are attempted at the same time.
+</p>
+<p>Furthermore, no temperature swapping is attempted for <a class="mw-selflink selflink">NTEMPER</a>=0. This allows many independent calculations to be performed in directories 01, 02, 03, ... which can be useful when performing many similar calculations for small systems or using machine-learned force fields on many-core machines (strong scaling is sometimes not particularly good for small systems).
+</p>
+<p>A final note is in place. If INCAR files exist in the subdirectories, the tag <a class="mw-selflink selflink">NTEMPER</a>  must be set in all <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> files of the subdirectories 01, 02, 03, and <a class="mw-selflink selflink">NTEMPER</a> must be identical. Failure to observe this rule can lead to unexpected behavior.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>,
+<a href="/wiki/index.php/LTEMPER" title="LTEMPER">LTEMPER</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IMAGES%22_incategory:%22Examples%22" title='Special:Search/"IMAGES" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

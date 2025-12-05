@@ -1,0 +1,193 @@
+<p><a class="mw-selflink selflink">LVTOT</a> = [logical]<br/> Default: <b>LVTOT</b> = .FALSE. 
+</p>
+<p>Description: Determines whether the total local potential <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>LOCPOT</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f2e58bda370c57efa7b5cec8f6af1d76&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 11.576ex;"/></span> (in eV) is written to the <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> file.
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+V_{\text{LOCPOT}}(\mathbf{r}) = 
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}+
+V_{\text{xc}}(\mathbf{r})
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>LOCPOT</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mo>∫<!-- ∫ --></mo>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+<mo>+</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>xc</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+V_{\text{LOCPOT}}(\mathbf{r}) = 
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}+
+V_{\text{xc}}(\mathbf{r})
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+V_{\text{LOCPOT}}(\mathbf{r}) = 
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}+
+V_{\text{xc}}(\mathbf{r})
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4453aed5233f12a8a2ecedc90fde3790&amp;mode=mathml" style="vertical-align: -2.671ex; height: 6.509ex; width: 47.774ex;"/></span>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{ionic}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{ionic}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{ionic}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9a8acf5f12bda003cd522ddc3e3fe59&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 7.88ex;"/></span> is the ionic potential,
+the second term is the Hartree potential, and 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{xc}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>xc</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{xc}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{xc}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=05011572151de1eec919ce2a2a02632e&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 6.097ex;"/></span> is the (semi-)local exchange-correlation potential.
+</p>
+<p>If <a class="mw-selflink selflink">LVTOT</a>=.TRUE., the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>LOCPOT</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{LOCPOT}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f2e58bda370c57efa7b5cec8f6af1d76&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 11.576ex;"/></span> is written to the <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> file and the <a href="/wiki/index.php/POT" title="POT">POT</a> file. The <a href="/wiki/index.php/POT" title="POT">POT</a> file additionally contains the augmentation part. 
+</p>
+<p><a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a> also gives access to the total local potential and offers more options.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Computing_the_work_function" title="Computing the work function">Computing the work function</a>, <a href="/wiki/index.php/LVHAR" title="LVHAR">LVHAR</a>, <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a>, <a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a>, <a href="/wiki/index.php/LVACPOTAV" title="LVACPOTAV">LVACPOTAV</a>, <a href="/wiki/index.php/POT" title="POT">POT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVTOT%22_incategory:%22Examples%22" title='Special:Search/"LVTOT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

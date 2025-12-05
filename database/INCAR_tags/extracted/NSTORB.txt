@@ -1,0 +1,46 @@
+<p><a class="mw-selflink selflink">NSTORB</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NSTORB</a> specifies the number of stochastic orbitals per cycle in the stochastic MP2 algorithm.
+</p>
+<p><a class="mw-selflink selflink"><span style="color:black">NSTORB</span></a> defines the number of stochastic orbitals per cycle, i.e., the number of stochastic orbitals that define one stochastic sample. If the sample is not large enough, the calculations are repeated until the accuracy, defined by ESTOP, is reached.
+</p>
+<p>As a rule of thumb, we recommend setting
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\texttt{NSTORB} = \sqrt{\texttt{NBANDS}} \;.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext mathvariant="monospace">NSTORB</mtext>
+</mrow>
+<mo>=</mo>
+<msqrt>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext mathvariant="monospace">NBANDS</mtext>
+</mrow>
+</msqrt>
+<mspace width="thickmathspace"></mspace>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\texttt{NSTORB} = \sqrt{\texttt{NBANDS}} \;.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\texttt{NSTORB} = \sqrt{\texttt{NBANDS}} \;.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=52a55f01a2e2125687de92f32e06b0f3&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.009ex; width: 20.973ex;"/></span>
+</p>
+<p>See <a href="/wiki/index.php/Stochastic_LTMP2" title="Stochastic LTMP2">here</a> for a small tutorial on stochastic Laplace transformed MP2 calculations.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>,
+<a href="/wiki/index.php/ESTOP" title="ESTOP">ESTOP</a>,
+<a href="/wiki/index.php/LSMP2LT" title="LSMP2LT">LSMP2LT</a>,
+<a href="/wiki/index.php/LMP2LT" title="LMP2LT">LMP2LT</a>,
+<a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>
+</p>

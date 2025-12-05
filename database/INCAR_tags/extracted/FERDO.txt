@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">FERDO</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">FERDO</a> sets the occupancies of the states in the down-spin channel for <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>=-2 and <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2.
+</p>
+<p>To set the occupancies, specify
+</p>
+<p>The occupancies must be specified for all bands and k points. The band-index runs fastest. The occupancies must be between 0 and 1.
+<a class="mw-selflink selflink">FERDO</a> has the same format as <a href="/wiki/index.php/FERWE" title="FERWE">FERWE</a>, please consider the notes on that page when setting <a class="mw-selflink selflink">FERDO</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/FERWE" title="FERWE">FERWE</a>,
+<a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22FERDO%22_incategory:%22Examples%22" title='Special:Search/"FERDO" incategory:"Examples"'>Examples that use this tag</a>
+</p>

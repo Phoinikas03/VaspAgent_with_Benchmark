@@ -1,0 +1,91 @@
+<p><a class="mw-selflink selflink">ML_W1</a> = [real]<br/> Default: <b>ML_W1</b> = 0.1 
+</p>
+<p>Description: This tag defines the weight <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0603860fcffe94e5b8eec59ed813421&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 1.332ex;"/></span> for the radial (and angular) descriptor within the machine learning force field method (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Potential_energy_fitting" title="Machine learning force field: Theory">this section</a>).
+</p>
+<p>The weight for the angular descriptor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W_{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>W</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W_{2}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W_{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=688f2f3f430306a725bba7055c0f8ee5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.248ex;"/></span> is internally computed from the weight of the radial descriptor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>W</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W_{1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1d68fc23c21f180bb94b1f658e9c323a&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.248ex;"/></span> as:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W_{2}=1.0-W_{1}.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>W</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>1.0</mn>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>W</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W_{2}=1.0-W_{1}.}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W_{2}=1.0-W_{1}.}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6bd35f5a62d0d3c94da1df21a857deb3&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 16.053ex;"/></span>
+</p>
+<p>The value for <a class="mw-selflink selflink">ML_W1</a> must be chosen in the interval <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [0, 1]}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo stretchy="false">]</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [0, 1]}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle [0, 1]}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=264884439b70ab09a86bc848421c6de6&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.653ex;"/></span>.
+</p>
+<p>By default, the angular and radial descriptors are both used although the latter is weighed less. In principle a weight of 0 for one of them is selectable which allows the code to internally skip the respective computation. However, it is generally recommended to use both descriptors to achieve satisfying training results.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_RCUT1" title="ML RCUT1">ML_RCUT1</a>, <a href="/wiki/index.php/ML_RCUT2" title="ML RCUT2">ML_RCUT2</a>, <a href="/wiki/index.php/ML_SION1" title="ML SION1">ML_SION1</a>, <a href="/wiki/index.php/ML_SION2" title="ML SION2">ML_SION2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_W1%22_incategory:%22Examples%22" title='Special:Search/"ML W1" incategory:"Examples"'>Examples that use this tag</a>
+</p>

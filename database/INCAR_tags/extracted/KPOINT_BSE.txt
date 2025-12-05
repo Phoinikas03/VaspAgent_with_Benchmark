@@ -1,0 +1,33 @@
+<p><a class="mw-selflink selflink">KPOINT_BSE</a> = [integer] (optionally [integer],[integer],[integer]) 
+</p>
+<p>Description: <a class="mw-selflink selflink">KPOINT_BSE</a>  specifies the k-point index at which VASP calculates the dielectric matrix.
+</p>
+<p>In the simplest form, one can specify
+</p>
+<p>Select the desired k point from the list of k points in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. Additionally, a shift by an arbitrary reciprocal lattice vector can be supplied by specifying three additional integer numbers:
+</p>
+<p>This allows calculating the dielectric function at a k point outside of the first Brillouin zone corresponding to
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{b}_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">b</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{b}_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{b}_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5813ed8e706513d971fc24c7125975c7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.285ex;"/></span> are the reciprocal-lattice vectors of the unit cell.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22KPOINT_BSE%22_incategory:%22Examples%22" title='Special:Search/"KPOINT BSE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

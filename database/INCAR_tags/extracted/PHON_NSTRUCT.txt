@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">PHON_NSTRUCT</a> = [integer]<br/> Default: <b>PHON_NSTRUCT</b> = none 
+</p>
+<p>Description: This flag sets the number of structures for electron-phonon interactions from Monte-Carlo (MC) sampling. 
+</p>
+<p>This feature is only available from VASP version 6.0 or higher.
+</p>
+<p>For <a class="mw-selflink selflink">PHON_NSTRUCT</a>=-1 the eigenvalues and eigenvectors of the dynamic matrix are written to the file <a href="/wiki/index.php/DYNMATFULL" title="DYNMATFULL">DYNMATFULL</a>.
+</p>
+<p>For <a class="mw-selflink selflink">PHON_NSTRUCT</a>=0 the ZG configuration<sup class="reference" id="cite_ref-zacharias:prb:2016_1-0"><a href="#cite_note-zacharias:prb:2016-1">[1]</a></sup> (one-shot) method is executed.
+</p>
+<p>For <a class="mw-selflink selflink">PHON_NSTRUCT</a>&gt;0 that many MC structures are prepared.
+</p>
+<p>For further usage of this tag see: <a href="/wiki/index.php/Electron-phonon_interactions_from_Monte-Carlo_sampling" title="Electron-phonon interactions from Monte-Carlo sampling">Electron-phonon interactions from Monte-Carlo sampling</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PHON_LMC" title="PHON LMC">PHON_LMC</a>, <a href="/wiki/index.php/PHON_LBOSE" title="PHON LBOSE">PHON_LBOSE</a>, <a href="/wiki/index.php/PHON_NTLIST" title="PHON NTLIST">PHON_NTLIST</a>, <a href="/wiki/index.php/PHON_TLIST" title="PHON TLIST">PHON_TLIST</a>, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PHON_NSTRUCT%22_incategory:%22Examples%22" title='Special:Search/"PHON NSTRUCT" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">LMAXMIX</a> = [integer]<br/> Default: <b>LMAXMIX</b> = 2 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMAXMIX</a> controls up to which <i>l</i>-quantum number the one-center PAW charge densities are passed through the charge density mixer and written to the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file.
+</p>
+<p>Higher <i>l</i>-quantum numbers (<i>l</i>&gt;<a class="mw-selflink selflink">LMAXMIX</a>) are not handled by the <a href="/wiki/index.php/Category:Density_mixing" title="Category:Density mixing">density mixer</a> (these components of the one-center charge density are set to the value corresponding to the present orbitals). Usually, it is not necessary to increase <a class="mw-selflink selflink">LMAXMIX</a>, but the following cases are exceptions:
+</p>
+<ul><li><a href="/wiki/index.php/Category:DFT%2BU" title="Category:DFT+U">DFT+U calculations</a> require, in many cases, an increase of <a class="mw-selflink selflink">LMAXMIX</a> to 4 for <i>d</i>-electrons (or 6 for <i>f</i>-elements) to obtain fast convergence to the ground state.</li></ul>
+<ul><li>The <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file will contain the one-center PAW occupancy matrices up to <a class="mw-selflink selflink">LMAXMIX</a>. When the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file is read and kept fixed in the course of the calculations (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11), the results will not necessarily be identical to a self-consistent run. The deviations will be large for DFT+U calculations. For the calculation of band structures within the DFT+U approach, it is strictly required to increase <a class="mw-selflink selflink">LMAXMIX</a> to 4 for <i>d</i>-elements and to 6 for <i>f</i>-elements.</li></ul>
+<ul><li><a href="/wiki/index.php/Category:Magnetism" title="Category:Magnetism">SDFT calculations</a> that consider noncollinear magnetism often require slow mixing of the spin density up to 4 for <i>d</i>-elements and up to 6 for <i>f</i>-elements to obtain fast convergence to the ground state.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMAXMIX%22_incategory:%22Examples%22" title='Special:Search/"LMAXMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,31 @@
+<p><a class="mw-selflink selflink">NELECT</a> = [real]<br/> Default: <b>NELECT</b> = number of valence electrons 
+</p>
+<p>Description: <a class="mw-selflink selflink">NELECT</a> sets the number of electrons.
+</p>
+<p>The number of electrons is determined automatically from the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> (ZVAL of the element) and <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file (number of the atoms of the respective atom type) assuming the cell is charge-neutral.
+If the number of electrons is not compatible with the number derived from the valence and the number of atoms a homogeneous background charge is assumed.
+If the number of ions specified in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file is 0 and <a class="mw-selflink selflink">NELECT</a>=n, then the energy of a homogeneous electron gas is calculated.
+</p>
+<h2><span class="mw-headline" id="Charged_calculations">Charged calculations</span></h2>
+<p>The required first-order correction to the energy caused by an excess charge is given by
+</p>
+<p>where <i>q</i> is the net charge of the system, α
+the Madelung constant of a point charge <i>q</i> placed in a homogeneous background charge <i>-q</i>, and ε 
+the dielectric constant of the system.
+For atoms or molecules surrounded by vacuum, ε takes on the vacuum value ε=1.
+VASP can automatically correct this leading error, see <a href="/wiki/index.php/Electrostatic_corrections" title="Electrostatic corrections">Electrostatic corrections</a> for further information.
+It is important to emphasize that the total energy cannot be corrected for charged slabs, since a charged slab results in an electrostatic potential that grows with the distance from the slab.
+This non-convergence of the potential is a result of the interaction between the charged slab and the compensating background.
+A practical consequence of this non-convergence is that the total energy depends linearly on the width of the vacuum.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/EPSILON" title="EPSILON">EPSILON</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/LMONO" title="LMONO">LMONO</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/EFIELD" title="EFIELD">EFIELD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NELECT%22_incategory:%22Examples%22" title='Special:Search/"NELECT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

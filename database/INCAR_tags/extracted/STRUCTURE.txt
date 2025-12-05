@@ -1,0 +1,34 @@
+<p><a class="mw-selflink selflink">PLUGINS/STRUCTURE</a> =  .True. | .False.<br/> Default: <b>PLUGINS/STRUCTURE</b> = .False. 
+</p>
+<p>Description: <a class="mw-selflink selflink">PLUGINS/STRUCTURE</a> calls the Python plugin for the structure interface for each ionic relaxation step
+</p>
+<p>When <a class="mw-selflink selflink">PLUGINS/STRUCTURE</a>=.TRUE., VASP calls the <code>structure</code> Python function at the end of each ionic relaxation step. 
+The primary use-case of this tag is to modify the structure based on the computed energy, force and stress tensor.
+</p>
+<h2><span class="mw-headline" id="Expected_inputs">Expected inputs</span></h2>
+<p>The <code>structure</code> Python function expects the following inputs,
+</p>
+<p>where <code>constants</code> and <code>additions</code> and <a class="external text" href="https://docs.python.org/3/library/dataclasses.html" rel="nofollow">Python dataclasses</a>.
+The <code>constants</code> dataclass consists of the following inputs, listed here with their associated <a class="external text" href="https://numpy.org/doc/stable/user/basics.types.html" rel="nofollow">datatypes</a>
+</p>
+<p>Note that the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> tags are capitalized.
+<code>number_ions</code> is the total number of ions listed in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file,
+<code>number_ion_types</code> is the number of ion corresponding to each ion type in the convention of the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file,
+<code>ion_types</code> stores the total number of ion types,
+<code>atomic_numbers</code> contains the atomic number for each atom type,
+<code>lattice_vectors</code> and <code>positions</code> contain the lattice vectors and positions of the current SCF step
+<code>forces</code> and <code>stress</code> are the computed forces and stress tensor and <code>charge_density</code> contains the charge density on the real space grid. <code>shape_grid</code> is a three dimensional integer array which stores the shape of the real space grid, <a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>, <a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a> and <a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a> and <code>charge_density</code> is the charge density on this real space grid.
+</p>
+<p>The <code>additions</code> dataclass consists of the following modifiable outputs
+</p>
+<h2><span class="mw-headline" id="Modifying_quantities">Modifying quantities</span></h2>
+<p>Modify the quantities listed in additions by adding to them.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Plugins" title="Plugins">Plugins</a>,
+<a href="/wiki/index.php/PLUGINS/FORCE_AND_STRESS" title="PLUGINS/FORCE AND STRESS">PLUGINS/FORCE_AND_STRESS</a>,
+<a href="/wiki/index.php/PLUGINS/LOCAL_POTENTIAL" title="PLUGINS/LOCAL POTENTIAL">PLUGINS/LOCAL_POTENTIAL</a>,
+<a href="/wiki/index.php/PLUGINS/MACHINE_LEARNING" title="PLUGINS/MACHINE LEARNING">PLUGINS/MACHINE_LEARNING</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PLUGINS/STRUCTURE%22_incategory:%22Examples%22" title='Special:Search/"PLUGINS/STRUCTURE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">QSPIRAL</a> = [real array]<br/> Default: <b>QSPIRAL</b> = 3*0.0 
+</p>
+<p>Description: the <a class="mw-selflink selflink">QSPIRAL</a>-tag specifies the spin spiral propagation vector.
+</p>
+<p><a class="mw-selflink selflink">QSPIRAL</a> specifies the spin spiral propagation vector in direct coordinates of the reciprocal lattice.
+</p>
+<p>See the <a href="/wiki/index.php/Spin_spirals" title="Spin spirals">description of spin spiral calculations</a> for more details.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Spin_spirals" title="Spin spirals">Spin spirals</a>,
+<a href="/wiki/index.php/LSPIRAL" title="LSPIRAL">LSPIRAL</a>,
+<a href="/wiki/index.php/LZEROZ" title="LZEROZ">LZEROZ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22QSPIRAL%22_incategory:%22Examples%22" title='Special:Search/"QSPIRAL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

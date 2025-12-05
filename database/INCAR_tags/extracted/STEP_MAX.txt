@@ -1,0 +1,21 @@
+<p><br/>
+<a class="mw-selflink selflink">STEP_MAX</a> = [real]<br/> Default: <b>STEP_MAX</b> = 0.1 
+</p>
+<p>Description: The flag <a class="mw-selflink selflink">STEP_MAX</a> defines the trust radius (upper limit) for the optimization step (in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span> ) in the <a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved Dimer Method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved Dimer Method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22STEP_MAX%22_incategory:%22Examples%22" title='Special:Search/"STEP MAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

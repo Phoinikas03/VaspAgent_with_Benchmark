@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">NSUBSYS</a> = [integer array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NSUBSYS</a> defines the atomic subsystems in calculations with multiple Anderson thermostats (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>Up to three user-defined atomic subsystems may be coupled with independent Andersen thermostats<sup class="reference" id="cite_ref-Andersen80_1-0"><a href="#cite_note-Andersen80-1">[1]</a></sup> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=13).
+</p>
+<p>These subsystems are defined by specifying the last atom for each subsystem (two or three values must be supplied). For instance, if total of 20 atoms is defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a>-file, and the initial 10 atoms belong to the subsystem 1, the next 7 atoms to the subsystem 2, and the last 3 atoms to the subsystem 3, <a class="mw-selflink selflink">NSUBSYS</a> should be defined as follows:
+</p>
+<p>Note that the last number in the previous example is actually redundant (clearly the last three atoms belong to the last subsystem) and does not have to be user-supplied.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/TSUBSYS" title="TSUBSYS">TSUBSYS</a>,
+<a href="/wiki/index.php/PSUBSYS" title="PSUBSYS">PSUBSYS</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NSUBSYS%22_incategory:%22Examples%22" title='Special:Search/"NSUBSYS" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

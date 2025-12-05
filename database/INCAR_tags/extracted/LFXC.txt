@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">LFXC</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LFXC</a> enables the local exchange-correlation kernel in <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">TD-DFT</a> and <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">TDHF</a> calculations.
+</p>
+<p>The local exchange-correlation kernel is determined via <sup class="reference" id="cite_ref-sander:prb:15_1-0"><a href="#cite_note-sander:prb:15-1">[1]</a></sup>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c_{\rm x}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">x</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c_{\rm x}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c_{\rm x}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9233b69cc1887ed3aa1f93a212545a9f&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.107ex;"/></span> is the fraction of the exchange interaction set by <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

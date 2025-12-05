@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">LELF</a> = .TRUE. | .FALSE.<br/> Default: <b>LELF</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LELF</a> determines whether to create an
+<a href="/wiki/index.php/ELFCAR" title="ELFCAR">ELFCAR</a> file or not.
+</p>
+<p>This file contains the so-called ELF (electron localization
+function) <sup class="reference" id="cite_ref-silvi:nature:371_1-0"><a href="#cite_note-silvi:nature:371-1">[1]</a></sup>
+</p>
+<p>If <a class="mw-selflink selflink">LELF</a> is set, <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>=1 has to be set explicitely in
+the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file in addition
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LELF%22_incategory:%22Examples%22" title='Special:Search/"LELF" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

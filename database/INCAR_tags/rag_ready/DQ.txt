@@ -1,0 +1,1 @@
+DQ =  Default: DQ = 0.001 Description: step size for the finite difference k -space derivative in the linear response calculation of chemical shifts. Typical values for DQ are in the range . The default is often sufficient. Related tags and articles LCHIMAG , ICHIBARE , LNMR_SYM_RED , NLSPLINE Examples that use this tag

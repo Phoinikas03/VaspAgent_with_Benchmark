@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_MHIS</a> = [integer]<br/> Default: <b>ML_MHIS</b> = 10 
+</p>
+<p>Description: This tag sets the number of estimated errors stored in memory to determine the threshold for error estimation in the machine learning force field method for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=1. For <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2, the history length is 50 x <a class="mw-selflink selflink">ML_MHIS</a> (or hard coded to 400).
+</p>
+<p>The use of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Threshold_for_error_of_forces" title="Machine learning force field: Theory">here</a>.
+</p>
+<p><a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=1: The ML code stores <a class="mw-selflink selflink">ML_MHIS</a> errors from previous training steps: immediately after a re-training of the ML-FF, the estimated errors of the forces are reevaluated for the current structure (that was also just added as training structure). The average  and the maximum error of the forces is stored in the history. After  <a class="mw-selflink selflink">ML_MHIS</a> updates of the force field, the threshold   <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> is updated the first time and is then updated after every further update of the ML-FF. We recommend to read the section <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a> for further details.
+</p>
+<p><a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2: Averaging is performed over 50 x <a class="mw-selflink selflink">ML_MHIS</a> error predictions. Every MD step is considered in the averaging (as opposed to above, where only structures after re-training are considered). 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>, <a href="/wiki/index.php/ML_CX" title="ML CX">ML_CX</a>, <a href="/wiki/index.php/ML_CSLOPE" title="ML CSLOPE">ML_CSLOPE</a>, <a href="/wiki/index.php/ML_CSIG" title="ML CSIG">ML_CSIG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_MHIS%22_incategory:%22Examples%22" title='Special:Search/"ML MHIS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

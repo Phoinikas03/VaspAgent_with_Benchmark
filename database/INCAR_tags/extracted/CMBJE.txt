@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">CMBJE</a> = [real]<br/> Default: <b>CMBJE</b> = 0.5 
+</p>
+<p>Description: sets the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e1671797c52e15f763380b45e841ec32&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.083ex;"/></span> parameter in the MBJ and local MBJ potentials.
+</p>
+<p>See the description of the <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/CMBJ" title="CMBJ">CMBJ</a>,
+<a href="/wiki/index.php/CMBJA" title="CMBJA">CMBJA</a>,
+<a href="/wiki/index.php/CMBJB" title="CMBJB">CMBJB</a>,
+<a href="/wiki/index.php/SMBJ" title="SMBJ">SMBJ</a>,
+<a href="/wiki/index.php/RSMBJ" title="RSMBJ">RSMBJ</a>,
+<a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a>,
+<a href="/wiki/index.php/LMAXTAU" title="LMAXTAU">LMAXTAU</a>,
+<a href="/wiki/index.php/LMIXTAU" title="LMIXTAU">LMIXTAU</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CMBJE%22_incategory:%22Examples%22" title='Special:Search/"CMBJE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

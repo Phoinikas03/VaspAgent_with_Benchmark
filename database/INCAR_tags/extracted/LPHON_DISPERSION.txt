@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">LPHON_DISPERSION</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LPHON_DISPERSION</a> requests the calculation of the phonon dispersion along the q-point path supplied in file <a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a> (same format as <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a>).
+</p>
+<p>After the computation of the force constants using finite differences (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=5,6) or density-functional perturbation theory (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=7,8) on a supercell it is possible to compute the phonon dispersion for the equivalent primitive cell determined by VASP by setting <a class="mw-selflink selflink">LPHON_DISPERSION</a>=.TRUE.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/PHON_NWRITE" title="PHON NWRITE">PHON_NWRITE</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>,
+<a href="/wiki/index.php/PHON_G_CUTOFF" title="PHON G CUTOFF">PHON_G_CUTOFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPHON_DISPERSION%22_incategory:%22Examples%22" title='Special:Search/"LPHON DISPERSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,97 @@
+<p><a class="mw-selflink selflink">VDW_C6</a> = [real (array)] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_C6</a> defines the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle C_6}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>C</mi>
+<mn>6</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle C_6}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle C_6}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ee9d16b68c34c5e6b221796fe15d9424&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.716ex;"/></span> parameters (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">J</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msup>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=90e4f658b1c3987262604076bad542fb&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 11.556ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<p><a class="mw-selflink selflink">VDW_C6</a> sets the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle C_6}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>C</mi>
+<mn>6</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle C_6}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle C_6}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ee9d16b68c34c5e6b221796fe15d9424&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.716ex;"/></span> parameters (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">J</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msup>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{Jnm}^{6}\mathrm{mol}^{-1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=90e4f658b1c3987262604076bad542fb&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 11.556ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file for the <a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>, <a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>, <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a>, and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VDW_C6AU" title="VDW C6AU">VDW_C6AU</a>,
+<a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>,
+<a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_C6%22_incategory:%22Examples%22" title='Special:Search/"VDW C6" incategory:"Examples"'>Examples that use this tag</a>
+</p>

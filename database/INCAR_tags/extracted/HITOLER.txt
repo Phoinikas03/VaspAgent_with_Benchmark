@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">HITOLER</a> = [real]<br/> Default: <b>HITOLER</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 5\times10^{-5}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>5</mn>
+<mo>×<!-- × --></mo>
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>5</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 5\times10^{-5}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 5\times10^{-5}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b421af8874615e1ec75af384f63efa35&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 8.661ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">HITOLER</a> specifies the convergence parameter for the iterative Hirschfeld partitioning in the Tkatchenko-Scheffler method.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>,
+<a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning" title="Tkatchenko-Scheffler method with iterative Hirshfeld partitioning">Tkatchenko-Scheffler method with iterative Hirshfeld partitioning</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+<a href="/wiki/index.php/DDsC_dispersion_correction" title="DDsC dispersion correction">dDsC dispersion correction</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HITOLER%22_incategory:%22Examples%22" title='Special:Search/"HITOLER" incategory:"Examples"'>Examples that use this tag</a>
+</p>

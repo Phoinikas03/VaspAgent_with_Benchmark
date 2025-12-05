@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">LSCALU</a> = [logical]<br/> Default: <b>LSCALU</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCALU</a> switches on the parallel LU decomposition (using scaLAPACK) in the orthonormalization of the wave functions. 
+</p>
+<p>For <a class="mw-selflink selflink">LSCALU</a>=.TRUE. the LU decomposition in the orthormalization of the wave functions is done in parallel, using scaLAPACK routines.
+Provided, of course, <a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>=.TRUE. and VASP was compiled with scaLAPACK support (<a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">precompiler flag</a>: -DscaLAPACK).
+</p>
+<p>In many cases, the scaLAPACK LU decomposition based is <i>slower</i> than the serial LU decomposition (compare the timing <tt>ORTHCH</tt> in the respective <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> files). Hence the default is <a class="mw-selflink selflink">LSCALU</a>=.FALSE.
+(subspace rotations, however, are still done using scaLAPACK).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>,
+<a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a>,
+<a href="/wiki/index.php/NSIM" title="NSIM">NSIM</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>,
+<a href="/wiki/index.php/LSCAAWARE" title="LSCAAWARE">LSCAAWARE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSCALU%22_incategory:%22Examples%22" title='Special:Search/"LSCALU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

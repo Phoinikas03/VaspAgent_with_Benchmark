@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_OUTPUT_MODE</a> = [integer]<br/> Default: <b>ML_OUTPUT_MODE</b> = 1 
+</p>
+<p>Description: This tag allows to disable certain file output which helps to increase performance in molecular-dynamics simulations with machine-learned force fields in prediction-only mode (<code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>).
+</p>
+<p>This tag is useful in combination with <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a> to further reduce per-time-step calculations and file output. The following options exist for this tag:
+</p>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ML_OUTPUT_MODE</a> = 1</code>: <b>Normal operation</b>, output is written as usual in ab-initio molecular-dynamics simulations.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ML_OUTPUT_MODE</a> = 0</code>: <b>Reduced file output mode</b>, in contrast to normal operation the following changes apply:
+<ul><li>Pair-correlation functions are not computed.</li>
+<li>No output to <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a> file.</li>
+<li>No <code>pair_correlation</code> output section in <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>.</li>
+<li>No <code>structure</code>, <code>varray name="forces"</code> and <code>varray name="stress"</code> output sections in <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a>.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_LFAST" title="ML LFAST">ML_LFAST</a>, <a href="/wiki/index.php/ML_IERR" title="ML IERR">ML_IERR</a>, <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>
+</p>

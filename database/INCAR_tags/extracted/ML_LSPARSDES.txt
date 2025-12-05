@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">ML_LSPARSDES</a> = [logical]<br/> Default: <b>ML_LSPARSDES</b> = .FALSE. 
+</p>
+<p>Description: Specifies whether angular-descriptor sparsification is enabled within the machine learning force field method.
+</p>
+<p>To use the <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sparsification_of_angular_descriptors" title="Machine learning force field: Theory">sparsification of angular descriptors set</a> the following tags:
+</p>
+<ul><li><a class="mw-selflink selflink">ML_LSPARSDES</a>=<i>.TRUE.</i>.</li>
+<li>The ratio of the selected descriptors to the total number of descriptors: <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>. This tag controls the extent of the sparsification.</li>
+<li>The number of the highest eigenvalues <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle k}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8ce4b16b22b58894aa86c421e8759df3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.211ex;"/></span> to which the correlation is measured via the leverage scoring: <a href="/wiki/index.php/ML_NRANK_SPARSDES" title="ML NRANK SPARSDES">ML_NRANK_SPARSDES</a>. This parameter usually does not need to be changed.</li></ul>
+<p>We advise the user to adjust this parameter carefully and test it individually for each system. This means e.g. plotting the accuracy of the calculation against the computational speed (Pareto curves) for different values of <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>. The user can then choose a tradeoff between efficiency and accuracy. 
+The behavior is system dependent, however, we have experienced the following trends for our test cases: For <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>=0 a descriptor sparsification of 50 percent <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>=0.5 leaves the accuracy almost untouched. 
+If more spars descriptors are used such as e.g. <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>=1, which already contain much fewer descriptors than the standard descriptor <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>=0, a 50 percent sparsification for <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>=1 results in noticeable accuracy loss. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>, <a href="/wiki/index.php/ML_NRANK_SPARSDES" title="ML NRANK SPARSDES">ML_NRANK_SPARSDES</a>, <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_EPS_LOW%22_incategory:%22Examples%22" title='Special:Search/"ML EPS LOW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

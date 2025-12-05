@@ -1,0 +1,109 @@
+<p><a class="mw-selflink selflink">VDW_C6AU</a> = [real (array)] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_C6AU</a> defines the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle C_6}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>C</mi>
+<mn>6</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle C_6}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle C_6}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ee9d16b68c34c5e6b221796fe15d9424&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.716ex;"/></span> parameters (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{Hartree}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">H</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">e</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{Hartree}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{Hartree}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=864bbd199c69c450cb94a124d2f9fd08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 7.698ex;"/></span> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{bohr}^{6}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">h</mi>
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{bohr}^{6}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{bohr}^{6}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=aa90258021bb97bb76ef1e157c41dda2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 5.713ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<p><a class="mw-selflink selflink">VDW_C6AU</a> sets the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle C_6}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>C</mi>
+<mn>6</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle C_6}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle C_6}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ee9d16b68c34c5e6b221796fe15d9424&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.716ex;"/></span> parameters (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{Hartree}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">H</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">e</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{Hartree}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{Hartree}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=864bbd199c69c450cb94a124d2f9fd08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 7.698ex;"/></span> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{bohr}^{6}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">h</mi>
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{bohr}^{6}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{bohr}^{6}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=aa90258021bb97bb76ef1e157c41dda2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 5.713ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file for the <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VDW_C6" title="VDW C6">VDW_C6</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_C6AU%22_incategory:%22Examples%22" title='Special:Search/"VDW C6AU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

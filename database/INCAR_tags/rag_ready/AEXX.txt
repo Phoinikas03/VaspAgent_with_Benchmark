@@ -1,0 +1,1 @@
+AEXX =  Description: AEXX specifies the fraction of exact exchange in a Hartree-Fock-type/hybrid-functional calculation. Related tags and articles ALDAX , ALDAC , AGGAX , AGGAC , AMGGAX , AMGGAC , LHFCALC , HFSCREEN , List of hybrid functionals , Hybrid functionals: formalism Examples that use this tag References

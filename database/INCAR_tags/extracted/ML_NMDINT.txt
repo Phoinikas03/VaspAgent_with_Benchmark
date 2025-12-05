@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">ML_NMDINT</a> = [integer] 
+</p>
+<p>Description: Tag to control the minimum interval to get training samples in the machine learning force field method.
+</p>
+<p>The usage of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sampling_of_training_data_and_local_reference_configurations" title="Machine learning force field: Theory">here</a>
+</p>
+<p>This tag defines a lower threshold for taking new configurations from the MD, so that as long as the upper threshold for the Bayesian error (e.g. <a href="/wiki/index.php/ML_CDOUB" title="ML CDOUB">ML_CDOUB</a> times <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>) is not exceeded,  at least <a class="mw-selflink selflink">ML_NMDINT</a> MD steps are preformed using the MLFF (i.e. no first principles calculation is performed). This avoids that many nearly identical structures are added.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>, <a href="/wiki/index.php/ML_CDOUB" title="ML CDOUB">ML_CDOUB</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>, <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_NMDINT%22_incategory:%22Examples%22" title='Special:Search/"ML NMDINT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

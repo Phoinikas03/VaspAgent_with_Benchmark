@@ -1,0 +1,336 @@
+<p><a class="mw-selflink selflink">LMAXFOCK</a> = [integer]<br/> Default: <b>LMAXFOCK</b> = 4 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMAXFOCK</a> sets the maximum angular momentum quantum number <i>L</i> for the augmentation of charge densities in Hartree-Fock type routines.
+</p>
+<p>In the <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a>, the difference between the charge density of the all-electron partial waves <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \phi_\beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mi>β<!-- β --></mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \phi_\beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \phi_\beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bac37bb7cdf69d8f8431eb782f0a5610&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 2.56ex;"/></span> and
+the pseudo partial waves <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tilde \phi_\beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ϕ<!-- ϕ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>β<!-- β --></mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tilde \phi_\beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tilde \phi_\beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=650c3a4294a98dd2a2c2cbe3db48cd77&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.509ex; width: 2.642ex;"/></span>
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+Q_{\alpha\beta}({\mathbf r})= \phi^*_\alpha({\mathbf r})\phi_\beta({\mathbf r})  - \tilde \phi^*_\alpha({\mathbf r})\tilde \phi_\beta({\mathbf r})
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>Q</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>β<!-- β --></mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<msubsup>
+<mi>ϕ<!-- ϕ --></mi>
+<mi>α<!-- α --></mi>
+<mo>∗<!-- ∗ --></mo>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mi>β<!-- β --></mi>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>−<!-- − --></mo>
+<msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ϕ<!-- ϕ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>α<!-- α --></mi>
+<mo>∗<!-- ∗ --></mo>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ϕ<!-- ϕ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>β<!-- β --></mi>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+Q_{\alpha\beta}({\mathbf r})= \phi^*_\alpha({\mathbf r})\phi_\beta({\mathbf r})  - \tilde \phi^*_\alpha({\mathbf r})\tilde \phi_\beta({\mathbf r})
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+Q_{\alpha\beta}({\mathbf r})= \phi^*_\alpha({\mathbf r})\phi_\beta({\mathbf r})  - \tilde \phi^*_\alpha({\mathbf r})\tilde \phi_\beta({\mathbf r})
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9d41940b4171dbce97ff17154c98f09d&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.676ex; width: 35.182ex;"/></span>
+</p>
+<p>is usually treated on spherical grids centered at each atom
+(one-center terms inside the PAW spheres, see <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a>). To describe long range electrostatic effects, the <i>moments</i> of the differences of the all-electron and pseudo charge density 
+also need to be added on the plane wave grid (compensation density, see <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a>).
+These compensation charges exactly restore the moments of the all-electron density on the plane wave
+grid. For the charge densities used in the Hartree and DFT term, 
+the augmentation is done exactly up to the maximum <i>L</i> quantum number required by the POTCAR files, 
+whereas for the Fock exchange, for reasons of efficiency, 
+the augmentation on the plane wave grid is controlled by <a class="mw-selflink selflink">LMAXFOCK</a>.
+</p>
+<p>Specifically, when the  exchange energy is evaluated
+</p>
+<p><span id="ExFock">
+</span></p>
+<p class="mw-empty-elt">
+</p>
+<p>the overlap density <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \psi_{n\mathbf{k}}^{*}(\mathbf{r})\psi_{m\mathbf{q}}(\mathbf{r}) }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∗<!-- ∗ --></mo>
+</mrow>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \psi_{n\mathbf{k}}^{*}(\mathbf{r})\psi_{m\mathbf{q}}(\mathbf{r}) }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \psi_{n\mathbf{k}}^{*}(\mathbf{r})\psi_{m\mathbf{q}}(\mathbf{r}) }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b7d32619c7e79c280a313b78a6607419&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 13.741ex;"/></span>
+between two Bloch orbitals needs to be calculated on the plane wave grid (see <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a>). The tag <a class="mw-selflink selflink">LMAXFOCK</a>
+controls up to which <i>L</i> quantum number, the compensation charge <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \widehat{n}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>n</mi>
+<mo>^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \widehat{n}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \widehat{n}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f01c472176a9c908519d2635200ab14&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.306ex;"/></span> is calculated on the plane wave grid (compared <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a> compensation charge):
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+  \widehat{n}(\mathbf{r}) = \sum_{\alpha,\beta,LM} \widehat{Q}_{\alpha,\beta}^{LM}(\mathbf{r})\,
+              \langle \widetilde{\psi}_{nk} | \widetilde{p}_{\alpha} \rangle
+              \langle \widetilde{p}_{\beta} | \widetilde{\psi}_{mk} \rangle.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>n</mi>
+<mo>^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+<mi>L</mi>
+<mi>M</mi>
+</mrow>
+</munder>
+<msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>Q</mi>
+<mo>^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>L</mi>
+<mi>M</mi>
+</mrow>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mspace width="thinmathspace"></mspace>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ψ<!-- ψ --></mi>
+<mo>~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo>~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>p</mi>
+<mo>~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ψ<!-- ψ --></mi>
+<mo>~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+  \widehat{n}(\mathbf{r}) = \sum_{\alpha,\beta,LM} \widehat{Q}_{\alpha,\beta}^{LM}(\mathbf{r})\,
+              \langle \widetilde{\psi}_{nk} | \widetilde{p}_{\alpha} \rangle
+              \langle \widetilde{p}_{\beta} | \widetilde{\psi}_{mk} \rangle.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+  \widehat{n}(\mathbf{r}) = \sum_{\alpha,\beta,LM} \widehat{Q}_{\alpha,\beta}^{LM}(\mathbf{r})\,
+              \langle \widetilde{\psi}_{nk} | \widetilde{p}_{\alpha} \rangle
+              \langle \widetilde{p}_{\beta} | \widetilde{\psi}_{mk} \rangle.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=97119c91d90e08ea7cca0ce450b6889b&amp;mode=mathml" style="vertical-align: -3.338ex; height: 6.343ex; width: 40.425ex;"/></span>
+</p>
+<p>To accelerate convergence with respect to <a class="mw-selflink selflink">LMAXFOCK</a>, VASP uses a small trick: the contributions from the Hartree-Fock one-center terms are evaluated for the pseudo orbitals also only up to <i>L</i>=<a class="mw-selflink selflink">LMAXFOCK</a>, whereas the one-center terms for the exact all-electron orbitals are evaluated up to the maximum required <i>L</i> (twice the angular quantum number of the partial wave with the highest <i>l</i>). The default is <a class="mw-selflink selflink">LMAXFOCK</a>=4, and it might be necessary to increase this parameter, if the system contains f-electrons. Since this increases the computational load considerably (about factor 2), it is recommended to perform tests, whether the results are already reasonably converged using the default <a class="mw-selflink selflink">LMAXFOCK</a>=4.
+</p>
+<p>To be compatible w.r.t. old releases, VASP also reads the flag <a href="/wiki/index.php/HFLMAX" title="HFLMAX">HFLMAX</a> to the same effect as <a class="mw-selflink selflink">LMAXFOCK</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/HFLMAX" title="HFLMAX">HFLMAX</a>,
+<a class="mw-redirect" href="/wiki/index.php/LMAXFOCKAE" title="LMAXFOCKAE">LMAXFOCKAE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMAXFOCK%22_incategory:%22Examples%22" title='Special:Search/"LMAXFOCK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

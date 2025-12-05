@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">LRHFCALC</a> = .TRUE. | .FALSE.<br/> Default: <b>LRHFCALC</b> = .FALSE. 
+</p>
+<p>Description: Switch on the decomposition of the exchange functional for the <a href="/wiki/index.php/Hybrid_functionals:_formalism#Error_function_screening_with_long-range_Hartree-Fock_exchange" title="Hybrid functionals: formalism">range-separated hybrid RSHXLDA or RSHXPBE functionals</a>.
+</p>
+<p>If <a class="mw-selflink selflink">LRHFCALC</a>=.TRUE. the exchange functional is decomposed into short-range LDA (or PBE) and long-range Hartree-Fock for calculations with the range-separated hybrid RSHXLDA or RSHXPBE functionals.<sup class="reference" id="cite_ref-iikura:jcp:2001_1-0"><a href="#cite_note-iikura:jcp:2001-1">[1]</a></sup><sup class="reference" id="cite_ref-gerber:cpl:2005_2-0"><a href="#cite_note-gerber:cpl:2005-2">[2]</a></sup><sup class="reference" id="cite_ref-gerber:jcp:2007_3-0"><a href="#cite_note-gerber:jcp:2007-3">[3]</a></sup> The screening parameter is specified by means of the <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> tag.
+</p>
+<p>The setting of the RSHXLDA and RSHXPBE functionals is shown on the <a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">page listing the hybrid functionals</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/LTHOMAS" title="LTHOMAS">LTHOMAS</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">list of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LRHFCALC%22_incategory:%22Examples%22" title='Special:Search/"LRHFCALC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,1 @@
+CLN =  Description: CLN selects the main quantum number {\displaystyle n} {\displaystyle n} of the excited core electron when using ICORELEVEL >0. Related tags and articles ICORELEVEL , CLNT , CLN , CLL LADDER , LHARTREE , NBANDSV , NBANDSO , OMEGAMAX , ANTIRES Examples that use this tag

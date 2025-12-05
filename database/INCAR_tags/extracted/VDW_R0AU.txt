@@ -1,0 +1,37 @@
+<p><a class="mw-selflink selflink">VDW_R0AU</a> = [real (array)] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_R0AU</a> defines the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f29d7d215dd27a9702745a0b43081d28&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> parameters (bohr) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<p><a class="mw-selflink selflink">VDW_R0AU</a> sets the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f29d7d215dd27a9702745a0b43081d28&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> parameters (bohr) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file for the <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VDW_R0" title="VDW R0">VDW_R0</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_R0AU%22_incategory:%22Examples%22" title='Special:Search/"VDW R0AU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

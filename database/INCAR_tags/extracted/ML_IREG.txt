@@ -1,0 +1,34 @@
+<p><a class="mw-selflink selflink">ML_IREG</a> = [integer]<br/> Default: <b>ML_IREG</b> = 2 
+</p>
+<p>Description: This tag specifies whether the regularization parameters are kept constant or not in the machine learning force field method.
+</p>
+<p>The following cases are possible for this tag:
+</p>
+<ul><li><a class="mw-selflink selflink">ML_IREG</a>=1: The (initial) precision (<a href="/wiki/index.php/ML_SIGV0" title="ML SIGV0">ML_SIGV0</a>) and noise (<a href="/wiki/index.php/ML_SIGW0" title="ML SIGW0">ML_SIGW0</a>) parameters are kept constant.</li>
+<li><a class="mw-selflink selflink">ML_IREG</a>=2: The parameters are optimized (default).</li></ul>
+<p>For the optimization of the noise parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_{\mathrm{v}}^{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">v</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_{\mathrm{v}}^{2}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_{\mathrm{v}}^{2}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b1a61ea1fa333241cdcb480c91ddf6eb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.843ex; width: 2.428ex;"/></span> see <a class="mw-redirect" href="/wiki/index.php/Machine_learning_force_fields:_Theory#Bayesian_error_estimation" title="Machine learning force fields: Theory">this section</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_SIGV0" title="ML SIGV0">ML_SIGV0</a>, <a href="/wiki/index.php/ML_SIGW0" title="ML SIGW0">ML_SIGW0</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IREG%22_incategory:%22Examples%22" title='Special:Search/"ML IREG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

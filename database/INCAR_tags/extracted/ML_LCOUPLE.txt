@@ -1,0 +1,497 @@
+<p><a class="mw-selflink selflink">ML_LCOUPLE</a> = [logical]<br/> Default: <b>ML_LCOUPLE</b> = .FALSE. 
+</p>
+<p>Description: This tag specifies whether thermodynamic integration is activated in order to calculate the chemical potentials within the machine learning force field method.
+</p>
+<p>In thermodynamic integration a coupling parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \lambda}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \lambda}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \lambda}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c6a6eb61fd9c6c913da73b3642ca147d&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.355ex;"/></span> is introduced to the Hamiltonian to smoothly switch between a "non-interacting" reference state and a "fully-interacting" state. The change of the free energy along this path is written as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\Delta \mu = \int\limits_{0}^{1} \langle \frac{dH(\lambda)}{d\lambda} \rangle_{\lambda} d\lambda.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mi>μ<!-- μ --></mi>
+<mo>=</mo>
+<munderover>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</munderover>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>H</mi>
+<mo stretchy="false">(</mo>
+<mi>λ<!-- λ --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>d</mi>
+<mi>λ<!-- λ --></mi>
+</mrow>
+</mfrac>
+<msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>λ<!-- λ --></mi>
+</mrow>
+</msub>
+<mi>d</mi>
+<mi>λ<!-- λ --></mi>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\Delta \mu = \int\limits_{0}^{1} \langle \frac{dH(\lambda)}{d\lambda} \rangle_{\lambda} d\lambda.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\Delta \mu = \int\limits_{0}^{1} \langle \frac{dH(\lambda)}{d\lambda} \rangle_{\lambda} d\lambda.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c446e1eae06698513ad3a2161027faca&amp;mode=mathml" style="vertical-align: -4.005ex; height: 9.176ex; width: 22.128ex;"/></span>
+</p>
+<p>Using machine learning force fields the Hamiltonian can be written as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+H (\lambda) = \sum\limits_{i=1}^{N_{a}} \frac{|\mathbf{p}_{i}|^2}{2m_{i}} + \sum\limits_{i \notin M} U_{i}(\lambda) + \lambda \sum\limits_{i \in M} U_{i}(\lambda) + \sum\limits_{i}^{N_{a}} U_{i,\mathbf{atom}}. 
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>H</mi>
+<mo stretchy="false">(</mo>
+<mi>λ<!-- λ --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<mfrac>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">p</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+</mfrac>
+<mo>+</mo>
+<munder>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>∉<!-- ∉ --></mo>
+<mi>M</mi>
+</mrow>
+</munder>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>λ<!-- λ --></mi>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mi>λ<!-- λ --></mi>
+<munder>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>∈<!-- ∈ --></mo>
+<mi>M</mi>
+</mrow>
+</munder>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>λ<!-- λ --></mi>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+<mi mathvariant="bold">t</mi>
+<mi mathvariant="bold">o</mi>
+<mi mathvariant="bold">m</mi>
+</mrow>
+</mrow>
+</msub>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+H (\lambda) = \sum\limits_{i=1}^{N_{a}} \frac{|\mathbf{p}_{i}|^2}{2m_{i}} + \sum\limits_{i \notin M} U_{i}(\lambda) + \lambda \sum\limits_{i \in M} U_{i}(\lambda) + \sum\limits_{i}^{N_{a}} U_{i,\mathbf{atom}}. 
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+H (\lambda) = \sum\limits_{i=1}^{N_{a}} \frac{|\mathbf{p}_{i}|^2}{2m_{i}} + \sum\limits_{i \notin M} U_{i}(\lambda) + \lambda \sum\limits_{i \in M} U_{i}(\lambda) + \sum\limits_{i}^{N_{a}} U_{i,\mathbf{atom}}. 
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=79c964b781a883499f82b9d48f98e240&amp;mode=mathml" style="vertical-align: -3.505ex; height: 7.843ex; width: 57.867ex;"/></span>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{a}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{a}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{a}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=48e9b1fb9472180b4ecea4ff24c56487&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.968ex;"/></span> denotes the number of atoms and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  U_{i,\mathbf{atom}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+<mi mathvariant="bold">t</mi>
+<mi mathvariant="bold">o</mi>
+<mi mathvariant="bold">m</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  U_{i,\mathbf{atom}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  U_{i,\mathbf{atom}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cac5e6946424198b4a06e89b30ce7b4&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 7.018ex;"/></span> is an atomic reference energy for a single non interacting atom. The first term in the equation describes the potential energy and the second and third term describe the potential energy of an atom <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span>. The index <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle M}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>M</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle M}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle M}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=69691c7bdcc3ce6d5d8a1361f22d04ac&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.442ex;"/></span> denotes the atoms whose interaction is controlled by a coupling parameter. The interactions of the atoms are controlled by scaling the contributions to the atom density via the coupling parameter
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho (\mathbf{r},\lambda) = \sum\limits_{j\notin M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right] + \lambda \sum\limits_{j\in M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right].
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ρ<!-- ρ --></mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>,</mo>
+<mi>λ<!-- λ --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<munder>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>∉<!-- ∉ --></mo>
+<mi>M</mi>
+</mrow>
+</munder>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mo>|</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>|</mo>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mi>g</mi>
+<mrow>
+<mo>[</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>+</mo>
+<mi>λ<!-- λ --></mi>
+<munder>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>∈<!-- ∈ --></mo>
+<mi>M</mi>
+</mrow>
+</munder>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mo>|</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>|</mo>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mi>g</mi>
+<mrow>
+<mo>[</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho (\mathbf{r},\lambda) = \sum\limits_{j\notin M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right] + \lambda \sum\limits_{j\in M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right].
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho (\mathbf{r},\lambda) = \sum\limits_{j\notin M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right] + \lambda \sum\limits_{j\in M} f_{\mathrm{cut}} \left( \left| \mathbf{r}_{j} - \mathbf{r}_{i} \right| \right) g \left[ \mathbf{r} - \left( \mathbf{r}_{j} - \mathbf{r}_{i} \right) \right].
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=356b04a0f6358c395d4563bb98118d5e&amp;mode=mathml" style="vertical-align: -3.505ex; height: 6.009ex; width: 82.17ex;"/></span>
+</p>
+<p><br/>
+Further details on the implementation can be found in reference <sup class="reference" id="cite_ref-jinnouchiti:prb:2020_1-0"><a href="#cite_note-jinnouchiti:prb:2020-1">[1]</a></sup>.
+</p>
+<p>For thermodynamic integration the following parameters have to be set:
+</p>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ML_LCOUPLE</a> = .TRUE.</code>.</li>
+<li>The number of atoms for which a coupling parameter is introduced (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i \in M }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+<mo>∈<!-- ∈ --></mo>
+<mi>M</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i \in M }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i \in M }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=28739f34769f867bb6861ddb5581ce05&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.085ex;"/></span>): <a href="/wiki/index.php/ML_NATOM_COUPLED" title="ML NATOM COUPLED">ML_NATOM_COUPLED</a>.</li>
+<li>The list of atom indices that for that the coupling parameter is applied in the interaction: <a href="/wiki/index.php/ML_ICOUPLE" title="ML ICOUPLE">ML_ICOUPLE</a>.</li>
+<li>The strength of the coupling parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \lambda}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \lambda}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \lambda}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c6a6eb61fd9c6c913da73b3642ca147d&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.355ex;"/></span> between 0 and 1: <a href="/wiki/index.php/ML_RCOUPLE" title="ML RCOUPLE">ML_RCOUPLE</a>.</li></ul>
+<p>The derivative of the hamiltonian with respect to the coupling constant <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle dH/d\lambda}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>d</mi>
+<mi>H</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>d</mi>
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle dH/d\lambda}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle dH/d\lambda}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a3493f5e2a63a8e5024ca87caf0c3d93&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 7.013ex;"/></span> is written out at every MD step to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a>. A sample output should look like this:
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_NATOM_COUPLED" title="ML NATOM COUPLED">ML_NATOM_COUPLED</a>, <a href="/wiki/index.php/ML_ICOUPLE" title="ML ICOUPLE">ML_ICOUPLE</a>, <a href="/wiki/index.php/ML_RCOUPLE" title="ML RCOUPLE">ML_RCOUPLE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LCOUPLE%22_incategory:%22Examples%22" title='Special:Search/"ML LCOUPLE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

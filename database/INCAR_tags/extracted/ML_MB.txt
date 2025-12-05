@@ -1,0 +1,37 @@
+<p><a class="mw-selflink selflink">ML_MB</a> = [integer]<br/> Default: <b>ML_MB</b> = see below 
+</p>
+<p>Description: This tag sets the maximum number of local reference configurations (i.e. basis functions in the kernel) in the machine learning force field method.
+</p>
+<p>The defaults for <a class="mw-selflink selflink">ML_MB</a> are different for each different <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> setting. Here are the defaults for each mode:
+</p>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = train</code>:
+<ul><li>No <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (learning from scratch): <code>min(1500 , max(<a href="/wiki/index.php/NSW" title="NSW">NSW</a> , 2*<a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a> * MAXAT_SP)</code></li>
+<li><a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (continuation of learning): <code>MB_AB + min(1500, max(<a href="/wiki/index.php/NSW" title="NSW">NSW</a> , 2*<a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a> * MAXAT_SP)</code></li></ul></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = select</code>: <code>MB_AB + <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a> * MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code>: <code>MB_AB + MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refitbayesian</code>: <code>MB_AB + MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>: <code>MB_AB</code></li></ul>
+<p>using the following definitions:
+</p>
+<ul><li><code>MAXAT_SP</code> = greatest number of atoms within all species among the current structures and the structures in the <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> file (if present).</li>
+<li><code>MB_AB</code> = greatest number of local reference configurations within all species in the <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> file.</li></ul>
+<p>The default value for <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = train</code> and <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = select</code> is a relatively safe value for most materials. However one might need to increase it to a greater value for liquids, polymers and amorphous systems, or when a MLFF for many different polytypes is trained. By default (<code style="padding: 2px"><a href="/wiki/index.php/ML_LBASIS_DISCARD" title="ML LBASIS DISCARD">ML_LBASIS_DISCARD</a> = .TRUE.</code>), if the number of local reference configurations would exceed <a class="mw-selflink selflink">ML_MB</a>, VASP would continue the calculation and disposes of these, but one should make extensive tests whether the generated MLFF is sufficiently accurate.
+</p>
+<p>If VASP stops, subsequent training can be restarted from the existing ML_AB file. This avoids loss of already acquired training data.
+</p>
+<p>Depending on the calculation mode VASP adds a little overhead in the allocation of <a class="mw-selflink selflink">ML_MB</a> arrays to buffer for new candidate structures. Here are the buffer sizes for each mode:
+</p>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = train</code>:
+<ul><li>No <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (learning from scratch): <code>min(<a href="/wiki/index.php/NSW" title="NSW">NSW</a> , <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>) * MAXAT_SP</code></li>
+<li><a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> present (continuation of learning): <code>min(<a href="/wiki/index.php/NSW" title="NSW">NSW</a> , <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>) * MAXAT_SP</code></li></ul></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = select</code>: <code><a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a> * MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code>: <code>MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refitbayesian</code>: <code>MAXAT_SP</code></li>
+<li><code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>: <code>0</code></li></ul>
+<p>The flag <a class="mw-selflink selflink">ML_MB</a> also determines the maximum number of rows of the design matrix.   This is usually a huge matrix. The design matrix is allocated statically at the beginning of the run, since several parts of the code use MPI shared memory and dynamic reallocation of these arrays can cause issues on many operating systems. An estimate of the size of the design matrix and all other large arrays is printed out to the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a> before allocation. The design matrix is fully distributed in a block-cyclic fashion for scaLAPACK, and thus the memory requirement for each core scales inversely proportional to the number of used cores.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_MCONF_NEW" title="ML MCONF NEW">ML_MCONF_NEW</a>, <a href="/wiki/index.php/ML_MCONF" title="ML MCONF">ML_MCONF</a>, <a href="/wiki/index.php/ML_LBASIS_DISCARD" title="ML LBASIS DISCARD">ML_LBASIS_DISCARD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_MB%22_incategory:%22Examples%22" title='Special:Search/"ML MB" incategory:"Examples"'>Examples that use this tag</a>
+</p>

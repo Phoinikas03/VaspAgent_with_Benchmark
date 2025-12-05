@@ -1,0 +1,96 @@
+<p><a class="mw-selflink selflink">LEFG</a> = .TRUE. | .FALSE.<br/> Default: <b>LEFG</b> =  .FALSE. 
+</p>
+<p>Description: The <a class="mw-selflink selflink">LEFG</a> computes the electric field gradient (EFG) at positions of the atomic nuclei.
+</p>
+<p>For <a class="mw-selflink selflink">LEFG</a>=.TRUE., the electric field gradient tensors at the positions of the atomic nuclei are calculated using the method of Petrilli <i>et al.</i> <sup class="reference" id="cite_ref-petrilli:prb:1998_1-0"><a href="#cite_note-petrilli:prb:1998-1">[1]</a></sup>. 
+</p>
+<p>The EFG tensors are symmetric. The principal components <i>V</i><sub>ii</sub> and asymmetry parameter η are printed for each atom. Following convention the principal components <i>V</i><sub>ii</sub> are ordered such that:
+</p>
+<p>The asymmetry parameter is defined as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta = {(V_{yy} - V_{xx})}/ V_{zz}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>η<!-- η --></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>y</mi>
+<mi>y</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>x</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>z</mi>
+<mi>z</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta = {(V_{yy} - V_{xx})}/ V_{zz}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta = {(V_{yy} - V_{xx})}/ V_{zz}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=71393cb695f7ebb5b35d981f147e13e2&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 19.896ex;"/></span>.
+For so-called "quadrupolar nuclei", <i>i.e.</i>, nuclei with nuclear spin I&gt;1/2, NMR experiments can
+access <i>V</i><sub>zz</sub> and η.
+</p>
+<p>To convert the <i>V</i><sub>zz</sub> values into the <i>C</i><sub>q</sub> often encountered in NMR literature, one has to specify the nuclear quadrupole moment by means of the <a href="/wiki/index.php/QUAD_EFG" title="QUAD EFG">QUAD_EFG</a>-tag. 
+</p>
+<h2><span class="mw-headline" id="Recommendations_and_advice">Recommendations and advice</span></h2>
+<p>Tight settings are required for calculating the electric field gradient.
+</p>
+<h3><span class="mw-headline" id="Input_parameters">Input parameters</span></h3>
+<ul><li>A larger <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> value than usual, generally much higher than the value given by ENMAX in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file, e.g. 800 eV for C in diamond, rather than the standard 400 eV.</li>
+<li>A small <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a> is required to provide converged chemical shifts, e.g. <code>1E-8</code> eV.</li>
+<li>Tighter precision, e.g. <a href="/wiki/index.php/PREC" title="PREC">PREC</a> = Accurate.</li>
+<li>Non-spherical contributions to the gradient of the density inside PAW spheres, i.e. <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> = .TRUE.</li></ul>
+<h3><span class="mw-headline" id="Structure">Structure</span></h3>
+<ul><li>The structure is extremely important, so using the experimental structure can improve results. Differences of 25 mÅ in structure can make a difference of 40 % to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{zz}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>z</mi>
+<mi>z</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{zz}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{zz}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ea77496f46a2711f4be323877207b977&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.126ex;"/></span> <sup class="reference" id="cite_ref-petrilli:prb:1998_1-1"><a href="#cite_note-petrilli:prb:1998-1">[1]</a></sup>.</li></ul>
+<h3><span class="mw-headline" id="PAW_pseudopotentials">PAW pseudopotentials</span></h3>
+<ul><li>The use of PAW potentials has a strong influence, GW <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files often improve values.</li>
+<li>Semi-core electrons can be important (check the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> files with <i>*_pv</i> or <i>*_sv</i>) as well as explicit inclusion of augmentation channels with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle d}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>d</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle d}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle d}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8277e0910d750195b448797616e091ad&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.216ex;"/></span>-projectors.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QUAD_EFG" title="QUAD EFG">QUAD_EFG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LEFG%22_incategory:%22Examples%22" title='Special:Search/"LEFG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

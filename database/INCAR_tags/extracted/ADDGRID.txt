@@ -1,0 +1,120 @@
+<p><a class="mw-selflink selflink">ADDGRID</a> = .TRUE. | .FALSE.<br/> Default: <b>ADDGRID</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">ADDGRID</a> determines whether an additional support grid is used for the evaluation of the augmentation charges.
+</p>
+<p>When <a class="mw-selflink selflink">ADDGRID</a>=.TRUE. VASP uses an additional support grid for the evaluation of the augmentation charges. This grid contains 8 times more points than the standard "fine" grid (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>×<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>×<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>). Whenever terms involving augmentation charges are evaluated, this additional grid is used. For instance: The augmentation charge is evaluated first in real space on this additional grid, FFT-transformed to reciprocal space, and then added to the total charge density on the standard "fine" grid (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>×<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>×<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>). The additional grid often helps to reduce the noise in the forces. In some cases, it even allows to perform calculations with <a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>=<a href="/wiki/index.php/NGX" title="NGX">NGX</a>. 
+</p>
+<p>Caveat:
+If there is any contribution in the density or potential at the highest Fourier component <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dfcf28d0734569a6a693bc8194de62bf&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.827ex;"/></span> of
+the conventional fine grid (given by <a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>×<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>×<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>), then Fourier interpolation to twice the grid density leads to
+oscillations in real space. These oscillations correspond to the largest wave vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  G_{cut} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  G_{cut} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  G_{cut} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=aae2bf3df167737b1de2a6b724e9dffe&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.305ex;"/></span> i.e. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e^{i G_{cut} r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+<mi>r</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e^{i G_{cut} r}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e^{i G_{cut} r}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ebde418c7c6d96a561930cee0d59539a&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 5.904ex;"/></span>.
+In real space, the charge density or potential will therefore alternate between positive and negative
+values on the ultra-fine grid, in particular, in regions where the density or potential are small.
+The terminus techniques is "termination wiggles".
+Although this is a somewhat oversimplified presentation, it is fairly straightforward to derive more rigorous results in 1D. 
+The upshot is that Fourier-interpolation can lead to termination wiggles with oscillations <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e^{i G_{cut} r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+<mi>r</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e^{i G_{cut} r}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e^{i G_{cut} r}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ebde418c7c6d96a561930cee0d59539a&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 5.904ex;"/></span> in the interpolated potential   (where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  G_{cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  G_{cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  G_{cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=76bb134cf03b90b716aabc765458b32e&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.305ex;"/></span> corresponds to
+the largest Fourier components on the fine grid). Fourier smoothing, which is in essence used for the augmentation densities, is generally less problematic, but it can also result in negative density in real space.
+Therefore, we recommend performing careful tests, on whether <a class="mw-selflink selflink">ADDGRID</a> works as desired; please do not use this tag as default in all your calculations!
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,
+<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,
+<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>,
+<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,
+<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,
+<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>,
+<a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a>,
+<a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ADDGRID%22_incategory:%22Examples%22" title='Special:Search/"ADDGRID" incategory:"Examples"'>Examples that use this tag</a>
+</p>

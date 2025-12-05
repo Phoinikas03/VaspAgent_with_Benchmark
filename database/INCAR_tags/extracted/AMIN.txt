@@ -1,0 +1,56 @@
+<p><a class="mw-selflink selflink">AMIN</a> = [real]<br/> Default: <b>AMIN</b> = min(0.1,<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>) 
+</p>
+<p>Description: <a class="mw-selflink selflink">AMIN</a> specifies the minimal mixing parameter in Kerker's initial approximation<sup class="reference" id="cite_ref-kerker:prb:1981_1-0"><a href="#cite_note-kerker:prb:1981-1">[1]</a></sup> to the charge-dielectric function used in the Broyden<sup class="reference" id="cite_ref-bluegel:phd:1988_2-0"><a href="#cite_note-bluegel:phd:1988-2">[2]</a></sup><sup class="reference" id="cite_ref-johnson:prb:1988_3-0"><a href="#cite_note-johnson:prb:1988-3">[3]</a></sup>/Pulay<sup class="reference" id="cite_ref-pulay:cpl:1980_4-0"><a href="#cite_note-pulay:cpl:1980-4">[4]</a></sup> mixing scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=4, <a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>=1).
+</p>
+<p>Kerker's initial approximation<sup class="reference" id="cite_ref-kerker:prb:1981_1-1"><a href="#cite_note-kerker:prb:1981-1">[1]</a></sup> for the charge-dielectric function is given by
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle A}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>A</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle A}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7fc56270e7a70fa81a5935b72eacbe29&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.743ex;"/></span>=<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>B</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9d5ed678fe57bcca610140957afab571&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.764ex;"/></span>=<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle A_{\rm min}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>A</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">n</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle A_{\rm min}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle A_{\rm min}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e3e8f4d23c334137fbec87b25cc4e7e&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.716ex;"/></span>=<a class="mw-selflink selflink">AMIN</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22AMIN%22_incategory:%22Examples%22" title='Special:Search/"AMIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

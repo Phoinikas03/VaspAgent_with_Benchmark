@@ -1,0 +1,1 @@
+CH_NEDOS =  Default: CH_NEDOS = 1000 Description: This tag specifies the number of frequency (energy) grid points on the x-axis in the calculation of the dielectric function in the supercell core-hole method. Related tags and articles CH_LSPEC , CH_SIGMA , CH_AMPLIFICATION , ICORELEVEL , CLNT , CLN , CLL , CLZ Examples that use this tag

@@ -1,0 +1,1 @@
+VCUTOFF =  Default: VCUTOFF = 1.1 ENCUTGW Description: The parameter VCUTOFF sets the energy cutoff for bare Coulomb matrix elements and controls the basis set for the bare Coulomb interaction. Related tags and articles ENCUTGW , CRPA calculations Examples that use this tag

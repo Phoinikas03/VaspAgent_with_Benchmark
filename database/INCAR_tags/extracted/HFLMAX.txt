@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">HFLMAX</a> = [integer]<br/> Default: <b>HFLMAX</b> = 4 
+</p>
+<p>Description: To be compatible w.r.t. old releases, VASP also reads the flag <a class="mw-selflink selflink">HFLMAX</a> to the same effect as <a href="/wiki/index.php/LMAXFOCK" title="LMAXFOCK">LMAXFOCK</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LMAXFOCK" title="LMAXFOCK">LMAXFOCK</a>,
+<a class="mw-redirect" href="/wiki/index.php/LMAXFOCKAE" title="LMAXFOCKAE">LMAXFOCKAE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HFLMAX%22_incategory:%22Examples%22" title='Special:Search/"HFLMAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

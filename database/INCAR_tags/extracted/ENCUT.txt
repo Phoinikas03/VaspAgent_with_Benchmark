@@ -1,0 +1,73 @@
+<p><a class="mw-selflink selflink">ENCUT</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">ENCUT</a> specifies the energy cutoff for the plane-wave basis set in eV.
+</p>
+<p>All plane waves with a kinetic energy smaller than <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\mathrm{cut}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\mathrm{cut}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\mathrm{cut}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5b8ecb640988338dd1b507ec28768a7b&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.231ex;"/></span> are included in the basis set, i.e.,
+</p>
+<p>With this energy cutoff, the number of plane waves included in the basis set depends on the <b>k</b>-point, leading to a superior behavior. For instance, for energy-volume calculations the total number of plane waves changes fairly smoothly according to the volume, while the criterion <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle | \mathbf{G} | &lt; G_{\mathrm{cut}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>&lt;</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle | \mathbf{G} | &lt; G_{\mathrm{cut}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle | \mathbf{G} | &lt; G_{\mathrm{cut}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=aa912db850a2a32a08bee4d0e183f8c0&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 10.836ex;"/></span> (i.e. same number of plane waves for all <b>k</b>-points) would lead to a very rough energy-volume curve and, generally, to a slower energy convergence with respect to the basis set size.
+</p>
+<p>The <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files contain a default <a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a> (and <a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a>). Therefore, it is, in principle, not necessary to specify <a class="mw-selflink selflink">ENCUT</a> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+For calculations with more than one species, the maximum cutoff <a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a> (or <a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a>) value is used for the calculation (see <a href="/wiki/index.php/PREC" title="PREC">PREC</a>).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a>,
+<a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a>,
+<a href="/wiki/index.php/ENINI" title="ENINI">ENINI</a>,
+<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,
+<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,
+<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>,
+<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,
+<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,
+<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>,
+<a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ENCUT%22_incategory:%22Examples%22" title='Special:Search/"ENCUT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

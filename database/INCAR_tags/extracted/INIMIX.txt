@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">INIMIX</a> = 0 | 1 | 2<br/> Default: <b>INIMIX</b> = 1 
+</p>
+<p>Description: Determines the functional form of the initial mixing matrix in the Broyden scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=4).
+</p>
+<p>The initial mixing matrix might influence the convergence speed for complex situations (especially surfaces and magnetic systems), nevertheless <a class="mw-selflink selflink">INIMIX</a> must not be changed from the default setting: anything which can be done with <a class="mw-selflink selflink">INIMIX</a> can also be done with <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> and <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>, and changing <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> and <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> is definitely preferable.
+</p>
+<p>Possible choices for INIMIX are:
+</p>
+<ul><li><a class="mw-selflink selflink">INIMIX</a>=0</li></ul>
+<ul><li><a class="mw-selflink selflink">INIMIX</a>=1</li></ul>
+<ul><li><a class="mw-selflink selflink">INIMIX</a>=2</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22INIMIX%22_incategory:%22Examples%22" title='Special:Search/"INIMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

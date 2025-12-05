@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">BMIX_MAG</a> = [real]<br/> Default: <b>BMIX_MAG</b> = 1.0 
+</p>
+<p>Description: Sets the cutoff wave vector for Kerker mixing scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=1 and/or <a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>=1) for the magnetization density <sup class="reference" id="cite_ref-kerker:prb:1981_1-0"><a href="#cite_note-kerker:prb:1981-1">[1]</a></sup>.
+</p>
+<p>The default mixing parameters for spinpolarized calculations are:
+</p>
+<p>These settings are consistent with an (initial) spin enhancement factor of 4, which is usually a reasonable approximation.
+</p>
+<p>There are only a few other parameter combinitions which can be tried, if convergence turns out to be very slow. In particular, for slabs, magnetic systems and insulating systems (e.g. molecules and clusters), an initial "linear mixing" can result in faster convergence than the Kerker model function <sup class="reference" id="cite_ref-kerker:prb:1981_1-1"><a href="#cite_note-kerker:prb:1981-1">[1]</a></sup>. One can therefore try to use the following setting 
+</p>
+<p><b>Mind</b>: For spinpolarized calculations the defaults for the mixing parameters <a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a> and <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> are different than for the non-spinpolarized case.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22BMIX_MAG%22_incategory:%22Examples%22" title='Special:Search/"BMIX MAG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

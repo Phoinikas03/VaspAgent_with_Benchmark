@@ -1,0 +1,34 @@
+<p><a class="mw-selflink selflink">LKPROJ</a> = .TRUE. | .FALSE.<br/> Default: <b>LKPROJ</b> =  .FALSE. 
+</p>
+<p>Description: switches on the <b>k</b>-point projection scheme.
+</p>
+<p>For <a class="mw-selflink selflink">LKPROJ</a>=.TRUE., VASP will project the orbitals onto the reciprocal space of an alternative unit cell.
+This unit cell has to be supplied in the file <a href="/wiki/index.php/POSCAR.prim" title="POSCAR.prim">POSCAR.prim</a>, in the usual <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> format.
+</p>
+<p>As a first step, the <b>k</b>-projection scheme determines the set {<b>k′</b>}, of <b>k</b>-points in the irreducible part of the first Brillouin zone of the structure given in <a href="/wiki/index.php/POSCAR.prim" title="POSCAR.prim">POSCAR.prim</a>, for which
+</p>
+<p>where <b>G</b> and <b>G′</b> are reciprocal space vectors in the reciprocal spaces of the structures specified in <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> and <a href="/wiki/index.php/POSCAR.prim" title="POSCAR.prim">POSCAR.prim</a>, respectively. As usual, the set of points {<b>k</b>} is specified in the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file.
+The set {<b>k′</b>} is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. Look at the part of the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> following <tt>NKPTS_PRIM</tt>. 
+</p>
+<p>Once the set {<b>k′</b>} has been determined VASP will compute the following
+</p>
+<p>and writes this information onto the <a href="/wiki/index.php/PRJCAR" title="PRJCAR">PRJCAR</a> and <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> files.
+</p>
+<p>K<sub>n<b>k</b>σ<b>k′</b></sub> provides a measure of how strongly the orbital <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Psi}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Ψ<!-- Ψ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Psi}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Psi}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7211c2fa4ea74200d14e81d44376b8c3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.808ex;"/></span><sub>n<b>k</b>σ</sub> contributes at the point <b>k′</b> in the reciprocal space of structure <a href="/wiki/index.php/POSCAR.prim" title="POSCAR.prim">POSCAR.prim</a>.
+</p>
+<p>One may, for instance, use this scheme to project the orbitals of a supercell onto the reciprocal space of a generating primitive cell.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PRJCAR" title="PRJCAR">PRJCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LKPROJ%22_incategory:%22Examples%22" title='Special:Search/"LKPROJ" incategory:"Examples"'>Examples that use this tag</a>
+</p>

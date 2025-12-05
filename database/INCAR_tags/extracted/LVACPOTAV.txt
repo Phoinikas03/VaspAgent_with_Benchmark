@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">LVACPOTAV</a> = .True. | .False.<br/> Default: <b>LVACPOTAV</b> = .False. 
+</p>
+<p>Description: Switch on determining the vacuum potential by averaging the local potential over a field-free region. 
+</p>
+<p><a class="mw-selflink selflink">LVACPOTAV</a> switches on the computation of the vacuum potential, i.e., the average of the local potential in the vacuum region. 
+It computes the average potential by searching regions that are field-free (<a href="/wiki/index.php/VACPOTFLAT" title="VACPOTFLAT">VACPOTFLAT</a>), and the 2D-averaged charge density is nearly zero. The averaging is done in the direction of <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a> and is reported as the vacuum potential in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>.
+</p>
+<p>The vacuum potential is one of the quantities needed to <a href="/wiki/index.php/Computing_the_work_function" title="Computing the work function">compute the work function</a>. It can be extracted from the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> by the following bash command
+</p>
+<p>Note that two vacuum potentials will be produced, one corresponding to the upper termination of the slab and one corresponding to the lower. Depending on the system, one might be more interesting than the other.
+</p>
+<p>Before VASP 6.4.3, the default algorithm reports the 2D-averaged potential four grid points from the the minimum 2D-averaged charge density in the direction of <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>, i.e., no averaging is performed along the surface normal of the 2D-averaged potential.
+</p>
+<h3><span class="mw-headline" id="Use_in_conjunction_with_the_dipole_correction">Use in conjunction with the dipole correction</span></h3>
+<p>A typical use case for <a class="mw-selflink selflink">LVACPOTAV</a> is together with the dipole correction (including tags <a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a> and <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>). Switching on the dipole correction is crucial for determining the vacuum potential; without it, there will be no field-free region for dipolar systems.
+</p>
+<h3><span class="mw-headline" id="Warnings">Warnings</span></h3>
+<p>In case <a class="mw-selflink selflink">LVACPOTAV</a> is not able to generate an accurate work function, the following warnings may be found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. 
+</p>
+<p>A possible solution to this problem is to increase the size of the vacuum dimension in your cell.
+</p>
+<p>Possible solutions include:
+</p>
+<ul><li>Making sure you have a large enough vacuum dimension.</li>
+<li>Increasing the precision of your calculation by changing <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/VACPOTFLAT" title="VACPOTFLAT">VACPOTFLAT</a>,
+<a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a>,
+<a href="/wiki/index.php/LVTOT" title="LVTOT">LVTOT</a>,
+<a href="/wiki/index.php/LVHAR" title="LVHAR">LVHAR</a>
+</p>
+<p><a href="/wiki/index.php/Computing_the_work_function" title="Computing the work function">Computing the work function</a>
+</p>

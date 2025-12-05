@@ -1,0 +1,41 @@
+<p><a class="mw-selflink selflink">LIBMBD_TS_SR</a> = [real]<br/> Default: <b>LIBMBD_TS_SR</b> = value that was determined for the exchange-correlation functional set with <a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_TS_SR</a> sets the value of the scaling factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_R}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mi>R</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_R}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_R}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=03164740ac7a45bf6c27c8c0bc767e32&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.57ex;"/></span> in the Tkatchenko-Scheffler method<sup class="reference" id="cite_ref-tkatchenko:prl:09_1-0"><a href="#cite_note-tkatchenko:prl:09-1">[1]</a></sup> as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_2-0"><a href="#cite_note-libmbd_1-2">[2]</a></sup><sup class="reference" id="cite_ref-libmbd_2_3-0"><a href="#cite_note-libmbd_2-3">[3]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_4-0"><a href="#cite_note-hermann:jcp:2023-4">[4]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_TS_SR</a> allows to choose the value of the scaling factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_R}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mi>R</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_R}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_R}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=03164740ac7a45bf6c27c8c0bc767e32&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.57ex;"/></span> in the Tkatchenko-Scheffler method<sup class="reference" id="cite_ref-tkatchenko:prl:09_1-1"><a href="#cite_note-tkatchenko:prl:09-1">[1]</a></sup> as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_2-1"><a href="#cite_note-libmbd_1-2">[2]</a></sup><sup class="reference" id="cite_ref-libmbd_2_3-1"><a href="#cite_note-libmbd_2-3">[3]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_4-1"><a href="#cite_note-hermann:jcp:2023-4">[4]</a></sup>. The value is internally passed to the libMBD input <b>ts_sr</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_5-0"><a href="#cite_note-libmbd_input-5">[5]</a></sup>. <a class="mw-selflink selflink">LIBMBD_TS_SR</a> is similar to the <a href="/wiki/index.php/VDW_SR" title="VDW SR">VDW_SR</a> tag that is used for the VASP implementation of the Tkatchenko-Scheffler method.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_3-2"><a href="#cite_note-libmbd_2-3">[3]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a>,
+<a href="/wiki/index.php/LIBMBD_TS_D" title="LIBMBD TS D">LIBMBD_TS_D</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_TS_SR%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD TS SR" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">PHON_NWRITE</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">PHON_NWRITE</a> 
+determines how much output is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file when computing the phonon dispersion <a href="/wiki/index.php/LPHON_DISPERSION" title="LPHON DISPERSION">LPHON_DISPERSION</a>=.TRUE.
+</p>
+<p>Positive numbers mean human-readable output, and negative numbers mean one-line format. The available options are:
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/LPHON_DISPERSION" title="LPHON DISPERSION">LPHON_DISPERSION</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>,
+<a href="/wiki/index.php/PHON_G_CUTOFF" title="PHON G CUTOFF">PHON_G_CUTOFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPHON_DISPERSION%22_incategory:%22Examples%22" title='Special:Search/"LPHON DISPERSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

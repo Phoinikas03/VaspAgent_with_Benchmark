@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">HFALPHA</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">HFALPHA</a> sets the decay constant used in the method of Massida, Posternak, and Baldereschi, which is activated by <a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a>=0.
+</p>
+<p><a class="mw-selflink selflink">HFALPHA</a> sets the decay constant in the error-function-like charge distribution for the method of Massida, Posternak, and Baldereschi<sup class="reference" id="cite_ref-massidda:prb:93_1-0"><a href="#cite_note-massidda:prb:93-1">[1]</a></sup>. The error-function-like charge distribution is used to calculate the difference between the isolated probe charge and the periodically repeated probe charge in a homogenous background. The default for <a class="mw-selflink selflink">HFALPHA</a> is 6/sqrt(<a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a>)/(2π) in atomic units. This usually yields robust and accurate results in the range of meV compared to the Ewald summation used for a regular k-mesh. This is the default approach used to implement the convergence corrections of the <a href="/wiki/index.php/Coulomb_singularity" title="Coulomb singularity">Coulomb singularity</a> in Hartree-Fock calculations. This does not work correctly for bandstructure calculations using the <a href="/wiki/index.php/Si_HSE_bandstructure" title="Si HSE bandstructure">0-weight scheme</a> or <a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a> because the correction is only applied for points in the regular grid. To overcome this problem we recommend using the Coulomb truncation methods using <a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a>,
+<a href="/wiki/index.php/LTHOMAS" title="LTHOMAS">LTHOMAS</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>,
+<a href="/wiki/index.php/Coulomb_singularity" title="Coulomb singularity">Coulomb singularity</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HFALPHA%22_incategory:%22Examples%22" title='Special:Search/"HFALPHA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

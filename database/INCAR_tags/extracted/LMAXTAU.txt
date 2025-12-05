@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">LMAXTAU</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMAXTAU</a> is the maximum <i>l</i>-quantum number included in the PAW one-center expansion of the kinetic energy density.
+</p>
+<p>The PAW one-center expansion of the density has component up to and including <i>L</i>=2*<i>l</i><sub>max</sub>, where <i>l</i><sub>max</sub> is the <i>l</i>-quantum number of the partial waves on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file, with the highest angular moment.
+If the PAW one-center expansion of the density has component up to <i>L</i>, then the one-center expansion of the kinetic energy density has components up to <i>L</i>+2.
+</p>
+<p>This means that as a rule of thumb, for <i>s</i>-elements: <a class="mw-selflink selflink">LMAXTAU</a>=2, for <i>p</i>: <a class="mw-selflink selflink">LMAXTAU</a>=4, and for <i>d</i>: <a class="mw-selflink selflink">LMAXTAU</a>=6.
+If you are willing to live with the computational costs, the default for <a class="mw-selflink selflink">LMAXTAU</a> should be safe in all cases, except those involving <i>f</i>-elements.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/CMBJ" title="CMBJ">CMBJ</a>,
+<a href="/wiki/index.php/CMBJA" title="CMBJA">CMBJA</a>,
+<a href="/wiki/index.php/CMBJB" title="CMBJB">CMBJB</a>,
+<a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a>,
+<a href="/wiki/index.php/LMIXTAU" title="LMIXTAU">LMIXTAU</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMAXTAU%22_incategory:%22Examples%22" title='Special:Search/"LMAXTAU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

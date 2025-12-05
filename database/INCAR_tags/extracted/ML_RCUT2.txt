@@ -1,0 +1,405 @@
+<p><a class="mw-selflink selflink">ML_RCUT2</a> = [real]<br/> Default: <b>ML_RCUT2</b> = 5.0 
+</p>
+<p>Description: This flag sets the cutoff radius <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_\text{cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mtext>cut</mtext>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_\text{cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_\text{cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1663aa8dd30f277d65b9f6f97b5cfefb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.28ex;"/></span> for the angular descriptor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \rho^{(3)}_i(r)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mi>i</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>3</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mi>r</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \rho^{(3)}_i(r)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \rho^{(3)}_i(r)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6e61bab3b1b444b80d886516507e9af2&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.676ex; width: 6.393ex;"/></span> in the machine learning force field method. The unit of the cut-off radius is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>.
+</p>
+<p>The angular descriptor is constructed from
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>3</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+</msubsup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>r</mi>
+<mo>,</mo>
+<mi>s</mi>
+<mo>,</mo>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mo>∬<!-- ∬ --></mo>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mi>δ<!-- δ --></mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>⋅<!-- ⋅ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mo>≠<!-- ≠ --></mo>
+<mi>j</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+<mspace width="1em"></mspace>
+<mtext>where</mtext>
+<mspace width="1em"></mspace>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<msub>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>)</mo>
+</mrow>
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=38f02482be2b76bfed8b993ef4585248&amp;mode=mathml" style="vertical-align: -3.505ex; height: 7.843ex; width: 99.323ex;"/></span>
+</p>
+<p>and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g\left(\mathbf{r}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g\left(\mathbf{r}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g\left(\mathbf{r}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a3a21ffaf3d6fa2e9bef79efc6360523&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.414ex;"/></span> is an approximation of the delta function. A basis set expansion of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \rho^{(3)}_i(r)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mi>i</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>3</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mi>r</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \rho^{(3)}_i(r)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \rho^{(3)}_i(r)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6e61bab3b1b444b80d886516507e9af2&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.676ex; width: 6.393ex;"/></span> yields the expansion coefficients <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{n\nu l}^{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{n\nu l}^{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle p_{n\nu l}^{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=18516de434ffe6549e026e5c4e9874c1&amp;mode=mathml" style="vertical-align: -1.005ex; margin-left: -0.089ex; height: 3.176ex; width: 3.839ex;"/></span> which are used in practice to describe the atomic environment (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Descriptors" title="Machine learning force field: Theory">this section</a> for details). The tag <a class="mw-selflink selflink">ML_RCUT2</a> sets the cutoff radius <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_\text{cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mtext>cut</mtext>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_\text{cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_\text{cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1663aa8dd30f277d65b9f6f97b5cfefb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.28ex;"/></span> at which the cutoff function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle f_{\mathrm{cut}}\left(r_{ij}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<msub>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle f_{\mathrm{cut}}\left(r_{ij}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle f_{\mathrm{cut}}\left(r_{ij}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bc4f3a1c87df208d1b0feea189d8111d&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 8.377ex;"/></span> decays to zero.
+</p>
+<p>For materials containing only H, B, C, O, N, and F (i.e. organic molecules, polymers), the learning efficiency might increase when ML_RCUT2 is set to values around 4  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span> (that is, less training data are required to achieve a specific accuracy), wheres for materials with very long bonds, a larger value around 6  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span> can improve the accuracy,
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_RCUT1" title="ML RCUT1">ML_RCUT1</a>, <a href="/wiki/index.php/ML_W1" title="ML W1">ML_W1</a>, <a href="/wiki/index.php/ML_SION1" title="ML SION1">ML_SION1</a>, <a href="/wiki/index.php/ML_SION2" title="ML SION2">ML_SION2</a>, <a href="/wiki/index.php/ML_MRB1" title="ML MRB1">ML_MRB1</a>, <a href="/wiki/index.php/ML_MRB2" title="ML MRB2">ML_MRB2</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22ML_RCUT1%22_incategory:%22Examples%22" title='Special:Search/"ML RCUT1" incategory:"Examples"'>Examples that use this tag</a>
+</p>

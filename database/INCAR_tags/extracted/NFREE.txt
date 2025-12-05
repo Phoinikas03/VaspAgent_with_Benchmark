@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">NFREE</a> = [integer] 
+</p>
+<p>Description: depending on <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a class="mw-selflink selflink">NFREE</a> specifies the number of remembered steps in the history of ionic convergence runs, or the number of ionic displacements in frozen phonon calculations.
+</p>
+<p><span>
+</span></p>
+<ul><li><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1 (quasi-Newton algorithm for ionic relaxation):</li></ul>
+<p>
+<span>
+</span></p>
+<ul><li><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=5 (from VASP.4.5) or <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=6 (from VASP.5.1): frozen phonon approach to calculate the zone-center vibrational frequencies of a system.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NFREE%22_incategory:%22Examples%22" title='Special:Search/"NFREE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

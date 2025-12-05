@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">VACPOTFLAT</a> = [real]<br/> Default: <b>VACPOTFLAT</b> = 0.1 
+</p>
+<p>Description: Maximum permissible 2D-averaged electric field for a region considered to be field-free in eV/Å.
+</p>
+<p>A region of space is considered to be field-free if the 2D-averaged electric field (<a href="/wiki/index.php/LVACPOTAV" title="LVACPOTAV">LVACPOTAV</a>=True) is smaller than <a class="mw-selflink selflink">VACPOTFLAT</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LVACPOTAV" title="LVACPOTAV">LVACPOTAV</a>,
+<a href="/wiki/index.php/LVTOT" title="LVTOT">LVTOT</a>,
+<a href="/wiki/index.php/LVHAR" title="LVHAR">LVHAR</a>,
+<a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>
+</p>

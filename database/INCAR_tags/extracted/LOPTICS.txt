@@ -1,0 +1,45 @@
+<p><a class="mw-selflink selflink">LOPTICS</a> = .TRUE. | .FALSE.<br/> Default: <b>LOPTICS</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LOPTICS</a>=.TRUE. calculates the frequency dependent dielectric matrix after the electronic ground state has been determined.
+</p>
+<p>The imaginary part is determined by a summation over empty states using the equation:
+</p>
+<p><span id="epsilon">
+</span></p>
+<p class="mw-empty-elt">
+</p>
+<p>here the indices <i>c</i> and <i>v</i> refer to conduction and valence band states respectively, and <i>u</i><sub><i>c</i><b>k</b></sub> is the cell periodic part of the orbitals at the k-point <b>k</b>. The real part of the dielectric tensor  ε<sup>(1)</sup> is obtained by the usual Kramers-Kronig
+transformation
+</p>
+<p><span id="kramerskronig">
+</span></p>
+<p class="mw-empty-elt">
+</p>
+<p>where <i>P</i> denotes the principle value. The method is explained in detail in the paper by Gajdoš <i>et al.</i> (see Eqs. 15, 29, and 30).<sup class="reference" id="cite_ref-gajdos:prb:06_1-0"><a href="#cite_note-gajdos:prb:06-1">[1]</a></sup> The complex shift η is determined by the parameter <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>.
+</p>
+<p>Note that local field effects, i.e. changes of the cell periodic part of the potential are neglected in this approximation.  These can be evaluated using either the implemented density functional perturbation theory (<a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>=.TRUE.), or the GW routines.
+</p>
+<p>The method selected using <a class="mw-selflink selflink">LOPTICS</a>=.TRUE. requires an appreciable number of empty conduction band states. Reasonable results are usually only obtained, if the parameter <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> is roughly doubled or tripled in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file with respect to the VASP default.
+Furthermore it is emphasized that the routine works properly even for <a href="/wiki/index.php/Category:Hybrid_functionals" title="Category:Hybrid functionals">HF and screened exchange type calculations and hybrid functionals</a>. In this case, finite differences are used to determine the derivatives of the Hamiltonian with respect to <b>k</b>.
+</p>
+<p>Note that the number of frequency grid points is determined by the parameter <a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a>. In many cases it is desirable to increase this parameter significantly from its default value. Values around <a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a>=2000 are strongly recommended.
+</p>
+<p>VASP posses multiple other routines to calculate the frequency dependent dielectric function.
+Specifically, one can use <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = TDHF (Casida/<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>), <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = GW (<a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>) and <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = TIMEEV (<a class="mw-redirect" href="/wiki/index.php/Time_Evolution" title="Time Evolution">Time Evolution</a>: apply a delta kick and follow the induced dipoles).
+Compared to <a class="mw-selflink selflink">LOPTICS</a>=.TRUE., all those routines have the advantage to include
+effects beyond the independent particle approximation, however, they are usually
+also much more expensive than <a class="mw-selflink selflink">LOPTICS</a>=.TRUE.
+</p>
+<h3><span class="mw-headline" id="Spectral_broadening">Spectral broadening</span></h3>
+<p>The dielectric function calculated with <a class="mw-selflink selflink">LOPTICS</a> includes broadening due to the smearing method <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a> and the Lorentzian broadening due to the complex shift in the Kramers-Kronig transformation. For example, the combination of <a class="mw-selflink selflink">LOPTICS</a>=.TRUE.  and  <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>=0  produces the dielectric function broadened by a Gaussian with the width <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a> and a Lorentzian with the width <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>. To avoid using two different broadening methods imultaneously and only include the Lorentzian broadening, one should set <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a> to a much smaller value than <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>,
+<a href="/wiki/index.php/LNABLA" title="LNABLA">LNABLA</a>,
+<a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>, 
+<a class="mw-redirect" href="/wiki/index.php/Time_Evolution" title="Time Evolution">Time Evolution</a>,
+<a href="/wiki/index.php/WPLASMAI" title="WPLASMAI">WPLASMAI</a>
+</p>
+<p>See also: <a href="/wiki/index.php/Special:Search/%22LOPTICS%22_incategory:%22Examples%22" title='Special:Search/"LOPTICS" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

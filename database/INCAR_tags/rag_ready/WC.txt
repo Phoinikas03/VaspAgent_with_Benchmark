@@ -1,0 +1,1 @@
+WC =  Default: WC = 1000. Description: WC specifies the weight factor for each step in Broyden mixing scheme ( IMIX =4). WC >0 WC =0 WC <0 (implemented for test purposes: not recommended) Related tags and sections IMIX , INIMIX , MAXMIX , AMIX , BMIX , AMIX_MAG , BMIX_MAG , AMIN , MIXPRE Examples that use this tag

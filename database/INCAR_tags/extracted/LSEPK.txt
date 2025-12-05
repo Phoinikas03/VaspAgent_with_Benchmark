@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">LSEPK</a> = [logical]<br/> Default: <b>LSEPK</b> = .FALSE. 
+</p>
+<p>Description: Specifies whether the <a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">partial charge density</a> is summed up for all selected <b>k</b> points or separated and printed out in different files.
+</p>
+<p>If <a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a> = .TRUE. the partial charge density is calculated for a subset of bands and <b>k</b> points depending on the setting of the tags <a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>, <a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>, <a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a>, and <a href="/wiki/index.php/EINT" title="EINT">EINT</a>. If <a class="mw-selflink selflink">LSEPK</a> is set to .TRUE., separate PARCHG.ALLB.nk or PARCHG.nb.nk files are created, dependent on the <a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> tag. If <a class="mw-selflink selflink">LSEPK</a> = .FALSE., the output is written to <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> or PARCHG.nb.ALLK, again depending on <a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>.
+</p>
+<p>Here are four examples to illustrate the interplay of <a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> and <a class="mw-selflink selflink">LSEPK</a>. in all cases, the following settings apply, selecting three specific bands and two <b>k</b> points <code style="padding: 2px"><a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a> =  9 10 11</code>, <code style="padding: 2px"><a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a> = 3</code>, and <code style="padding: 2px"><a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a> =  1 34</code>:
+</p>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> = .FALSE.</code>, <code style="padding: 2px"><a class="mw-selflink selflink">LSEPK</a> = .FALSE.</code></li></ul>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> = .TRUE.</code>, <code style="padding: 2px"><a class="mw-selflink selflink">LSEPK</a> = .FALSE.</code></li></ul>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> = .FALSE.</code>, <code style="padding: 2px"><a class="mw-selflink selflink">LSEPK</a> = .TRUE.</code></li></ul>
+<ul><li><code style="padding: 2px"><a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> = .TRUE.</code>, <code style="padding: 2px"><a class="mw-selflink selflink">LSEPK</a> = .TRUE.</code></li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a>,
+<a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>,
+<a href="/wiki/index.php/EINT" title="EINT">EINT</a>,
+<a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a>,
+<a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>,
+<a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>,
+<a href="/wiki/index.php/LPARDH5" title="LPARDH5">LPARDH5</a>,
+<a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>,
+<a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>,
+<a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">Band-decomposed charge densities</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSEPB%22_incategory:%22Examples%22" title='Special:Search/"LSEPB" incategory:"Examples"'>Examples that use this tag</a>
+</p>

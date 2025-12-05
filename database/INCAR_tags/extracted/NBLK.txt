@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">NBLK</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBLK</a> determines the blocking factor in many BLAS level 3 routines.
+</p>
+<p>In some cases, VASP has to perform a unitary transformation of the current orbitals. This is done using a work array CBLOCK and the following FORTRAN code:
+</p>
+<p>ZGEMM is the matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \times}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>×<!-- × --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \times}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \times}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=60c13e05d3ec8c10b8564eae7023d9db&amp;mode=mathml" style="vertical-align: 0.019ex; margin-bottom: -0.19ex; height: 1.509ex; width: 1.808ex;"/></span> matrix  multiplication command of the BLAS package. The task performed by this call is indicated by the comment line written above the ZGEMM call. Generally <a class="mw-selflink selflink">NBLK</a>=16 or 32 is large enough for super-scalar machines. A large value might be necessary on vector machines for optimal performance (<a class="mw-selflink selflink">NBLK</a>=128).
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBLK%22_incategory:%22Examples%22" title='Special:Search/"NBLK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,82 @@
+<p><a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NPPSTR</a> specifies the number of k-points on the strings in the <a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a> direction.
+</p>
+<p><a class="mw-selflink selflink">NPPSTR</a> specifies the number of k-points on the strings <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>⊥<!-- ⊥ --></mo>
+</mrow>
+</msub>
+<mo>+</mo>
+<mi>j</mi>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∥<!-- ∥ --></mo>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">R</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=36993d891cd68331e041956841a1fd73&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.176ex; width: 26.047ex;"/></span> (with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+<mo>=</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mo>.</mo>
+<mo>.</mo>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">R</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0e9b2be92e915c5aba22514605fde68&amp;mode=mathml" style="vertical-align: -0.671ex; margin-left: -0.027ex; height: 2.509ex; width: 22.974ex;"/></span>). See also <a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>, <a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NPPSTR%22_incategory:%22Examples%22" title='Special:Search/"NPPSTR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,39 @@
+<p><a class="mw-selflink selflink">VDW_S8</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_S8</a> defines the damping function parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{8}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>8</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{8}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{8}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=93cbc0970a1b9f495f90dcba773b2c30&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.145ex;"/></span>.
+</p>
+<p><a class="mw-selflink selflink">VDW_S8</a> sets the damping function parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{8}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>8</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{8}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{8}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=93cbc0970a1b9f495f90dcba773b2c30&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.145ex;"/></span> in the <a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a> and <a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a>,<a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_S8%22_incategory:%22Examples%22" title='Special:Search/"VDW S8" incategory:"Examples"'>Examples that use this tag</a>
+</p>

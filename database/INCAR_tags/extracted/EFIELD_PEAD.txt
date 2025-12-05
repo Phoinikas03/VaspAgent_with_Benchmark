@@ -1,0 +1,53 @@
+<p><a class="mw-selflink selflink">EFIELD_PEAD</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">EFIELD_PEAD</a> specifies the homogeneous electric force field in the electric enthalpy functional used to compute the <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#Self-consistent_response_to_finite_electric_fields" title="Berry phases and finite electric fields">self-consistent response to finite electric fields</a>. <a class="mw-selflink selflink">EFIELD_PEAD</a> is specified in units of eV/Å.
+</p>
+<p>If
+</p>
+<p>is set, with |<span style="font-size:14pt"><i>ε</i></span>|&gt;0, VASP will first determine the zero-field groundstate of the system, and subsequently switch on the electric field and compute the field-polarized groundstate orbitals.
+</p>
+<p>Additionally, from the change in the macroscopic electronic polarization due to the applied electric field, VASP calculates (part of) the components on the diagonal of the ion-clamped static dielectric tensor (ε<sub>∞</sub>), in accordance with:
+</p>
+<p>Beware: this option is only useful if one is interested in selected components on the diagonal of the ion-clamped dielectric tensor (for instance, in cubic systems). To calculate the full ion-clamped dielectric tensor of a system
+</p>
+<p>from field-polarized calculations, use <a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>=.TRUE..
+</p>
+<p><b>Note</b>: One should be aware that when the electric field is chosen to be too large, the electric enthalpy functional will lose its minima, and VASP will not be able to find a stationary solution for the field-polarized orbitals.
+This is discussed in some detail by Souza <i>et al.</i>.<sup class="reference" id="cite_ref-souza:prl:02_1-0"><a href="#cite_note-souza:prl:02-1">[1]</a></sup>
+VASP will produce a warning if:
+</p>
+<p>where <i>E</i><sub>gap</sub> is the bandgap, <b>a</b><sub>i</sub> are the lattice vectors, and <i>N</i><sub>i</sub> is the number of <b>k</b>-points along the reciprocal lattice vector <i>i</i>, in the regular (<i>N</i><sub>1</sub>×<i>N</i><sub>2</sub>×<i>N</i><sub>3</sub>) <b>k</b>-mesh. The factor 1/10 is chosen to be on the safe side. If one does not include unoccupied bands, VASP is obviously not able to determine the bandgap and can not check whether the electric field might be too large. This will also produce a warning message.
+</p>
+<h3><span id="An_example:_.CE.B5.E2.88.9E_in_NaF"></span><span class="mw-headline" id="An_example:_ε∞_in_NaF">An example: ε<sub>∞</sub> in NaF</span></h3>
+<ul><li>Using the following <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file:</li></ul>
+<ul><li><a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file:</li></ul>
+<ul><li><a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file:</li></ul>
+<ul><li>and LDA Na_sv and F PAW datasets.</li></ul>
+<p>With the input above, running VASP should produce something akin to:
+</p>
+<p>where one can discern three distinct blocks of SCF iterations. The first one (steps marked with <tt>DAV</tt>) corresponds to the calculation of the zero-field groundstate. After this groundstate has been reached, the <b>k</b>-point mesh is regenerated using a set of symmetry operations, which takes into account that the symmetry of the system is possibly reduced by the applied electric field. In most cases the new set of <b>k</b>-points is larger than the original one. The orbitals at the additional <b>k</b>-points are generated from their symmetry equivalent counterparts in the zero-field case. This expanded set of orbitals is now reoptimized until convergence is better than <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>/100 (the second block, marked <tt>DMP</tt>), and the initial electronic polarization is computed.
+</p>
+<p>Then the electric field is switched on, and the field-polarized groundstate is calculated. This is the last block of steps marked with DMP. From the change in the electronic dipole moment due to the electric field VASP computes (part of) the components on the diagonal of the ion-clamped static dielectric tensor.
+</p>
+<p>This information is found both in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file and on <tt>stdout</tt>:
+</p>
+<p>To speed up the computation of the field-polarized groundstate one may set <a class="new" href="/wiki/index.php?title=SKIP_EDOTP&amp;action=edit&amp;redlink=1" title="SKIP EDOTP (page does not exist)">SKIP_EDOTP</a>=.TRUE. to avoid the recalculation of the <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#pol" title="Berry phases and finite electric fields">electronic polarization</a> at each iteration during the SCF procedure.
+However, the additional term in Hamiltonian (second term on the right-hand-side of <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#HdotP" title="Berry phases and finite electric fields">the electric enthalpy functional</a>) has to be correctly included and can not be kept fixed.
+Basically this means one does not minimize the total energy but optimizes the orbitals until a stationary point is reached. A stationary point is considered to be reached as soon as the norm of the gradient on the orbitals is smaller than <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>/100, and the SCF procedure will stop.
+In the case of the previous example this will lead to:
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="new" href="/wiki/index.php?title=SKIP_EDOTP&amp;action=edit&amp;redlink=1" title="SKIP EDOTP (page does not exist)">SKIP_EDOTP</a>,
+<a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>,
+<a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>,
+<a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>,
+<a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>,
+<a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EFIELD_PEAD%22_incategory:%22Examples%22" title='Special:Search/"EFIELD PEAD" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">DEPER</a> = [real]<br/> Default: <b>DEPER</b> = 0.3 
+</p>
+<p>Description: <a class="mw-selflink selflink">DEPER</a> specifies a relative stopping criterion for the optimization of an eigenvalue.
+</p>
+<p>The tags <a class="mw-selflink selflink">DEPER</a>, <a href="/wiki/index.php/WEIMIN" title="WEIMIN">WEIMIN</a>, and <a href="/wiki/index.php/EBREAK" title="EBREAK">EBREAK</a> allow fine tuning of the iterative matrix diagonalization, and are best not changed. They are optimized for a large variety of systems, and changing one of the parameters usually decreases performance or can even screw up the iterative matrix diagonalization totally.
+In general, these tags control when the optimization of a single band is stopped within the iterative matrix diagonalization schemes:
+</p>
+<p><a class="mw-selflink selflink">DEPER</a> specifies a relative break-criterion: the optimization of a band is stopped after the energy change becomes smaller than <a class="mw-selflink selflink">DEPER</a> multiplied with the energy change in the first iterative optimization step. The maximum number of optimization steps is always 4.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/WEIMIN" title="WEIMIN">WEIMIN</a>,
+<a href="/wiki/index.php/EBREAK" title="EBREAK">EBREAK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22DEPER%22_incategory:%22Examples%22" title='Special:Search/"DEPER" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">LWRITE_UNK</a> = .TRUE. | .FALSE.<br/> Default: <b>LWRITE_UNK</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWRITE_UNK</a> decides whether the cell-periodic part of the relevant Bloch functions is written.
+</p>
+<p>For <a class="mw-selflink selflink">LWRITE_UNK</a>=True, VASP writes the cell-periodic part of the Kohn–Sham orbitals in spin channel s at k point p to the file <b>wannier90.UNKp.s</b>. This file can be used to plot Wannier orbitals with WANNIER90.
+</p>
+<p>For details on the execution of <tt>wannier_setup</tt> in VASP, see the description of the <a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a> tag.
+For information on the <b>wannier90.win</b> file and the execution of WANNIER90, we refer to the <a class="external text" href="http://www.wannier.org/doc/user_guide.pdf" rel="nofollow">WANNIER90 manual</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWRITE_MMN_AMN" title="LWRITE MMN AMN">LWRITE_MMN_AMN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWANNIER90_RUN%22_incategory:%22Examples%22" title='Special:Search/"LWANNIER90 RUN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

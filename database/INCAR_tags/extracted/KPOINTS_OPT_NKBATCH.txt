@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">KPOINTS_OPT_NKBATCH</a> = [integer]
+</p>
+<p>Default: <a class="mw-selflink selflink">KPOINTS_OPT_NKBATCH</a> = Number of k-points in the irreducible Brillouin zone of the self-consistent calculation. 
+</p>
+<p>Description: <a class="mw-selflink selflink">KPOINTS_OPT_NKBATCH</a> determines the size of the batch of k-points for the KPOINTS_OPT driver.
+</p>
+<p>When the <a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a> is present an additional non-self-consistent calculation is performed after self-consistency is reached.
+This one-shot calculation is done in batches of N k-points to reduce memory usage.
+Increasing the size of the batch leads to faster calculation times but higher memory usage in the non-self-consistent calculation.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LKPOINTS_OPT" title="LKPOINTS OPT">LKPOINTS_OPT</a>, <a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a>, <a href="/wiki/index.php/PROCAR_OPT" title="PROCAR OPT">PROCAR_OPT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LKPOINTS_OPT%22_incategory:%22Examples%22" title='Special:Search/"LKPOINTS OPT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

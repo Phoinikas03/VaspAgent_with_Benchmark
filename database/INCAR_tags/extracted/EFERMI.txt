@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">EFERMI</a> = MIDGAP | LEGACY | [real]<br/> Default: <b>EFERMI</b> = LEGACY 
+</p>
+<p>Description: Defines how the Fermi energy is calculated in VASP. It is recommended to use EFERMI = MIDGAP.
+</p>
+<h2><span class="mw-headline" id="Fermi_energy_in_semiconductors">Fermi energy in semiconductors</span></h2>
+<p>For semiconducting materials, the Fermi energy is not uniquely defined in the bandgap of the material.
+Any value that produces the correct number of electrons (<a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>) is allowed.
+By default, VASP places the Fermi energy at a somewhat arbitrary value within the bandgap.
+The precise value depends on values chosen for the smearing (<a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a> and <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>) and the density of states (<a href="/wiki/index.php/EMIN" title="EMIN">EMIN</a>, <a href="/wiki/index.php/EMAX" title="EMAX">EMAX</a>, and <a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a>).
+Typically, this places the Fermi energy towards the bottom of the bandgap.
+</p>
+<p>You can change this behavior by setting <a class="mw-selflink selflink">EFERMI</a> = MIDGAP (recommended).
+VASP will then put the Fermi energy in the middle of the gap because this is the most consistent with increasing the smearing <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>.
+This algorithm to determine the Fermi energy was introduced in VASP.6.4.
+The value of the Fermi energy should not affect the outcome of the calculation.
+</p>
+<h2><span class="mw-headline" id="Fermi_energy_in_metals">Fermi energy in metals</span></h2>
+<p>MIDGAP and LEGACY should yield the same value when your system does not have a gap.
+The Fermi energy is placed precisely at the value so that underneath are enough states to accommodate <a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a> electrons. The evaluation of the Fermi energy involves an integral over the 1. BZ.
+Therefore, the Fermi energy in metals needs to be converged with respect to the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> mesh and smearing (<a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>, <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>).
+</p>
+<h2><span class="mw-headline" id="Fixed_Fermi_energy">Fixed Fermi energy</span></h2>
+<p>Occasionally, you want to compute systems with fixed Fermi energy for a given charge density.
+To this end, set <a class="mw-selflink selflink">EFERMI</a> to a numeric value and <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a> = 11.
+A possible use case is to set <a class="mw-selflink selflink">EFERMI</a> to the converged Fermi energy in a band-structure calculation.
+You may use this to introduce electron doping/depletion to a system.
+</p>
+<p>This is, in particular, important for band-structure calculation of metallic systems because for gaped systems the Fermi energy often still ends up at a valid value within the gap despite the inaccurate computation. Hence, to plot a band structure the band energies should be taken from the calculation with fixed charge density based on <b>k</b>-points along a path, but the Fermi energy should be taken from the calculation based on a <b>k</b> mesh (e.g., the scf calculation by which the charge density was obtained or a more precisely converged Fermi energy based on the same fixed charge density). <a class="mw-selflink selflink">EFERMI</a> can fix the Fermi energy to the proper value during the band-structure calculation.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>,
+<a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>,
+<a href="/wiki/index.php/EMIN" title="EMIN">EMIN</a>,
+<a href="/wiki/index.php/EMAX" title="EMAX">EMAX</a>,
+<a href="/wiki/index.php/NEDOS" title="NEDOS">NEDOS</a>
+</p>

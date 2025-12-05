@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LWRITE_MMN_AMN</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWRITE_MMN_AMN</a>=.TRUE. tells the VASP2WANNIER90 interface to write the <b>wannier90.mmn</b> and <b>wannier90.amn</b> files.
+</p>
+<p>When running WANNIER90 in library mode (<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>=.TRUE.), the <b>wannier90.mmn</b> and <b>wannier90.amn</b> files are not written. The information these files normally contain is passed on to <tt>wannier_run</tt> internally. If you want these files to be written anyway, for instance, to be able to run WANNIER90 standalone later on, set <a class="mw-selflink selflink">LWRITE_MMN_AMN</a>=.TRUE. in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWRITE_MMN_AMN%22_incategory:%22Examples%22" title='Special:Search/"LWRITE MMN AMN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

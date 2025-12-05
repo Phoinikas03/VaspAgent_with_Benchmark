@@ -1,0 +1,129 @@
+<p><a class="mw-selflink selflink">LIBXC1_Pn</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBXC1_Pn</a>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n=1, 2, \ldots}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n=1, 2, \ldots}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n=1, 2, \ldots}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3c9d8d9ab2bc60bb31c9f8419a5edace&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 11.609ex;"/></span> allows to specify the values of the parameters of the functional implemented in Libxc that is called with <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>.
+</p>
+<p>For many of the functionals implemented in the library of exchange-correlation functionals Libxc<sup class="reference" id="cite_ref-marques:cpc:2012_1-0"><a href="#cite_note-marques:cpc:2012-1">[1]</a></sup><sup class="reference" id="cite_ref-lehtola:sx:2018_2-0"><a href="#cite_note-lehtola:sx:2018-2">[2]</a></sup><sup class="reference" id="cite_ref-libxc_3-0"><a href="#cite_note-libxc-3">[3]</a></sup> it is possible to modify the parameters if one does not want to use the default values. If a functional from Libxc has parameters that can be modified, then they are listed in <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> below "Parameters of Libxc functionals:" as P<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n=1, 2, \ldots}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n=1, 2, \ldots}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n=1, 2, \ldots}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3c9d8d9ab2bc60bb31c9f8419a5edace&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 11.609ex;"/></span>). <a class="mw-selflink selflink">LIBXC1_Pn</a> and <a href="/wiki/index.php/LIBXC2_Pn" title="LIBXC2 Pn">LIBXC2_Pn</a> are for the functionals called with <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a> and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>, respectively.
+</p>
+<p>An example is given below for the GGA PBE functional<sup class="reference" id="cite_ref-perdew:prl:1996_4-0"><a href="#cite_note-perdew:prl:1996-4">[4]</a></sup> where the default parameters <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu=0.21951}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+<mo>=</mo>
+<mn>0.21951</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu=0.21951}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu=0.21951}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a6d6be1439abcba925437c8ebe7f4c5b&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.676ex; width: 12.122ex;"/></span> in exchange and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta=0.066725}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>=</mo>
+<mn>0.066725</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta=0.066725}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta=0.066725}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=027dd08ad1ac17ab9f77616f840c4e82&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 13.214ex;"/></span> in correlation are changed to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu=10/81\approx0.12345679}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+<mo>=</mo>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>81</mn>
+<mo>≈<!-- ≈ --></mo>
+<mn>0.12345679</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu=10/81\approx0.12345679}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu=10/81\approx0.12345679}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9bdecd66b05d296c53efd37487c696db&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 24.52ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta=0.046}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>=</mo>
+<mn>0.046</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta=0.046}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta=0.046}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5ddee18c1856bfe9e8ee2f8a24fd1d5a&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 9.727ex;"/></span> to get the PBEsol functional<sup class="reference" id="cite_ref-perdew:prl:2008_5-0"><a href="#cite_note-perdew:prl:2008-5">[5]</a></sup> (of course, the simpler way to use PBEsol from Libxc would be to call it directly with <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>=GGA_X_PBE_SOL and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>=GGA_C_PBE_SOL).
+</p>
+<p>For Libxc functionals that are the semilocal component of a hybrid functional, i.e. those with a tag that starts with HYB (<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>=.TRUE. will be set automatically if such a functional is selected), the following explains how it works for the mixing and screening parameters:
+</p>
+<ul><li>Mixing parameter:
+<ul><li>It is usually one of the parameters <a class="mw-selflink selflink">LIBXC1_Pn</a>, and can therefore be modified.</li>
+<li>For HYB_GGA_XC_PBEH, HYB_GGA_XC_B1WC, HYB_GGA_XC_HSE03, HYB_GGA_XC_HSE06, HYB_GGA_XC_HSE12, and HYB_GGA_XC_HSE12S, the value of <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> (even if not specified explicitly in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>) will be used and automatically passed to the corresponding parameter in Libxc. On the other hand, if this corresponding parameter (<a class="mw-selflink selflink">LIBXC1_Pn</a>) is specified in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>, then it will be used (instead of <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>), however note that it will be only for the semilocal component of the hybrid functional and not for the exact exchange that will still use <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>.</li>
+<li>For all hybrid functionals except those listed just above, <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> will not be considered for the semilocal component of the hybrid functional, but only for the exact exchange component. Therefore, a particular choice for the mixing parameter has to be done by specifying both <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> (for the exact exchange) and the appropriate <a class="mw-selflink selflink">LIBXC1_Pn</a> (for the semilocal component).</li>
+<li>The <a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>, <a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>, <a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>, <a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>, <a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>, and <a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a> tags are ignored if the Libxc functional is an hybrid functional (those with a tag that starts with HYB).</li></ul></li>
+<li>Screening parameter:
+<ul><li>It is usually one of the parameters <a class="mw-selflink selflink">LIBXC1_Pn</a> if it is a screened functional, and can therefore be modified.</li>
+<li>For HYB_GGA_XC_HSE03, HYB_GGA_XC_HSE06, HYB_GGA_XC_HSE12, and HYB_GGA_XC_HSE12S, the value of <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> (even if not specified explicitly in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>) will be used and automatically passed to the corresponding parameter in Libxc. On the other hand, if this corresponding parameter (<a class="mw-selflink selflink">LIBXC1_Pn</a>) is specified in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>, then it will be used (instead of <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>), however note that it will be only for the semilocal component of the hybrid functional and not for the exact exchange that will still use <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>.</li>
+<li>For all hybrid functionals except those listed just above, <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> will not be considered for the semilocal component of the hybrid functional, but only for the exact exchange component. Therefore, a particular choice for the screening parameter has to be done by specifying both <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> (for the exact exchange) and the appropriate <a class="mw-selflink selflink">LIBXC1_Pn</a> (for the semilocal component).</li></ul></li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/LIBXC2_Pn" title="LIBXC2 Pn">LIBXC2_Pn</a>,
+<a href="/wiki/index.php/LTBOUNDLIBXC" title="LTBOUNDLIBXC">LTBOUNDLIBXC</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LIBXC1_Pn%22_incategory:%22Examples%22" title='Special:Search/"LIBXC1 Pn" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

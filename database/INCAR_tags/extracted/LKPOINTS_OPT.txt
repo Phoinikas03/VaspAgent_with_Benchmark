@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LKPOINTS_OPT</a> = .TRUE.| .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LKPOINTS_OPT</a> controlls whether VASP reads the <a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a> file.
+</p>
+<p>To avoid reading the <a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a> file without removing it from the working directory, the <a class="mw-selflink selflink">LKPOINTS_OPT</a> tag can be set to <code>.FALSE.</code> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KPOINTS_OPT" title="KPOINTS OPT">KPOINTS_OPT</a>, <a href="/wiki/index.php/PROCAR_OPT" title="PROCAR OPT">PROCAR_OPT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LKPOINTS_OPT%22_incategory:%22Examples%22" title='Special:Search/"LKPOINTS OPT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

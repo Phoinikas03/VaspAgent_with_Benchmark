@@ -1,0 +1,1 @@
+LCHARG =  Default: LCHARG = .NOT. LH5 Description: LCHARG determines whether the charge densities (files CHGCAR and CHG ) are written. Related tags and articles LWAVE , LWAVEH5 , LCHARGH5 , LH5 Examples that use this tag

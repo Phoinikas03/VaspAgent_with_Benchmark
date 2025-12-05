@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ANTIRES</a> = 0 | 1 | 2<br/> Default: <b>ANTIRES</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">ANTIRES</a> determines whether the Tamm-Dancoff approximation is used or not. 
+</p>
+<ul><li><a class="mw-selflink selflink">ANTIRES</a>=0 Tamm-Dancoff approximation (TDA)</li>
+<li><a class="mw-selflink selflink">ANTIRES</a>=1 yields exact results at ω=0 at roughly the same cost  as TDA</li>
+<li><a class="mw-selflink selflink">ANTIRES</a>=2 beyond Tamm-Dancoff, coupling between positive and negative frequencies</li></ul>
+<p>VASP uses the procedures outlined in reference <sup class="reference" id="cite_ref-Sander_1-0"><a href="#cite_note-Sander-1">[1]</a></sup> to include contributions beyond TDA. Beyond-TDA calculations increase the computational time and memory requirements by typically a factor of 2.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ANTIRES%22_incategory:%22Examples%22" title='Special:Search/"ANTIRES" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

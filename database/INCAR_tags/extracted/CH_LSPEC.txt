@@ -1,0 +1,52 @@
+<p><a class="mw-selflink selflink">CH_LSPEC</a> = [logical]<br/> Default: <b>CH_LSPEC</b> = .FALSE. 
+</p>
+<p>Description: This flag controls whether the dielecectric function using the supercell core-hole method is calculated or not.
+</p>
+<p>How to calculate X-ray absorption spectra from the supercell core-hole method are is explained <a href="/wiki/index.php/Supercell_core-hole_calculations" title="Supercell core-hole calculations">here</a>.
+</p>
+<p>This tag should be used in combination with the following important tags for the core-hole approximation:
+</p>
+<ul><li><a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>: To enable core-hole calculations in the final-state approximation with self-consistent field cycles (SCF) one has to set <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>=2. Core-hole calculations in the initial-state approximation (<a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>=1) are also available, but they are physically less relevant and should be only used if especially needed.</li>
+<li><a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>: This tag selects the species holding the core hole. This number corresponds to the species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> and <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files.</li>
+<li><a href="/wiki/index.php/CLN" title="CLN">CLN</a>: Specifies the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span> quantum number of the excited electron.</li>
+<li><a href="/wiki/index.php/CLL" title="CLL">CLL</a>: Specifies the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span> quantum number of the excited electron.</li>
+<li><a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>: Specifies how much of a faction of the chosen electron should be excited. Usually one always sets <a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>=1.0, but in some cases values lesser than 1 can lead to better agreement with experiment. However, this should be handled with caution since the physics behind is very dubious.</li></ul>
+<p>And following tags to control the calculation of the dieletric function:
+</p>
+<ul><li><a href="/wiki/index.php/CH_SIGMA" title="CH SIGMA">CH_SIGMA</a>: The broadening of the spectrum is by default of Gaussian form and the broadening width in eV is set by <a href="/wiki/index.php/CH_SIGMA" title="CH SIGMA">CH_SIGMA</a>. We recommend using a very small broadening <a href="/wiki/index.php/CH_SIGMA" title="CH SIGMA">CH_SIGMA</a><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \le}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≤<!-- ≤ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \le}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \le}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2d1b2a11ff4a816536a8937f2ece2e9c&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.176ex; width: 1.808ex;"/></span>0.001 in the calculations and to broaden the spectrum in post-processing. Also, the spectrum can be recalculated with different parameters without the need to redo the electronic self-consistent field cycle. For that one can use the converged <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> from the previous calculation and set <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=<i>None</i> together with the new parameters for the spectrum "CH_*" in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.</li>
+<li><a href="/wiki/index.php/CH_NEDOS" title="CH NEDOS">CH_NEDOS</a>: Sets the number of grid points on the energy axis of the spectrum.</li>
+<li><a href="/wiki/index.php/CH_AMPLIFICATION" title="CH AMPLIFICATION">CH_AMPLIFICATION</a>: Scaling of the spectrum by the specified value. This tag is not important but can be useful sometimes if one needs to scale the spectrum a priori. Otherwise, it is recommended to scale the spectrum a posteriori.</li></ul>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CH_SIGMA" title="CH SIGMA">CH_SIGMA</a>, <a href="/wiki/index.php/CH_NEDOS" title="CH NEDOS">CH_NEDOS</a>, <a href="/wiki/index.php/CH_AMPLIFICATION" title="CH AMPLIFICATION">CH_AMPLIFICATION</a>, <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, <a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>, <a href="/wiki/index.php/CLN" title="CLN">CLN</a>, <a href="/wiki/index.php/CLL" title="CLL">CLL</a>, <a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>, <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>, <a href="/wiki/index.php/CH_AMPLIFICATION" title="CH AMPLIFICATION">CH_AMPLIFICATION</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CH_LSPEC%22_incategory:%22Examples%22" title='Special:Search/"CH LSPEC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

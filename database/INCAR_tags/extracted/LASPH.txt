@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">LASPH</a> = .TRUE. | .FALSE.<br/> Default: <b>LASPH</b> = .FALSE. 
+</p>
+<p>Description: include non-spherical contributions related to the gradient of the density in the PAW spheres.
+</p>
+<p>Usually VASP calculates only the spherical contribution to the gradient corrections inside the PAW spheres (non-spherical contributions for the LDA part of the potential and the Hartree potential are always included).
+</p>
+<p>For <a class="mw-selflink selflink">LASPH</a> = .TRUE., non-spherical contributions from the gradient corrections inside the PAW spheres will be included as well. For VASP.4.6, these contributions are only included in the total energy, after self-consistency has been reached disregarding the aspherical contributions in the gradient corrections.
+</p>
+<p>For VASP.5.X the aspherical contributions are properly accounted for in the Kohn-Sham potential as well, if
+<a class="mw-selflink selflink">LASPH</a> = .TRUE. is set. This is essential for accurate total energies and band structure calculations for <i>f</i>-elements (e.g. ceria), all 3<i>d</i>-elements (transition metal oxides), and magnetic atoms in the 2nd row (B-F atom), in particular if DFT+U or hybrid functionals, meta-GGAs, or vdW-DFT are used, since these functionals often result in aspherical charge densities.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LMAXPAW" title="LMAXPAW">LMAXPAW</a>,
+<a href="/wiki/index.php/LMAXTAU" title="LMAXTAU">LMAXTAU</a>,
+<a href="/wiki/index.php/LMIXTAU" title="LMIXTAU">LMIXTAU</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LASPH%22_incategory:%22Examples%22" title='Special:Search/"LASPH" incategory:"Examples"'>Examples that use this tag</a>
+</p>

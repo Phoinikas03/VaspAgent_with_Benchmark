@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">SIGMA</a> = [real]<br/> Default: <b>SIGMA</b> = 0.2 
+</p>
+<p>Description: <a class="mw-selflink selflink">SIGMA</a> specifies the width of the smearing in eV.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>,
+<a href="/wiki/index.php/EFERMI" title="EFERMI">EFERMI</a>,
+<a class="mw-redirect" href="/wiki/index.php/K-point_integration" title="K-point integration">K-point integration</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SIGMA%22_incategory:%22Examples%22" title='Special:Search/"SIGMA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

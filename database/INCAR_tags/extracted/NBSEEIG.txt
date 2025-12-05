@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">NBSEEIG</a> = [integer]<br/> Default: <b>NBSEEIG</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBSEEIG</a> sets the number of BSE eigenvectors written to the <a href="/wiki/index.php/BSEFATBAND" title="BSEFATBAND">BSEFATBAND</a> file. If <a href="/wiki/index.php/BSEHOLE" title="BSEHOLE">BSEHOLE</a> or <a href="/wiki/index.php/BSEELECTRON" title="BSEELECTRON">BSEELECTRON</a> is set, <a class="mw-selflink selflink">NBSEEIG</a> exciton wavefunctions are written to the <a href="/wiki/index.php/CHG" title="CHG">CHG</a>.XX files.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE" title="BSE">BSE</a>, <a href="/wiki/index.php/BSEFATBAND" title="BSEFATBAND">BSEFATBAND</a>, <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBSEEIG%22_incategory:%22Examples%22" title='Special:Search/"NBSEEIG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

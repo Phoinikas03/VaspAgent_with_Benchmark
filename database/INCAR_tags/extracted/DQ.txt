@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">DQ</a> = [real]<br/> Default: <b>DQ</b> =  0.001 
+</p>
+<p>Description: step size for the finite difference <i>k</i>-space derivative in the linear response calculation of chemical shifts.
+</p>
+<p>Typical values for <a class="mw-selflink selflink">DQ</a> are in the range [0.001 - 0.003]. The default is often sufficient.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>,
+<a href="/wiki/index.php/ICHIBARE" title="ICHIBARE">ICHIBARE</a>,
+<a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>,
+<a href="/wiki/index.php/NLSPLINE" title="NLSPLINE">NLSPLINE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22DQ%22_incategory:%22Examples%22" title='Special:Search/"DQ" incategory:"Examples"'>Examples that use this tag</a>
+</p>

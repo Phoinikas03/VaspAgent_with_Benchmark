@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">INIWAV</a> = 0 | 1 
+</p>
+<p>Description: Specifies how to set up the initial orbitals in case <a href="/wiki/index.php/ISTART" title="ISTART">ISTART</a>=0.
+</p>
+<ul><li><a class="mw-selflink selflink">INIWAV</a>=0</li></ul>
+<ul><li><a class="mw-selflink selflink">INIWAV</a>=1</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a href="/wiki/index.php/ISTART" title="ISTART">ISTART</a>
+</p>

@@ -1,0 +1,8 @@
+<p><a class="mw-selflink selflink">SYSTEM</a> = [string]<br/> Default: <b>SYSTEM</b> = unknown system 
+</p>
+<p>Description: The "title string" defined by <a class="mw-selflink selflink">SYSTEM</a> is for the user only and should help the user to identify what he/she wants to do with this specific input file.
+</p>
+<p>The <a class="mw-selflink selflink">SYSTEM</a> tag is followed by a string that possibly contains blanks. The string is read in and written to the main output file <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SYSTEM%22_incategory:%22Examples%22" title='Special:Search/"SYSTEM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

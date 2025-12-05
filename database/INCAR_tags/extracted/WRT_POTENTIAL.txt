@@ -1,0 +1,109 @@
+<p><a class="mw-selflink selflink">WRT_POTENTIAL</a> = string<br/> Default: <b>WRT_POTENTIAL</b> = None 
+</p>
+<p>Description: Select which component of the local potential to be written as a post-processing step.
+</p>
+<p><a class="mw-selflink selflink">WRT_POTENTIAL</a> can select one or multiple local potentials on the real-space grid in the unit cell to be written, e.g.,
+</p>
+<p>or
+</p>
+<p>The output is written to <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a> and can be accessed either by <a class="external text" href="https://vasp.at/py4vasp/latest/index.html" rel="nofollow">py4vasp</a> or HDF5 command-line tools (h5ls, h5dump).
+</p>
+<p>The above allows the creation of a Python dictionary with the potential data.
+</p>
+<p>The above shows the table of contents of <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>. Depending on the keywords specified with <a class="mw-selflink selflink">WRT_POTENTIAL</a> and the system it yields
+</p>
+<p>The grid density can be increased by choosing a higher value for <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> or explicitly by <a href="/wiki/index.php/NGX" title="NGX">NGX</a>, <a href="/wiki/index.php/NGY" title="NGY">NGY</a>, <a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>.
+</p>
+<p>The first dimension of the datasets in /results/potential is 1 for nonmagnetic calculation, 2 for spin-polarized calculation, and 4 for noncollinear calculations. In case the potential is scalar, i.e., has no B-field-like contribution that couples to the magnetization, only the 1st component exists. Hence, for <i>hartree</i> and <i>ionic</i>, the first dimension is 1. The components for the magnetic calculations correspond to the spinor representation with the scalar potential in the first component and the B-field in the second (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2) or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=262e0afc75c8a9fc536a7dce57e6ebe1&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f5ef944a2d6b5db7b0f5eb7664fbe8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mn>3</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7fc13d7af04367f93852375411286af2&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> in the 2nd, 3rd and 4th component (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T) in the basis of Pauli matrices <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cb5c2f61508f101086a7a8864790dd71&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}_3\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}_3\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}_3\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cfbb347eec57d0f275d4f1f7d10a0e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span> given by <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>.
+</p>
+<p><a class="mw-selflink selflink">WRT_POTENTIAL</a> can be run as a post-processing step by restarting from a converged <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> and setting <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=None. It is available for VASP &gt;= 6.4.3.
+</p>
+<h2><span class="mw-headline" id="Options_to_select">Options to select</span></h2>
+<h3><span class="mw-headline" id="total">total</span></h3>
+<h3><span class="mw-headline" id="hartree">hartree</span></h3>
+<h3><span class="mw-headline" id="ionic">ionic</span></h3>
+<h3><span class="mw-headline" id="xc">xc</span></h3>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LVACPOTAV" title="LVACPOTAV">LVACPOTAV</a>,
+<a href="/wiki/index.php/LVTOT" title="LVTOT">LVTOT</a>,
+<a href="/wiki/index.php/LVHAR" title="LVHAR">LVHAR</a>,
+<a class="mw-selflink selflink">WRT_POTENTIAL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>, <a href="/wiki/index.php/NGX" title="NGX">NGX</a>, <a href="/wiki/index.php/NGY" title="NGY">NGY</a>, <a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>
+</p>

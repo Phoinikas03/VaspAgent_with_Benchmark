@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">CUTOFF_SIGMA</a> =  [real] ( [real] ) 
+</p>
+<p>Description: <a class="mw-selflink selflink">CUTOFF_SIGMA</a> specifies the broadening <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a2ab7d71a0f07f388ff823293c147d21&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> in eV for the cutoff function specified by <a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a>.
+</p>
+<p>Corresponds to a broadening of the cutoff function used in the <a class="mw-redirect" href="/wiki/index.php/Wannier_functions#One-shot_single_value_decomposition_(SVD)" title="Wannier functions"> one-shot method</a> to obtain Wannier functions.
+The meaning of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a2ab7d71a0f07f388ff823293c147d21&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> depends on the <a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a> tag.
+</p>
+<p>For spin-polarized calculations (<code style="padding: 2px"><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2</code>), two values can be specified for <a class="mw-selflink selflink">CUTOFF_SIGMA</a>, one for each spin channel.
+If only a single value is specified, it will be used for both spin channels.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a>,
+<a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a>,
+<a href="/wiki/index.php/LSCDM" title="LSCDM">LSCDM</a>,
+<a href="/wiki/index.php/LOCPROJ" title="LOCPROJ">LOCPROJ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CUTOFF_SIGMA%22_incategory:%22Examples%22" title='Special:Search/"CUTOFF SIGMA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

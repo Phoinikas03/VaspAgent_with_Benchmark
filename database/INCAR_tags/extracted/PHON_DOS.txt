@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">PHON_DOS</a> =  0 | 1 | 2 
+</p>
+<p>Description: Select the approach to use when computing the phonon density-of-states (DOS).
+</p>
+<p>The possible values are
+</p>
+<p>To get a representative density of states the <a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a> file should specify a regular mesh.
+When line mode in the <a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a> file and gaussian smearing (PHON_DOS=1) is used, the phonon density of states will still be computed but the results are not reliable.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/PHON_NWRITE" title="PHON NWRITE">PHON_NWRITE</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>,
+<a href="/wiki/index.php/PHON_G_CUTOFF" title="PHON G CUTOFF">PHON_G_CUTOFF</a>,
+<a href="/wiki/index.php/PHON_SIGMA" title="PHON SIGMA">PHON_SIGMA</a>,
+<a href="/wiki/index.php/PHON_NEDOS" title="PHON NEDOS">PHON_NEDOS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPHON_DISPERSION%22_incategory:%22Examples%22" title='Special:Search/"LPHON DISPERSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

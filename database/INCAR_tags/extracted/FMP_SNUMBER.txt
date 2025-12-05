@@ -1,0 +1,47 @@
+<p><a class="mw-selflink selflink">FMP_SNUMBER</a> = integer<br/> Default: <b>FMP_SNUMBER</b> =  10 
+</p>
+<p>Description: Number of slabs perpendicular to the temperature gradient in the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>.
+</p>
+<p><a class="mw-selflink selflink">FMP_SNUMBER</a> defines the number of slabs perpendicular to the lattice vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{a}_i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{a}_i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ebb9b5f0045f8af04acaf7f094dc3b02&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.099ex;"/></span> along which the gradient <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \partial T/\partial \mathbf{a}_i }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">a</mi>
+</mrow>
+<mi>i</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \partial T/\partial \mathbf{a}_i }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \partial T/\partial \mathbf{a}_i }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=82cfc2ccaf090602bdf64c00e9c30256&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 7.534ex;"/></span> is created during the reverse nonequilibrium molecular dynamics run using the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>,
+<a href="/wiki/index.php/FMP_ACTIVE" title="FMP ACTIVE">FMP_ACTIVE</a>,
+<a href="/wiki/index.php/FMP_DIRECTION" title="FMP DIRECTION">FMP_DIRECTION</a>,
+<a href="/wiki/index.php/FMP_SWAPNUM" title="FMP SWAPNUM">FMP_SWAPNUM</a>,
+<a href="/wiki/index.php/FMP_PERIOD" title="FMP PERIOD">FMP_PERIOD</a>
+</p>

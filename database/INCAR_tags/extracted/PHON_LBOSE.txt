@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">PHON_LBOSE</a> = [logical]<br/> Default: <b>PHON_LBOSE</b> = .TRUE. 
+</p>
+<p>Description: This flag determines whether random structures in the Monte-Carlo (MC) sampling are created according to Bose-Einstein or Maxwell-Boltzmann statistics. 
+</p>
+<p>For <a class="mw-selflink selflink">PHON_LBOSE</a>=<i>.TRUE.</i> Bose-Einstein statistics is used.
+</p>
+<p>For <a class="mw-selflink selflink">PHON_LBOSE</a>=<i>.FALSE.</i> Maxwell-Boltzmann statistics is used.
+</p>
+<p>For further usage of this tag see: <a href="/wiki/index.php/Electron-phonon_interactions_from_Monte-Carlo_sampling" title="Electron-phonon interactions from Monte-Carlo sampling">Electron-phonon interactions from Monte-Carlo sampling</a>.
+</p>
+<p><b>Important</b>: This tag does not work together with <a href="/wiki/index.php/PHON_NSTRUCT" title="PHON NSTRUCT">PHON_NSTRUCT</a>=0.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PHON_LMC" title="PHON LMC">PHON_LMC</a>, <a href="/wiki/index.php/PHON_NSTRUCT" title="PHON NSTRUCT">PHON_NSTRUCT</a>, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PHON_LBOES%22_incategory:%22Examples%22" title='Special:Search/"PHON LBOES" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,93 @@
+<p><a class="mw-selflink selflink">ML_AFILT2</a> = [real]<br/> Default: <b>ML_AFILT2</b> = 0.002 
+</p>
+<p>Description: This tag sets the filtering parameter for the angular filtering for <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a> in the machine learning force field method.
+</p>
+<p>This tag is only used if <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a>=<i>.TRUE.</i> and <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>=2 are used.
+</p>
+<p>The angular filtering function<sup class="reference" id="cite_ref-boyd:book:2000_1-0"><a href="#cite_note-boyd:book:2000-1">[1]</a></sup> for <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>=2 is described as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>η<!-- η --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mo>,</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">[</mo>
+<mi>l</mi>
+<mo stretchy="false">(</mo>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<msup>
+<mo stretchy="false">]</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} [l (l+1)]^{2}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d2fbdcbf841b97fb3fb7676882956d27&amp;mode=mathml" style="vertical-align: -2.671ex; height: 6.009ex; width: 29.347ex;"/></span>. The tag <a class="mw-selflink selflink">ML_AFILT2</a> sets the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{\mathrm{FILT}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">L</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{\mathrm{FILT}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a_{\mathrm{FILT}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=839d3eca48595523133797e197e454c0&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 5.343ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LAFILT2" title="ML LAFILT2">ML_LAFILT2</a>, <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_AFILT2%22_incategory:%22Examples%22" title='Special:Search/"ML AFILT2" incategory:"Examples"'>Examples that use this tag</a>
+</p>

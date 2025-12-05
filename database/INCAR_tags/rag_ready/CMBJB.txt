@@ -1,0 +1,1 @@
+CMBJB =  Description: sets the {\displaystyle \beta} {\displaystyle \beta} parameter in the MBJ and LMBJ potentials. See the description of the METAGGA tag. Related tags and articles METAGGA , CMBJ , CMBJA , CMBJE , SMBJ , RSMBJ , LASPH , LMAXTAU , LMIXTAU Examples that use this tag

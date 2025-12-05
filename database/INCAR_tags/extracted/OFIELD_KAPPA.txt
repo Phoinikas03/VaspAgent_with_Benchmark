@@ -1,0 +1,61 @@
+<p><a class="mw-selflink selflink">OFIELD_KAPPA</a> = [real] 
+</p>
+<p>Description: The tag <a class="mw-selflink selflink">OFIELD_KAPPA</a> sets the strength of the bias potential in the <a href="/wiki/index.php/Category:Interface_pinning" title="Category:Interface pinning">Interface pinning</a> method. 
+</p>
+<p>The bias potential in the <a href="/wiki/index.php/Category:Interface_pinning" title="Category:Interface pinning">Interface pinning</a> method is written as
+</p>
+<p>The tag <a class="mw-selflink selflink">OFIELD_KAPPA</a> method sets the strength of the bias potential <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span>. The unit of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \kappa}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>κ<!-- κ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \kappa}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \kappa}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=269cb4a8704d5fb203ad10436efe52d1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.339ex;"/></span> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \textrm{eV}/(\textrm{unit} \,\, \textrm{ of }\,\, Q)^2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>eV</mtext>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>unit</mtext>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+<mspace width="thinmathspace"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext> of </mtext>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+<mspace width="thinmathspace"></mspace>
+<mi>Q</mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mn>2</mn>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \textrm{eV}/(\textrm{unit} \,\, \textrm{ of }\,\, Q)^2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \textrm{eV}/(\textrm{unit} \,\, \textrm{ of }\,\, Q)^2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89aeebdf00c50551c550bcd39695d44e&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 17.36ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Category:Interface_pinning" title="Category:Interface pinning">Interface pinning</a>, <a href="/wiki/index.php/OFIELD_Q6_NEAR" title="OFIELD Q6 NEAR">OFIELD_Q6_NEAR</a>, <a href="/wiki/index.php/OFIELD_Q6_FAR" title="OFIELD Q6 FAR">OFIELD_Q6_FAR</a>, <a href="/wiki/index.php/OFIELD_A" title="OFIELD A">OFIELD_A</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22OFIELD_KAPPA%22_incategory:%22Examples%22" title='Special:Search/"OFIELD KAPPA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

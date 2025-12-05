@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">NHC_NRESPA</a> = [integer]<br/> Default: <b>NHC_NRESPA</b> = 1 
+</p>
+<p>Description: The number of subdivisions of the integration step used in propagation of thermostat variables in <a href="/wiki/index.php/Nose-Hoover-chain_thermostat" title="Nose-Hoover-chain thermostat">Nosé-Hoover–chain (NHC) thermostat</a>. 
+</p>
+<p><a class="mw-selflink selflink">NHC_NRESPA</a> sets the number of subdivisions of the integration step used in propagation of thermostat variables in  <a href="/wiki/index.php/Nose-Hoover-chain_thermostat" title="Nose-Hoover-chain thermostat">Nosé-Hoover–chain (NHC) thermostat</a>. This might be needed in accurate calculations where, due to rapidly varying terms appearing in thermostat variables propagators could cause significant drifts of total energy (including energy contributions due to thermostat), which is a conserved quantity. 
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NHC_PERIOD" title="NHC PERIOD">NHC_PERIOD</a>, <a href="/wiki/index.php/NHC_NS" title="NHC NS">NHC_NS</a>, <a class="mw-redirect" href="/wiki/index.php/NHC_thermostat" title="NHC thermostat">NHC thermostat</a>
+</p>

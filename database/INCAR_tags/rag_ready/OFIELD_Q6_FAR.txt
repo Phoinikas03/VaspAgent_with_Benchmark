@@ -1,0 +1,1 @@
+OFIELD_Q6_FAR =  Description: OFIELD_Q6_FAR sets the far fading distance for the computation of a continuous {\displaystyle Q_6} {\displaystyle Q_6} parameter in the interface-pinning method. The unit of OFIELD_Q6_FAR is {\displaystyle \AA} {\displaystyle \AA} . Related tags and articles Interface pinning , OFIELD_Q6_NEAR , OFIELD_A , OFIELD_KAPPA Examples that use this tag

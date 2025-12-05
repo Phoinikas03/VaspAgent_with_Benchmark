@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">CH_NEDOS</a> = [integer]<br/> Default: <b>CH_NEDOS</b> = 1000 
+</p>
+<p>Description: This tag specifies the number of frequency (energy) grid points on the x-axis in the calculation of the dielectric function in the supercell core-hole method.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CH_LSPEC" title="CH LSPEC">CH_LSPEC</a>, <a href="/wiki/index.php/CH_SIGMA" title="CH SIGMA">CH_SIGMA</a>, <a href="/wiki/index.php/CH_AMPLIFICATION" title="CH AMPLIFICATION">CH_AMPLIFICATION</a>, <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, <a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>, <a href="/wiki/index.php/CLN" title="CLN">CLN</a>, <a href="/wiki/index.php/CLL" title="CLL">CLL</a>, <a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CH_SIGMA%22_incategory:%22Examples%22" title='Special:Search/"CH SIGMA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

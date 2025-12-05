@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">XC_C</a> = [real array]<br/> Default: <b>XC_C</b> =  1.0*NXC 
+</p>
+<p>Description: Multiplication factors for the components of the functional given by the <a href="/wiki/index.php/XC" title="XC">XC</a> tag.
+</p>
+<p><a class="mw-selflink selflink">XC_C</a> sets the factors that multiply each component of the functional specified with the <a href="/wiki/index.php/XC" title="XC">XC</a> tag. The number of values specified with <a class="mw-selflink selflink">XC_C</a> has to be equal to the number of functional components set with <a href="/wiki/index.php/XC" title="XC">XC</a> (NXC). Examples of how to use <a class="mw-selflink selflink">XC_C</a> are provided at <a href="/wiki/index.php/XC" title="XC">XC</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/XC" title="XC">XC</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22XC_C%22_incategory:%22Examples%22" title='Special:Search/"XC C" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,1 @@
+INIWAV = 0 | 1 Description: Specifies how to set up the initial orbitals in case ISTART =0. INIWAV =0 INIWAV =1 Related tags and sections ISTART

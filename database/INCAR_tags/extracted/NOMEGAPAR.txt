@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">NOMEGAPAR</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NOMEGAPAR</a> available as of VASP.6, specifies the number of processor groups sharing the same imaginary frequency grid points.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NTAUPAR" title="NTAUPAR">NTAUPAR</a>, 
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NOMEGAPAR%22_incategory:%22Examples%22" title='Special:Search/"NOMEGAPAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

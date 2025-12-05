@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LSCSGRAD</a> = .TRUE. | .FALSE.<br/> Default: <b>LSCSGRAD</b> = .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCSGRAD</a>  decides whether to compute gradients in the calculation of the MBD dispersion energy or the SCS contribution.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+<a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/LVDWEXPANSION" title="LVDWEXPANSION">LVDWEXPANSION</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVDWEXPANSION%22_incategory:%22Examples%22" title='Special:Search/"LVDWEXPANSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

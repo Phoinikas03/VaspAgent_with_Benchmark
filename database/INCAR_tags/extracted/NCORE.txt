@@ -1,0 +1,40 @@
+<p><a class="mw-selflink selflink">NCORE</a> = [integer]<br/> Default: <b>NCORE</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">NCORE</a> determines the number of compute cores that work on an individual orbital (available as of VASP.5.2.13). 
+</p>
+<p>VASP currently offers parallelization and data distribution over bands and/or over plane wave coefficients, and as of VASP.5.3.2, parallelization over <b>k</b>-points (no data distribution, see <a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>).
+To achieve high efficiency on massively parallel systems or modern multi-core machines, it is strongly recommended to use all parallelization options available. Most algorithms work with any data distribution (except for the single band conjugated gradient, which is obsolete).
+</p>
+<p><a class="mw-selflink selflink">NCORE</a> is available from VASP.5.2.13 on, and is more handy than the previous parameter <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>. The user should either specify <a class="mw-selflink selflink">NCORE</a> or <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>, where <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a> takes a higher preference. The relation between both parameters is 
+</p>
+<p>NCORE =number-of-cores /KPAR / NPAR
+</p>
+<p><a class="mw-selflink selflink">NCORE</a> determines how many cores share the work on an individual orbital. The current default is <a class="mw-selflink selflink">NCORE</a>=1, meaning that one orbital is treated by one core. <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a> is then set to the total number of cores (divided by KPAR). If <a class="mw-selflink selflink">NCORE</a> equals the total number of cores, <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a> is set to 1. This implies data distribution over plane wave coefficients only: all cores will work together on every individual band, i.e., the plane wave coefficients of each band are distributed over all cores. This is usually very slow and should be avoided.
+</p>
+<p><a class="mw-selflink selflink">NCORE</a>=1 is the optimal setting for small unit cells, and platforms with a small communication bandwidth. It is also a good choice for up to 8 cores. However, this mode substantially increases the memory requirements, because the non-local projector functions must be stored entirely on each core. In addition, substantial all-to-all communications are required to orthogonalize the bands. 
+</p>
+<p>On massively parallel systems and modern multi-core machines we strongly recommend to set 
+</p>
+<p><br/>
+For large unit cells, we found that this can improve the performance by up to a factor four compared to the default, and it also significantly improves the stability of the code due to reduced memory requirements. Ideally, <a class="mw-selflink selflink">NCORE</a> should be a factor of the number-of-cores-per-socket (or number-of-cores-per-node), since this reduces communication between the sockets or nodes. The best value <a class="mw-selflink selflink">NCORE</a> depends somewhat on the number of atoms in the unit cell. Values around 4 are usually ideal for 100 atoms in the unit cell. For very large unit cells (more than 400 atoms) values around 12-16 are often optimal. If you run extensive simulations for similar systems, make your own tests.
+</p>
+<p><br/>
+Finally, the optimal settings for <a class="mw-selflink selflink">NCORE</a> and <a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a> depend strongly on the type of machine you are using.
+Some recommended setups:
+</p>
+<ul><li>LINUX cluster linked by Infiniband, modern multicore machines:</li></ul>
+<ul><li>LINUX cluster linked by 1 Gbit Ethernet, and LINUX clusters with single cores:</li></ul>
+<ul><li>Massively parallel machines with dedicated network (maybe Cray):</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a>,
+<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>,
+<a href="/wiki/index.php/NSIM" title="NSIM">NSIM</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>,
+<a href="/wiki/index.php/LSCAAWARE" title="LSCAAWARE">LSCAAWARE</a>,
+<a href="/wiki/index.php/OpenACC_GPU_port_of_VASP" title="OpenACC GPU port of VASP">OpenACC GPU Port of VASP</a>,
+<a href="/wiki/index.php/Combining_MPI_and_OpenMP" title="Combining MPI and OpenMP">Combining MPI and OpenMP</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NCORE%22_incategory:%22Examples%22" title='Special:Search/"NCORE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

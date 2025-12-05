@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">NCRPA_BANDS</a> = [integer array] 
+</p>
+<p>Description: Controls which bands are excluded in the constrained random phase approximation. Check also <a href="/wiki/index.php/NTARGET_STATES" title="NTARGET STATES">NTARGET_STATES</a>.
+</p>
+<p>This tag is effective for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=CRPA and ignored otherwise.
+</p>
+<p>For instance 
+</p>
+<p>removes all screening effects between bands 21, 22 and 23 in the random phase approximation of the screened Coulomb interaction. 
+</p>
+<h3><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h3>
+<p><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>,
+<a href="/wiki/index.php/NTARGET_STATES" title="NTARGET STATES">NTARGET_STATES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NCRPA_BANDS%22_incategory:%22Examples%22" title='Special:Search/"NCRPA BANDS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

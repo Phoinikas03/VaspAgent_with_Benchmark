@@ -1,0 +1,38 @@
+<p><a class="mw-selflink selflink">ML_IWEIGHT</a> = [integer]<br/> Default: <b>ML_IWEIGHT</b> = 3 
+</p>
+<p>Description: This tag controls which procedure is used for normalizing and weighting the energies, forces, and stresses in the machine learning force field method.
+</p>
+<p>To achieve optimal training it is important to normalize the available data. Furthermore, sometimes it may be desired to emphasize some training quantities over others, e.g. one might want excellent force predictions, even at the cost of sacrificing some energy and stress accuracy. How normalizing and weighting are performed can be controlled with the <a class="mw-selflink selflink">ML_IWEIGHT</a> together with weighting parameters <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> and <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a> for energies, forces, and stresses, respectively. The following procedures can be selected via <a class="mw-selflink selflink">ML_IWEIGHT</a>:
+</p>
+<ul><li><a class="mw-selflink selflink">ML_IWEIGHT</a> = 1: Manual control over normalization/weighting: the unnormalized energies, forces, and stress tensor training data are divided by the weights determined by the flags <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a> (eV/atom), <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> (eV/<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>) and <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a> (kBar), respectively.</li></ul>
+<ul><li><a class="mw-selflink selflink">ML_IWEIGHT</a> = 2: Normalization via global standard deviations: The energies, forces, and stresses are normalized by their respective standard deviation over the entire training data. Then, the normalized quantities are weighted by <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> and <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a> when they are processed for learning in the design matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\Phi}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">Φ<!-- Φ --></mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\Phi}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\Phi}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bf0bed6ba2a1d44e51988f6906e9345f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.931ex;"/></span> (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Matrix_vector_form_of_linear_equations" title="Machine learning force field: Theory">this section</a>). In this case the values of <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> and <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a> are unitless quantities.</li></ul>
+<ul><li><a class="mw-selflink selflink">ML_IWEIGHT</a> = 3: Normalization via averages over subset standard deviations: Same as <a class="mw-selflink selflink">ML_IWEIGHT</a> = 2 but the training data is divided into individual subsets. For each subset, the standard deviations are calculated separately. Then, the energies, forces, and stresses are normalized using the average of the standard deviations of all subsets. Finally, as for <a class="mw-selflink selflink">ML_IWEIGHT</a> = 2 the normalized quantities are multiplied by <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> and <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a> for learning purposes. By default (<a href="/wiki/index.php/ML_LUSE_NAMES" title="ML LUSE NAMES">ML_LUSE_NAMES</a>=<i>.FALSE.</i>) the division into subsets is based on the atom types and number of atoms per type. If two systems contain the same atom types and the same number of atoms per type then they are considered to be in the same subset. To further divide them into subsets set <a href="/wiki/index.php/ML_LUSE_NAMES" title="ML LUSE NAMES">ML_LUSE_NAMES</a>=<i>.TRUE.</i> and choose different system names in the first line of the  <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file. This can be useful if training is performed for widely different materials, for instance, different phases with widely different energies. Without the finer subset assignment, the overall energy standard deviation might become large, reducing the weight of the energies too much of given subsets.</li></ul>
+<p>For <a class="mw-selflink selflink">ML_IWEIGHT</a> = 2, 3 the weights are unitless quantities used to multiply the data, whereas for <a class="mw-selflink selflink">ML_IWEIGHT</a> = 1 they have a unit. All three methods provide unitless energies, forces, and stress tensors, which are then passed to the learning algorithm. Although the defaults are usually rather sensible, it can be useful to explore different weights. For instance, if vibrational frequencies are supposed to be reproduced accurately, we found it helpful to increase <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a> to 10-100. On the other hand, if the energy difference between different phases needs to be described accurately by the force field, it might be useful to increase <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a> to around 10-100.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a>, <a href="/wiki/index.php/ML_LUSE_NAMES" title="ML LUSE NAMES">ML_LUSE_NAMES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IWEIGHT%22_incategory:%22Examples%22" title='Special:Search/"ML IWEIGHT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

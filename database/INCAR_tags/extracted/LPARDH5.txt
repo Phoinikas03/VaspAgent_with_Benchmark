@@ -1,0 +1,23 @@
+<p><a class="mw-selflink selflink">LPARDH5</a> = [logical]<br/> Default: <b>LPARDH5</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LPARDH5</a> determines whether the partial charges are written to <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> or <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>.
+</p>
+<p><a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">Partial charges</a> can be calculated as a postprocessing step when <a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a> = .TRUE.. The output is written to one or several <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> files if <a class="mw-selflink selflink">LPARDH5</a>=.FALSE., and to <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a> if <a class="mw-selflink selflink">LPARDH5</a>=.TRUE.. If <a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a> = -1, the setting of <a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a> is irrelevant. Instead of a <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> file, or a partial_charges group in the <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a> hdf5 file, a <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file <i>without</i> augmentation charges will be written.
+</p>
+<p>If the output is redirected to <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>, <a class="external text" href="https://vasp.at/py4vasp/latest/index.html" rel="nofollow">py4vasp</a> can be used to analyze the partial charge density and to simulate STM pictures.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a>,
+<a href="/wiki/index.php/LWAVEH5" title="LWAVEH5">LWAVEH5</a>,
+<a href="/wiki/index.php/LCHARGH5" title="LCHARGH5">LCHARGH5</a>,
+<a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>,
+<a href="/wiki/index.php/EINT" title="EINT">EINT</a>,
+<a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a>,
+<a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>,
+<a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>,
+<a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>,
+<a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>,
+<a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">band-decomposed charge densities</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPARDH5%22_incategory:%22Examples%22" title='Special:Search/"LPARDH5" incategory:"Examples"'>Examples that use this tag</a>
+</p>

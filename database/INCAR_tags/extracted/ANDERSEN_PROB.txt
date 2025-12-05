@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">ANDERSEN_PROB</a> = 0≤[real]≤1<br/> Default: <b>ANDERSEN_PROB</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">ANDERSEN_PROB</a> sets the collision probability for the Anderson thermostat (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>In the approach proposed by Andersen<sup class="reference" id="cite_ref-Andersen80_1-0"><a href="#cite_note-Andersen80-1">[1]</a></sup> the system is thermally coupled to a fictitious heat bath with the desired temperature. The coupling is represented by stochastic impulsive forces that act occasionally on randomly selected particles. The collision probability is defined as an average number of collisions per atom and time-step. This quantity can be controlled by the flag <a class="mw-selflink selflink">ANDERSEN_PROB</a>. The total number of collisions with the heat-bath is written in the file <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a> for each MD step.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ANDERSEN_PROB%22_incategory:%22Examples%22" title='Special:Search/"ANDERSEN PROB" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

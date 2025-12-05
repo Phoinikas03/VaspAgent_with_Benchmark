@@ -1,0 +1,51 @@
+<p><a class="mw-selflink selflink">EVENONLYGW</a> = [logical]<br/> Default: <b>EVENONLYGW</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">EVENONLYGW</a> allows to restrict the k-points in the evaluation of response functions (in <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>) to even values.
+</p>
+<p><a class="mw-selflink selflink">EVENONLYGW</a>=<i>.TRUE.</i> is only of limited use and restricts the summation to k-points with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n_{1}+n_{2}+n_{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n_{1}+n_{2}+n_{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n_{1}+n_{2}+n_{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e57b0749cf0bd929fe1a36978def747d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.343ex; width: 13.028ex;"/></span> being even (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point and from there on every second k-point included).
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ODDONLYGW" title="ODDONLYGW">ODDONLYGW</a>,
+<a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EVENONLYGW%22_incategory:%22Examples%22" title='Special:Search/"EVENONLYGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

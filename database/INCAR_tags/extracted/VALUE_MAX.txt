@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">VALUE_MAX</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VALUE_MAX</a> sets the upper limits for the monitoring of geometric parameters (in case VASP was compiled with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>).
+</p>
+<p>For <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=1 | 2, the geometric parameters defined in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a> file may be monitored without being subjected to a constraint or bias potential (<tt>STATUS=7</tt> in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file).
+</p>
+<p>If all values of monitored parameters defined in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a> file (<tt>STATUS=7</tt>) are smaller than <a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a> or larger than <a class="mw-selflink selflink">VALUE_MAX</a>, the simulation terminates.
+</p>
+<p>Upper limits for monitored coordinates, must be supplied for each geometric parameter in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a> file with <tt>STATUS=7</tt>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VALUE_MAX%22_incategory:%22Examples%22" title='Special:Search/"VALUE MAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

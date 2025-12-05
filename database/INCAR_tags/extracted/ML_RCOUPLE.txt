@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">ML_RCOUPLE</a> = [real]<br/> Default: <b>ML_RCOUPLE</b> = 1.0 
+</p>
+<p>Description: This tag specifies the value of the coupling parameter for the calculation of the chemical potential within the machine learning force field method.
+</p>
+<p>For thermodynamic integration calculations please have a look at the tag <a href="/wiki/index.php/ML_LCOUPLE" title="ML LCOUPLE">ML_LCOUPLE</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LCOUPLE" title="ML LCOUPLE">ML_LCOUPLE</a>, <a href="/wiki/index.php/ML_NATOM_COUPLED" title="ML NATOM COUPLED">ML_NATOM_COUPLED</a>, <a href="/wiki/index.php/ML_ICOUPLE" title="ML ICOUPLE">ML_ICOUPLE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_RCOUPLE%22_incategory:%22Examples%22" title='Special:Search/"ML RCOUPLE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

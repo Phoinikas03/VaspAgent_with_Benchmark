@@ -1,0 +1,47 @@
+<p><a class="mw-selflink selflink">LVDW_EWALD</a> = logical<br/> Default: <b>LVDW_EWALD</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LVDW_EWALD</a> decides whether the lattice summation in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{disp}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mi>i</mi>
+<mi>s</mi>
+<mi>p</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{disp}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{disp}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7562caeb9458e7e73efc996ba61443c3&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 4.973ex;"/></span> expression by means of Ewald's summation is computed.
+</p>
+<p><a class="mw-selflink selflink">LVDW_EWALD</a> decides whether the lattice summation in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{disp}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mi>i</mi>
+<mi>s</mi>
+<mi>p</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{disp}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{disp}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7562caeb9458e7e73efc996ba61443c3&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 4.973ex;"/></span> expression by means of Ewald's summation is computed in the pairwise van der Waals corrections schemes <a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>, <a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a> and <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>,
+<a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVDW_EWALD%22_incategory:%22Examples%22" title='Special:Search/"LVDW EWALD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">HFSCREEN</a> = [real]<br/> Default: <b>HFSCREEN</b> = 0 (none) 
+</p>
+<p>Description: <a class="mw-selflink selflink">HFSCREEN</a> (in Å<sup>-1</sup>) specifies the range-separation parameter in <a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">range-separated hybrid functionals</a>.
+</p>
+<p>In case <a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>=.TRUE., in combination with PBE potentials (or <a href="/wiki/index.php/GGA" title="GGA">GGA</a>=PE), attributing a value to <a class="mw-selflink selflink">HFSCREEN</a> will switch from the PBE0 functional to, e.g., the closely related <a href="/wiki/index.php/List_of_hybrid_functionals#HSE03" title="List of hybrid functionals">HSE03</a> (<a class="mw-selflink selflink">HFSCREEN</a>=0.3) or <a href="/wiki/index.php/List_of_hybrid_functionals#HSE06" title="List of hybrid functionals">HSE06</a> (<a class="mw-selflink selflink">HFSCREEN</a>=0.2) functionals. It also needs to be set for dielectric-dependent hybrid functionals (DDH) and doubly screened hybrid (DSH) functionals, see <a href="/wiki/index.php/LMODELHF" title="LMODELHF">LMODELHF</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LMODELHF" title="LMODELHF">LMODELHF</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/LTHOMAS" title="LTHOMAS">LTHOMAS</a>,
+<a href="/wiki/index.php/LRHFCALC" title="LRHFCALC">LRHFCALC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HFSCREEN%22_incategory:%22Examples%22" title='Special:Search/"HFSCREEN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

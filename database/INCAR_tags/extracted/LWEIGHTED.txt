@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">LWEIGHTED</a> = [logical]<br/> Default: <b>LWEIGHTED</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWEIGHTED</a> selects the <a href="/wiki/index.php/Constrained%E2%80%93random-phase%E2%80%93approximation_formalism#Weighted_method" title="Constrained–random-phase–approximation formalism">weighted cRPA method</a>. 
+</p>
+<p>Selects the cRPA method of Sasioglu, Friedrich and Blügel<sup class="reference" id="cite_ref-sasioglu:prb:83_1-0"><a href="#cite_note-sasioglu:prb:83-1">[1]</a></sup> where following screening are subtracted from the full RPA polarizability:
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="new" href="/wiki/index.php?title=LDISENTANGLE&amp;action=edit&amp;redlink=1" title="LDISENTANGLE (page does not exist)">LDISENTANGLE</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWEIGHTED%22_incategory:%22Examples%22" title='Special:Search/"LWEIGHTED" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

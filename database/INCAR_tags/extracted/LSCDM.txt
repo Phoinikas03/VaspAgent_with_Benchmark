@@ -1,0 +1,99 @@
+<p><a class="mw-selflink selflink">LSCDM</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCDM</a> switches on the selected columns of the density matrix (SCDM) method. 
+</p>
+<p>The selected columns of the density matrix (SCDM) method works by fitting a unitary matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle U_{mn\mathbf{k}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle U_{mn\mathbf{k}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle U_{mn\mathbf{k}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=91b5602115556544b67c5c7583be6910&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 5.246ex;"/></span> that transforms 
+the basis from Bloch states <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |\psi_{n\mathbf{k}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |\psi_{n\mathbf{k}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |\psi_{n\mathbf{k}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a0c432ebef1830db4a05407346f9f86f&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 5.281ex;"/></span> obtained by VASP to a <a class="mw-redirect" href="/wiki/index.php/Wannier_functions" title="Wannier functions"> Wannier basis</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |w_{m\mathbf{R}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |w_{m\mathbf{R}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |w_{m\mathbf{R}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3669890431e8ca97fcf6fd83a9f4f46d&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 6.307ex;"/></span>.
+</p>
+<p>This is done using a <a class="mw-redirect" href="/wiki/index.php/Wannier_Functions#One-shot_single_value_decomposition_(SVD)" title="Wannier Functions"> one-shot method </a> through a singular-value decomposition as proposed by A. Damle and L. Lin <sup class="reference" id="cite_ref-damle:mms:2018_1-0"><a href="#cite_note-damle:mms:2018-1">[1]</a></sup>.
+</p>
+<p>In order to obtain a good Wannierization, a certain level of freedom should be given to the localized orbitals to adequately accommodate the Bloch states. This is controlled by the cutoff function specified by the <a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a> tag and related parameters 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> (<a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a>) and
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a2ab7d71a0f07f388ff823293c147d21&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> (<a href="/wiki/index.php/CUTOFF_SIGMA" title="CUTOFF SIGMA">CUTOFF_SIGMA</a>).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a>,
+<a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a>,
+<a href="/wiki/index.php/CUTOFF_SIGMA" title="CUTOFF SIGMA">CUTOFF_SIGMA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSCDM%22_incategory:%22Examples%22" title='Special:Search/"LSCDM" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,49 @@
+<p><a class="mw-selflink selflink">LAECHG</a> = .TRUE. | .FALSE.<br/> Default: <b>LAECHG</b> = .FALSE. 
+</p>
+<p>Description: when <a class="mw-selflink selflink">LAECHG</a>=.TRUE. the <i>all-electron</i> charge density will be reconstructed explicitly and written to files.
+</p>
+<p>If <a class="mw-selflink selflink">LAECHG</a>=.TRUE. is set VASP will reconstruct the <i>all-electron</i> charge density on the so-called "fine" FFT-grid.
+This "fine" FFT-grid consists of <a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>×<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>×<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a> points in real space (<i>i.e.</i>, the grid that is used to represent the augmented pseudo charge densities of the USPP and PAW methods).
+</p>
+<p>In fact, for <a class="mw-selflink selflink">LAECHG</a>=.TRUE., VASP will reconstruct three distinct <i>all-electron</i> densities:
+</p>
+<ol><li>the core density.</li>
+<li>the proto-atomic valence density (overlapping atomic charge densities).</li>
+<li>the self-consistent valence density.</li></ol>
+<p>These are written to the files <a class="new" href="/wiki/index.php?title=AECCAR0&amp;action=edit&amp;redlink=1" title="AECCAR0 (page does not exist)">AECCAR0</a>, <a class="new" href="/wiki/index.php?title=AECCAR1&amp;action=edit&amp;redlink=1" title="AECCAR1 (page does not exist)">AECCAR1</a>, and <a class="new" href="/wiki/index.php?title=AECCAR2&amp;action=edit&amp;redlink=1" title="AECCAR2 (page does not exist)">AECCAR2</a>, respectively.
+The first two of these files are written at the start of the run, whereas the last is written at the end after self-consistency has been reached.
+</p>
+<p><b>N.B.:</b> In the language of the <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">PAW method</a> an "all-electron" density does <b>not</b> refer to the <i>density of all electrons</i>, instead it denotes a density that includes all the nodal features near the nucleus associated with the <i>true</i> (as opposed to the <i>pseudized</i>) one-electron orbitals.
+Within the PAW method, the <i>all-electron</i> density arising from the one-electron pseudo orbitals <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{ \widetilde{\psi}_{n\mathbf{k}} \}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ψ<!-- ψ --></mi>
+<mo>~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{ \widetilde{\psi}_{n\mathbf{k}} \}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{ \widetilde{\psi}_{n\mathbf{k}} \}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2336b42a35cf762af6ec1fc85029a8f7&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 6.202ex;"/></span> is given by:
+</p>
+<p>Normally one does not attempt to reconstruct <i>all-electron</i> densities explicitly since the second term on the right-hand side varies rapidly near the nuclei and is too costly to expand in-plane waves (see the bit about <a href="/wiki/index.php/Projector-augmented-wave_formalism" title="Projector-augmented-wave formalism">augmentation and compensation charges</a>). For <a class="mw-selflink selflink">LAECHG</a>=.TRUE., however, this reconstruction is exactly the thing that is done.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="new" href="/wiki/index.php?title=AECCAR0&amp;action=edit&amp;redlink=1" title="AECCAR0 (page does not exist)">AECCAR0</a>, <a class="new" href="/wiki/index.php?title=AECCAR1&amp;action=edit&amp;redlink=1" title="AECCAR1 (page does not exist)">AECCAR1</a>, <a class="new" href="/wiki/index.php?title=AECCAR2&amp;action=edit&amp;redlink=1" title="AECCAR2 (page does not exist)">AECCAR2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LAECHG%22_incategory:%22Examples%22" title='Special:Search/"LAECHG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

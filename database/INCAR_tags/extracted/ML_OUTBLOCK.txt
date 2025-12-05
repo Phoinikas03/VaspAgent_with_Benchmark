@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">ML_OUTBLOCK</a> = [integer]<br/> Default: <b>ML_OUTBLOCK</b> = 1 
+</p>
+<p>Description: Output distance in number of steps for molecular-dynamics simulations with machine-learned force fields in prediction-only mode (<code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>).
+</p>
+<p>By default VASP writes all results at every molecular-dynamics step (<code style="padding: 2px"><a class="mw-selflink selflink">ML_OUTBLOCK</a> = 1</code>). However, this may become inefficient when running long trajectories in production runs with a machine-learned force field in prediction-only mode (<code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>). This is particularly true if the force field supports the fast execution mode, i.e., refitting was performed with <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code>. Then, depending on the system size, writing output each time step may hinder performance, cause heavy I/O load and create unnecessary large files. In order to circumvent these problems <code style="padding: 2px"><a class="mw-selflink selflink">ML_OUTBLOCK</a> = n</code> instructs VASP to write screen and file output only every <code>n</code> time steps.
+</p>
+<p>In order to further increase the efficiency, calculation and output of pair-correlation functions can be completely switched off by setting <code style="padding: 2px"><a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a> = 0</code>. 
+</p>
+<p> A comparison of the effects of <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a> and <a class="mw-selflink selflink">ML_OUTBLOCK</a> on the output frequency of different files/properties is given in the following table. Here, "yes" means the output will only be written in the interval in time steps given by the tag value. On the other hand, "no" indicates that the output will be written every time step regardless of the tag value.
+</p>
+<p>(1) <code style="padding: 2px"><a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a> = 0</code> can disable output completely
+</p>
+<p>(2) Zeros are written for intermediate steps 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_LFAST" title="ML LFAST">ML_LFAST</a>, <a href="/wiki/index.php/ML_IERR" title="ML IERR">ML_IERR</a>, <a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a>, <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>
+</p>

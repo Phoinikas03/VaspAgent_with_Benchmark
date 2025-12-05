@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">PHON_LMC</a> = [logical]<br/> Default: <b>PHON_LMC</b> = .FALSE. 
+</p>
+<p>Description: This flag controls whether electron-phonon interactions from Monte-Carlo sampling are calculated or not. 
+</p>
+<p>This feature is only available from VASP version 6.0 or higher.
+</p>
+<p>For further usage of this tag see: <a href="/wiki/index.php/Electron-phonon_interactions_from_Monte-Carlo_sampling" title="Electron-phonon interactions from Monte-Carlo sampling">Electron-phonon interactions from Monte-Carlo sampling</a>. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PHON_NSTRUCT" title="PHON NSTRUCT">PHON_NSTRUCT</a>, <a href="/wiki/index.php/PHON_LBOSE" title="PHON LBOSE">PHON_LBOSE</a>, <a href="/wiki/index.php/PHON_NTLIST" title="PHON NTLIST">PHON_NTLIST</a>, <a href="/wiki/index.php/PHON_TLIST" title="PHON TLIST">PHON_TLIST</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PHON_LMC%22_incategory:%22Examples%22" title='Special:Search/"PHON LMC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

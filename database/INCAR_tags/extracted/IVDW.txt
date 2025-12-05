@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">IVDW</a> = 1 | 11 | 12 | 2 | 21 | ...<br/> Default: <b>IVDW</b> = 0 (no correction) 
+</p>
+<p>Description: <a class="mw-selflink selflink">IVDW</a> specifies a vdW dispersion term of the atom-pairwise or many-body type.
+</p>
+<h2><span class="mw-headline" id="Available_vdW_atom-pairwise_and_many-body_methods">Available vdW atom-pairwise and many-body methods</span></h2>
+<p>With all methods listed below, a dispersion correction is added to the total energy, but also to the atomic forces and stress tensor, such that lattice relaxations, molecular dynamics, and vibrational analysis (via finite differences) can be performed. Note, however, that these correction schemes are currently not available for phonon calculations based on <a href="/wiki/index.php/Phonons:_Theory#Density_functional_perturbation_theory" title="Phonons: Theory">density functional perturbation theory</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>, <a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a>, <a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning" title="Tkatchenko-Scheffler method with iterative Hirshfeld partitioning">Tkatchenko-Scheffler method with iterative Hirshfeld partitioning</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability" title="Many-body dispersion energy with fractionally ionic model for polarizability">Many-body dispersion energy with fractionally ionic model for polarizability</a>,
+<a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>,
+<a href="/wiki/index.php/DDsC_dispersion_correction" title="DDsC dispersion correction">dDsC dispersion correction</a>,
+<a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>
+</p>
+<p>See also the alternative vdW-DF functionals: <a href="/wiki/index.php/LUSE_VDW" title="LUSE VDW">LUSE_VDW</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IVDW%22_incategory:%22Examples%22" title='Special:Search/"IVDW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

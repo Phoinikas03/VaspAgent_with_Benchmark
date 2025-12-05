@@ -1,0 +1,47 @@
+<p><a class="mw-selflink selflink">ML_SIGW0</a> = [real]<br/> Default: none 
+</p>
+<p>Description: This flag sets the precision parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{\mathrm{w}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">w</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{\mathrm{w}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{\mathrm{w}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bb5adb6130f5a6b28d0779d579bd66c6&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.509ex;"/></span> (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Bayesian_linear_regression" title="Machine learning force field: Theory">here</a> for definition) for the fitting in the machine learning force field method. 
+</p>
+<p>The default value for <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>REFIT</i> works reliably in most calculations, however, sometimes it is necessary to increase the regularization parameter to avoid instabilities during finite temperature molecular dynamics simulations.
+</p>
+<p>Suppose the regularization needs to be controlled manually, like e.g. in the fitting via singular value decomposition (<a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>REFIT</i> or <a href="/wiki/index.php/ML_IALGO_LINREG" title="ML IALGO LINREG">ML_IALGO_LINREG</a>=4). The best is to control the regularization via this parameter and keep the noise parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{\mathrm{v}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">v</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{\mathrm{v}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{\mathrm{v}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e60de60fb42e240493b2dbd7ce3ac524&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.191ex;"/></span> (see <a href="/wiki/index.php/ML_SIGV0" title="ML SIGV0">ML_SIGV0</a>) constant at 1. Useful values for <a class="mw-selflink selflink">ML_SIGW0</a> are typically between 1E-1 and 1E-9. When the value is increased the regularization is increased. This often slightly increases the training set error but also reduces potential instabilities. Hence, if instabilities are observed during molecular-dynamics simulations, one should try to increase <a class="mw-selflink selflink">ML_SIGW0</a> to say 1E-3, then refit, and repeat the molecular-dynamics simulations.   
+</p>
+<p>More on the theory of this regularization parameter can be found in <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Regression" title="Machine learning force field: Theory">this section</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_IREG" title="ML IREG">ML_IREG</a>, <a href="/wiki/index.php/ML_SIGV0" title="ML SIGV0">ML_SIGV0</a>, <a href="/wiki/index.php/ML_IALGO_LINREG" title="ML IALGO LINREG">ML_IALGO_LINREG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_SIGW0%22_incategory:%22Examples%22" title='Special:Search/"ML SIGW0" incategory:"Examples"'>Examples that use this tag</a>
+</p>

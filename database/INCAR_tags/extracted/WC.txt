@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">WC</a> = [real]<br/> Default: <b>WC</b> = 1000. 
+</p>
+<p>Description: <a class="mw-selflink selflink">WC</a> specifies the weight factor for each step in Broyden mixing scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=4).
+</p>
+<ul><li><a class="mw-selflink selflink">WC</a>&gt;0</li></ul>
+<ul><li><a class="mw-selflink selflink">WC</a>=0</li></ul>
+<ul><li><a class="mw-selflink selflink">WC</a>&lt;0 (implemented for test purposes: <b>not</b> recommended)</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22WC%22_incategory:%22Examples%22" title='Special:Search/"WC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

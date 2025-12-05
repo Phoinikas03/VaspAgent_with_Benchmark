@@ -1,0 +1,60 @@
+<p><a class="mw-selflink selflink">EFOR</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">EFOR</a> sets external forces in eV/<span>Å</span> on each atom in the cartesian x-, y-, and z-directions. The order of the ions is equivalent to the order in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, and for each ion, x-, y-, and z-components have to be given.
+</p>
+<p>The array of external forces will be added to the <a class="mw-redirect" href="/wiki/index.php/Forces" title="Forces">forces</a> computed internally for each ionic step (<a class="mw-redirect" href="/wiki/index.php/Ionic_minimization" title="Ionic minimization">ionic minimization</a> or <a class="mw-redirect" href="/wiki/index.php/Molecular_dynamics" title="Molecular dynamics">molecular dynamics</a>).
+If an <a class="mw-redirect" href="/wiki/index.php/Ionic_minimization" title="Ionic minimization">ionic minimization</a> is performed with non-zero external forces, the converged structures will be only at a minimum accounting for the constraint of the external forces. Regardless of whether the <a href="/wiki/index.php/EDIFFG" title="EDIFFG">convergence criterion</a> is set to minimize total forces, or converge the total energy.
+</p>
+<p>While the total sum of all external forces in all directions must be zero, it is possible to achieve this by putting balancing forces on an ion that is fixed by the <a href="/wiki/index.php/POSCAR#Full_format_specification" title="POSCAR">selective dynamics</a> feature in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Format">Format</span></h2>
+<p><a class="mw-selflink selflink">EFOR</a> can be a very long array, as 3 values need to be set for each ion in the system. The format is equivalent to setting the magnetic moments in the noncollinear case using <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a>, so it is possible to use an <code>N*F</code> syntax to indicate that the next <b>N</b> entries in the array should be of value <b>F</b>. E.g.:
+</p>
+<p>In this example, we have 64 ions, so we have to set 3*64=192 values in the array. Only the cartesian z components of the first and last ion should be non-zero, which enables a compact <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> line.
+</p>
+<p>If more force components are non-zero, readability is increased by utilizing the <a href="/wiki/index.php/INCAR#Format" title="INCAR">multi-line option</a> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file. This is achieved by using backslashes (<b>\</b>) to negate line breaks or put the multi-line expression in quotes (<b>"</b>). E.g. for a 32 atom system with forces in the x- and z-directions on the first and last 8 atoms:
+</p>
+<h2><span class="mw-headline" id="Symmetry_and_periodic_boundary_conditions">Symmetry and periodic boundary conditions</span></h2>
+<h3><span class="mw-headline" id="Symmetry_considerations">Symmetry considerations</span></h3>
+<p>Setting external forces will, in most cases, break some symmetries of the system, resulting in more <a href="/wiki/index.php/KPOINTS#Symmetry_reduction_of_the_mesh" title="KPOINTS">irreducible <b>k</b> points</a> and thus increased computational effort.
+</p>
+<p>If any non-zero external forces are set, the symmetry reduction is reported in the OUTCAR after all other symmetry operations. E.g.:
+</p>
+<h3><span class="mw-headline" id="Periodic_boundary_conditions">Periodic boundary conditions</span></h3>
+<p>All VASP calculations are performed under periodic boundary conditions. When external forces are applied to bulk systems, this can lead to unexpected results. E.g. pushing an atom towards another atom in the same unit cell might pull it further away from the same atom in a neighboring unit cell. Thus external forces cannot be used to uniformly compress or strain a bulk system along a specific axis. This can however be achieved by lengthening or shortening the relevant lattice vector.
+</p>
+<p>On the other hand, external forces should be used if strain needs to be applied to a slab, a molecule, or any other system in which a vacuum region is used. When e.g. a surface slab needs to be compressed in the direction normal to the surface plane, the lattice vector cannot be shortened because this would collapse the vacuum. External forces on the atoms at the surfaces can achieve the desired effect.
+</p>
+<h2><span class="mw-headline" id="External_forces_during_on-the-fly_learning">External forces during on-the-fly learning</span></h2>
+<p>External forces can be used during on-the-fly training for <a class="mw-redirect" href="/wiki/index.php/Machine-learned_force_fields" title="Machine-learned force fields">machine-learned force fields</a>. In that case, the external forces will be only used during the ionic updates but will be removed for the training. This ensures that only forces arising from interatomic interactions will contribute to the force field and the resulting force field can be used without, or with different external forces.
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>The external forces are printed to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file after the positions of ions. E.g.:
+</p>
+<p>After each ionic step, the external forces are included in the reported TOTAL-FORCE array, but not separately listed, since they are not updated during a VASP run.:
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<p>As an example, the compression of an Al(001) slab under 4 GPa of pressure is chosen. At ~39500 times the atmospheric pressure at sea level, this is considerable, but pressures in <a class="external text" href="https://en.wikipedia.org/wiki/Diamond_anvil_cell" rel="nofollow">diamond anvil cells</a> can be two orders of magnitude larger. The four-layer thick slab corresponding to the following <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> is already relaxed without external forces:
+</p>
+<p>The pressure has to be converted into the correct units. Forces in VASP are given in eV/<span>Å</span>, and an area in <span>Å<sup>2</sup></span>, thus GPa needs to be converted to (eV/<span>Å</span>)/<span>Å<sup>2</sup></span>, or eV <span>Å<sup>-3</sup></span>:
+</p>
+<p>With a lattice parameter of 4.047<span>Å</span>, the surface area A of the slab is about 16.381 <span>Å<sup>2</sup></span>. Thus the total force in eV/<span>Å</span> we have to put on the top layer to compress the slab with 4 GPa of pressure is:
+</p>
+<p>or 0.20448 eV/<span>Å</span> per surface atom. The <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file can now be written:
+</p>
+<p>Note that the forces on the top atoms are balanced by putting the opposing force on one atom only. This is feasible since both atoms in the bottom layer are fixed by selective dynamics flags.
+</p>
+<p>Using a 5x5x1 Γ-centered mesh in the <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file, and the standard PBE Al <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>, the calculation converges in less than 10 ionic steps.
+</p>
+<p>The slab is compressed by less than 2%, from 6.21 <span>Å</span> to 6.10 <span>Å</span>. This relatively small compression at relatively high pressure is due to three factors:
+</p>
+<ul><li>4 GPa corresponds to forces of ~0.2 eV/<span>Å</span>, which is only 20 times the negligible force limit of 0.01 eV/<span>Å</span> in this calculation.</li>
+<li>We do not allow the material to <a class="external text" href="https://en.wikipedia.org/wiki/Poisson%27s_ratio" rel="nofollow">expand in the direction normal to the pressure</a> by keeping the cell shape fixed with <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a> = 2.</li>
+<li>Intra-atomic forces in perfect close-packed metallic crystals are powerful, and lattice imperfections usually mediate deformations in real materials.</li></ul>
+<p>For layered materials, molecules on surfaces, and other, less strongly-bound systems, similar forces will have larger effects, however.
+</p>
+<h2><span class="mw-headline" id="Related_Tags_and_Sections">Related Tags and Sections</span></h2>
+<p><a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EFOR%22_incategory:%22Examples%22" title='Special:Search/"EFOR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

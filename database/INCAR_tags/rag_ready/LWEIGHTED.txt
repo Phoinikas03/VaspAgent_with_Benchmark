@@ -1,0 +1,1 @@
+LWEIGHTED =  Default: LWEIGHTED = .FALSE. Description: LWEIGHTED selects the weighted cRPA method . Selects the cRPA method of Sasioglu, Friedrich and Blügel  where following screening are subtracted from the full RPA polarizability: Related tags and articles LDISENTANGLE , ALGO Examples that use this tag References

@@ -1,0 +1,47 @@
+<p><a class="mw-selflink selflink">LIBMBD_MBD_BETA</a> = [real]<br/> Default: <b>LIBMBD_MBD_BETA</b> = value that was determined for the exchange-correlation functional set with <a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_MBD_BETA</a> sets the value of the scaling factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0603860fcffe94e5b8eec59ed813421&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 1.332ex;"/></span> (usually denoted <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_R}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mi>R</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_R}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_R}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=03164740ac7a45bf6c27c8c0bc767e32&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.57ex;"/></span>) in the many-body methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_MBD_BETA</a> allows to choose the value of the damping parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0603860fcffe94e5b8eec59ed813421&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 1.332ex;"/></span> in the many-body methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-1"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-1"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>. The value is internally passed to the libMBD input <b>mbd_beta</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_4-0"><a href="#cite_note-libmbd_input-4">[4]</a></sup>. <a class="mw-selflink selflink">LIBMBD_MBD_BETA</a> is the same as the <a href="/wiki/index.php/VDW_SR" title="VDW SR">VDW_SR</a> tag that is used for the VASP implementation of the many-body methods.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-2"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a>,
+<a href="/wiki/index.php/LIBMBD_MBD_A" title="LIBMBD MBD A">LIBMBD_MBD_A</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_MBD_BETA%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD MBD BETA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

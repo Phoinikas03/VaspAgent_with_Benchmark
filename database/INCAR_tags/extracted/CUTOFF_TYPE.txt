@@ -1,0 +1,96 @@
+<p><a class="mw-selflink selflink">CUTOFF_TYPE</a> = erfc | gaussian | fermi | num_wann 
+</p>
+<p>Description: <a class="mw-selflink selflink">CUTOFF_TYPE</a> chooses the type of cutoff function to be used before performing the singular-value decomposition (SVD) of the initial projections matrix.
+</p>
+<p>This tag governs how much weight should be given in the SVD during the <a class="mw-redirect" href="/wiki/index.php/Wannier_functions#One-shot_single_value_decomposition_(SVD)" title="Wannier functions"> one-shot Wannierization</a> to a certain orbital with energy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \epsilon_{n\mathbf{k}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \epsilon_{n\mathbf{k}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \epsilon_{n\mathbf{k}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ced6c3f24586029af5480744db78b6be&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 3.16ex;"/></span>.
+If the weight is zero the orbital is not included in the fitting while if it is one it is included with the maximum importance.
+This behavior is similar to the wannier90 disentanglement window.
+</p>
+<p>In order to obtain a good Wannierization, a certain level of freedom should be given to the localized orbitals to adequately accommodate the Bloch states.
+Applying a smooth cutoff function from the following table can help achieve this goal by including more states beyond the relevant energy range.
+This is particularly important for systems with entangled states.
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a2ab7d71a0f07f388ff823293c147d21&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> specified by the <a href="/wiki/index.php/CUTOFF_SIGMA" title="CUTOFF SIGMA">CUTOFF_SIGMA</a> tag and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> by <a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a>.
+</p>
+<p>In addition to the aforementioned cutoff functions, it is also possible to select <code style="padding: 2px"><a class="mw-selflink selflink">CUTOFF_TYPE</a> = num_wann</code>.
+This mode is identical to <code style="padding: 2px"><a class="mw-selflink selflink">CUTOFF_TYPE</a> = erfc</code> with the exception that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> is set to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \epsilon_{N \mathbf{k}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \epsilon_{N \mathbf{k}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \epsilon_{N \mathbf{k}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bed77099f5ddfc29529da65b9c91e69a&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 3.633ex;"/></span> at each individual k-point, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>N</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8d9c307cb7f3c4a32822a51922d1ceaa&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.064ex;"/></span> is the number of Wannier orbitals specified via <a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a>.
+In this case, <a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a> is ignored.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CUTOFF_MU" title="CUTOFF MU">CUTOFF_MU</a>,
+<a href="/wiki/index.php/CUTOFF_SIGMA" title="CUTOFF SIGMA">CUTOFF_SIGMA</a>,
+<a href="/wiki/index.php/LSCDM" title="LSCDM">LSCDM</a>,
+<a href="/wiki/index.php/LOCPROJ" title="LOCPROJ">LOCPROJ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CUTOFF_TYPE%22_incategory:%22Examples%22" title='Special:Search/"CUTOFF TYPE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

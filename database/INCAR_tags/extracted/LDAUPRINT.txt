@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">LDAUPRINT</a> = 0 | 1<br/> Default: <b>LDAUPRINT</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">LDAUPRINT</a> controls the verbosity of a DFT+U calculation.
+</p>
+<ul><li><a class="mw-selflink selflink">LDAUPRINT</a>=0: No onsite occupancy matrix is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file.</li>
+<li><a class="mw-selflink selflink">LDAUPRINT</a>=1: The spin up and spin down onsite occupancy matrices of the atoms types to which a <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle U}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>U</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle U}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle U}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4c614360da93c0a041b22e537de151eb&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.783ex;"/></span> is applied are written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file at each iteration (below "onsite density matrix"). The eigenvalues and eigenvectors of the total (spin up + spin down) onsite matrix is also written (below "occupancies and eigenvectors").</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LDAU" title="LDAU">LDAU</a>,
+<a href="/wiki/index.php/LDAUTYPE" title="LDAUTYPE">LDAUTYPE</a>,
+<a href="/wiki/index.php/LDAUL" title="LDAUL">LDAUL</a>,
+<a href="/wiki/index.php/LDAUU" title="LDAUU">LDAUU</a>,
+<a href="/wiki/index.php/LDAUJ" title="LDAUJ">LDAUJ</a>,
+<a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDAUPRINT%22_incategory:%22Examples%22" title='Special:Search/"LDAUPRINT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

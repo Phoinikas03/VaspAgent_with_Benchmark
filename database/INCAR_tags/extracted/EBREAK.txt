@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">EBREAK</a> = [real]<br/> Default: <b>EBREAK</b> = <a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a>/<a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>/4 
+</p>
+<p>Description: <a class="mw-selflink selflink">EBREAK</a> specifies an absolute stopping criterion for the optimization of an eigenvalue.
+</p>
+<p>The tags <a class="mw-selflink selflink">EBREAK</a>, <a href="/wiki/index.php/DEPER" title="DEPER">DEPER</a>, and <a href="/wiki/index.php/WEIMIN" title="WEIMIN">WEIMIN</a> allow fine tuning of the iterative matrix diagonalization, and are best not changed. They are optimized for a large variety of systems, and changing one of the parameters usually decreases performance or can even screw up the iterative matrix diagonalization totally.
+In general, these tags control when the optimization of a single band is stopped within the iterative matrix diagonalization schemes:
+</p>
+<p><a class="mw-selflink selflink">EBREAK</a> determines whether a band is fully converged or not. Optimization of an eigenvalue/eigenvectors pair is stopped if the change in the eigenenergy is smaller than <a class="mw-selflink selflink">EBREAK</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/WEIMIN" title="WEIMIN">WEIMIN</a>,
+<a href="/wiki/index.php/DEPER" title="DEPER">DEPER</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EBREAK%22_incategory:%22Examples%22" title='Special:Search/"EBREAK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

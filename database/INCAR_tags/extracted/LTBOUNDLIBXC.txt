@@ -1,0 +1,214 @@
+<p><a class="mw-selflink selflink">LTBOUNDLIBXC</a> = .TRUE. | .FALSE.<br/> Default: <b>LTBOUNDLIBXC</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LTBOUNDLIBXC</a> specifies whether or not the lower bound for the Kohn-Sham kinetic-energy density <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c985b918bbef664263836bbaa6b0a2a7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.189ex;"/></span> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>W</mtext>
+</mrow>
+</mrow>
+</msubsup>
+<mo>&lt;</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d2d2a3dc2594e6930a6ca40da7a78282&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.843ex; width: 8.466ex;"/></span>) is enforced before <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c985b918bbef664263836bbaa6b0a2a7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.189ex;"/></span> is used in a <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> functional from Libxc.
+</p>
+<p>The Kohn-Sham kinetic-energy density 
+</p>
+<p>should, in principle, be larger than the von Weizsäcker kinetic-energy density<sup class="reference" id="cite_ref-kurth:ijqc:1999_1-0"><a href="#cite_note-kurth:ijqc:1999-1">[1]</a></sup>
+</p>
+<p>However, for numerical reasons <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>W</mtext>
+</mrow>
+</mrow>
+</msubsup>
+<mo>&lt;</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}^{\textrm{W}}&lt;\tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d2d2a3dc2594e6930a6ca40da7a78282&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.843ex; width: 8.466ex;"/></span> may not be fulfilled, which can potentially lead to problems, in particular if the meta-GGA functional is not defined for negative values of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\textrm{W}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>W</mtext>
+</mrow>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\textrm{W}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\textrm{W}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9e5edf3e04ca015399c9196cb5a8e23&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.843ex; width: 8.208ex;"/></span>. If <a class="mw-selflink selflink">LTBOUNDLIBXC</a>=.TRUE. in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>, then <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo form="prefix" movablelimits="true">max</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>,</mo>
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">W</mi>
+</mrow>
+</mrow>
+</msubsup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3747bb7c8fe6854ec3681fbcd5689a42&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.009ex; width: 17.824ex;"/></span> is applied before <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c985b918bbef664263836bbaa6b0a2a7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.189ex;"/></span> is used in a meta-GGA functional from Libxc.
+</p>
+<p>However, according to tests, for some of the most common meta-GGA functionals like SCAN<sup class="reference" id="cite_ref-sun:prl:15_2-0"><a href="#cite_note-sun:prl:15-2">[2]</a></sup>, a violation of the lower bound is technically not a problem. Furthermore, it has been observed that applying <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo form="prefix" movablelimits="true">max</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>,</mo>
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">W</mi>
+</mrow>
+</mrow>
+</msubsup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3747bb7c8fe6854ec3681fbcd5689a42&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.009ex; width: 17.824ex;"/></span> may possibly lead to very inaccurate forces and stress tensor. Therefore, by default <a class="mw-selflink selflink">LTBOUNDLIBXC</a>=.FALSE. and Libxc should be compiled  with the option <code>--disable-fhc</code> has explained <a href="/wiki/index.php/Makefile.include#Libxc_.28optional.29" title="Makefile.include">here</a>.
+</p>
+<p>Thus, the recommendation is to set <a class="mw-selflink selflink">LTBOUNDLIBXC</a>=.TRUE. only in the case convergence shows an erratic behavior. If this choice is made, then the forces and stress tensor should be carefully monitored if a geometry optimization is done.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LTBOUNDLIBXC%22_incategory:%22Examples%22" title='Special:Search/"LTBOUNDLIBXC" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

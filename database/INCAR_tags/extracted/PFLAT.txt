@@ -1,0 +1,8 @@
+<p><a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a> = [logical] 
+</p>
+<p>Description: Control flag for the output of the profiling routines.
+</p>
+<p>If specified as <a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a>=<i>.TRUE.</i>, only the flat profile is printed out in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PFLAT%22_incategory:%22Examples%22" title='Special:Search/"PFLAT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

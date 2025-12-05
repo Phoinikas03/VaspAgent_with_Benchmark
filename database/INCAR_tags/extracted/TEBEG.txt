@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">TEBEG</a> = [real]<br/> Default: <b>TEBEG</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">TEBEG</a> sets the starting temperature (in K) for an ab-initio molecular dynamics run (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0) and other routines (e.g. <a href="/wiki/index.php/Electron-phonon_interactions_from_Monte-Carlo_sampling" title="Electron-phonon interactions from Monte-Carlo sampling">Electron-phonon interactions from Monte-Carlo sampling</a>).
+</p>
+<p>If no initial velocities are supplied on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, the velocities are set randomly according to a Maxwell-Boltzmann distribution at the initial temperature <a class="mw-selflink selflink">TEBEG</a>. Velocities are only used for molecular dynamics (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0).
+</p>
+<p><b>Mind</b>: If <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>&gt;0 is used VASP defines the temperature as 
+</p>
+<p>This temperature ist written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. 
+Depending on the type of thermostat this temperature has to be rescaled to obtain the real simulation temperature. 
+</p>
+<ul><li><a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a>:</li></ul>
+<p>In this thermostat the number of degrees of freedom including constraines are already acounted for in the potential energy term. In this this method the center of mass is conserved. This lowers the degrees of freedom by one which is also taken into account in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. 
+</p>
+<ul><li><a href="/wiki/index.php/Andersen_thermostat" title="Andersen thermostat">Andersen thermostat</a>:</li></ul>
+<p>Same as for <a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a>.
+</p>
+<ul><li><a href="/wiki/index.php/Langevin_thermostat" title="Langevin thermostat">Langevin thermostat</a>:</li></ul>
+<p>As for the <a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a> and <a href="/wiki/index.php/Andersen_thermostat" title="Andersen thermostat">Andersen thermostat</a> in this thermostat the number of degrees of freedom including constraines are already acounted for. The center of mass is not conserved in this method, hence this method has 3 degrees of freedom more than the <a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a> and <a href="/wiki/index.php/Andersen_thermostat" title="Andersen thermostat">Andersen thermostat</a>. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/TEEND" title="TEEND">TEEND</a>,
+<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22TEBEG%22_incategory:%22Examples%22" title='Special:Search/"TEBEG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

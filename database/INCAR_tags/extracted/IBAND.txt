@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">IBAND</a> = [integer array]<br/> Default: <b>IBAND</b> = not set 
+</p>
+<p>Description: <a class="mw-selflink selflink">IBAND</a> sets a list of bands that contribute to calculating the <a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">partial charge density</a>.
+</p>
+<p><a class="mw-selflink selflink">IBAND</a> selects a subset of bands for which the partial charge density is calculated when <a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a> = .TRUE..
+Partial charge densities are written to the <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> file, or one of its variants, depending on the setting of <a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> and <a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>.
+</p>
+<p>E.g. if
+<code>IBAND = 20 21 22 23 45</code>
+the charge density will be calculated for the four bands 20 to 23 and band 45, and <a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a> will be set to 5.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LPARD" title="LPARD">LPARD</a>,
+<a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a>,
+<a href="/wiki/index.php/EINT" title="EINT">EINT</a>,
+<a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>,
+<a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>,
+<a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>,
+<a href="/wiki/index.php/LPARDH5" title="LPARDH5">LPARDH5</a>,
+<a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>,
+<a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>,
+<a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">Band-decomposed charge densities</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IBAND%22_incategory:%22Examples%22" title='Special:Search/"IBAND" incategory:"Examples"'>Examples that use this tag</a>
+</p>

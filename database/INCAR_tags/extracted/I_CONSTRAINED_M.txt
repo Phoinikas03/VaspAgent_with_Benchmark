@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">I_CONSTRAINED_M</a> = 1 | 2 | 4<br/> Default: <b>I_CONSTRAINED_M</b> = none 
+</p>
+<p>Description: <a class="mw-selflink selflink">I_CONSTRAINED_M</a> switches on the constrained local moments approach.
+</p>
+<p>VASP offers the possibility to add a penalty contribution to the total energy expression (and consequently a penalty functional to the Hamiltonian) that drives the local magnetic moment (integral of the magnetization in a site centered sphere of radius <a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>) into a direction given by the <a href="/wiki/index.php/M_CONSTR" title="M CONSTR">M_CONSTR</a>-tag.
+</p>
+<ul><li><a class="mw-selflink selflink">I_CONSTRAINED_M</a>=1: Constrain the <i>direction</i> of the magnetic moments.</li></ul>
+<p><span id="MWint">
+</span></p>
+<p class="mw-empty-elt">
+</p>
+<ul><li><a class="mw-selflink selflink">I_CONSTRAINED_M</a>=2: Constrain the <i>size and direction</i> of the magnetic moments.</li></ul>
+<ul><li><a class="mw-selflink selflink">I_CONSTRAINED_M</a>=4: Constrain the <i>direction and sign</i> of the magnetic moments<sup class="reference" id="cite_ref-ma:prb:15_1-0"><a href="#cite_note-ma:prb:15-1">[1]</a></sup>, available since VASP.6.4.0.</li></ul>
+<p>The weight λ, with which the penalty terms enter into the total energy expression and the Hamiltonian in the above is specified through the <a href="/wiki/index.php/LAMBDA" title="LAMBDA">LAMBDA</a> tag.
+</p>
+<p>As is probably clear from the above, applying constraints by means of a penalty functional contributes to the total energy. This contribution, however, decreases with increasing <a href="/wiki/index.php/LAMBDA" title="LAMBDA">LAMBDA</a> and can in principle be made vanishingly small <sup class="reference" id="cite_ref-ma:prb:15_1-1"><a href="#cite_note-ma:prb:15-1">[1]</a></sup>. Increasing <a href="/wiki/index.php/LAMBDA" title="LAMBDA">LAMBDA</a> stepwise, from one run to another (slowly so the solution remains stable) one thus converges towards the DFT total energy for a given magnetic configuration.
+</p>
+<p>When one uses the constrained moment approach, additional information pertaining to the effect of the constraints is written into the <a href="/wiki/index.php/OSZICAR" title="OSZICAR">OSZICAR</a> file:
+</p>
+<p><tt>E_p</tt> is the contribution to the total energy arising from the penalty functional. Under <tt>M_int</tt> VASP lists the integrated magnetic moment at each atomic site. The column labeled <tt>MW_int</tt> shows the result of the integration of magnetization density which has been smoothed towards the boundary of the sphere. It is actually the <a href="#MWint">smoothed integrated moment</a> which enters in the penalty terms (the smoothing ensures that the total local potential remains continuous at the sphere boundary). One should look at the latter numbers to check whether enough of the magnetization density around each atomic site is contained within the integration sphere and increase <a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a> accordingly. What exactly constitutes "enough" in this context is hard to say. It is best to set <a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a> in such a manner that the integration spheres do not overlap and are otherwise as large as possible.
+</p>
+<p>Under <tt>lambda*MW_perp</tt> the constraining "magnetic field" at each atomic site is listed. It shows which magnetic field is added to the DFT Hamiltonian to stabilize the magnetic configuration.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/M_CONSTR" title="M CONSTR">M_CONSTR</a>,
+<a href="/wiki/index.php/LAMBDA" title="LAMBDA">LAMBDA</a>,
+<a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>,
+<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22I_CONSTRAINED_M%22_incategory:%22Examples%22" title='Special:Search/"I CONSTRAINED M" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

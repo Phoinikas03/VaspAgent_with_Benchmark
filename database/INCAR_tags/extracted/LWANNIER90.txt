@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">LWANNIER90</a> = .TRUE. | .FALSE.<br/> Default: <b>LWANNIER90</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWANNIER90</a>=.TRUE. switches on the interface between VASP and <a class="external text" href="http://www.wannier.org" rel="nofollow">WANNIER90</a>.
+</p>
+<p><b>N.B.</b>: This feature is only present if VASP is compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags#Optional" title="Precompiler flags">-DVASP2WANNIER90 or -DVASP2WANNIER90v2</a>.
+</p>
+<p>For <a class="mw-selflink selflink">LWANNIER90</a>=.TRUE., VASP will write the input files for a WANNIER90 run: <b>wannier90.win</b>, <b>wannier90.mmn</b>, <b>wannier90.eig</b>, <b>wannier90.amn</b>, and if <a href="/wiki/index.php/LWRITE_UNK" title="LWRITE UNK">LWRITE_UNK</a>=.TRUE. <b>wannier90.UNKp.s</b>. This is done by running <tt>wannier_setup</tt> in library mode as described in Chapter 6 of the <a class="external text" href="http://www.wannier.org/doc/user_guide.pdf" rel="nofollow">WANNIER90 manual</a>. For documentation of these files and tags therein, please refer to the <a class="external text" href="http://www.wannier.org/doc/user_guide.pdf" rel="nofollow">WANNIER90 manual</a>.
+</p>
+<p>The following cases may occur:
+</p>
+<ul><li>If <b>wannier90.win</b> does not exist, VASP will write the following template</li></ul>
+<ul><li>If the <b>wannier90.win</b> file already exists, VASP will only add the aforementioned information if it is not already present. This means that VASP will check, for instance, whether or not the <b>wannier90.win</b> file contains a <tt>kpoints</tt> block, and add one if not. <b>Mind</b>: If it finds a <tt>kpoints</tt> block, VASP will not check whether this block agrees with the k points used in the VASP calculation!</li></ul>
+<p>The user may create a <b>wannier90.win</b> file prior to running VASP with <a class="mw-selflink selflink">LWANNIER90</a>=.TRUE., and specify any tag and/or block that is understood by <tt>wannier_setup</tt> and/or <tt>wannier_run</tt>. For instance, one can specify the <tt>projections</tt> block in the <b>wannier90.win</b> file that controls the initial guess for the maximally localized Wannier functions.
+Then, VASP writes the projections of the Bloch functions onto the relevant projectors to the <b>wannier90.amn</b> file. See Chapter 3 of the <a class="external text" href="http://www.wannier.org/doc/user_guide.pdf" rel="nofollow">WANNIER90 manual</a> for more information.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWRITE_UNK" title="LWRITE UNK">LWRITE_UNK</a>,
+<a href="/wiki/index.php/LWRITE_MMN_AMN" title="LWRITE MMN AMN">LWRITE_MMN_AMN</a>,
+<a href="/wiki/index.php/LWRITE_SPN" title="LWRITE SPN">LWRITE_SPN</a>,
+<a href="/wiki/index.php/LWANNIER90_RUN" title="LWANNIER90 RUN">LWANNIER90_RUN</a>,
+<a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a>,
+<a href="/wiki/index.php/WANNIER90_WIN" title="WANNIER90 WIN">WANNIER90_WIN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWANNIER90%22_incategory:%22Examples%22" title='Special:Search/"LWANNIER90" incategory:"Examples"'>Examples that use this tag</a>
+</p>

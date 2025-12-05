@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">LBONE</a> = .TRUE. | .FALSE.<br/> Default: <b>LBONE</b> =  .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LBONE</a> adds the small <i>B</i>-component to the chemical shift tensor.
+</p>
+<p><a class="mw-selflink selflink">LBONE</a> restores the small <i>B</i>-component of the wave function inside
+the PAW spheres in the linear-response calculation of the NMR chemical shift
+tensor. The POTCARs used in VASP are scalar-relativistic and the
+AE-partial waves are solutions of the scalar-relativistic Kohn-Sham
+equation for the spherical atom. These have a large (<i>A</i>) and a small (<i>B</i>) component.
+The latter is not retained on the POTCAR, but approximately restored when <a class="mw-selflink selflink">LBONE</a>=.TRUE. <sup class="reference" id="cite_ref-dewijs:laskowski:jcp:2017_1-0"><a href="#cite_note-dewijs:laskowski:jcp:2017-1">[1]</a></sup>.
+<a class="mw-selflink selflink">LBONE</a> only affects the one-center valence contributions to the chemical shift. The contribution of the core electrons includes the <i>B</i>-component by default.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articless">Related tags and articless</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

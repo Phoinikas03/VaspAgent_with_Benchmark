@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">CH_SIGMA</a> = [real]<br/> Default: <b>CH_SIGMA</b> = 0.3 
+</p>
+<p>Description: This tag specifies the width of the Gaussian broadening in eV of the imaginary dielectric function within the supercell core-hole method.
+</p>
+<p>At the moment only Gaussian broadening of the dielectric function is implemented within the supercell core-hole method.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CH_LSPEC" title="CH LSPEC">CH_LSPEC</a>, <a href="/wiki/index.php/CH_NEDOS" title="CH NEDOS">CH_NEDOS</a>, <a href="/wiki/index.php/CH_AMPLIFICATION" title="CH AMPLIFICATION">CH_AMPLIFICATION</a>, <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, <a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>, <a href="/wiki/index.php/CLN" title="CLN">CLN</a>, <a href="/wiki/index.php/CLL" title="CLL">CLL</a>, <a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CH_SIGMA%22_incategory:%22Examples%22" title='Special:Search/"CH SIGMA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

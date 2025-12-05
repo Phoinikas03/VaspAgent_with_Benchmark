@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">AMGGAC</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">AMGGAC</a> is a parameter that multiplies the meta-GGA correlation functional (available as of VASP.6.4.0).
+</p>
+<p><a class="mw-selflink selflink">AMGGAC</a> can be used as the fraction of  meta-GGA correlation in a Hartree-Fock/DFT hybrid functional. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22AMGGAC%22_incategory:%22Examples%22" title='Special:Search/"AMGGAC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

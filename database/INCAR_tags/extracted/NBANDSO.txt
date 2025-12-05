@@ -1,0 +1,158 @@
+<p><a class="mw-selflink selflink">NBANDSO</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBANDSO</a> determines how many occupied orbitals are included in the Casida/<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a> or time propagation (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=TIMEEV.
+</p>
+<p>For the time-propagation algorithm increasing <a class="mw-selflink selflink">NBANDSO</a> only modestly increases the compute time.
+For BSE and Casida-type calculations, the compute time  grows with the third power of the number of included occupied and unoccupied bands
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  (N_{\mathrm{occ}} N_{\mathrm{virtual}} N_{\mathrm{k}})^{3} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">c</mi>
+</mrow>
+</mrow>
+</msub>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">v</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+</mrow>
+</msub>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">k</mi>
+</mrow>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  (N_{\mathrm{occ}} N_{\mathrm{virtual}} N_{\mathrm{k}})^{3} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  (N_{\mathrm{occ}} N_{\mathrm{virtual}} N_{\mathrm{k}})^{3} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=992f159b3839bccef2c18b5b8e31b973&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 17.112ex;"/></span>
+</p>
+<p>and the memory requirements increase quadratically
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  (N_{\mathrm{occ}}N_{\mathrm{virtual}} N_{\mathrm{k}})^{2} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">c</mi>
+</mrow>
+</mrow>
+</msub>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">v</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+</mrow>
+</msub>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">k</mi>
+</mrow>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  (N_{\mathrm{occ}}N_{\mathrm{virtual}} N_{\mathrm{k}})^{2} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  (N_{\mathrm{occ}}N_{\mathrm{virtual}} N_{\mathrm{k}})^{2} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ac3fdea83fa65f2d8fe347aea23dab42&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 17.112ex;"/></span>
+</p>
+<p>Please be aware that symmetry is not exploited in the BSE code, hence memory requirements can be excessive. To allow for calculations on large systems, the BSE code distributes the BSE matrix among all available cores and uses ScaLAPACK for the diagonalization.
+</p>
+<p>VASP always uses the orbitals closest to the Fermi-level, and <a class="mw-selflink selflink">NBANDSO</a> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{\mathrm{occ}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">c</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{\mathrm{occ}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{\mathrm{occ}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e99febb3f7010f1af707a856759ea1e7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.38ex;"/></span>) and <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{\mathrm{virtual}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">v</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{\mathrm{virtual}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{\mathrm{virtual}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6e32fb6108de40698c48685eec251a52&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.901ex;"/></span>) determines how many occupied and unoccupied orbitals are included. The defaults are fairly "conservative" and equal the total number of electrons/2 (this usually implies that all occupied states are included). For highly accurate results, <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a> often needs to be increased, whereas for large systems one is often forced to reduce both values to much smaller numbers. Sometimes qualitative results for bandlike  Wannier-Mott excitons can be obtained even with a single conduction and valence band.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>,
+<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>,
+<a class="mw-redirect" href="/wiki/index.php/Timepropagation" title="Timepropagation">Timepropagation</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBANDSO%22_incategory:%22Examples%22" title='Special:Search/"NBANDSO" incategory:"Examples"'>Examples that use this tag</a>
+</p>

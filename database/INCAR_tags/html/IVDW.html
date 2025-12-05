@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>IVDW - VASP Wiki</title>
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"5378c7dd80d24d5c183f37d9","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"IVDW","wgTitle":"IVDW","wgCurRevisionId":29525,"wgRevisionId":29525,"wgArticleId":376,"wgIsArticle":true,"wgIsRedirect":
+false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["INCAR tag","Exchange-correlation functionals","Van der Waals functionals"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"IVDW","wgRelevantArticleId":376,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgVector2022PreviewPages":[],"wgEditSubmitButtonLabelPublish":false};RLSTATE={"skins.vector.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","jquery.tablesorter.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site",
+"mediawiki.page.ready","jquery.tablesorter","skins.vector.js","skins.vector.es6","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.tablesorter.styles%7Cmediawiki.ui.button%2Cicon%7Cskins.vector.icons%2Cstyles&amp;only=styles&amp;skin=vector-2022"/>
+<script async="" src="/wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022"/>
+<meta name="generator" content="MediaWiki 1.40.1"/>
+<meta name="robots" content="max-image-preview:standard"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="VASP Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.vasp.at/wiki/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"/>
+<link rel="alternate" type="application/atom+xml" title="VASP Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-IVDW rootpage-IVDW skin-vector-2022 action-view skin--responsive"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+	<div class="mw-page-container-inner">
+		<input
+			type="checkbox"
+			id="mw-sidebar-checkbox"
+			class="mw-checkbox-hack-checkbox"
+			>
+		<header class="mw-header mw-ui-icon-flush-left mw-ui-icon-flush-right">
+			<div class="vector-header-start">
+					<label
+				id="mw-sidebar-button"
+				class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element mw-ui-icon-flush-right"
+				for="mw-sidebar-checkbox"
+				role="button"
+				aria-controls="mw-panel"
+				data-event-name="ui.sidebar"
+				tabindex="0"
+				title="Main menu">
+				<span>Toggle sidebar</span>
+			</label>
+		
+<a href="/wiki/index.php/Main_page" class="mw-logo">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="VASP Wiki"
+			src="/wiki/images/logo-on-white.png" style="width: 11.1875em; height: 2.5em;">
+	</span>
+</a>
+
+			</div>
+			<div class="vector-header-end">
+				
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box">
+	<a href="/wiki/index.php/Special:Search"
+	
+		
+		
+		
+		title="Search VASP Wiki [f]"
+		accesskey="f"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+	<div>
+		<form action="/wiki/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search VASP Wiki" aria-label="Search VASP Wiki" autocapitalize="sentences" title="Search VASP Wiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+				<nav class="vector-user-links" aria-label="Personal tools" role="navigation" >
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet mw-portlet-vector-user-menu-overflow"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login-2" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=IVDW" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+<div id="vector-user-links-dropdown" class="vector-menu vector-dropdown vector-menu-dropdown vector-user-menu vector-user-menu-logged-out"  title="More options" >
+	<input type="checkbox"
+		id="vector-user-links-dropdown-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-user-links-dropdown"
+		class="vector-menu-checkbox "
+		
+		aria-label="Personal tools"
+		
+	/>
+	<label
+		id="vector-user-links-dropdown-label"
+		for="vector-user-links-dropdown-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=IVDW" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="mw-ui-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+</nav>
+
+			</div>
+		</header>
+		<div class="vector-main-menu-container ">
+			<div id="mw-navigation">
+				<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+						
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	
+	
+<div id="p-navigation" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-navigation"  >
+	<div
+		id="p-navigation-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/index.php/Main_page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/index.php/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-tb" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-tb"  >
+	<div
+		id="p-tb-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/index.php/Special:WhatLinksHere/IVDW" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChangesLinked/IVDW" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/wiki/index.php?title=IVDW&amp;oldid=29525" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/wiki/index.php?title=IVDW&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+
+</div>
+
+				</nav>
+			</div>
+		</div>
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="localNotice"><div class="sitenotice" lang="en" dir="ltr"><p>Requests for technical support from the VASP team should be posted in the <a rel="nofollow" class="external text" href="https://www.vasp.at/forum/">VASP Forum</a>.
+</p></div></div></div>
+		</div>
+		<input type="checkbox" id="vector-toc-collapsed-checkbox" class="mw-checkbox-hack-checkbox">
+		<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+			<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Available_vdW_atom-pairwise_and_many-body_methods"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Available_vdW_atom-pairwise_and_many-body_methods">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Available vdW atom-pairwise and many-body methods</div>
+		</a>
+		
+		<ul id="toc-Available_vdW_atom-pairwise_and_many-body_methods-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Related_tags_and_articles"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Related_tags_and_articles">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Related tags and articles</div>
+		</a>
+		
+		<ul id="toc-Related_tags_and_articles-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+			</div>
+		</nav>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<label
+						id="vector-toc-collapsed-button"
+						class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-flush-left mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+						for="vector-toc-collapsed-checkbox"
+						role="button"
+						aria-controls="toc-toggle-list"
+						data-event-name="vector.toc-toggle-list"
+						tabindex="0"
+						title="Table of Contents">
+						Toggle the table of contents
+					</label>
+				
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-menu vector-dropdown vector-menu-dropdown vector-page-titlebar-toc mw-ui-icon-flush-left"  >
+	<input type="checkbox"
+		id="vector-page-titlebar-toc-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-page-titlebar-toc"
+		class="vector-menu-checkbox "
+		
+		aria-label="Toggle the table of contents"
+		
+	/>
+	<label
+		id="vector-page-titlebar-toc-label"
+		for="vector-page-titlebar-toc-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+		<span class="vector-menu-heading-label">Toggle the table of contents</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">IVDW</span></h1>
+				
+				
+				</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/IVDW" title="View the content page [c]" accesskey="c" class=""><span>Page</span></a>
+</li>
+<li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=Talk:IVDW&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t" class=""><span>Discussion</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+								
+
+<div id="p-variants" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-variants emptyPortlet"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-label="Change language variant"
+		
+		
+	/>
+	<label
+		id="p-variants-label"
+		for="p-variants-checkbox"
+		class="vector-menu-heading "
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/IVDW" class=""><span>Read</span></a>
+</li>
+<li id="ca-viewsource" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=IVDW&amp;action=edit" title="This page is protected.
+You can view its source [e]" accesskey="e" class=""><span>View source</span></a>
+</li>
+<li id="ca-history" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=IVDW&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="More options">
+								
+
+<div id="p-cactions" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		
+		aria-label="More"
+		
+	/>
+	<label
+		id="p-cactions-label"
+		for="p-cactions-checkbox"
+		class="vector-menu-heading"
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php/IVDW"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=IVDW&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=IVDW&amp;action=history"><span>View history</span></a></li></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From VASP Wiki</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><a class="mw-selflink selflink">IVDW</a>&#160;= 1 | 11 | 12 | 2 | 21 | ...<br /> Default: <b>IVDW</b> = 0 (no correction)&#160;
+</p><p>Description: <a class="mw-selflink selflink">IVDW</a> specifies a vdW dispersion term of the atom-pairwise or many-body type.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Available_vdW_atom-pairwise_and_many-body_methods">Available vdW atom-pairwise and many-body methods</span></h2>
+<p>With all methods listed below, a dispersion correction is added to the total energy, but also to the atomic forces and stress tensor, such that lattice relaxations, molecular dynamics, and vibrational analysis (via finite differences) can be performed. Note, however, that these correction schemes are currently not available for phonon calculations based on <a href="/wiki/index.php/Phonons:_Theory#Density_functional_perturbation_theory" title="Phonons: Theory">density functional perturbation theory</a>.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th style="width:4em">IVDW=</th>
+<th style="width:12em">Type</th>
+<th class="unsortable">Description
+</th></tr>
+<tr>
+<td style="text-align:center;">1 or 10</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a> method of Grimme.<sup id="cite_ref-grimme:jcc:06_1-0" class="reference"><a href="#cite_note-grimme:jcc:06-1">&#91;1&#93;</a></sup> Available as of VASP.5.2.11.
+</td></tr>
+<tr>
+<td style="text-align:center;">11</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a> method of Grimme with zero-damping function.<sup id="cite_ref-grimme:jcp:10_2-0" class="reference"><a href="#cite_note-grimme:jcp:10-2">&#91;2&#93;</a></sup> Available as of VASP.5.3.4.
+</td></tr>
+<tr>
+<td style="text-align:center;">12</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a> method with Becke-Johnson damping function.<sup id="cite_ref-grimme:jcc:11_3-0" class="reference"><a href="#cite_note-grimme:jcc:11-3">&#91;3&#93;</a></sup> Available as of VASP.5.3.4.
+</td></tr>
+<tr>
+<td style="text-align:center;">13</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a> method.<sup id="cite_ref-caldeweyher:jcp:2019_4-0" class="reference"><a href="#cite_note-caldeweyher:jcp:2019-4">&#91;4&#93;</a></sup> Available as of VASP.6.2 as <a href="/wiki/index.php/Makefile.include#DFT-D4_.28optional.29" title="Makefile.include">external package</a>.
+</td></tr>
+<tr>
+<td style="text-align:center;">3</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a><sup id="cite_ref-kim:jpcl:2012_5-0" class="reference"><a href="#cite_note-kim:jpcl:2012-5">&#91;5&#93;</a></sup> method. Available as of VASP.5.3.5.
+</td></tr>
+<tr>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/DDsC_dispersion_correction" title="DDsC dispersion correction">dDsC dispersion correction</a><sup id="cite_ref-steinmann:jcp:11_6-0" class="reference"><a href="#cite_note-steinmann:jcp:11-6">&#91;6&#93;</a></sup><sup id="cite_ref-steinmann:jctc:11_7-0" class="reference"><a href="#cite_note-steinmann:jctc:11-7">&#91;7&#93;</a></sup> method. Available as of VASP.5.4.1.
+</td></tr>
+<tr>
+<td style="text-align:center;">2 or 20</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>.<sup id="cite_ref-tkatchenko:prl:09_8-0" class="reference"><a href="#cite_note-tkatchenko:prl:09-8">&#91;8&#93;</a></sup> Available as of VASP.5.3.3.
+</td></tr>
+<tr>
+<td style="text-align:center;">21</td>
+<td style="text-align:center;">pairwise</td>
+<td><a href="/wiki/index.php/Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning" title="Tkatchenko-Scheffler method with iterative Hirshfeld partitioning">Tkatchenko-Scheffler method with iterative Hirshfeld partitioning</a>.<sup id="cite_ref-bucko:jctc:13_9-0" class="reference"><a href="#cite_note-bucko:jctc:13-9">&#91;9&#93;</a></sup><sup id="cite_ref-bucko:jcp:14_10-0" class="reference"><a href="#cite_note-bucko:jcp:14-10">&#91;10&#93;</a></sup> Available as of VASP.5.3.5.
+</td></tr>
+<tr>
+<td style="text-align:center;">202</td>
+<td style="text-align:center;">many-body</td>
+<td><a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> method (MBD@rsSCS).<sup id="cite_ref-tkatchenko:prl:12_11-0" class="reference"><a href="#cite_note-tkatchenko:prl:12-11">&#91;11&#93;</a></sup><sup id="cite_ref-ambrosetti:jcp:14_12-0" class="reference"><a href="#cite_note-ambrosetti:jcp:14-12">&#91;12&#93;</a></sup> Available as of VASP.5.4.1.
+</td></tr>
+<tr>
+<td style="text-align:center;">263</td>
+<td style="text-align:center;">many-body</td>
+<td><a href="/wiki/index.php/Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability" title="Many-body dispersion energy with fractionally ionic model for polarizability">Many-body dispersion energy with fractionally ionic model for polarizability</a> method (MBD@rSC/FI).<sup id="cite_ref-gould:jctc:2016_a_13-0" class="reference"><a href="#cite_note-gould:jctc:2016_a-13">&#91;13&#93;</a></sup><sup id="cite_ref-gould:jctc:2016_b_14-0" class="reference"><a href="#cite_note-gould:jctc:2016_b-14">&#91;14&#93;</a></sup> Available as of VASP.6.1.0.
+</td></tr>
+<tr>
+<td style="text-align:center;">14</td>
+<td style="text-align:center;">pairwise and many-body</td>
+<td>One of the methods available in the <a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">Library libMBD of many-body dispersion methods</a>.<sup id="cite_ref-libmbd_1_15-0" class="reference"><a href="#cite_note-libmbd_1-15">&#91;15&#93;</a></sup><sup id="cite_ref-libmbd_2_16-0" class="reference"><a href="#cite_note-libmbd_2-16">&#91;16&#93;</a></sup><sup id="cite_ref-hermann:jcp:2023_17-0" class="reference"><a href="#cite_note-hermann:jcp:2023-17">&#91;17&#93;</a></sup> Available as of VASP.6.4.3 as <a href="/wiki/index.php/Makefile.include#libMBD_.28optional.29" title="Makefile.include">external package</a>.
+</td></tr></tbody></table>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b>
+<ul><li>The <a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">libMBD</a> implementations (<a class="mw-selflink selflink">IVDW</a>=14) of the Tkatchenko-Scheffler methods and their MBD extensions are much faster (analytical calculation of the forces) than the VASP implementations (numerical calculation of the forces). Therefore, it is strongly recommended to use the <a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">libMBD</a> implementation if available.</li>
+<li>The parameter <a href="/wiki/index.php/LVDW" class="mw-redirect" title="LVDW">LVDW</a> used in previous versions of VASP (5.2.11 and later) to activate the <a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a> method is now obsolete. If <a href="/wiki/index.php/LVDW" class="mw-redirect" title="LVDW">LVDW</a>=<i>.TRUE.</i> is defined, <a class="mw-selflink selflink">IVDW</a> is automatically set to 1 (unless <a class="mw-selflink selflink">IVDW</a> is specified in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>).</li></ul>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>, <a href="/wiki/index.php/DFT-D3" title="DFT-D3">DFT-D3</a>, <a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning" title="Tkatchenko-Scheffler method with iterative Hirshfeld partitioning">Tkatchenko-Scheffler method with iterative Hirshfeld partitioning</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability" title="Many-body dispersion energy with fractionally ionic model for polarizability">Many-body dispersion energy with fractionally ionic model for polarizability</a>,
+<a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>,
+<a href="/wiki/index.php/DDsC_dispersion_correction" title="DDsC dispersion correction">dDsC dispersion correction</a>,
+<a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>
+</p><p>See also the alternative vdW-DF functionals: <a href="/wiki/index.php/LUSE_VDW" title="LUSE VDW">LUSE_VDW</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>.
+</p><p><a href="/wiki/index.php/Special:Search/%22IVDW%22_incategory:%22Examples%22" title="Special:Search/&quot;IVDW&quot; incategory:&quot;Examples&quot;">Examples that use this tag</a>
+</p>
+<hr />
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-grimme:jcc:06-1"><a href="#cite_ref-grimme:jcc:06_1-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1002/jcc.20495">S. Grimme, J. Comput. Chem. <b>27</b>, 1787 (2006).</a></span>
+</li>
+<li id="cite_note-grimme:jcp:10-2"><a href="#cite_ref-grimme:jcp:10_2-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/1.3382344">S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem. Phys. <b>132</b>, 154104 (2010).</a></span>
+</li>
+<li id="cite_note-grimme:jcc:11-3"><a href="#cite_ref-grimme:jcc:11_3-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1002/jcc.21759">S. Grimme, S. Ehrlich, and L. Goerigk, J. Comput. Chem. <b>32</b>, 1456 (2011).</a></span>
+</li>
+<li id="cite_note-caldeweyher:jcp:2019-4"><a href="#cite_ref-caldeweyher:jcp:2019_4-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/1.5090222">E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S. Spicher, C. Bannwarth, and S. Grimme, J. Chem. Phys. <b>150</b>, 154122 (2019).</a></span>
+</li>
+<li id="cite_note-kim:jpcl:2012-5"><a href="#cite_ref-kim:jpcl:2012_5-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1021/jz2016395">H. Kim, J.-M. Choi, and W. A. Goddard, III, J. Phys. Chem. Lett. <b>3</b>, 360 (2012).</a></span>
+</li>
+<li id="cite_note-steinmann:jcp:11-6"><a href="#cite_ref-steinmann:jcp:11_6-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/1.3545985">S. N. Steinmann and C. Corminboeuf, J. Chem. Phys. <b>134</b>, 044117 (2011).</a></span>
+</li>
+<li id="cite_note-steinmann:jctc:11-7"><a href="#cite_ref-steinmann:jctc:11_7-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1021/ct200602x">S. N. Steinmann and C. Corminboeuf, J. Chem. Theory Comput. <b>7</b>, 3567 (2011).</a></span>
+</li>
+<li id="cite_note-tkatchenko:prl:09-8"><a href="#cite_ref-tkatchenko:prl:09_8-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1103/PhysRevLett.102.073005">A. Tkatchenko and M. Scheffler, Phys. Rev. Lett. <b>102</b>, 073005 (2009).</a></span>
+</li>
+<li id="cite_note-bucko:jctc:13-9"><a href="#cite_ref-bucko:jctc:13_9-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1021/ct400694h">T. Bučko, S. Lebègue, J. Hafner, and J. G. Ángyán, J. Chem. Theory Comput. <b>9</b>, 4293 (2013)</a></span>
+</li>
+<li id="cite_note-bucko:jcp:14-10"><a href="#cite_ref-bucko:jcp:14_10-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/1.4890003">T. Bučko, S. Lebègue, J. G. Ángyán, and J. Hafner, J. Chem. Phys. <b>141</b>, 034114 (2014).</a></span>
+</li>
+<li id="cite_note-tkatchenko:prl:12-11"><a href="#cite_ref-tkatchenko:prl:12_11-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1103/PhysRevLett.108.236402">A. Tkatchenko, R. A. DiStasio, Jr., R. Car, and M. Scheffler, Phys. Rev. Lett. <b>108</b>, 236402 (2012).</a></span>
+</li>
+<li id="cite_note-ambrosetti:jcp:14-12"><a href="#cite_ref-ambrosetti:jcp:14_12-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/1.4865104">A. Ambrosetti, A. M. Reilly, and R. A. DiStasio Jr., J. Chem. Phys. <b>140</b>, 018A508 (2014).</a></span>
+</li>
+<li id="cite_note-gould:jctc:2016_a-13"><a href="#cite_ref-gould:jctc:2016_a_13-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1021/acs.jctc.6b00361">T. Gould and T. Bučko, <i>C6 Coefficients and Dipole Polarizabilities for All Atoms and Many Ions in Rows 1–6 of the Periodic Table</i>, J. Chem. Theory Comput. <b>12</b>, 3603 (2016).</a></span>
+</li>
+<li id="cite_note-gould:jctc:2016_b-14"><a href="#cite_ref-gould:jctc:2016_b_14-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1021/acs.jctc.6b00925">T. Gould, S. Lebègue, J. G. Ángyán, and T. Bučko, <i>A Fractionally Ionic Approach to Polarizability and van der Waals Many-Body Dispersion Calculations</i>, J. Chem. Theory Comput. <b>12</b>, 5920 (2016).</a></span>
+</li>
+<li id="cite_note-libmbd_1-15"><a href="#cite_ref-libmbd_1_15-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://libmbd.github.io/">https://libmbd.github.io/</a></span>
+</li>
+<li id="cite_note-libmbd_2-16"><a href="#cite_ref-libmbd_2_16-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/libmbd/libmbd">https://github.com/libmbd/libmbd</a></span>
+</li>
+<li id="cite_note-hermann:jcp:2023-17"><a href="#cite_ref-hermann:jcp:2023_17-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1063/5.0170972">J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi, R. J. Maurer, and A. Tkatchenko, <i>libMBD: A general-purpose package for scalable quantum many-body dispersion calculations</i>, J. Chem. Phys. <b>159</b>, 174802 (2023).</a></span>
+</li>
+</ol></div>
+<!-- 
+NewPP limit report
+Cached time: 20250305154506
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [no‐toc‐conversion]
+CPU time usage: 1.419 seconds
+Real time usage: 1.633 seconds
+Preprocessor visited node count: 100939/1000000
+Post‐expand include size: 4601/2097152 bytes
+Template argument size: 320992/2097152 bytes
+Highest expansion depth: 6/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1997/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1563.577      1 -total
+ 98.34% 1537.679     17 Template:Cite
+ 60.10%  939.744   7174 Template:Reference
+  0.80%   12.560      1 Template:Sc
+  0.36%    5.615      1 Template:TAGDEF
+  0.19%    3.049      1 Template:NB
+  0.12%    1.907     28 Template:TAG
+  0.05%    0.816      1 Template:FILE
+-->
+
+<!-- Saved in parser cache with key mediawiki-vw:pcache:idhash:376-0!canonical and timestamp 20250305154504 and revision id 29525. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://www.vasp.at/wiki/index.php?title=IVDW&amp;oldid=29525">https://www.vasp.at/wiki/index.php?title=IVDW&amp;oldid=29525</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/index.php/Category:INCAR_tag" title="Category:INCAR tag">INCAR tag</a></li><li><a href="/wiki/index.php/Category:Exchange-correlation_functionals" title="Category:Exchange-correlation functionals">Exchange-correlation functionals</a></li><li><a href="/wiki/index.php/Category:Van_der_Waals_functionals" title="Category:Van der Waals functionals">Van der Waals functionals</a></li></ul></div></div>
+					
+				</div>
+				
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 28 February 2025, at 14:31.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/wiki/index.php/VASP_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/index.php/VASP_Wiki:About">About VASP Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/index.php/VASP_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"><img src="/wiki/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/wiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1997,"wgPageParseReport":{"limitreport":{"cputime":"1.419","walltime":"1.633","ppvisitednodes":{"value":100939,"limit":1000000},"postexpandincludesize":{"value":4601,"limit":2097152},"templateargumentsize":{"value":320992,"limit":2097152},"expansiondepth":{"value":6,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1997,"limit":5000000},"timingprofile":["100.00% 1563.577      1 -total"," 98.34% 1537.679     17 Template:Cite"," 60.10%  939.744   7174 Template:Reference","  0.80%   12.560      1 Template:Sc","  0.36%    5.615      1 Template:TAGDEF","  0.19%    3.049      1 Template:NB","  0.12%    1.907     28 Template:TAG","  0.05%    0.816      1 Template:FILE"]},"cachereport":{"timestamp":"20250305154506","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20250305154506 -->
+</html>

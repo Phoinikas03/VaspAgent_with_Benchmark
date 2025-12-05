@@ -1,0 +1,1 @@
+ISTART = 0 | 1 | 2 | 3 Description: ISTART determines whether or not to read the WAVECAR file. ISTART =0 ISTART =1 ISTART =2 ISTART =3 Examples that use this tag

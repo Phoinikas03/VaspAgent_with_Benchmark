@@ -1,0 +1,23 @@
+<p><a class="mw-selflink selflink">MIXPRE</a> = 0 | 1 | 2 | 3<br/> Default: <b>MIXPRE</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">MIXPRE</a> specifies the metric in the Broyden mixing scheme(<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=4).
+</p>
+<ul><li><a class="mw-selflink selflink">MIXPRE</a>=0</li></ul>
+<ul><li><a class="mw-selflink selflink">MIXPRE</a>=1</li></ul>
+<ul><li><a class="mw-selflink selflink">MIXPRE</a>=2</li></ul>
+<ul><li><a class="mw-selflink selflink">MIXPRE</a>=3 (implemented for test purposes; <b>not</b> recommended)</li></ul>
+<p>The preconditioning is done only on the total charge density (i.e. up+down component) and not on the magnetization charge density (i.e. up-down component). In our experience, the introduction of a metric always improves the convergence speed. The best choice is <a class="mw-selflink selflink">MIXPRE</a>=1 (i.e. the default).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MIXPRE%22_incategory:%22Examples%22" title='Special:Search/"MIXPRE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

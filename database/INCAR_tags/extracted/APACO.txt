@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">APACO</a> = [real]<br/> Default: <b>APACO</b> = 10 
+</p>
+<p>Description: <a class="mw-selflink selflink">APACO</a> sets the maximum distance in the evaluation of the pair-correlation function (in Å).
+</p>
+<p>VASP evaluates the pair-correlation function each <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a> steps and writes it after <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>×<a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a> steps to the <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPACO" title="NPACO">NPACO</a>,
+<a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>,
+<a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a>,
+<a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22APACO%22_incategory:%22Examples%22" title='Special:Search/"APACO" incategory:"Examples"'>Examples that use this tag</a>
+</p>

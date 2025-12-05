@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">BSEHOLE</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">BSEHOLE</a> sets the coordinates of the fixed hole of the exciton wavefunction
+</p>
+<p>If <a class="mw-selflink selflink">BSEHOLE</a> is set in a BSE calculation, VASP computes exciton wavefunction for the first <a href="/wiki/index.php/NBSEEIG" title="NBSEEIG">NBSEEIG</a> states.
+The coordinates are provided in direct (fractional) coordinates.
+</p>
+<p>When fixing the position of the particle, ensure that it is not fixed exactly at the center of an atom or coincides with a node of the wavefunction. To avoid that, shift the fixed coordinate slightly away from the center of the atom. Furthermore, the wavefunction of the fixed particle is taken at the nearest <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=527acb137a08b95c9f663e8d60297de7&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.101ex;"/></span>-vector, whose exact position is written in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file 
+</p>
+<p>or
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_sections">Related tags and sections</span></h2>
+<p><a href="/wiki/index.php/BSEELECTRON" title="BSEELECTRON">BSEELECTRON</a>, <a href="/wiki/index.php/NBSEEIG" title="NBSEEIG">NBSEEIG</a>, <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>, <a href="/wiki/index.php/Plotting_exciton_wavefunction" title="Plotting exciton wavefunction">Plotting exciton wavefunction</a>
+</p>

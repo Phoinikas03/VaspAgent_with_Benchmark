@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">KBLOCK</a> = [integer]<br/> Default: <b>KBLOCK</b> = <a href="/wiki/index.php/NSW" title="NSW">NSW</a> 
+</p>
+<p>Description: After <code><a class="mw-selflink selflink">KBLOCK</a> * <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a></code> ionic steps the averaged pair-correlation function and DOS are written to the files <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>  and <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>. More details can be found on the page describing the tag <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>, <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>, <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22KBLOCK%22_incategory:%22Examples%22" title='Special:Search/"KBLOCK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

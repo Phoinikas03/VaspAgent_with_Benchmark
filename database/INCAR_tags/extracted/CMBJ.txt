@@ -1,0 +1,120 @@
+<p><a class="mw-selflink selflink">CMBJ</a> = [real (array)]<br/> Default: <b>CMBJ</b> = calculated self-consistently 
+</p>
+<p>Description: defines the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>c</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a8a08f09d37b73795649038408b5f33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.007ex;"/></span> parameter in the MBJ potential.
+</p>
+<p>The <a class="mw-selflink selflink">CMBJ</a> tag can be set in the following ways:
+</p>
+<ul><li>Specify a constant that is used at every point of space <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{r}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{r}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dfe81406c7b3cb2ce4c2639cda51c3c3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.102ex;"/></span><pre>CMBJ = c</pre></li></ul>
+<ul><li>Specify one entry per atomic type<pre>CMBJ = c_1 c_2 .. c_n</pre> where the order and number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span> is in accordance with atomic types in your <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file. The MBJ exchange potential at a point <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{r}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{r}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dfe81406c7b3cb2ce4c2639cda51c3c3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.102ex;"/></span> will then be calculated using the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d9899588b2b28a768a63ade0f3523596&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 1.807ex;"/></span> belonging to the atomic species of the atomic site nearest to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{r}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{r}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dfe81406c7b3cb2ce4c2639cda51c3c3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.102ex;"/></span>.</li></ul>
+<p>If <a class="mw-selflink selflink">CMBJ</a> is not set, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>c</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a8a08f09d37b73795649038408b5f33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.007ex;"/></span> is calculated at each electronic step as the average of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \left\vert\nabla n\right\vert/n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow>
+<mo>|</mo>
+<mrow>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mi>n</mi>
+</mrow>
+<mo>|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \left\vert\nabla n\right\vert/n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \left\vert\nabla n\right\vert/n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1c47a932fcd1851883d9b6b10bc093e7&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 7.569ex;"/></span> in the unit cell, as explained in the description of the <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/CMBJA" title="CMBJA">CMBJA</a>,
+<a href="/wiki/index.php/CMBJB" title="CMBJB">CMBJB</a>,
+<a href="/wiki/index.php/CMBJE" title="CMBJE">CMBJE</a>,
+<a href="/wiki/index.php/SMBJ" title="SMBJ">SMBJ</a>,
+<a href="/wiki/index.php/RSMBJ" title="RSMBJ">RSMBJ</a>,
+<a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a>,
+<a href="/wiki/index.php/LMAXTAU" title="LMAXTAU">LMAXTAU</a>,
+<a href="/wiki/index.php/LMIXTAU" title="LMIXTAU">LMIXTAU</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CMBJ%22_incategory:%22Examples%22" title='Special:Search/"CMBJ" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>

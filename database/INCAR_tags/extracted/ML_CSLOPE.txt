@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">ML_CSLOPE</a> = [real]<br/> Default: <b>ML_CSLOPE</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 0.2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>0.2</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 0.2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 0.2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3d522deaf85577451c01974654b36ad3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.972ex;"/></span> 
+</p>
+<p>Description: Parameter used in the automatic determination of threshold for error estimation in the machine learning force field method.
+</p>
+<p>The usage of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field_calculations:_Basics#Threshold_for_error_of_forces" title="Machine learning force field calculations: Basics">here</a>.
+</p>
+<p>The standard error of the history of maximum estimated errors of the forces (<a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>) and it's slope must be below <a href="/wiki/index.php/ML_CSIG" title="ML CSIG">ML_CSIG</a> and <a class="mw-selflink selflink">ML_CSLOPE</a> so that an update of the threshold for the maximum estimated error of forces <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> can take place. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_CSIG" title="ML CSIG">ML_CSIG</a>, <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>, <a href="/wiki/index.php/ML_CX" title="ML CX">ML_CX</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_CSLOPE%22_incategory:%22Examples%22" title='Special:Search/"ML CSLOPE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

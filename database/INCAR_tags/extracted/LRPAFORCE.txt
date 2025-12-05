@@ -1,0 +1,31 @@
+<p><a class="mw-selflink selflink">LRPAFORCE</a> = .TRUE. | .FALSE.<br/> Default: <b>LRPAFORCE</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LRPAFORCE</a>=.TRUE. calculates forces in the random-phase approximation (RPA).
+</p>
+<p>Available as of VASP.6.1.
+</p>
+<p>This tag can be optionally set in low-scaling <a href="/wiki/index.php/ACFDT/RPA_calculations#RPAFORCES" title="ACFDT/RPA calculations">RPA calculations</a> or <a class="mw-redirect" href="/wiki/index.php/GW_calculations#RPAFORCES" title="GW calculations"> GW calculations</a>. It allows computing the <a class="mw-redirect" href="/wiki/index.php/Forces#RPA-forces" title="Forces">RPA forces</a><sup class="reference" id="cite_ref-ramberger:prl:118_1-0"><a href="#cite_note-ramberger:prl:118-1">[1]</a></sup> on each ion. 
+Setting
+</p>
+<p>or equivalently 
+</p>
+<p>determines the RPA total energy with corresponding forces and the quasiparticle energies within the GW approximation. 
+</p>
+<p>The <a class="mw-selflink selflink">LRPAFORCE</a> tag can be used in combination with the standard relaxation options <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> and <a href="/wiki/index.php/NSW" title="NSW">NSW</a> as explained in the corresponding <a href="/wiki/index.php/ACFDT/RPA_calculations#RPAFORCES" title="ACFDT/RPA calculations">RPA calculations guide</a>.
+</p>
+<p>Generally, the energy calculated by the RPA can be quite noisy as a function of the ionic positions, in particular, if <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> = FAST and <a class="mw-redirect" href="/wiki/index.php/NMAXFOCKAE" title="NMAXFOCKAE">NMAXFOCKAE</a> = 1 is set
+(these are the default values for RPA calculations). Most of the noise is related to the exact exchange energy, and we are working on methods to improve this issue.
+Currently, to reduce the noise in the energy and forces, it is sensible to set <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> = Normal (typically doubling the execution time and memory requirement). It is also possible to set <a class="mw-redirect" href="/wiki/index.php/LMAXFOCKAE" title="LMAXFOCKAE">LMAXFOCKAE</a> = -1 (which implicitly sets <a class="mw-redirect" href="/wiki/index.php/NMAXFOCKAE" title="NMAXFOCKAE">NMAXFOCKAE</a> = 0). This makes the correlation energies and the related forces less noisy, but technically less accurate (i.e. part of the correlation energy will be missing at high transition energies).  
+Overall, RPA forces must be used carefully and only after extensive testing of all relevant parameters. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/NSW" title="NSW">NSW</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>,
+<a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>,
+<a class="mw-redirect" href="/wiki/index.php/NMAXFOCKAE" title="NMAXFOCKAE">NMAXFOCKAE</a>,
+<a href="/wiki/index.php/ACFDT/RPA_calculations#RPAFORCES" title="ACFDT/RPA calculations">RPA calculations</a>, 
+<a class="mw-redirect" href="/wiki/index.php/GW_calculations#RPAFORCES" title="GW calculations"> GW calculations</a>
+<a href="/wiki/index.php/Special:Search/%22LRPAFORCE%22_incategory:%22Examples%22" title='Special:Search/"LRPAFORCE" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

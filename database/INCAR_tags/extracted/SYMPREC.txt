@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">SYMPREC</a> = [real]<br/> Default: <b>SYMPREC</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 10^{-5}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>5</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 10^{-5}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 10^{-5}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b9afc70a4d618f9e2db0198231d72534&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.658ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">SYMPREC</a> determines to which accuracy the positions in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file must be specified (as of VASP.4.4.4).
+</p>
+<p><a class="mw-selflink selflink">SYMPREC</a> determines how accurately the positions in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file must be specified.
+The default, <a class="mw-selflink selflink">SYMPREC</a>=10<sup>-5</sup>, is usually large enough, even if the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file has been generated with single precision accuracy.
+Increasing <a class="mw-selflink selflink">SYMPREC</a> means that the positions in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file can be specified with less accuracy (increasing fuzziness). Please also have a look at <a href="/wiki/index.php/POSCAR#Precision_and_symmetry" title="POSCAR">this section</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ISYM" title="ISYM">ISYM</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SYMPREC%22_incategory:%22Examples%22" title='Special:Search/"SYMPREC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

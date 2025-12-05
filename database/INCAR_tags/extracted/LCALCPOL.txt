@@ -1,0 +1,221 @@
+<p><a class="mw-selflink selflink">LCALCPOL</a> = .TRUE. | .FALSE.<br/> Default: <b>LCALCPOL</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LCALCPOL</a>=.TRUE.  switches on the evaluation of the Berry phase expressions for the macroscopic electronic polarization in accordance with the so-called <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#Modern_Theory_of_Polarization" title="Berry phases and finite electric fields">Modern Theory of Polarization</a>.
+</p>
+<p>For <a class="mw-selflink selflink">LCALCPOL</a>=.TRUE., VASP calculates the electronic contribution to the polarization, along the three reciprocal lattice vectors <b>G</b><sub>i</sub>, i=1,2,3,  (i.e. Σ<sub>i</sub> <b>P</b>·<b>G</b><sub>i</sub>) in a single run (unlike <a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>=.TRUE.).
+</p>
+<h3><span id="An_example:_The_fluorine_displacement_dipole_.28Born_effective_charge.29_in_NaF"></span><span class="mw-headline" id="An_example:_The_fluorine_displacement_dipole_(Born_effective_charge)_in_NaF">An example: The fluorine displacement dipole (Born effective charge) in NaF</span></h3>
+<ul><li>With <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file:</li></ul>
+<ul><li><a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file:</li></ul>
+<ul><li><a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file:</li></ul>
+<ul><li>and LDA Na_sv and F PAW datasets.</li></ul>
+<p>The <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file should now contain the following lines:
+</p>
+<p>Here the units "electrons Angst" denote <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e\AA=-1.602 10^{-19}C\AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1.602</mn>
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>19</mn>
+</mrow>
+</msup>
+<mi>C</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e\AA=-1.602 10^{-19}C\AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e\AA=-1.602 10^{-19}C\AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0469a3bb7e19440fe9eb6e6f1d38b308&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.509ex; width: 21.366ex;"/></span>.
+</p>
+<p>To calculate the change in the electronic polarization of NaF due to the displacement of the fluorine sublattice we repeat the previous calculation with the following <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file:
+</p>
+<p>The <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> should now contain something very similar to the following lines:
+</p>
+<p>From the above one easily recognizes that the change in the electronic dipole moment due to the F-sublattice displacement is: 
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Delta\mathrm{p[elc]}=0.3606\hat{z}\;e\AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+<mi mathvariant="normal">c</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mo>=</mo>
+<mn>0.3606</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mspace width="thickmathspace"></mspace>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Delta\mathrm{p[elc]}=0.3606\hat{z}\;e\AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Delta\mathrm{p[elc]}=0.3606\hat{z}\;e\AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1ed0aaadc3c02494c08f3866929d828d&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 21.233ex;"/></span>
+</p>
+<p>and the corresponding change in the ionic dipole moment:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Delta\mathrm{p[ion]}=1.93939-2.25510=-0.31571\hat{z}\;e\AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mo>=</mo>
+<mn>1.93939</mn>
+<mo>−<!-- − --></mo>
+<mn>2.25510</mn>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>0.31571</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mspace width="thickmathspace"></mspace>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Delta\mathrm{p[ion]}=1.93939-2.25510=-0.31571\hat{z}\;e\AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Delta\mathrm{p[ion]}=1.93939-2.25510=-0.31571\hat{z}\;e\AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=11528913d6cb5514e8da01cab8960749&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 45.776ex;"/></span>
+</p>
+<p>Thus the total change is found to be:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Delta\mathrm{p[tot]}=0.36061-0.31571=0.0449\hat{z}\;e\AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">t</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mo>=</mo>
+<mn>0.36061</mn>
+<mo>−<!-- − --></mo>
+<mn>0.31571</mn>
+<mo>=</mo>
+<mn>0.0449</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mspace width="thickmathspace"></mspace>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Delta\mathrm{p[tot]}=0.36061-0.31571=0.0449\hat{z}\;e\AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Delta\mathrm{p[tot]}=0.36061-0.31571=0.0449\hat{z}\;e\AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3fd7235b1536fd2a9395ced9d4f9725e&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 42.675ex;"/></span>
+</p>
+<p>and considering that the F-sublattice was displaced by 0.045102 Å these calculations yield a Born effective charge for fluorine of 
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Z^*=0.0449/0.045102=-0.995|e|\;}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>Z</mi>
+<mo>∗<!-- ∗ --></mo>
+</msup>
+<mo>=</mo>
+<mn>0.0449</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>0.045102</mn>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>0.995</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mspace width="thickmathspace"></mspace>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Z^*=0.0449/0.045102=-0.995|e|\;}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle Z^*=0.0449/0.045102=-0.995|e|\;}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c2605988b5377068de41fa94d13d7655&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 35.492ex;"/></span>.
+</p>
+<p>The socalled parallel or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{\parallel}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∥<!-- ∥ --></mo>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{\parallel}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{\parallel}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bb3142c3a54ee1931763157d8b1f0160&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.009ex; width: 3.155ex;"/></span>
+direction in the integration over the reciprocal space unit cell is set in <a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>,
+<a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>,
+<a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>,
+<a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>,
+<a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>,
+<a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LCALCPOL%22_incategory:%22Examples%22" title='Special:Search/"LCALCPOL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

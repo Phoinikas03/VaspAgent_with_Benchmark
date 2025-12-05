@@ -1,0 +1,1 @@
+IMIX = 0 | 1 | 2 | 4 Default: IMIX = 4 Description: IMIX specifies the type of density mixing . IMIX =0: No mixing IMIX =1: Kerker mixing IMIX =2: Variant of Tchebycheff mixing IMIX =4: Broyden's 2 nd method and Pulay-mixing method (default) Related tags and articles INIMIX , MAXMIX , AMIX , BMIX , AMIX_MAG , BMIX_MAG , AMIN , MIXPRE , WC Examples that use this tag References

@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">LTSSURF</a> = .TRUE. | .FALSE.<br/> Default: <b>LTSSURF</b> = .FALSE. 
+</p>
+<p>Description: if <a class="mw-selflink selflink">LTSSURF</a>  set to .TRUE., the standard parametrization of the Tkatchenko-Scheffler method is replaced by the one designed to enable reliable modeling of structure and stability for a broad class of organic molecules adsorbed on metal surfaces is activated<sup class="reference" id="cite_ref-ruiz:prb:2016_1-0"><a href="#cite_note-ruiz:prb:2016-1">[1]</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LTSSURF%22_incategory:%22Examples%22" title='Special:Search/"LTSSURF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

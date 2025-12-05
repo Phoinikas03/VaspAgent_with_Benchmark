@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">ENAUG</a> = [real]<br/> Default: <b>ENAUG</b> = largest <i>EAUG</i> read from the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file 
+</p>
+<p>Description: Specifies the cutoff energy of the plane-wave representation of the augmentation charges in eV.
+</p>
+<p><a class="mw-selflink selflink">ENAUG</a> determines <a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>, <a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>, and <a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a> in accordance with the <a href="/wiki/index.php/PREC" title="PREC">PREC</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,
+<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,
+<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ENAUG%22_incategory:%22Examples%22" title='Special:Search/"ENAUG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

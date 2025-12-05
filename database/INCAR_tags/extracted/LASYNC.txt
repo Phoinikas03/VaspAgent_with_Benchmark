@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LASYNC</a> = [logical]<br/> Default: <b>LASYNC</b> = .FALSE. 
+</p>
+<p>Description: Controls the overlap in communication. 
+</p>
+<p>If <a class="mw-selflink selflink">LASYNC</a>=<i>.TRUE.</i> is set in the INCAR file, VASP will try to overlap communication with calculations.
+This might improve performance or degrade it depending on the MPI library and hardware you are running on.
+Please do your own testing and compare the runtimes and results before using this tag in production runs.
+Compiling VASP using the <a href="/wiki/index.php/Precompiler_options#-DPROFILING" title="Precompiler options">-DPROFILING</a> precompiler switch provides a detailed timing of the different VASP routines which helps in determining if there is a performance gain.
+Please report any issues in the <a class="external text" href="https://www.vasp.at/forum/" rel="nofollow">VASP forum</a>.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LASYNC%22_incategory:%22Examples%22" title='Special:Search/"LASYNC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

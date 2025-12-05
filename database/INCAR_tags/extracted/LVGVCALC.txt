@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">LVGVCALC</a> = .TRUE. | .FALSE.<br/> Default: <b>LVGVCALC</b> =  .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LVGVCALC</a> switches on calculation of the <i>vGv</i> expression for the orbital magnetic susceptibility.
+</p>
+<p><a class="mw-selflink selflink">LVGVCALC</a> is available as of VASP.6.4.0.
+</p>
+<p>When performing a chemical shift calculation the standard <i>pGv</i> susceptibility is calculated and used in the calculation of the CSA tensor <sup class="reference" id="cite_ref-yates:prb:2007_1-0"><a href="#cite_note-yates:prb:2007-1">[1]</a></sup>. When <a class="mw-selflink selflink">LVGVCALC</a> is true, the magnetic susceptibility is also calculated with the <i>vGv</i> approximation. <a href="/wiki/index.php/LVGVAPPL" title="LVGVAPPL">LVGVAPPL</a> determines whether the <i>vGv</i> or <i>pGv</i> result is applied in the calculation of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G=0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+<mo mathvariant="bold">=</mo>
+<mn mathvariant="bold">0</mn>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G=0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G=0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=87373523a6a5a8386c67a65665ad394b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.805ex;"/></span> contribution to the CSA tensor.
+</p>
+<p>The <i>vGv</i> expression for the orbital susceptibility was introduced by d'Avezac <i>et al.</i> <sup class="reference" id="cite_ref-avezac:prb:2007_2-0"><a href="#cite_note-avezac:prb:2007-2">[2]</a></sup>.
+In VASP its ultra-soft generalization is used <sup class="reference" id="cite_ref-dewijs:havenith:jcp:2021_3-0"><a href="#cite_note-dewijs:havenith:jcp:2021-3">[3]</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>, <a href="/wiki/index.php/LVGVAPPL" title="LVGVAPPL">LVGVAPPL</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

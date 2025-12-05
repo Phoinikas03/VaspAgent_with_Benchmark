@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">LDISENTANGLED</a> = [logical]<br/> Default: <b>LDISENTANGLED</b> = .FALSE. 
+</p>
+<p>Description: Selects the <a href="/wiki/index.php/Constrained%E2%80%93random-phase%E2%80%93approximation_formalism#Disentangled_method" title="Constrained–random-phase–approximation formalism">disentangled cRPA method</a>. 
+</p>
+<p>Selects the cRPA method of Miyake, Aryasetiawan, and Imada<sup class="reference" id="cite_ref-miyake:prb:80_1-0"><a href="#cite_note-miyake:prb:80-1">[1]</a></sup>. Following screening is subtracted from the full RPA polarizability:
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tilde \epsilon_{n\bf k}^\sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ϵ<!-- ϵ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi mathvariant="bold">k</mi>
+</mrow>
+<mi>σ<!-- σ --></mi>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tilde \epsilon_{n\bf k}^\sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tilde \epsilon_{n\bf k}^\sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e2aafa2ba74a9bf25aebddf77a891a9&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 3.508ex;"/></span> is the disentangled band structure. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWEIGHTED" title="LWEIGHTED">LWEIGHTED</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDISENTANGLED%22_incategory:%22Examples%22" title='Special:Search/"LDISENTANGLED" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

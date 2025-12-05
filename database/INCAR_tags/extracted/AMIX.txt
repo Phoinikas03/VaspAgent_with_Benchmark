@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">AMIX</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">AMIX</a> specifies the linear mixing parameter.
+</p>
+<p>In VASP the eigenvalue spectrum of the charge dielectric matrix is calculated and written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file at each electronic step. This allows a rather easy optimization of the mixing parameters, if required. Search in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file for
+</p>
+<p>The parameters for the mixing are optimal if the mean eigenvalue Γ<sub>mean</sub>=1, and if the width of the eigenvalue spectrum is minimal. For an initial linear mixing (<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>≈0) an optimal setting for <a class="mw-selflink selflink">AMIX</a> can be found easily by setting <a class="mw-selflink selflink">AMIX</a><sub>optimal</sub>=<a class="mw-selflink selflink">AMIX</a><sub>current</sub>*Γ<sub>mean</sub>. For the Kerker scheme (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=1) either <a class="mw-selflink selflink">AMIX</a> or <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> can be optimized, but we recommend to change only <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> and keep <a class="mw-selflink selflink">AMIX</a> fixed (you must decrease <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> if the mean eigenvalue is larger than one, and increase <a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a> if the mean eigenvalue Γ<sub>mean</sub>&lt;1).
+However, the optimal <a class="mw-selflink selflink"><span style="color:black">AMIX</span></a> depends very much on the system, for metals this parameter usually has to be rather small, e.g. AMIX= 0.02.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22AMIX%22_incategory:%22Examples%22" title='Special:Search/"AMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,117 @@
+<p><a class="mw-selflink selflink">NATURALO</a> = [integer]<br/> Default: <b>NATURALO</b> = 0; for low scaling GW type calculations the default is 4 
+</p>
+<p>Description: calculate RPA natural orbitals.
+</p>
+<p>This flag should be used in combination with <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = G0W0R or <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = scGW0R.  The VASP code diagonalizes the RPA density
+matrix and writes the final natural orbitals to the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file.
+The one-electron occupancies on the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file can also be updated to the eigenvalues of the RPA density matrix. For <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = G0W0R, the interacting Green's function is approximated as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+G = G_0 + G_0 \Sigma G_0
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<msub>
+<mi>G</mi>
+<mn>0</mn>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>G</mi>
+<mn>0</mn>
+</msub>
+<mi mathvariant="normal">Σ<!-- Σ --></mi>
+<msub>
+<mi>G</mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+G = G_0 + G_0 \Sigma G_0
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+G = G_0 + G_0 \Sigma G_0
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=91cd9fa8397bd68ef3b9fa66b62787e6&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 18.087ex;"/></span>
+</p>
+<p>whereas for  <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = scGW0R the Dyson equation is solved
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+G = G_0 + G \Sigma G_0.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<msub>
+<mi>G</mi>
+<mn>0</mn>
+</msub>
+<mo>+</mo>
+<mi>G</mi>
+<mi mathvariant="normal">Σ<!-- Σ --></mi>
+<msub>
+<mi>G</mi>
+<mn>0</mn>
+</msub>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+G = G_0 + G \Sigma G_0.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+G = G_0 + G \Sigma G_0.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=341a2af1179d226a6d990ea5b1ed853b&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 17.679ex;"/></span>
+</p>
+<p>In both cases, the RPA density matrix is determined as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \gamma= \lim_{\tau \to 0^-} G(\tau) }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>γ<!-- γ --></mi>
+<mo>=</mo>
+<munder>
+<mo form="prefix" movablelimits="true">lim</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>τ<!-- τ --></mi>
+<mo stretchy="false">→<!-- → --></mo>
+<msup>
+<mn>0</mn>
+<mo>−<!-- − --></mo>
+</msup>
+</mrow>
+</munder>
+<mi>G</mi>
+<mo stretchy="false">(</mo>
+<mi>τ<!-- τ --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \gamma= \lim_{\tau \to 0^-} G(\tau) }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \gamma= \lim_{\tau \to 0^-} G(\tau) }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ba764a6cc58da129e5ee4b60d8d51aa4&amp;mode=mathml" style="vertical-align: -2.338ex; height: 4.343ex; width: 14.103ex;"/></span>. More details on the use of RPA natural orbitals can be found in Ref. <sup class="reference" id="cite_ref-ramberger2019rpa_1-0"><a href="#cite_note-ramberger2019rpa-1">[1]</a></sup>.
+</p>
+<p>The following settings are currently supported
+</p>
+<ul><li><a class="mw-selflink selflink">NATURALO</a>=0 calculate the density matrix, diagonalize the matrix and write the natural orbitals and eigenvalues of the density matrix to <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a>. The eigenvalues of the density matrix are stored in the occupancy entries of the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file, whereas the one-electron DFT eigenvalues remain untouched. This setting is usually not particularly useful for practical calculations and should be used only by experts. Furthermore, <a href="/wiki/index.php/LFINITE_TEMPERATURE" title="LFINITE TEMPERATURE">LFINITE_TEMPERATURE</a> should not be combined with this setting.</li></ul>
+<ul><li><a class="mw-selflink selflink">NATURALO</a>=1 calculate the density matrix, diagonalize the matrix only in the sub-block of unoccupied states, and write the occupied Kohn Sham orbitals, as well as the natural orbitals corresponding to unoccupied states to the file <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a>. The unoccupied orbitals are ordered according to their occupancies in the RPA density matrix. The one-electron occupancies and KS-DFT eigenvalues are not updated from their KS values (the occupancies will remain 1 for occupied Kohn-Sham orbitals and 0 for natural orbitals representing the virtual manifold). This setting has been used in Ref. <sup class="reference" id="cite_ref-ramberger2019rpa_1-1"><a href="#cite_note-ramberger2019rpa-1">[1]</a></sup>. See also Ref. <sup class="reference" id="cite_ref-GruneisNO_2-0"><a href="#cite_note-GruneisNO-2">[2]</a></sup> for further information. Note that all orbitals- even those with a tiny fractional occupancy -are treated as occupied orbitals and not updated: the algorithm should hence even work for metallic systems.</li></ul>
+<ul><li><a class="mw-selflink selflink">NATURALO</a>&lt;0. Similar to  <a class="mw-selflink selflink">NATURALO</a>=1 but additionally conserves ABS|<a class="mw-selflink selflink">NATURALO</a>| unoccupied Kohn-Sham states. This is expedient, for subsequent GW and BSE calculations to conserve  few unoccupied orbitals to their Kohn-Sham states.</li></ul>
+<ul><li>If 10 is added (e.g. <a class="mw-selflink selflink">NATURALO</a>=10, <a class="mw-selflink selflink">NATURALO</a>=11) the density matrix is diagonalizes using a perturbative Loewdin algorithm that attempts to keep the orbital order strictly conserved: E.g. the natural orbital matching closest to each Kohn-Sham orbital will be determined and stored. Use this tag for metals.</li></ul>
+<ul><li><a class="mw-selflink selflink">NATURALO</a>=2 (or 12) is similar to 0, but the one-electron occupancies are not updated. In rare cases this might lead to inconsistencies, if the orbital order changes between DFT and the RPA density matrix (i.e. a previously occupied DFT orbitals posses a smaller occupation in the RPA density matrix than some unoccupied Kohn-Sham orbitals and are moved into the unoccupied block). This problem can be reduced using <a class="mw-selflink selflink">NATURALO</a>=12, as described above. This flag, in combination with <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = scGW0R, can be used to evaluate the GW-singles contribution to the correlation energy.<sup class="reference" id="cite_ref-Klimessingles_3-0"><a href="#cite_note-Klimessingles-3">[3]</a></sup> One can deduct the HF singles and the GW singles energies from the energies after</li></ul>
+<p>Experience has shown that there is very little difference between the natural orbitals obtained using <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = G0W0R and <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = scGW0R. We strongly recommend to use the more efficient and better tested algorithm <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = G0W0R (with the exception of GW-singles) to determine natural orbitals. Furthermore, perform careful tests for <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>: the RPA total energy converges much faster then the natural orbitals. Using a too small <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> can yield natural orbitals that are non-optimal, leading to very slow convergence of correlated calculations with respect to the number of natural orbitals.
+A crucial test is that the following line
+</p>
+<p>in the stdout and OUTCAR file shows values close to zero (for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = G0W0R). The above value is perfectly acceptable and the value decreases as <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> increases. 
+</p>
+<ul><li><a class="mw-selflink selflink">NATURALO</a>=4 preserves original (DFT) orbitals but updates the eigenvalues in the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file to the QP energies. This mode is useful if only quasi-particle energies are corrected with the GW method, for instance when selecting <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=<a class="mw-redirect" href="/wiki/index.php/GW_calculations#gw0" title="GW calculations">EVGW0R</a>.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<ul><li><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> for response functions and <i>RPA</i> calculations</li>
+<li>for an overview on total energies using the <a href="/wiki/index.php/ACFDT/RPA_calculations" title="ACFDT/RPA calculations">ACFDT/RPA formalism</a></li>
+<li>for a practical guide to <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span></h2>

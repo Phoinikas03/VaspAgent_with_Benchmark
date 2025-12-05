@@ -1,0 +1,132 @@
+<p><a class="mw-selflink selflink">LMODELHF</a> = .TRUE. | .FALSE.<br/> Default: <b>LMODELHF</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMODELHF</a> selects dielectric-dependent hybrid functionals  with full exchange in the short-range, and <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> in the long-range.
+</p>
+<p><a class="mw-selflink selflink">LMODELHF</a>=.TRUE. selects the range separated hybrid functional suggested in Ref. <sup class="reference" id="cite_ref-chen2018nonempirical_1-0"><a href="#cite_note-chen2018nonempirical-1">[1]</a></sup>
+and Ref. <sup class="reference" id="cite_ref-cui2018doubly_2-0"><a href="#cite_note-cui2018doubly-2">[2]</a></sup> under the name dielectric-dependent hybrid functionals (DDH) and  doubly screened hybrid (DSH) functionals, respectively. These two hybrid functionals are both based on a common model for the dielectric function, but differ in the way how the range-separation parameters are obtained from first principles calculations. Their connection and performance have been discussed for instance in Ref. <sup class="reference" id="cite_ref-liu2019assessing_3-0"><a href="#cite_note-liu2019assessing-3">[3]</a></sup>. In principle,
+they can be considered to be a smartly constructed approximation to COH-SEX (local Coulomb hole plus screened exchange),
+albeit fulfilling many important constraints that the exact exchange correlation functional must observe.
+</p>
+<p>The corresponding functional has been available in VASP since VASP.5.2 released in 2009 (before the two publications), although the gradient contribution had been erroneously implemented in all VASP.5 releases and is only correct in VASP.6. The related bug fix has been made available by the authors of Ref. <sup class="reference" id="cite_ref-cui2018doubly_2-1"><a href="#cite_note-cui2018doubly-2">[2]</a></sup>. The nonlocal exchange part of the functional has also been used and documented in Ref. <sup class="reference" id="cite_ref-bokdam:scr:2016_4-0"><a href="#cite_note-bokdam:scr:2016-4">[4]</a></sup> and is covered in <a href="/wiki/index.php/Improving_the_dielectric_function" title="Improving the dielectric function">Improving the dielectric function</a>.
+</p>
+<p>Typically the user will need to set the following tags in the INCAR file:
+</p>
+<p>In this case, <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> specifies the amount of exact exchange in the long range, that is for short wave vectors (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \mathbf{G} \to 0 }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mo stretchy="false">→<!-- → --></mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \mathbf{G} \to 0 }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \mathbf{G} \to 0 }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=74184f70a490423f460724663cef7470&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.877ex;"/></span>). In the short range, that is for large wave vectors, always the full nonlocal exchange is used. The <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> determines how quickly the nonlocal exchange changes from <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> to 1. 
+</p>
+<p>Specifically, in VASP, the  Coulomb kernel <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  4 \pi e^2 / (\mathbf{q}+\mathbf{G})^2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>4</mn>
+<mi>π<!-- π --></mi>
+<msup>
+<mi>e</mi>
+<mn>2</mn>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<msup>
+<mo stretchy="false">)</mo>
+<mn>2</mn>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  4 \pi e^2 / (\mathbf{q}+\mathbf{G})^2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  4 \pi e^2 / (\mathbf{q}+\mathbf{G})^2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e4b799cca9698006e9a91272bcecd590&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 15.015ex;"/></span> in the exact exchange is multiplied by a model for the dielectric function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \epsilon^{-1} (\mathbf{q}+\mathbf{G})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \epsilon^{-1} (\mathbf{q}+\mathbf{G})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \epsilon^{-1} (\mathbf{q}+\mathbf{G})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c62f8b6d5f600fe0f638d3406e4de623&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 11.443ex;"/></span>:
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \mu  }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \mu  }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \mu  }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f8274327e29407dcc1656d93a1e55249&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> corresponds to <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>, and  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  {{\varepsilon}_{\infty}^{-1}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ε<!-- ε --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msubsup>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  {{\varepsilon}_{\infty}^{-1}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  {{\varepsilon}_{\infty}^{-1}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b7ae669a04759ab6c7532e6619641f86&amp;mode=mathml" style="vertical-align: -0.671ex; height: 3.009ex; width: 3.416ex;"/></span> is specified by <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>. In real space this correspond to a Coulomb kernel 
+</p>
+<p><br/>
+The remaining part of the exchange is handled by an appropriate semi-local exchange correlation functional. For further detail we refer to the literature listed below.
+</p>
+<p>Typical values for <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a> are listed in the table below
+</p>
+<p>These values have been obtained from fits of the dielectric function using the Nanoquanta kernel and partially self-consistent GW calculations as used in Ref. <sup class="reference" id="cite_ref-grueneis2014ionization_5-0"><a href="#cite_note-grueneis2014ionization-5">[5]</a></sup>. The values can be also estimated from simple dimensional scaling relations of the valence electron density. Furthermore band gap predictions are not very sensitive to the choice of <a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/HFSCREEN" title="HFSCREEN">HFSCREEN</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism#Thomas-Fermi_exponential_screening_with_short-range_Hartree-Fock_exchange" title="Hybrid functionals: formalism">Thomas-Fermi screening</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>,
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

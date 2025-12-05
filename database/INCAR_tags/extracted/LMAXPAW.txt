@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LMAXPAW</a> = [integer]<br/> Default: <b>LMAXPAW</b> = 2<i>l</i><sub> max</sub>, where <i>l</i><sub> max</sub> is the maximum angular quantum number of the PAW partial waves in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file. 
+</p>
+<p>Description: The maximum <i>l</i>-quantum number for the evaluation of the one-center terms on the radial grids in the <a class="mw-redirect" href="/wiki/index.php/PAW_method" title="PAW method">PAW method</a>. 
+</p>
+<p>Useful settings for LMAXPAW are for instance:
+</p>
+<p>In this case, only spherical terms are evaluated on the radial grid. This does not mean that aspherical terms are totally neglected, because the compensation charges are always expanded up to 2<i>l</i><sub> max</sub>  on the plane wave grid.
+</p>
+<p>For <code style="padding: 2px"><a class="mw-selflink selflink">LMAXPAW</a> = -1</code>, no one-center correction terms are evaluated on the radial support grid, which effectively means that the behavior of US-PP's is recovered with PAW input datasets. Usually, this allows for somewhat faster calculations, and this switch might be of interest for relaxations and molecular dynamics runs. Energies should be evaluated with the default setting for <a class="mw-selflink selflink">LMAXPAW</a>. For spinpolarized calculations, results using LMAXPAW=-1 might differ significantly from conventional PAW calculations, hence the use of <code style="padding: 2px"><a class="mw-selflink selflink">LMAXPAW</a> = -1</code>  is not recommended for magnetic materials, spin-polarized molecules or atoms.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMAXPAW%22_incategory:%22Examples%22" title='Special:Search/"LMAXPAW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

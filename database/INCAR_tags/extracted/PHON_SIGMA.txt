@@ -1,0 +1,87 @@
+<p><a class="mw-selflink selflink">PHON_SIGMA</a> =  [real] 
+</p>
+<p>Description: Set the width of the Gaussian function in eV to compute the phonon density of states.
+</p>
+<p>The density of states is computed between 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma]}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<msub>
+<mi>ω<!-- ω --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>min</mtext>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<mn>5</mn>
+<mi>σ<!-- σ --></mi>
+<mo>,</mo>
+<msub>
+<mi>ω<!-- ω --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>max</mtext>
+</mrow>
+</msub>
+<mo>+</mo>
+<mn>5</mn>
+<mi>σ<!-- σ --></mi>
+<mo stretchy="false">]</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma]}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle [\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma]}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a6520ee41e34b3d1620141dc2b3cc395&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 22.148ex;"/></span> with 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \omega_{\text{min}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ω<!-- ω --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>min</mtext>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \omega_{\text{min}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \omega_{\text{min}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cc439f6dbc548dff844560ca8ec2f92e&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 4.418ex;"/></span> and 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \omega_{\text{max}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ω<!-- ω --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>max</mtext>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \omega_{\text{max}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \omega_{\text{max}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6bc564d6ecc25819d957e2f12f5b3b80&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 4.737ex;"/></span> the lowest and highest phonon frequency and 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>σ<!-- σ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a2ab7d71a0f07f388ff823293c147d21&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> the broadening <a class="mw-selflink selflink">PHON_SIGMA</a>.
+The number of energy points in this interval is set by <a href="/wiki/index.php/PHON_NEDOS" title="PHON NEDOS">PHON_NEDOS</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/PHON_NWRITE" title="PHON NWRITE">PHON_NWRITE</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>,
+<a href="/wiki/index.php/PHON_G_CUTOFF" title="PHON G CUTOFF">PHON_G_CUTOFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPHON_DISPERSION%22_incategory:%22Examples%22" title='Special:Search/"LPHON DISPERSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

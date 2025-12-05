@@ -1,0 +1,141 @@
+<p><a class="mw-selflink selflink">LIBXC1</a> = [string] or [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBXC1</a> specifies the exchange or exchange-correlation functional from the library of exchange-correlation functionals Libxc<sup class="reference" id="cite_ref-marques:cpc:2012_1-0"><a href="#cite_note-marques:cpc:2012-1">[1]</a></sup><sup class="reference" id="cite_ref-lehtola:sx:2018_2-0"><a href="#cite_note-lehtola:sx:2018-2">[2]</a></sup><sup class="reference" id="cite_ref-libxc_3-0"><a href="#cite_note-libxc-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBXC1</a> and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> can be set to a label (string) or number (integer) associated with a functional listed on the Libxc website<sup class="reference" id="cite_ref-libxc_list_4-0"><a href="#cite_note-libxc_list-4">[4]</a></sup>, e.g., <code>GGA_X_PBE</code> and <code>101</code> for PBE exchange. The label indicates if this is an exchange (X), correlation (C), or exchange-correlation (XC) functional, and which family it belongs to, namely LDA (LDA or HYB_LDA), GGA (GGA or HYB_GGA) or meta-GGA (MGGA or HYB_MGGA). If <a class="mw-selflink selflink">LIBXC1</a> corresponds to an exchange functional, then it can be used in combination with <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> for the correlation functional.
+</p>
+<p>Libxc is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libxc_3-1"><a href="#cite_note-libxc-3">[3]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DUSELIBXC" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#Libxc_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<p>Calculations with Laplacian-dependent meta-GGA functionals and meta-GGA-based hybrid functionals are possible since VASP.6.4.0.
+</p>
+<h2><span class="mw-headline" id="How_to">How to</span></h2>
+<p>The allowed possibilities for <a class="mw-selflink selflink">LIBXC1</a> and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> are the following:
+</p>
+<ul><li>Both <a class="mw-selflink selflink">LIBXC1</a>  and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> are specified and correspond to exchange and correlation functionals, respectively.</li>
+<li>Only <a class="mw-selflink selflink">LIBXC1</a>  is specified and corresponds to an exchange or exchange-correlation functional.</li></ul>
+<ul><li><a class="mw-selflink selflink">LIBXC1</a>  and <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> can correspond to functionals of different families, e.g., a meta-GGA and a GGA, respectively.</li></ul>
+<p>Regarding other tags in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> related to Libxc:
+</p>
+<ul><li>One also has to specify <a href="/wiki/index.php/GGA" title="GGA">GGA</a> = LIBXC for LDA, GGA and GGA-based hybrid functionals or <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> = LIBXC for meta-GGA functionals and meta-GGA-based hybrid functionals. Note that if one of the tags (<a class="mw-selflink selflink">LIBXC1</a>  or <a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a> ) corresponds to a meta-GGA, while the other corresponds to a GGA or LDA, then <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> = LIBXC (and not <a href="/wiki/index.php/GGA" title="GGA">GGA</a> = LIBXC) has to be specified.</li>
+<li>Many of the functionals implemented in Libxc have parameters that can be modified. This can be done via the tags <a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a> and <a href="/wiki/index.php/LIBXC2_Pn" title="LIBXC2 Pn">LIBXC2_Pn</a>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n=1, 2, \ldots}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n=1, 2, \ldots}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n=1, 2, \ldots}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3c9d8d9ab2bc60bb31c9f8419a5edace&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 11.609ex;"/></span>.</li>
+<li>The tag <a href="/wiki/index.php/LTBOUNDLIBXC" title="LTBOUNDLIBXC">LTBOUNDLIBXC</a>, which is .FALSE. by default, allows to enforce the lower bound on the kinetic-energy density (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}^{\mathrm{W}}&lt;\tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">W</mi>
+</mrow>
+</mrow>
+</msubsup>
+<mo>&lt;</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}^{\mathrm{W}}&lt;\tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}^{\mathrm{W}}&lt;\tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=83a600fd43fc6e1f1569470d20e4ca65&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.843ex; width: 8.466ex;"/></span>) with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo form="prefix" movablelimits="true">max</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+<mo>,</mo>
+<msubsup>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">W</mi>
+</mrow>
+</mrow>
+</msubsup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}=\max(\tau_{\sigma},\tau_{\sigma}^{\mathrm{W}})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3747bb7c8fe6854ec3681fbcd5689a42&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.009ex; width: 17.824ex;"/></span> before <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c985b918bbef664263836bbaa6b0a2a7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.189ex;"/></span> is used in a meta-GGA functional from Libxc.</li></ul>
+<p>For calculations with hybrid functionals (<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>=True), the following provides some explanations:
+</p>
+<ul><li>The Libxc functionals whose tag starts with HYB already include the mixing parameter. Therefore, for them, the <a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>, <a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>, <a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>, <a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>, <a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>, and <a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a> tags can not be used (more information on how to modify the mixing and screening parameters can be found at <a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a>). However, it is still necessary to set <a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a> at the proper value.</li>
+<li>If the semilocal component of the hybrid functional is constructed using Libxc functionals that do not contain HYB in the tag, then <a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>, <a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>, <a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>, and <a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a> will be used and multiply</li></ul>
+<h2><span class="mw-headline" id="Examples_of_INCAR">Examples of <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a></span></h2>
+<ul><li>PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-0"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup></li></ul>
+<ul><li>SCAN<sup class="reference" id="cite_ref-sun:prl:15_6-0"><a href="#cite_note-sun:prl:15-6">[6]</a></sup></li></ul>
+<ul><li>PBEh (PBE0)<sup class="reference" id="cite_ref-adamo:jcp:1999_7-0"><a href="#cite_note-adamo:jcp:1999-7">[7]</a></sup></li></ul>
+<ul><li>SCAN0</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a>,
+<a href="/wiki/index.php/LIBXC2_Pn" title="LIBXC2 Pn">LIBXC2_Pn</a>,
+<a href="/wiki/index.php/LTBOUNDLIBXC" title="LTBOUNDLIBXC">LTBOUNDLIBXC</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBXC1%22_incategory:%22Examples%22" title='Special:Search/"LIBXC1" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

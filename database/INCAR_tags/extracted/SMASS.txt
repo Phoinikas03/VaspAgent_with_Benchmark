@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">SMASS</a> = -3 | -2 | -1 | [real] ≥ 0<br/> Default: <b>SMASS</b> = -3 
+</p>
+<p>Description: <a class="mw-selflink selflink">SMASS</a> controls the velocities during an ab-initio molecular-dynamics run.
+</p>
+<ul><li><a class="mw-selflink selflink">SMASS</a>=-3</li></ul>
+<ul><li><a class="mw-selflink selflink">SMASS</a>=-2</li></ul>
+<ul><li><a class="mw-selflink selflink">SMASS</a>=-1</li></ul>
+<ul><li><a class="mw-selflink selflink">SMASS</a>≥0</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Structure_optimization" title="Structure optimization">structure optimization</a>,
+<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>,
+<a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>,
+<a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>,
+<a href="/wiki/index.php/TEEND" title="TEEND">TEEND</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SMASS%22_incategory:%22Examples%22" title='Special:Search/"SMASS" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>

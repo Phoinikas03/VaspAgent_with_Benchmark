@@ -1,0 +1,235 @@
+<p><a class="mw-selflink selflink">MDALGO</a> = 0 | 1 | 2 | 3 | 4 | 5 | 11 | 21 | 13<br/> Default: <b>MDALGO</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">MDALGO</a> specifies the molecular-dynamics-simulation protocol (in case <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0 and VASP was compiled with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>). 
+</p>
+<h2><span id="MDALGO.3D0:_Standard_molecular_dynamics"></span><span class="mw-headline" id="MDALGO=0:_Standard_molecular_dynamics"><a class="mw-selflink selflink">MDALGO</a>=0: Standard molecular dynamics</span></h2>
+<p>Should provide the same results as <a class="mw-selflink selflink">MDALGO</a>=2 (<a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a>). The difference is that it is a different implementation and works also without the precompiler flag <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>.
+</p>
+<h3><span class="mw-headline" id="NVE_ensemble">NVE ensemble</span></h3>
+<ul><li>To perform a calculation in the NVE ensemble:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=0 and set <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>=-3.</li></ol>
+<h2><span id="MDALGO.3D1:_Andersen_thermostat"></span><span class="mw-headline" id="MDALGO=1:_Andersen_thermostat"><a class="mw-selflink selflink">MDALGO</a>=1: Andersen thermostat</span></h2>
+<p>For the description of the Andersen thermostat see: <a href="/wiki/index.php/Andersen_thermostat" title="Andersen thermostat">Andersen thermostat</a>.
+</p>
+<p>The Andersen thermostat is only available for the NVT ensemble.
+</p>
+<h3><span class="mw-headline" id="Standard_molecular_dynamics_in">Standard molecular dynamics in</span></h3>
+<ul><li>For a standard molecular dynamics run with Anderson thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1, and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a></li></ol>
+<h3><span class="mw-headline" id="Constrained_molecular_dynamics">Constrained molecular dynamics</span></h3>
+<p>For a description of constrained molecular dynamics see <a href="/wiki/index.php/Constrained_molecular_dynamics" title="Constrained molecular dynamics">Constrained molecular dynamics</a>.
+</p>
+<ul><li>For a constrained molecular dynamics run with Andersen thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1, and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a></li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the STATUS parameter for the constrained coordinates to 0</li>
+<li>When the free-energy gradient is to be computed, set <a href="/wiki/index.php/LBLUEOUT" title="LBLUEOUT">LBLUEOUT</a>=.TRUE.</li></ol>
+<h3><span class="mw-headline" id="Slow-growth_approach">Slow-growth approach</span></h3>
+<p>For a description of slow-growth approach see <a href="/wiki/index.php/Slow-growth_approach" title="Slow-growth approach">Slow-growth approach</a>.
+</p>
+<ul><li>For a slow-growth simulation, one has to perform a calcualtion very similar to <a href="/wiki/index.php/Constrained_molecular_dynamics" title="Constrained molecular dynamics">Constrained molecular dynamics</a> but additionally the transformation velocity-related <a href="/wiki/index.php/INCREM" title="INCREM">INCREM</a>-tag for each geometric parameter with <tt>STATUS=0</tt> has to be specified:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1, and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a></li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the STATUS parameter for the constrained coordinates to 0</li>
+<li>When the free-energy gradient is to be computed, set <a href="/wiki/index.php/LBLUEOUT" title="LBLUEOUT">LBLUEOUT</a>=.TRUE.</li></ol>
+<ol start="5">
+<li>Specify the transformation velocity-related <a href="/wiki/index.php/INCREM" title="INCREM">INCREM</a>-tag for each geometric parameter with <tt>STATUS=0</tt>.</li>
+</ol>
+<h3><span class="mw-headline" id="Monitoring_geometric_parameters">Monitoring geometric parameters</span></h3>
+<p>Geometric parameters with <tt>STATUS = 7</tt> in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file are monitored during the MD simulation.
+The corresponding values are written onto the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, for each MD step, after the lines following the string <tt>Monit_coord</tt>.
+</p>
+<p>Sometimes it is desirable to terminate the simulation if all values of monitored parameters get larger that some predefined upper and/or lower limits. These limits can be set by the user by means of the <a href="/wiki/index.php/VALUE_MAX" title="VALUE MAX">VALUE_MAX</a> and <a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>-tags.
+</p>
+<ul><li>To monitor geometric parameters during an MD run:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1, and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>.</li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the constrained coordinates to 7.</li>
+<li>Optionally, set the upper and/or lower limits for the coordinates, by means of the <a href="/wiki/index.php/VALUE_MAX" title="VALUE MAX">VALUE_MAX</a> and <a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>-tags, respectively.</li></ol>
+<h3><span class="mw-headline" id="Metadynamics">Metadynamics</span></h3>
+<p>For a description of metadynamics see <a href="/wiki/index.php/Metadynamics" title="Metadynamics">Metadynamics</a>.
+</p>
+<ul><li>For a metadynamics run with Andersen thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1 (or <a class="mw-selflink selflink">MDALGO</a>=11 in VASP 5.x), and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>.</li>
+<li>Set the parameters <a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>, <a href="/wiki/index.php/HILLS_W" title="HILLS W">HILLS_W</a>, and <a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>.</li>
+<li>Define collective variables in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <a class="new" href="/wiki/index.php?title=STATUS&amp;action=edit&amp;redlink=1" title="STATUS (page does not exist)">STATUS</a> parameter for the collective variables to 5.</li>
+<li>If needed, define the bias potential in the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file.</li></ol>
+<p>The actual time-dependent bias potential is written to the <a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a>-file, which is updated after adding a new Gaussian. At the beginning of the simulation, VASP attempts to read the initial bias potential from the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file. For the continuation of a metadynamics run, copy <a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a> to <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>. The values of all collective variables for each MD step are listed in <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, check the lines after the string <tt>Metadynamics</tt>.
+</p>
+<h3><span class="mw-headline" id="Biased_molecular_dynamics">Biased molecular dynamics</span></h3>
+<p>For a description of biased molecular dynamics see <a href="/wiki/index.php/Biased_molecular_dynamics" title="Biased molecular dynamics">Biased molecular dynamics</a>.
+</p>
+<ul><li>For a biased molecular dynamics run with Andersen thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1 (or <a class="mw-selflink selflink">MDALGO</a>=11 in VASP 5.x), and choose an appropriate setting for <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>.</li>
+<li>In order to avoid updating of the bias potential, set <a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>=<a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Define collective variables in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the collective variables to 5.</li>
+<li>Define the bias potential in the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file if necessary.</li></ol>
+<p>The values of all collective variables for each MD step are listed in the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, check the lines after the string <tt>Metadynamics</tt>.
+</p>
+<h3><span class="mw-headline" id="Special_case:_NVE_ensemble">Special case: NVE ensemble</span></h3>
+<p>NVE ensemble calculations can be also run by selecting the Anderson thermostat and setting the update collision probability (<a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>) to zero.
+</p>
+<ul><li>To run an NVE ensemble:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=1 and <a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>=0.0.</li></ol>
+<h2><span id="MDALGO.3D2:_Nose-Hoover_thermostat"></span><span class="mw-headline" id="MDALGO=2:_Nose-Hoover_thermostat"><a class="mw-selflink selflink">MDALGO</a>=2: Nose-Hoover thermostat</span></h2>
+<p>For the description of the Nose-Hoover thermostat see: <a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">Nose-Hoover thermostat</a>.
+</p>
+<p>The Nose-Hoover thermostat is currently only available for the NVT ensemble. 
+</p>
+<h3><span class="mw-headline" id="Standard_molecular_dynamics">Standard molecular dynamics</span></h3>
+<ul><li>For a standard molecular dynamics run with Nose-Hoover thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2, and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>.</li></ol>
+<h3><span class="mw-headline" id="Constrained_molecular_dynamics_2">Constrained molecular dynamics</span></h3>
+<p>For a description of constrained molecular dynamics see <a href="/wiki/index.php/Constrained_molecular_dynamics" title="Constrained molecular dynamics">Constrained molecular dynamics</a>.
+</p>
+<ul><li>For a constrained molecular dynamics run with Nose-Hoover thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2, and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>.</li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the STATUS parameter for the constrained coordinates to 0.</li>
+<li>When the free-energy gradient is to be computed, set <a href="/wiki/index.php/LBLUEOUT" title="LBLUEOUT">LBLUEOUT</a>=.TRUE.</li></ol>
+<h3><span class="mw-headline" id="Slow-growth_approach_2">Slow-growth approach</span></h3>
+<p>For a description of slow-growth approach see <a href="/wiki/index.php/Slow-growth_approach" title="Slow-growth approach">Slow-growth approach</a>.
+</p>
+<ul><li>For a slow-growth approach run with Nose-Hoover thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2, and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a></li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the constrained coordinates to 0</li>
+<li>When the free-energy gradient is to be computed, set <a href="/wiki/index.php/LBLUEOUT" title="LBLUEOUT">LBLUEOUT</a>=.TRUE.</li></ol>
+<ol start="5">
+<li>Specify the transformation velocity-related <a href="/wiki/index.php/INCREM" title="INCREM">INCREM</a>-tag for each geometric parameter with <tt>STATUS=0</tt></li>
+</ol>
+<h3><span class="mw-headline" id="Monitoring_geometric_parameters_2">Monitoring geometric parameters</span></h3>
+<p>Geometric parameters with <tt>STATUS = 7</tt> in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file are monitored during the MD simulation.
+The corresponding values are written onto the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, for each MD step, after the lines following the string <tt>Monit_coord</tt>.
+</p>
+<p>Sometimes it is desirable to terminate the simulation if all values of monitored parameters get larger that some predefined upper and/or lower limits. These limits can be set by the user by means of the <a href="/wiki/index.php/VALUE_MAX" title="VALUE MAX">VALUE_MAX</a> and <a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>-tags.
+</p>
+<p>To monitor geometric parameters during an MD run:
+</p>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2, and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a></li>
+<li>Define geometric constraints in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the constrained coordinates to 7</li>
+<li>Optionally, set the upper and/or lower limits for the coordinates, by means of the <a href="/wiki/index.php/VALUE_MAX" title="VALUE MAX">VALUE_MAX</a> and <a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>-tags, respectively.</li></ol>
+<h3><span class="mw-headline" id="Metadynamics_2">Metadynamics</span></h3>
+<p>For a description of metadynamics see <a href="/wiki/index.php/Metadynamics" title="Metadynamics">Metadynamics</a>.
+</p>
+<ul><li>For a metadynamics run with Nose-Hoover thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2 (or <a class="mw-selflink selflink">MDALGO</a>=21 in VASP 5.x), and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>.</li>
+<li>Set the parameters <a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>, <a href="/wiki/index.php/HILLS_W" title="HILLS W">HILLS_W</a>, and <a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>.</li>
+<li>Define collective variables in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the collective variables to 5.</li>
+<li>If needed, define the bias potential in the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file.</li></ol>
+<p>The actual time-dependent bias potential is written to the <a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a>-file, which is updated after adding a new Gaussian. At the beginning of the simulation, VASP attempts to read the initial bias potential from the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file. For the continuation of a metadynamics run, copy <a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a> to <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>. The values of all collective variables for each MD step are listed in <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, check the lines after the string <tt>Metadynamics</tt>.
+</p>
+<h3><span class="mw-headline" id="Biased_molecular_dynamics_2">Biased molecular dynamics</span></h3>
+<p>For a description of biased molecular dynamics see <a href="/wiki/index.php/Biased_molecular_dynamics" title="Biased molecular dynamics">Biased molecular dynamics</a>.
+</p>
+<ul><li>For a biased molecular dynamics run with Nose-Hoover thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=2 (or <a class="mw-selflink selflink">MDALGO</a>=21 in VASP 5.x), and choose an appropriate setting for <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>.</li>
+<li>In order to avoid updating of the bias potential, set <a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>=<a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Define collective variables in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file, and set the <tt>STATUS</tt> parameter for the collective variables to 5.</li>
+<li>Define the bias potential in the <a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>-file.</li></ol>
+<p>The values of all collective variables for each MD step are listed in the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>-file, check the lines after the string <tt>Metadynamics</tt>.
+</p>
+<h2><span id="MDALGO.3D3:_Langevin_thermostat"></span><span class="mw-headline" id="MDALGO=3:_Langevin_thermostat"><a class="mw-selflink selflink">MDALGO</a>=3: Langevin thermostat</span></h2>
+<p>For the description of the Langevin thermostat see: <a href="/wiki/index.php/Langevin_thermostat" title="Langevin thermostat">Langevin thermostat</a>.
+</p>
+<p>The Langevin thermostat is available for <a href="/wiki/index.php/NVT_ensemble" title="NVT ensemble">NVT</a> and <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT</a> ensembles.
+</p>
+<h3><span class="mw-headline" id="NVT-simulation_with_Langevin_thermostat"><i>NVT</i>-simulation with Langevin thermostat</span></h3>
+<ul><li>To run an <i>NVT</i>-simulation with a Langevin thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=2.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=3 to invoke the Langevin thermostat.</li>
+<li>Specify friction coefficients for all species in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, by means of the <a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>-tag.</li></ol>
+<h3><span class="mw-headline" id="NpT-simulation_with_Langevin_thermostat"><i>NpT</i>-simulation with Langevin thermostat</span></h3>
+<p>The Langevin dynamics in the isobaric-isothermal ensemble is calculated by the method of Parrinello and Rahman<sup class="reference" id="cite_ref-parrinello:prl:1980_1-0"><a href="#cite_note-parrinello:prl:1980-1">[1]</a></sup><sup class="reference" id="cite_ref-parrinello:jap:1981_2-0"><a href="#cite_note-parrinello:jap:1981-2">[2]</a></sup> (see <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT ensemble</a> for more descriptions) combined with a <a href="/wiki/index.php/Langevin_thermostat" title="Langevin thermostat">Langevin thermostat</a>.
+</p>
+<ul><li>To run an NpT-simulation (Parinello-Rahman dynamics) with a Langevin thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a>.</li>
+<li>Set <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=3 to allow for relaxation of the cell volume and shape. At the moment, dynamics with <i>fixed volume+variable shape</i> (<a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=4) or <i>fixed shape+variable volume</i> (<a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=7) are not available.</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=3 to invoke the Langevin thermostat.</li>
+<li>Specify friction coefficients for all species in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, by means of the <a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>-tag.</li>
+<li>Specify a separate set of friction coefficient for the lattice degrees-of-freedom, using the <a href="/wiki/index.php/LANGEVIN_GAMMA_L" title="LANGEVIN GAMMA L">LANGEVIN_GAMMA_L</a>-tag.</li>
+<li>Set a mass for the lattice degrees-of-freedom, using the <a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a>-tag.</li>
+<li>Optionally, one may define an external pressure (in kB), by means of the <a href="/wiki/index.php/PSTRESS" title="PSTRESS">PSTRESS</a>-tag.</li></ol>
+<p>Note that the advanced simulation protocols, such metadynamics, or geometric constraints and restraints are available within the <a class="mw-selflink selflink">MDALGO</a>=3 setting. 
+</p>
+<h3><span class="mw-headline" id="Stochastic_boundary_conditions">Stochastic boundary conditions</span></h3>
+<p>In some cases it is desirable to study approach of initially non-equilibrium system to equilibrium. Examples of such simulations include the impact problems when a particle with large kinetic energy hits a surface or calculation of friction force between two surfaces sliding with respect to each other. As shown by Toton <i>et al.</i><sup class="reference" id="cite_ref-Toton10_3-0"><a href="#cite_note-Toton10-3">[3]</a></sup>, this type of problems can be studied using the stochastic boundary conditions (SBC) derived from the generalized Langevin equation by Kantorovich and Rompotis.<sup class="reference" id="cite_ref-Kantorovich08_4-0"><a href="#cite_note-Kantorovich08-4">[4]</a></sup> In this approach, the system of interest is divided into three regions: (a) fixed atoms, (b) the internal (Newtonian) atoms moving according to Newtonian dynamics, and (c) a buffer region of Langevin atoms (<i>i.e.</i>, atoms governed by <a href="#LangevinEOM">Langevin equations of motion</a>) located between (a) and (b).
+</p>
+<p>The role of the Langevin atoms is to dissipate heat, while the fixed atoms are needed solely to create the correct potential well for the Langevin atoms to move in. The Newtonian region should include all atoms relevant to the process under study: in the case of the impact problem, for instance, the Newtonian region should contain atoms of the molecule hitting the surface and several uppermost layers of the material forming the surface. Performing molecular dynamics with such a setup guarantees that the system (possibly out of equilibrium initially) arrives at the appropriate canonical distribution.
+</p>
+<ul><li>To run a simulation with stochastic boundary conditions, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=2</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=3 to invoke the Langevin thermostat</li>
+<li>Prepare the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file in such a way that the Newtonian and Langevin atoms are treated as different species (even if they are chemically identical). In your <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a>, use "selective dynamics" and the corresponding logical flags to define the frozen and moveable atoms.</li>
+<li>Specify friction coefficients γ, for all species in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, by means of the <a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>-tag: set the friction coefficients to 0 for all fixed and Newtonian atoms, and choose a proper γ for the Langevin atoms.</li></ol>
+<p>Consider a system consisting of 16 hydrogen and 48 silicon atoms. Suppose that eight silicon atoms are considered to be Langevin atoms and the remaining 32 Si atoms are either fixed or Newtonian atoms. The Langevin and Newtonian (or fixed) atoms should be considered as different species, <i>i.e.</i>, the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a>-file should contain the line like this:
+</p>
+<p>As only the final eight Si atoms are considered to be Langevin atoms, the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>-file should contain the following line defining the friction coefficients:
+</p>
+<p><i>i.e.</i>, for all non-Langevin atoms, γ should be set to zero.
+</p>
+<h2><span id="MDALGO.3D4:_Nose_Hoover_chains_thermostat"></span><span class="mw-headline" id="MDALGO=4:_Nose_Hoover_chains_thermostat"><a class="mw-selflink selflink">MDALGO</a>=4: Nose Hoover chains thermostat</span></h2>
+<p>For a description of Nose Hoover chains theromastat, see <a class="mw-redirect" href="/wiki/index.php/NHC_thermostat" title="NHC thermostat">NHC thermostat</a>.
+</p>
+<ul><li>To run an <i>NVT</i>-simulation with a Nose Hoover chains thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=2</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=4 to invoke the thermostat, select the number of thermostats in chain via <a href="/wiki/index.php/NHC_NCHAINS" title="NHC NCHAINS">NHC_NCHAINS</a> and choose an appropriate setting for the thermostat parameter <a href="/wiki/index.php/NHC_PERIOD" title="NHC PERIOD">NHC_PERIOD</a>.</li></ol>
+<p>Note that the advanced simulation protocols, such metadynamics, or geometric constraints and restraints are available within the <a class="mw-selflink selflink">MDALGO</a>=4 setting. 
+</p>
+<h2><span id="MDALGO.3D5:_Canonical_sampling_through_velocity-rescaling_.28CSVR_thermostat.29"></span><span class="mw-headline" id="MDALGO=5:_Canonical_sampling_through_velocity-rescaling_(CSVR_thermostat)"><a class="mw-selflink selflink">MDALGO</a>=5: Canonical sampling through velocity-rescaling (CSVR thermostat)</span></h2>
+<p>For a description of CSVR theromastat, see <a href="/wiki/index.php/CSVR_thermostat" title="CSVR thermostat">CSVR thermostat</a>.
+</p>
+<ul><li>To run an <i>NVT</i>-simulation with a CSVR thermostat, one has to:</li></ul>
+<ol><li>Set the standard MD-related tags: <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0, <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a>, <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>, and <a href="/wiki/index.php/NSW" title="NSW">NSW</a></li>
+<li>Set <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=2</li>
+<li>Set <a class="mw-selflink selflink">MDALGO</a>=5 to invoke the thermostat and choose an appropriate setting for the thermostat parameter <a href="/wiki/index.php/CSVR_PERIOD" title="CSVR PERIOD">CSVR_PERIOD</a>.</li></ol>
+<p>Note that the advanced simulation protocols, such metadynamics, or geometric constraints and restraints are available within the <a class="mw-selflink selflink">MDALGO</a>=5 setting.
+</p>
+<h2><span id="MDALGO.3D13:_Multiple_Andersen_thermostats"></span><span class="mw-headline" id="MDALGO=13:_Multiple_Andersen_thermostats"><a class="mw-selflink selflink">MDALGO</a>=13: Multiple Andersen thermostats</span></h2>
+<p>Up to three user-defined atomic subsystems may be coupled with independent Andersen thermostats<sup class="reference" id="cite_ref-Andersen80_5-0"><a href="#cite_note-Andersen80-5">[5]</a></sup> (see remarks under <a class="mw-selflink selflink">MDALGO</a>=1 as well).
+The <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file must be organized such that the positions of atoms of subsystem <i>i+1</i> are defined after those for the subsystem <i>i</i>, and the following flags must be set by the user: 
+</p>
+<ul><li><a href="/wiki/index.php/NSUBSYS" title="NSUBSYS">NSUBSYS</a>=[int array]</li></ul>
+<ul><li><a href="/wiki/index.php/TSUBSYS" title="TSUBSYS">TSUBSYS</a>=[real array]</li></ul>
+<ul><li><a href="/wiki/index.php/PSUBSYS" title="PSUBSYS">PSUBSYS</a>=[real array]</li></ul>
+<h2><span class="mw-headline" id="Related_Tags_and_Sections">Related Tags and Sections</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>,
+<a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>,
+<a href="/wiki/index.php/ANDERSEN_PROB" title="ANDERSEN PROB">ANDERSEN_PROB</a>,
+<a href="/wiki/index.php/RANDOM_SEED" title="RANDOM SEED">RANDOM_SEED</a>,
+<a href="/wiki/index.php/LBLUEOUT" title="LBLUEOUT">LBLUEOUT</a>,
+<a href="/wiki/index.php/SHAKETOL" title="SHAKETOL">SHAKETOL</a>,
+<a href="/wiki/index.php/SHAKEMAXITER" title="SHAKEMAXITER">SHAKEMAXITER</a>,
+<a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>,
+<a href="/wiki/index.php/HILLS_W" title="HILLS W">HILLS_W</a>,
+<a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>,
+<a href="/wiki/index.php/INCREM" title="INCREM">INCREM</a>,
+<a href="/wiki/index.php/VALUE_MIN" title="VALUE MIN">VALUE_MIN</a>,
+<a href="/wiki/index.php/VALUE_MAX" title="VALUE MAX">VALUE_MAX</a>,
+<a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>,
+<a href="/wiki/index.php/LANGEVIN_GAMMA_L" title="LANGEVIN GAMMA L">LANGEVIN_GAMMA_L</a>,
+<a href="/wiki/index.php/PMASS" title="PMASS">PMASS</a>,
+<a href="/wiki/index.php/NSUBSYS" title="NSUBSYS">NSUBSYS</a>,
+<a href="/wiki/index.php/TSUBSYS" title="TSUBSYS">TSUBSYS</a>,
+<a href="/wiki/index.php/PSUBSYS" title="PSUBSYS">PSUBSYS</a>,
+<a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>,
+<a href="/wiki/index.php/PENALTYPOT" title="PENALTYPOT">PENALTYPOT</a>,
+<a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a>,
+<a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MDALGO%22_incategory:%22Examples%22" title='Special:Search/"MDALGO" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

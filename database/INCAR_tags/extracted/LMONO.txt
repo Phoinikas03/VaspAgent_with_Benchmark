@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">LMONO</a> = .TRUE. | .FALSE.<br/> Default: <b>LMONO</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LMONO</a> switches on monopole-monopole corrections for the total energy.
+</p>
+<p>The flag switches on monopole corrections for charged systems. The correction is calculated only a posteriori for the total energy.  No correction to the potential is calculated.
+</p>
+<p>The primary use of this flag is for defect calculations in charged supercells, as well
+as charged 0D systems (molecules and atoms). VASP also automatically calculates
+corrections to the total energy related to repeated dipoles (<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>=4). 
+The user then needs to decide whether
+those are sensible or not. Specifically, for super cells using periodic boundary conditions, 
+it is often not possible to determine the dipole at the defect site accurately,
+whereas for 0D systems (i.e. atoms and molecules) the dipole can be determined 
+accurately.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>,
+<a href="/wiki/index.php/EPSILON" title="EPSILON">EPSILON</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>,
+<a href="/wiki/index.php/EFIELD" title="EFIELD">EFIELD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LMONO%22_incategory:%22Examples%22" title='Special:Search/"LMONO" incategory:"Examples"'>Examples that use this tag</a>
+</p>

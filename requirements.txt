@@ -1,0 +1,13 @@
+anthropic
+backoff
+beautifulsoup4
+transformers
+datasets
+google-genai
+openai
+dotenv
+ipython
+pandas
+torch
+tqdm
+sentence_transformers

@@ -1,0 +1,480 @@
+<p><a class="mw-selflink selflink">ENCUTGWSOFT</a> = [real] 
+</p>
+<p>Descprition: The flag <a class="mw-selflink selflink">ENCUTGWSOFT</a> sets the energy cutoff for the response function, such that it allows to truncate the Coulomb kernel slowly between the energy
+specified by <a class="mw-selflink selflink">ENCUTGWSOFT</a> and <a href="/wiki/index.php/ENCUTGW" title="ENCUTGW">ENCUTGW</a> using a cosine window function.
+</p>
+<p>RPA/ACFDT correlation energies converge very slowly with respect to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}_{\rm max }}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">x</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}_{\rm max }}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}_{\rm max }}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cdf19ddd5b8af73082e854b53481db9c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 5.392ex;"/></span>. 
+Thus VASP automatically extrapolates to the infinite basis set limit using a linear regression to the equation: <sup class="reference" id="cite_ref-harl:2008_1-0"><a href="#cite_note-harl:2008-1">[1]</a></sup><sup class="reference" id="cite_ref-harl:2010_2-0"><a href="#cite_note-harl:2010-2">[2]</a></sup><sup class="reference" id="cite_ref-klimes:2014_3-0"><a href="#cite_note-klimes:2014-3">[3]</a></sup>
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mfrac>
+<mi>A</mi>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mn>3</mn>
+</msup>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0ac1565befc70bae1bff01967858d2d2&amp;mode=mathml" style="vertical-align: -2.338ex; height: 5.843ex; width: 23.328ex;"/></span>.
+</p>
+<p>This  usually leads to much smoother energy-volume curves in <a class="mw-redirect" href="/wiki/index.php/ACFDT_calculations" title="ACFDT calculations">ACFDT calculations</a> and <a href="/wiki/index.php/MP2_calculations" title="MP2 calculations">MP2 calculations</a>.
+The modified Coulomb kernel is in this case:
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle v_{G} = \frac{4 \pi e^2} {G^2} \frac{1}{2} \left( 1 + \cos \left( \pi \, \frac{ \frac{\hbar^{2} G^2 }{2 m_e} - \mathrm{ ENCUTGWSOFT} }{ \mathrm{ENCUTGW} -  \mathrm{ENCUTGWSOFT}} \right) \right) 
+\qquad \mbox{for} \quad  \frac{\hbar^2 G^2 }{2 m_e} &gt;  \mathrm{ENCUTGWSOFT}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>v</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>G</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>4</mn>
+<mi>π<!-- π --></mi>
+<msup>
+<mi>e</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<msup>
+<mi>G</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mi>cos</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>π<!-- π --></mi>
+<mspace width="thinmathspace"></mspace>
+<mfrac>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi class="MJX-variant">ℏ<!-- ℏ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<msup>
+<mi>G</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+</mfrac>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mspace width="2em"></mspace>
+<mstyle displaystyle="false" scriptlevel="0">
+<mtext>for</mtext>
+</mstyle>
+<mspace width="1em"></mspace>
+<mfrac>
+<mrow>
+<msup>
+<mi class="MJX-variant">ℏ<!-- ℏ --></mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>G</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+</mfrac>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle v_{G} = \frac{4 \pi e^2} {G^2} \frac{1}{2} \left( 1 + \cos \left( \pi \, \frac{ \frac{\hbar^{2} G^2 }{2 m_e} - \mathrm{ ENCUTGWSOFT} }{ \mathrm{ENCUTGW} -  \mathrm{ENCUTGWSOFT}} \right) \right) 
+\qquad \mbox{for} \quad  \frac{\hbar^2 G^2 }{2 m_e} &gt;  \mathrm{ENCUTGWSOFT}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle v_{G} = \frac{4 \pi e^2} {G^2} \frac{1}{2} \left( 1 + \cos \left( \pi \, \frac{ \frac{\hbar^{2} G^2 }{2 m_e} - \mathrm{ ENCUTGWSOFT} }{ \mathrm{ENCUTGW} -  \mathrm{ENCUTGWSOFT}} \right) \right) 
+\qquad \mbox{for} \quad  \frac{\hbar^2 G^2 }{2 m_e} &gt;  \mathrm{ENCUTGWSOFT}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ef6f4b98a727fc3a9eb15caf3b53ce23&amp;mode=mathml" style="vertical-align: -4.171ex; height: 9.509ex; width: 103.701ex;"/></span>
+</p>
+<p>If <a href="/wiki/index.php/LSCK" title="LSCK">LSCK</a> is set to .TRUE., the squeezed Coulomb kernel is used instead of the cosine window:<sup class="reference" id="cite_ref-riemelmoser:jcp:2020_4-0"><a href="#cite_note-riemelmoser:jcp:2020-4">[4]</a></sup>
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle v_{G} = 4 \pi e^2 \frac{
+(G_{max}-G_{min})(G_{max}-G)
+}{
+(G_{min}^2 - G(2G_{min}-G_{max}))^2
+}  
+\qquad \mbox{for} \quad  \mathrm{ENCUTGWSOFT}=\frac{\hbar^2G_{min}^2}{2m_e}&lt;\frac{\hbar^2 G^2}{2m_e}&lt;\frac{\hbar^2G_{max}^2}{2m_e}=\mathrm{ENCUTGW}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>v</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>G</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>4</mn>
+<mi>π<!-- π --></mi>
+<msup>
+<mi>e</mi>
+<mn>2</mn>
+</msup>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>a</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>i</mi>
+<mi>n</mi>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>a</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<mi>G</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mo stretchy="false">(</mo>
+<msubsup>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>i</mi>
+<mi>n</mi>
+</mrow>
+<mn>2</mn>
+</msubsup>
+<mo>−<!-- − --></mo>
+<mi>G</mi>
+<mo stretchy="false">(</mo>
+<mn>2</mn>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>i</mi>
+<mi>n</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>a</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+<msup>
+<mo stretchy="false">)</mo>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mspace width="2em"></mspace>
+<mstyle displaystyle="false" scriptlevel="0">
+<mtext>for</mtext>
+</mstyle>
+<mspace width="1em"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi class="MJX-variant">ℏ<!-- ℏ --></mi>
+<mn>2</mn>
+</msup>
+<msubsup>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>i</mi>
+<mi>n</mi>
+</mrow>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+</mfrac>
+<mo>&lt;</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi class="MJX-variant">ℏ<!-- ℏ --></mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>G</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+</mfrac>
+<mo>&lt;</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi class="MJX-variant">ℏ<!-- ℏ --></mi>
+<mn>2</mn>
+</msup>
+<msubsup>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>a</mi>
+<mi>x</mi>
+</mrow>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+</mfrac>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">U</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">W</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle v_{G} = 4 \pi e^2 \frac{
+(G_{max}-G_{min})(G_{max}-G)
+}{
+(G_{min}^2 - G(2G_{min}-G_{max}))^2
+}  
+\qquad \mbox{for} \quad  \mathrm{ENCUTGWSOFT}=\frac{\hbar^2G_{min}^2}{2m_e}&lt;\frac{\hbar^2 G^2}{2m_e}&lt;\frac{\hbar^2G_{max}^2}{2m_e}=\mathrm{ENCUTGW}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle v_{G} = 4 \pi e^2 \frac{
+(G_{max}-G_{min})(G_{max}-G)
+}{
+(G_{min}^2 - G(2G_{min}-G_{max}))^2
+}  
+\qquad \mbox{for} \quad  \mathrm{ENCUTGWSOFT}=\frac{\hbar^2G_{min}^2}{2m_e}&lt;\frac{\hbar^2 G^2}{2m_e}&lt;\frac{\hbar^2G_{max}^2}{2m_e}=\mathrm{ENCUTGW}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3260ad9da96b7117c0a4805a123e9eeb&amp;mode=mathml" style="vertical-align: -3.005ex; height: 7.176ex; width: 116.589ex;"/></span>
+</p>
+<p>This kernel <i>squeezes</i> contributions from large wave vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G&gt;G_{max}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>&gt;</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>a</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G&gt;G_{max}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G&gt;G_{max}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=576733a852862487c9af30fe6fb17455&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 10.237ex;"/></span> into the window given by <a class="mw-selflink selflink"><span style="color:black">ENCUTGWSOFT</span></a>.
+For GW type calculations the squeezed Coulomb kernel was the default (when <a class="mw-selflink selflink"><span style="color:black">ENCUTGWSOFT</span></a> was set in the INCAR file) before version vasp.6.3, but
+in newer releases the code always defaults to a smoothed Coulomb kernel (both for GW and RPA type calculations). If one desires to recover the behavior
+of vasp.6.2 and older versions, <a href="/wiki/index.php/LSCK" title="LSCK">LSCK</a>=.TRUE. must be set in the INCAR file for GW type calculations if <a class="mw-selflink selflink"><span style="color:black">ENCUTGWSOFT</span></a> is set in the INCAR file.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/ENCUTGW" title="ENCUTGW">ENCUTGW</a>,
+<a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>,
+<a href="/wiki/index.php/LSCK" title="LSCK">LSCK</a>,
+<a href="/wiki/index.php/ACFDT/RPA_calculations#Basis_set_convergence" title="ACFDT/RPA calculations">RPA/ACFDT basis set convergence</a>,
+<a href="/wiki/index.php/Special:Search/%22ENCUTGWSOFT%22_incategory:%22Examples%22" title='Special:Search/"ENCUTGWSOFT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

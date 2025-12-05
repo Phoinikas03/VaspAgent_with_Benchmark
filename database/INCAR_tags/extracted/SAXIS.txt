@@ -1,0 +1,677 @@
+<p><a class="mw-selflink selflink">SAXIS</a> = [real array]<br/> Default: <b>SAXIS</b> =  (0, 0, 1) 
+</p>
+<p>Description: Set the global spin-quantization axis w.r.t. Cartesian coordinates.
+</p>
+<p><a class="mw-selflink selflink">SAXIS</a> specifies the relative orientation of spinor space spanned by the Pauli matrices <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cb5c2f61508f101086a7a8864790dd71&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}_3\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}_3\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}_3\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cfbb347eec57d0f275d4f1f7d10a0e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span> with respect to Cartesian coordinates <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\hat x, \hat y, \hat z\} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\hat x, \hat y, \hat z\} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\hat x, \hat y, \hat z\} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e684056c11e7454f0f13461b61ae8f1f&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 8.321ex;"/></span>. The default is  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1=\hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1=\hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1=\hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73849afedcda56194a8d21c6ba04bfab&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.81ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2 =\hat y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2 =\hat y}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2 =\hat y}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e92fcd0bce2cbaaa66970287e376a42&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.782ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3 = \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3 = \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3 = \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61c76ccb9d30d7b60ef441452afda149&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.776ex;"/></span>.
+The direction of the spin-quantization axis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3da642dd93b405e08993e719433b1039&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span> with respect to Cartesian coordinates is set
+</p>
+<p>such that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3=\mathbf{s}/|\mathbf{s}|}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3=\mathbf{s}/|\mathbf{s}|}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3=\mathbf{s}/|\mathbf{s}|}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=567b668cc7f4dfe1c571598acd60d3b9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 10.047ex;"/></span>, i.e., <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3da642dd93b405e08993e719433b1039&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span> points along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{s}=(s_x,s_y,s_z)^T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>s</mi>
+<mi>x</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>s</mi>
+<mi>y</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>s</mi>
+<mi>z</mi>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mi>T</mi>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{s}=(s_x,s_y,s_z)^T}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{s}=(s_x,s_y,s_z)^T}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f0b9af3c4995efef1560875497012605&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.343ex; width: 15.915ex;"/></span>. The directions of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5ff63147c5116e9cd9c01709485c5551&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span> are a consequence of rotating <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3da642dd93b405e08993e719433b1039&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span> to point along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{s}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{s}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{s}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4eca1f27137609136f5ea96540020356&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.056ex;"/></span> as described below. 
+</p>
+<p>The relative orientation of spinor space with respect to real space becomes important in case spin-orbit coupling is included (<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>=True). All magnetic moments and spinor-like quantities written or read by VASP are given in the basis of the spinor space <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cb5c2f61508f101086a7a8864790dd71&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}_3\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}_3\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}_3\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cfbb347eec57d0f275d4f1f7d10a0e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>. This includes the <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> tag in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file, the total and local magnetizations in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> and <a href="/wiki/index.php/PROCAR" title="PROCAR">PROCAR</a> file, the spinor-like orbitals in the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file, and the magnetization density in the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file. 
+</p>
+<h2><span class="mw-headline" id="Coordinate_system">Coordinate system</span></h2>
+<p>The default orientation is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1=\hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1=\hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1=\hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73849afedcda56194a8d21c6ba04bfab&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.81ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2 =\hat y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2 =\hat y}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2 =\hat y}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e92fcd0bce2cbaaa66970287e376a42&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.782ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3 = \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3 = \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3 = \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61c76ccb9d30d7b60ef441452afda149&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.776ex;"/></span>. 
+To set <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \hat{\sigma}_3=s/|s|}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>σ<!-- σ --></mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \hat{\sigma}_3=s/|s|}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \hat{\sigma}_3=s/|s|}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1cb52bbc37e29c11a44d9b0d3d8ccb29&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 10.119ex;"/></span>, VASP applies two rotations with Euler angles
+</p>
+<p>Here, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span> is the angle between the projection of <a class="mw-selflink selflink">SAXIS</a> onto the <i>xy</i> plane (s<sub>x</sub>,s<sub>y</sub>,0) and the Cartesian vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c243886a288804343eee2af0ad8dcebc&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.33ex;"/></span>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0603860fcffe94e5b8eec59ed813421&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 1.332ex;"/></span> is the angle between the vector <a class="mw-selflink selflink">SAXIS</a> and the Cartesian vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8525852f0aeec3b7f461623645f3e4a8&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.296ex;"/></span>, see Fig. 1. Search for `Euler angles` in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file to see what VASP uses. For the default <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{s}=(0,0,1)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{s}=(0,0,1)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{s}=(0,0,1)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ba8c0792d0b692cc0c75ad5151cf1360&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 11.519ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha=0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha=0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2aa447f3144cccc2865e6268c583f0f3&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 5.749ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta=0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta=0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e67d6e83066e4bc070af866c01375a4c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 5.593ex;"/></span>.
+</p>
+<p>The transformation of a vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{m}=(m_1,m_2,m_3)^T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">m</mi>
+</mrow>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>m</mi>
+<mn>1</mn>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>m</mi>
+<mn>2</mn>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>m</mi>
+<mn>3</mn>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mi>T</mi>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{m}=(m_1,m_2,m_3)^T}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{m}=(m_1,m_2,m_3)^T}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=10aae7339d6b3013eda8c715dbe6895e&amp;mode=mathml" style="vertical-align: -0.838ex; height: 3.176ex; width: 19.875ex;"/></span> given in the basis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cb5c2f61508f101086a7a8864790dd71&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}_3\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}_3\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}_3\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cfbb347eec57d0f275d4f1f7d10a0e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span> into <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{m}'=(m_x,m_y,m_z)^T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">m</mi>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>m</mi>
+<mi>x</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>m</mi>
+<mi>y</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>m</mi>
+<mi>z</mi>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mi>T</mi>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{m}'=(m_x,m_y,m_z)^T}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{m}'=(m_x,m_y,m_z)^T}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2fec77db72adaded48cdde7f9fa3f5f1&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.343ex; width: 20.62ex;"/></span> in Cartesian coordinates and its inverse transformation read
+</p>
+<p>where the rotation matrices are
+</p>
+<p>For instance, when <a href="/wiki/index.php/LORBMOM" title="LORBMOM">LORBMOM</a>=True the orbital angular momentum is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file in Cartesian coordinates. Thus, when comparing the orbital angular momentum (vector-like quantity) and the magnetization (spinor-like quantity), one has to perform a basis transformation on one of the quantities unless the bases agree (default).
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<ul><li>In case the bases have the same orientation, i.e., <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1=\hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1=\hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1=\hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73849afedcda56194a8d21c6ba04bfab&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.81ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2 =\hat y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2 =\hat y}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2 =\hat y}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e92fcd0bce2cbaaa66970287e376a42&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.782ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3 = \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3 = \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3 = \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61c76ccb9d30d7b60ef441452afda149&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.776ex;"/></span> (default)</li></ul>
+<ul><li>Another good choice is setting <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{s}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{s}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{s}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4eca1f27137609136f5ea96540020356&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.056ex;"/></span> to point along the direction of the on-site magnetic moment such that</li></ul>
+<ul><li>In case</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>,
+<a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a>,
+<a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SAXIS%22_incategory:%22Examples%22" title='Special:Search/"SAXIS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

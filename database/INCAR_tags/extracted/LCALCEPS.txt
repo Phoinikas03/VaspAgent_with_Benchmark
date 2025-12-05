@@ -1,0 +1,48 @@
+<p><a class="mw-selflink selflink">LCALCEPS</a> = .TRUE. | .FALSE.<br/> Default: <b>LCALCEPS</b> = .FALSE. 
+</p>
+<p>Description: for <a class="mw-selflink selflink">LCALCEPS</a>=.TRUE. the macroscopic ion-clamped static dielectric tensor, Born effective charge tensors, and the ion-clamped piezoelectric tensor of the system are determined from the response to finite electric fields.
+</p>
+<p>For <a class="mw-selflink selflink">LCALCEPS</a>=.TRUE., VASP calculates the ion-clamped static dielectric tensor
+</p>
+<p>the Born effective charge tensors
+</p>
+<p>and the ion-clamped piezoelectric tensor of the system
+</p>
+<p>from the <a href="/wiki/index.php/Berry_phases_and_finite_electric_fields#Self-consistent_response_to_finite_electric_fields" title="Berry phases and finite electric fields">self-consistent response to a finite electric field</a> <span style="font-size:16pt"><i>ε</i></span>.
+In this case, the "response" of the system is the change in the polarization <b>P</b>, the Hellmann-Feynman forces <b>F</b>, and the stress tensor σ. Mind the <a href="/wiki/index.php/ISIF" title="ISIF">definition/sign convention of the stress tensor</a>.
+</p>
+<p>If this is combined with <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=6, the contribution from the ionic relaxations to the piezoelectric and dielectric tensors are calculated as well.
+</p>
+<p>To this end VASP will perform essentially three successive calculations, with: 
+</p>
+<p>where, by default, VASP chooses <span style="font-size:16pt"><i>ε</i></span><sub>x</sub>=<span style="font-size:16pt"><i>ε</i></span><sub>y</sub>=<span style="font-size:16pt"><i>ε</i></span><sub>z</sub>=0.01 eV/Å.
+</p>
+<p>This default may be overwritten by specifying
+</p>
+<p>in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<p>The relevant output is found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file, immediately following the lines (see the description of <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>=.TRUE. as well):
+</p>
+<p>In the above, "including local field effects" pertains to the fact that changes in the orbitals due to the electric field induce changes in the Hartree- and exchange-correlation potential. One may choose to limit this to changes in the Hartree potential alone, by specifying:
+</p>
+<p>This is commonly referred to as the response within the "Random Phase Approximation" (RPA), or the "neglect of local field effects". The OUTCAR file will now contain additional sections, headed by the lines: 
+</p>
+<p><b>Note</b>: For standard DFT functionals, ε<sub>∞</sub>, <i>Z</i><sup>*</sup>, and <i>e</i><sup>(0)</sup> may be more easily calculated from density functional perturbation theory (see <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>=.TRUE.). For functionals that depend not only on the density but also explicitly on the orbitals, like <a href="/wiki/index.php/Category:Hybrid_functionals" title="Category:Hybrid functionals">hybrid functionals</a>, density functional perturbation theory is presently not implemented and <a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>=.TRUE. is not applicable.
+</p>
+<p><b>Note</b>: The piezoelectric tensor has the wrong sign in Vasp 5.4.4 and older. The bug is fixed with <a class="external text" href="http://cms.mpi.univie.ac.at/patches/patch.5.4.4.16052018.gz" rel="nofollow">patch.5.4.4.16052018.gz</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>,
+<a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a>,
+<a href="/wiki/index.php/EFIELD_PEAD" title="EFIELD PEAD">EFIELD_PEAD</a>,
+<a href="/wiki/index.php/LPEAD" title="LPEAD">LPEAD</a>,
+<a href="/wiki/index.php/IPEAD" title="IPEAD">IPEAD</a>,
+<a href="/wiki/index.php/LBERRY" title="LBERRY">LBERRY</a>,
+<a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>,
+<a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/Berry_phases_and_finite_electric_fields" title="Berry phases and finite electric fields">Berry phases and finite electric fields</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LCALCEPS%22_incategory:%22Examples%22" title='Special:Search/"LCALCEPS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

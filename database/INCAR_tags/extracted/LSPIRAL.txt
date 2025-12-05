@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LSPIRAL</a> = .TRUE. | .FALSE.<br/> Default: <b>LSPIRAL</b> = .FALSE. 
+</p>
+<p>Description: set <a class="mw-selflink selflink">LSPIRAL</a>=.TRUE. to represent spin spirals by means of a generalized Bloch condition.
+</p>
+<p>See the <a href="/wiki/index.php/Spin_spirals" title="Spin spirals">description of spin spiral calculations</a> for more details.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Spin_spirals" title="Spin spirals">Spin spirals</a>,
+<a href="/wiki/index.php/QSPIRAL" title="QSPIRAL">QSPIRAL</a>,
+<a href="/wiki/index.php/LZEROZ" title="LZEROZ">LZEROZ</a>
+</p>

@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">FERWE</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">FERWE</a> sets the occupancies of the states for <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>=-2.
+</p>
+<p>To set the occupancies, specify
+</p>
+<p>The occupancies must be specified for all bands and k points. 
+The band index runs fastest. 
+The occupancies must be between 0 and 1.
+In the case of spin-polarized calculations (<code style="padding: 2px"><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2</code>), <a class="mw-selflink selflink">FERWE</a> sets the occupancies of the states in the up-spin channel. 
+Specify the occupancies of the states in the down-spin channel by means of the <a href="/wiki/index.php/FERDO" title="FERDO">FERDO</a> tag.
+</p>
+<p>Note that the partial occupancies are also written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file
+</p>
+<p>Keep in mind that for systems without spin-polarization the occupations are twice as large in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file than what you should provide for <a class="mw-selflink selflink">FERWE</a> because of spin degeneracy.
+</p>
+<p>You can use <a class="mw-selflink selflink">FERWE</a> to keep occupancies fixed during ionic relaxations or molecular dynamics simulations. 
+However, keeping the orbital occupancies fixed, requires that the orbital order does not change during the self-consistency cycle or during the optimization of the orbitals. 
+Imagine, for instance, that the eigenenergy of the 65th orbital moves below the orbital energy of the 64th orbital.
+By default, VASP will order the eigenenergies so that enforcing <a class="mw-selflink selflink">FERWE</a> will move the electrons to the originally unoccupied 65th orbital because it has now the lower energy.
+This problem can be often circumvented by specifying <code style="padding: 2px"><a href="/wiki/index.php/LDIAG" title="LDIAG">LDIAG</a> = .FALSE.</code> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/FERDO" title="FERDO">FERDO</a>,
+<a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>,
+<a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>,
+<a href="/wiki/index.php/LDIAG" title="LDIAG">LDIAG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22FERWE%22_incategory:%22Examples%22" title='Special:Search/"FERWE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

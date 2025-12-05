@@ -1,0 +1,1 @@
+SMASS = -3 | -2 | -1 |  ≥ 0 Default: SMASS = -3 Description: SMASS controls the velocities during an ab-initio molecular-dynamics run. SMASS =-3 SMASS =-2 SMASS =-1 SMASS ≥0 Related tags and articles structure optimization , IBRION , POTIM , NBLOCK , TEBEG , TEEND Examples that use this tag References

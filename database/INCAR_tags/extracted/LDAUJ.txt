@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">LDAUJ</a> = [real array]<br/> Default: <b>LDAUJ</b> = NTYP*0.0 
+</p>
+<p>Description: Sets the effective on-site exchange interactions (eV).
+</p>
+<p><a class="mw-selflink selflink">LDAUJ</a> specifies the strength of the effective on-site exchange interactions in eV. It must hold one value for each atomic species.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LDAU" title="LDAU">LDAU</a>,
+<a href="/wiki/index.php/LDAUTYPE" title="LDAUTYPE">LDAUTYPE</a>,
+<a href="/wiki/index.php/LDAUL" title="LDAUL">LDAUL</a>,
+<a href="/wiki/index.php/LDAUU" title="LDAUU">LDAUU</a>,
+<a href="/wiki/index.php/LDAUPRINT" title="LDAUPRINT">LDAUPRINT</a>,
+<a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDAUJ%22_incategory:%22Examples%22" title='Special:Search/"LDAUJ" incategory:"Examples"'>Examples that use this tag</a>
+</p>

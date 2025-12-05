@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">ZVAL</a> = [real]<br/> Default: <b>ZVAL</b> = values read from <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">ZVAL</a> describes the valency of each atomic sphere.
+</p>
+<p><a class="mw-selflink selflink">ZVAL</a> determines the valency of each atomic species and should be omitted usually since the values are read from the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file. If incompatibilities exist, VASP will stop.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/POMASS" title="POMASS">POMASS</a>, <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ZVAL%22_incategory:%22Examples%22" title='Special:Search/"ZVAL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

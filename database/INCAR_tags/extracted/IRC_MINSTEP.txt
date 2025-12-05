@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">IRC_MINSTEP</a> = real<br/> Default: <b>IRC_MINSTEP</b> =  0.0250 
+</p>
+<p>Description: Lower limit for the step size (in fs).
+</p>
+<p>The damped-velocity-Verlet algorithm for the <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a> uses an adaptively varying size of the time step. It depends on the estimated accuracy of the previous step. <a class="mw-selflink selflink">IRC_MINSTEP</a> defines the lower limit for the step size in fs.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a href="/wiki/index.php/IRC_DIRECTION" title="IRC DIRECTION">IRC_DIRECTION </a>,
+<a href="/wiki/index.php/IRC_STOP" title="IRC STOP">IRC_STOP</a>,
+<a href="/wiki/index.php/IRC_DELTA0" title="IRC DELTA0">IRC_DELTA0</a>,
+<a href="/wiki/index.php/IRC_MAXSTEP" title="IRC MAXSTEP">IRC_MAXSTEP</a>,
+<a href="/wiki/index.php/IRC_VNORM0" title="IRC VNORM0">IRC_VNORM0</a>
+</p>

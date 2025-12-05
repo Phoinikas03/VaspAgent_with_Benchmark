@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">NOMEGAR</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NOMEGAR</a> specifies the number of frequency grid points along the real axis.
+</p>
+<p>Usually <a class="mw-selflink selflink">NOMEGAR</a> equals <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>. If <a class="mw-selflink selflink">NOMEGAR</a> is smaller than  <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> (for instance 0), frequencies along the imaginary time axis are included (this feature is currently not fully supported). 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NOMEGAR%22_incategory:%22Examples%22" title='Special:Search/"NOMEGAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

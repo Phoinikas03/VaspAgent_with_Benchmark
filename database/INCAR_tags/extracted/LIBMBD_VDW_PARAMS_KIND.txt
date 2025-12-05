@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a> = ts | tssurf 
+</p>
+<p>Default: <a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a>=ts (default in libMBD)
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a> sets the type of free-atom van der Waals parameters that are used for the methods implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a> allows to choose the set of van der Waals parameters from either the original Tkatchenko-Scheffler method<sup class="reference" id="cite_ref-tkatchenko:prl:09_4-0"><a href="#cite_note-tkatchenko:prl:09-4">[4]</a></sup> (<a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a>=ts) or its variant that was designed to be more accurate for systems with surface<sup class="reference" id="cite_ref-ruiz:prb:2016_5-0"><a href="#cite_note-ruiz:prb:2016-5">[5]</a></sup> (<a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a>=tssurf). The value is internally passed to the libMBD input <b>vdw_params_kind</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_6-0"><a href="#cite_note-libmbd_input-6">[6]</a></sup>. <a class="mw-selflink selflink">LIBMBD_VDW_PARAMS_KIND</a> is similar to the <a href="/wiki/index.php/LTSSURF" title="LTSSURF">LTSSURF</a> tag that is used for the VASP implementation of the Tkatchenko-Scheffler method.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_VDW_PARAMS_KIND%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD VDW PARAMS KIND" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,7 @@
+<p><a class="mw-selflink selflink">ML_LERR</a> = [logical]<br/> Default: <b>ML_LERR</b> = .TRUE. 
+</p>
+<p>Description: Decides whether the Bayesian error estimates are calculated and written out or not.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_IERR" title="ML IERR">ML_IERR</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>
+</p>

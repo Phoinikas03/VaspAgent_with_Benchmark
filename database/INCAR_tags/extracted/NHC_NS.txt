@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">NHC_NS</a> = [integer] 1 | 3 | 7<br/> Default: <b>NHC_NS</b> = 1 
+</p>
+<p>Description: The number of subdivisions of each RESPA step used in the integration step used in propagation of thermostat variables in <a href="/wiki/index.php/Nose-Hoover-chain_thermostat" title="Nose-Hoover-chain thermostat">Nosé-Hoover–chain (NHC) thermostat</a>. 
+</p>
+<p>The RESPA steps used in in propagation of thermostat variables in  <a href="/wiki/index.php/Nose-Hoover-chain_thermostat" title="Nose-Hoover-chain thermostat">Nosé-Hoover–chain (NHC) thermostat</a> are treated by Suzuki-Yoshida scheme<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>, whereby each step is subdivided further into <a class="mw-selflink selflink">NHC_NS</a> parts. First, fourth, and sixth order schemes with, 1, 3, and 7 steps, respectively, are supported. 
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NHC_PERIOD" title="NHC PERIOD">NHC_PERIOD</a>, <a href="/wiki/index.php/NHC_NRESPA" title="NHC NRESPA">NHC_NRESPA</a>, <a class="mw-redirect" href="/wiki/index.php/NHC_thermostat" title="NHC thermostat">NHC thermostat</a>
+</p>

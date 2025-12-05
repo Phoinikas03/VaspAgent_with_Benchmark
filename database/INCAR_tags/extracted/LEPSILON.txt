@@ -1,0 +1,53 @@
+<p><a class="mw-selflink selflink">LEPSILON</a> = .TRUE. | .FALSE.<br/> Default: <b>LEPSILON</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LEPSILON</a>=.TRUE. determines the static dielectric matrix, ion-clamped piezoelectric tensor and the Born effective charges using density functional perturbation theory.
+</p>
+<p>Determines the static ion-clamped dielectric matrix using density functional perturbation
+theory. The dielectric matrix is calculated with and without local field effects. Usually local field effects are determined on the Hartree level, i.e. including changes of the Hartree potential.
+To include microscopic changes of the exchange correlation potential 
+the tag <a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a>=.FALSE. must be set. The method is explained in detail in paper by Gajdoš <i>et al.</i>,<sup class="reference" id="cite_ref-gajdos:prb:06_1-0"><a href="#cite_note-gajdos:prb:06-1">[1]</a></sup> and closely follows the original work of Baroni and Resta.<sup class="reference" id="cite_ref-baroni:prb:86_2-0"><a href="#cite_note-baroni:prb:86-2">[2]</a></sup>
+A summation over empty conduction band states is not required, instead the usual expressions in perturbation theory (<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE.),
+</p>
+<p>are rewritten as linear Sternheimer equations:
+</p>
+<p>The solution of this equation involves similar iterative techniques as the conventional selfconsistency cycles. Hence, for each element of the dielectric matrix several lines will be written to the <tt>stdout</tt> and <a href="/wiki/index.php/OSZICAR" title="OSZICAR">OSZICAR</a>. These possess a similar structure as for conventional selfconsistent or non-selfconsistent calculations (a residual minimization scheme is used to solve the linear equation, other schemes such as Davidson do not apply to a linear equation):
+</p>
+<p>It is important to note that exact values for the dielectric matrix are obtained even if only valence band states are calculated. Hence this method does not require to increase the <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> parameter. The final values for the static dielectric matrix can be found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file after the lines
+</p>
+<p>and
+</p>
+<p>The values found after <tt>MACROSCOPIC STATIC DIELECTRIC TENSOR (excluding local field effects)</tt> should match exactly to the zero frequency values ω→0 determined by the method selected using <a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE..
+This offers a convenient way to determine how many empty bands are required for
+<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE.. Simply execute VASP using <a class="mw-selflink selflink">LEPSILON</a>=.TRUE. in order to determine the exact values for the dielectric constants. Next, switch to <a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE. and increase the number of conduction bands until the same values are obtained as using density functional perturbation theory.
+</p>
+<p>Note that the routine also parses and uses the value supplied in the <a href="/wiki/index.php/LNABLA" title="LNABLA">LNABLA</a> tag.
+Furthermore, the routine calculates the Born effective charge tensor (dynamical charges) and electronic contribution to the piezoelectric tensor ,
+and prints them after
+</p>
+<p>and
+</p>
+<p>if <a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a>=.FALSE. is set (the calculated tensors are not sensible in the random phase approximation <a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a>=.TRUE.). Regarding the piezoelectric tensor, mind the <a href="/wiki/index.php/ISIF" title="ISIF">definition/sign convention of the stress tensor</a>.
+</p>
+<p><br/>
+</p>
+<ul><li>no conduction bands required.</li>
+<li>local field effects included on the RPA and DFT level (see <a href="/wiki/index.php/ACFDT/RPA_calculations" title="ACFDT/RPA calculations">ACFDT/RPA calculations</a>).</li></ul>
+<p><br/>
+</p>
+<ul><li>presently only static properties available.</li>
+<li>requires a relatively time consuming iterative process.</li>
+<li>does not support HF or hybrid functionals, whereas <a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE. and the GW routines do.</li></ul>
+<p><br/>
+We do not recommend to select <a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=.TRUE. and <a class="mw-selflink selflink">LEPSILON</a>=.TRUE.
+in a single run (although it might work in some versions).
+Density functional perturbation theory <a class="mw-selflink selflink">LEPSILON</a>=.TRUE. does not require to increase <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> and is, in fact, much slower if  <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> is increased, whereas the summation over emtpy conduction band states requires a large number of such states.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>,
+<a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LEPSILON%22_incategory:%22Examples%22" title='Special:Search/"LEPSILON" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

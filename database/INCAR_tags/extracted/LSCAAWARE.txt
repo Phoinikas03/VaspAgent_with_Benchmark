@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">LSCAAWARE</a> = [logical] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSCAAWARE</a> controls the distribution of the Hamilton matrix. 
+</p>
+<p>For <a class="mw-selflink selflink">LSCAAWARE</a>=.TRUE., VASP distributes the Hamilton matrix among the MPI ranks.  
+For <a class="mw-selflink selflink">LSCAAWARE</a>=.FALSE., each MPI ranks allocates the complete Hamiltonain. In both cases <a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a> decides if ScaLAPACK routines are used for diagonalization. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,
+<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>,
+<a href="/wiki/index.php/LPLANE" title="LPLANE">LPLANE</a>,
+<a href="/wiki/index.php/NSIM" title="NSIM">NSIM</a>,
+<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>,
+<a href="/wiki/index.php/LSCALU" title="LSCALU">LSCALU</a>,
+<a href="/wiki/index.php/LSCALAPACK" title="LSCALAPACK">LSCALAPACK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSCAAWARE%22_incategory:%22Examples%22" title='Special:Search/"LSCAAWARE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

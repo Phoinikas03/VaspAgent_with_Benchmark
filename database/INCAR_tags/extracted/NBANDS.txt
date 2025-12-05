@@ -1,0 +1,35 @@
+<p><a class="mw-selflink selflink">NBANDS</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">NBANDS</a> specifies the total number of KS or QP orbitals in the calculation.
+</p>
+<p>The right choice of <a class="mw-selflink selflink">NBANDS</a> strongly depends on the type of the performed calculation and the system. As a minimum, VASP requires all occupied states + one empty band, otherwise, a warning is given. 
+</p>
+<p>In the electronic minimization calculations, empty states do not contribute to the total energy, however, empty states are required to achieve a better convergence. 
+In iterative matrix-diagonalization algorithms (see <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>) eigenvectors close to the top of the calculated number of states converge much slower than the lowest eigenstates, thus it is important to choose a sufficiently large <a class="mw-selflink selflink">NBANDS</a>.  Therefore, we recommend using the default settings for <a class="mw-selflink selflink">NBANDS</a>, i.e.,  <i>NELECT/2 + NIONS/2</i>, which is a safe choice in most cases. In some cases, it is also possible to decrease it to <i>NELECT/2+NIONS/4</i>, however, in some transition metals with open <i>f</i> shells a much larger number of empty bands might be required (up to <i>NELECT/2+2*NIONS</i>).  To check this parameter perform several calculations for a fixed potential (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=12) with an increasing number of bands (e.g. starting from <i>NELECT/2 + NIONS/2</i>). An accuracy of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  10^{-6}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>6</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  10^{-6}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  10^{-6}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9abbf75d4e121f35749a5f8f75d814db&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.658ex;"/></span> should be obtained in 10-15 iterations. 
+</p>
+<p>In the Many-Body Perturbation Theory calculations (<a href="/wiki/index.php/Practical_guide_to_GW_calculations" title="Practical guide to GW calculations"><i>GW</i></a>,<a href="/wiki/index.php/RPA/ACFDT:_Correlation_energy_in_the_Random_Phase_Approximation" title="RPA/ACFDT: Correlation energy in the Random Phase Approximation">RPA</a>, and <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE</a>), a large number of empty orbitals is usually required, which can be much higher than the number of occupied states.  The convergence of the calculations with a large number of empty states can be very slow. In such cases, we recommend performing an exact diagonalization (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Exact) of the Hamiltonian with empty bands starting from a converged charge density.
+</p>
+<p>When executed on multiple CPUs, VASP automatically increases the number of bands, so that <a class="mw-selflink selflink">NBANDS</a> is divisible by the number of CPU cores.  If <a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a> &gt; 1, <a class="mw-selflink selflink">NBANDS</a> is increased until it is divisible by the number of cores in a group (<a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>).  If <a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a> &gt; 1, <a class="mw-selflink selflink">NBANDS</a> is increased until it is divisible by the number of cores in a group. 
+</p>
+<p>In the case of spin-polarized calculations, the default value for <a class="mw-selflink selflink">NBANDS</a> is increased to account for the initial magnetic moments.
+</p>
+<p>In noncollinear calculations, the default <a class="mw-selflink selflink">NBANDS</a> value is doubled to account for the spinors components.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_article">Related tags and article</span></h2>
+<p><a href="/wiki/index.php/NCORE" title="NCORE">NCORE</a>, <a class="mw-selflink selflink">NBANDS</a>, <a href="/wiki/index.php/NBANDSGW" title="NBANDSGW">NBANDSGW</a>, <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>, <a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>, <a href="/wiki/index.php/NPAR" title="NPAR">NPAR</a>,<a href="/wiki/index.php/KPAR" title="KPAR">KPAR</a>
+</p>

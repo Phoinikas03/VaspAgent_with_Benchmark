@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">M_CONSTR</a> = [real array]<br/> Default: <b>M_CONSTR</b> = 3*NIONS*0.0 
+</p>
+<p>Description: <a class="mw-selflink selflink">M_CONSTR</a> specifies the desired local magnetic moment (size and/or direction) for the constrained local moments approach. 
+</p>
+<p>The <a class="mw-selflink selflink">M_CONSTR</a> tag sets the desired size and/or direction of the integrated local magnetic moments in cartesian coordinates.
+</p>
+<p>For each ion 3 coordinates must be specified, i.e., for a system of <i>N</i> ions
+</p>
+<p>For <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>=1 the norm of this vector is meaningless since only the direction will be constrained. For <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>=2 both the norm as well as the direction of the moments specified by means of <a class="mw-selflink selflink">M_CONSTR</a> are subject to constraints.
+</p>
+<p>Setting
+</p>
+<p>for a certain ion is equivalent to imposing no constraints on the integrated local magnetic moment at this ionic site.
+</p>
+<p>For an explanation of the constrained local moments approach see the description of the <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>,
+<a href="/wiki/index.php/LAMBDA" title="LAMBDA">LAMBDA</a>,
+<a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>,
+<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22M_CONSTR%22_incategory:%22Examples%22" title='Special:Search/"M CONSTR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

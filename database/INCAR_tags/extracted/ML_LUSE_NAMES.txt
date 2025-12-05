@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">ML_LUSE_NAMES</a> = [logical]<br/> Default: <b>ML_LUSE_NAMES</b> = .FALSE. 
+</p>
+<p>Description: Decides whether training structures are additionally subdivided into groups internally due to their structure name.
+</p>
+<p>This tag is important if the normalization via averages over subset standard deviations (<a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>=3) is employed.
+By default (<a class="mw-selflink selflink">ML_LUSE_NAMES</a>=<i>.FALSE.</i>) the division into subsets is based on the atom types and number of atoms per type. If two systems contain the same atom types and the same number of atoms per type then they are considered to be in the same subset. To further divide them into subsets set <a class="mw-selflink selflink">ML_LUSE_NAMES</a>=<i>.TRUE.</i> and choose different system names in the first line of the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file. This can be useful if training is performed for widely different materials, for instance, different phases with widely different energies. Without the finer subset assignment, the overall energy standard deviation might become large, reducing the weight of the energies too much of given subsets.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a>, <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IWEIGHT%22_incategory:%22Examples%22" title='Special:Search/"ML IWEIGHT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

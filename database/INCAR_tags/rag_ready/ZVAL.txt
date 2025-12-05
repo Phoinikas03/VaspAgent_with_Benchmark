@@ -1,0 +1,1 @@
+ZVAL =  Default: ZVAL = values read from POTCAR Description: ZVAL describes the valency of each atomic sphere. ZVAL determines the valency of each atomic species and should be omitted usually since the values are read from the POTCAR file. If incompatibilities exist, VASP will stop. Related tags and articles POMASS , POTCAR Examples that use this tag

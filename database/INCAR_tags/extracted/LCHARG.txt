@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">LCHARG</a> = [logical]<br/> Default: <b>LCHARG</b> = .NOT.<a href="/wiki/index.php/LH5" title="LH5">LH5</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LCHARG</a> determines whether the charge densities (files <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> and <a href="/wiki/index.php/CHG" title="CHG">CHG</a>) are written.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWAVE" title="LWAVE">LWAVE</a>, <a href="/wiki/index.php/LWAVEH5" title="LWAVEH5">LWAVEH5</a>, <a href="/wiki/index.php/LCHARGH5" title="LCHARGH5">LCHARGH5</a>, <a href="/wiki/index.php/LH5" title="LH5">LH5</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LCHARG%22_incategory:%22Examples%22" title='Special:Search/"LCHARG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

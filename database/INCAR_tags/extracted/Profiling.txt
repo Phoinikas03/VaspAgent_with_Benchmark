@@ -1,0 +1,33 @@
+<p>In the most recent version of VASP, profiling routines were added to all important routines in VASP. Using profiling will print at the end of the OUTCAR a list of all routines called during the specific run of VASP, its overall execution time, the number of times it was called and the level at which it was called.
+</p>
+<h2><span class="mw-headline" id="Compilation">Compilation</span></h2>
+<p>To add support for profiling add <code>-DPROFILING</code> to the already existing preprocessor flags
+</p>
+<p>Then you have to entirely recompile VASP by executing
+</p>
+<h2><span class="mw-headline" id="Support_for_new_routines">Support for new routines</span></h2>
+<p>If you want to include newly developed routines to the profiling, you have to include the profiling module (if it is not already included in the enclosing module your routine is in) by adding 
+</p>
+<p>Furthermore you have to put the following statement at the very beginning of the routine with the name <code>[name]</code>
+</p>
+<p>and at every possible return to the outer subroutine you have to put 
+</p>
+<p>Mind that there are sometimes other <code>#ifdef</code> constructs, which change the starting or return point of subroutines. 
+If a subroutine is not started or not stopped appropriately the profiling will get messed up. There is still some room for improvement, but it works so far. 
+</p>
+<p>In addition one can also profile certain parts of a routine or calls to LAPACK routines by enclosing this parts with calls to  <code>START_PROFILING</code> and <code>STOP_PROFILING</code>, e.g.:
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>All the timings will be summarized at the end of the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file.
+</p>
+<p>In the first row we have just an index number, then the name of the called routine, its total execution time at this place in the program, the number of calls and the nesting level inside VASP (so <code>total_time</code> has level <code>1</code>, since it includes all other routines. <code>initialization</code> is called from inside <code>total_time</code> so it has level <code>2</code> and so on). After the detailed profile the Flat profile in printed
+</p>
+<p>Here all execution times of a routine are summed up and all timings from routines called from inside this routine are subtraced. So we get the real execution time of this routine and can track down the most time consuming routines for this specific run.
+</p>
+<h2><span class="mw-headline" id="INCAR_Flags"><a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> Flags</span></h2>
+<p>In the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> the output of the profiling can be controlled by four different flag:
+</p>
+<ul><li><a href="/wiki/index.php/PTHRESHOLD" title="PTHRESHOLD">PTHRESHOLD</a></li>
+<li><a href="/wiki/index.php/PROUTINE" title="PROUTINE">PROUTINE</a></li>
+<li><a href="/wiki/index.php/PLEVEL" title="PLEVEL">PLEVEL</a></li>
+<li><a href="/wiki/index.php/PFLAT" title="PFLAT">PFLAT</a></li></ul>

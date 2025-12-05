@@ -1,0 +1,36 @@
+<p><a class="mw-selflink selflink">OMEGATL</a> = [real]<br/> Default: <b>OMEGATL</b> = 10 <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \times}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>×<!-- × --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \times}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \times}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=60c13e05d3ec8c10b8564eae7023d9db&amp;mode=mathml" style="vertical-align: 0.019ex; margin-bottom: -0.19ex; height: 1.509ex; width: 1.808ex;"/></span> outermost node in dielectric function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \epsilon(\omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ϵ<!-- ϵ --></mi>
+<mo stretchy="false">(</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \epsilon(\omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \epsilon(\omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d78e602be0b0ea5ecba9e79283fb6417&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.199ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">OMEGATL</a> specifies the maximum frequency for the coarse part of the frequency grid. 
+</p>
+<p>For the frequency grid along the real and imaginary axis sophisticated schemes are used, which are based on simple model functions for the macroscopic dielectric function. The grid spacing is dense up to roughly 1.3*<a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a> and becomes coarser for larger frequencies. 
+The default has been carefully tested, and it is recommended to leave it unmodified whenever possible.  
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a href="/wiki/index.php/OMEGAMIN" title="OMEGAMIN">OMEGAMIN</a>,
+<a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>,
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22OMEGATL%22_incategory:%22Examples%22" title='Special:Search/"OMEGATL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

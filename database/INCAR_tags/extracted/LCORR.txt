@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LCORR</a> = [logical]<br/> Default: <b>LCORR</b> = .TRUE. 
+</p>
+<p>Description: Controls whether Harris corrections are calculated or not.
+</p>
+<p>Based on the ideas of the <a href="/wiki/index.php/Harris-Foulkes_functional" title="Harris-Foulkes functional">Harris-Foulkes functional</a> it is possible to derive a correction to the forces for non fully self-consistent calculations, we call these corrections Harris corrections. For <a class="mw-selflink selflink">LCORR</a>=<i>.TRUE.</i> these corrections are calculated and included in the stress-tensor and the forces. The contributions are explicitly written to the file <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> and help to show how well forces and stress are converged. For surfaces, the correction term might be relatively large and testing has shown that the corrected forces converge much faster to the exact forces than uncorrected forces.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Harris-Foulkes_functional" title="Harris-Foulkes functional">Harris-Foulkes functional</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LCORR%22_incategory:%22Examples%22" title='Special:Search/"LCORR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

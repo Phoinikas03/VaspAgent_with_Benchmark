@@ -1,0 +1,144 @@
+<p><a class="mw-selflink selflink">LFOCKACE</a> = .TRUE. | .FALSE.<br/> Default: <b>LFOCKACE</b> =  .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LFOCKACE</a> determines whether the Adaptively Compressed Exchange Operator is used.<sup class="reference" id="cite_ref-linlin:jctc:2016_1-0"><a href="#cite_note-linlin:jctc:2016-1">[1]</a></sup>
+</p>
+<ul><li>N.B.:Available for CPU and OpenACC version of VASP.6 when compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dfock_dblbuf</a>.</li></ul>
+<p>For <a class="mw-selflink selflink">LFOCKACE</a>=.TRUE. the Cholesky decomposition <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X=LL^\dagger}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+<mo>=</mo>
+<mi>L</mi>
+<msup>
+<mi>L</mi>
+<mo>†<!-- † --></mo>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X=LL^\dagger}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle X=LL^\dagger}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=456fbc605162603ee6d5d43e97c2ed05&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 9.206ex;"/></span> of the Fock exchange matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X_{ij} = \langle \tilde\psi_i \mid \tilde V_X \mid \tilde\psi_j \rangle }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ψ<!-- ψ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>i</mi>
+</msub>
+<mo>∣<!-- ∣ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>V</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>X</mi>
+</msub>
+<mo>∣<!-- ∣ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>ψ<!-- ψ --></mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>j</mi>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X_{ij} = \langle \tilde\psi_i \mid \tilde V_X \mid \tilde\psi_j \rangle }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle X_{ij} = \langle \tilde\psi_i \mid \tilde V_X \mid \tilde\psi_j \rangle }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4ec75bf8ec2fa90f391d3c6d9e591a7a&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.509ex; width: 20.504ex;"/></span> is calculated and the adaptively compressed exchange operator <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tilde V_{ACE} = -\sum_i \mid \tilde X_i \rangle \langle \tilde X_i \mid }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>V</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>A</mi>
+<mi>C</mi>
+<mi>E</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mi>i</mi>
+</munder>
+<mo>∣<!-- ∣ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>X</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>i</mi>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>X</mi>
+<mo stretchy="false">~<!-- ~ --></mo>
+</mover>
+</mrow>
+<mi>i</mi>
+</msub>
+<mo stretchy="false">∣<!-- ∣ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tilde V_{ACE} = -\sum_i \mid \tilde X_i \rangle \langle \tilde X_i \mid }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tilde V_{ACE} = -\sum_i \mid \tilde X_i \rangle \langle \tilde X_i \mid }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=043654f1736ce1d7c7111d51b537a9bf&amp;mode=mathml" style="vertical-align: -3.005ex; height: 5.509ex; width: 24.358ex;"/></span> is used for the action of the Fock exchange on the pseudo orbitals. This method can be used for <a href="/wiki/index.php/Category:Hybrid_functionals" title="Category:Hybrid functionals">hybrid functionals</a> in combination with the Davidson algorithm (<a href="/wiki/index.php/ALGO" title="ALGO"><span style="color:black">ALGO</span></a>=Normal) to save a factor of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \approx 3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≈<!-- ≈ --></mo>
+<mn>3</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \approx 3}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \approx 3}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2a19fa04fc8dd847f536331ce90c0f4f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 3.616ex;"/></span> in computation time.  
+</p>
+<p>For <a class="mw-selflink selflink">LFOCKACE</a>=.FALSE. the conventional orbital representation is used. 
+</p>
+<p>Note: it is good scientific practice to cite the original publication (Ref. <sup class="reference" id="cite_ref-linlin:jctc:2016_1-1"><a href="#cite_note-linlin:jctc:2016-1">[1]</a></sup>) if you use this feature. The feature is used by default, if the Davidson algorithm (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = Normal) is used; ACE is not used for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = Damped or <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = All.  
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LHFCALC%22_incategory:%22Examples%22" title='Special:Search/"LHFCALC" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

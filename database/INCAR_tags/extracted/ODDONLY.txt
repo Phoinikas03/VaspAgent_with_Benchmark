@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">ODDONLY</a> = .TRUE. | .FALSE.<br/> Default: <b>ODDONLY</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">ODDONLY</a>=.TRUE. selects a subset of <b>k</b>-points for the representation of the Fock exchange potential, with <i>C</i><sub>1</sub>=<i>C</i><sub>2</sub>=<i>C</i><sub>3</sub>=1, and <i>n</i><sub>1</sub>+<i>n</i><sub>2</sub>+<i>n</i><sub>3</sub> odd.
+</p>
+<p>One may restrict the sum over <b>q</b> in the <a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Fock exchange potential</a> (or one of its short range counterparts) to a subset, {<b>q</b><sub><b>k</b></sub>}, of the full (<i>N</i><sub>1</sub>×<i>N</i><sub>2</sub>×<i>N</i><sub>3</sub>)  <b>k</b>-point set, {<b>k</b>}, for which the following holds
+</p>
+<p>where <b>b</b><sub>1,2,3</sub> are the reciprocal lattice vectors of the primitive cell,
+and <i>C</i><sub>i</sub> is the integer grid reduction factor along reciprocal lattice direction
+<b>b</b><sub>i</sub>.
+</p>
+<p><a class="mw-selflink selflink">ODDONLY</a>=.TRUE. selects a subset of <b>k</b>-points with <i>C</i><sub>1</sub>=<i>C</i><sub>2</sub>=<i>C</i><sub>3</sub>=1, and <i>n</i><sub>1</sub>+<i>n</i><sub>2</sub>+<i>n</i><sub>3</sub> odd. It reduces the computational work load for HF type calculations by a factor two, but is only sensible for high symmetry cases (such as sc, fcc or bcc cells).
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NKRED" title="NKRED">NKRED</a>,
+<a href="/wiki/index.php/NKREDX" title="NKREDX">NKREDX</a>,
+<a href="/wiki/index.php/NKREDY" title="NKREDY">NKREDY</a>,
+<a href="/wiki/index.php/NKREDZ" title="NKREDZ">NKREDZ</a>,
+<a href="/wiki/index.php/EVENONLY" title="EVENONLY">EVENONLY</a>,
+<a href="/wiki/index.php/Downsampling_of_the_Hartree-Fock_operator" title="Downsampling of the Hartree-Fock operator">downsampling</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ODDONLY%22_incategory:%22Examples%22" title='Special:Search/"ODDONLY" incategory:"Examples"'>Examples that use this tag</a>
+</p>

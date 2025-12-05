@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">KGAMMA</a> = [logical]<br/> Default: <b>KGAMMA</b> = .TRUE. 
+</p>
+<p>Description: Determines whether the k points (specified by the <a href="/wiki/index.php/KSPACING" title="KSPACING">KSPACING</a> tag ) include (<a class="mw-selflink selflink">KGAMMA</a>=.TRUE.) the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KSPACING" title="KSPACING">KSPACING</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22KGAMMA%22_incategory:%22Examples%22" title='Special:Search/"KGAMMA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

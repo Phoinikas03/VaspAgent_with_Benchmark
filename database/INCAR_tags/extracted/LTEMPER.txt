@@ -1,0 +1,58 @@
+<p><a class="mw-selflink selflink">LTEMPER</a> = [logical]<br/> Default: <b>LTEMPER</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LTEMPER</a> specified whether parallel tempering is used. The flag must be used in combination with  <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>.
+</p>
+<p>VASP supports various modes where simultaneous calculations for different INCAR, KPOINTS, POTCAR, or POSCAR files are performed. 
+The parallel tempering mode is explained in this section, however, please read the section <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a> first. Parallel tempering is also known as replica-exchange molecular dynamics.<sup class="reference" id="cite_ref-sugi99_1-0"><a href="#cite_note-sugi99-1">[1]</a></sup>
+</p>
+<p>If the tags <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>=nn and  <a class="mw-selflink selflink">LTEMPER</a>=.TRUE. are set in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file, VASP performs parallel tempering calculations. In this case, it is expedient to supply different <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> and <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> files in each subdirectory 01, 02, 03, ..., nn. For each subdiretory a different simulation temperature should be supplied using the tags  <a href="/wiki/index.php/TEBEG" title="TEBEG">TEBEG</a> in the INCAR files 01/INCAR, 02/INCAR ... nn/INCAR.
+</p>
+<p>In the course of the simulations, VASP will attempt to swap the temperatures between the images. Swapping attempts are made every 
+<a href="/wiki/index.php/NTEMPER" title="NTEMPER">NTEMPER</a> MD steps and accepted with a likelyhood of
+</p>
+<p><br/>
+where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  E_i, E_j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>E</mi>
+<mi>j</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  E_i, E_j}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  E_i, E_j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3f3b2e2222c7d7d314e9b04d68905f47&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 6.174ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  T_i, T_j }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>T</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>T</mi>
+<mi>j</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  T_i, T_j }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  T_i, T_j }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=753adc03e83ca693f7c893ad98cfbdba&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 5.458ex;"/></span> are the energies and temperatures of the considered two replicas. Note that VASP swaps the temperatures and not the positions between images. This means that the temperatures in each subdirectory change as the MD progresses. Information on the current temperatures for each image can be found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> files around the lines (all OUTCAR files will show the same information):
+</p>
+<p>The average acceptance ratios are also written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. For efficient parallel tempering the acceptance ratio should not fall much below 0.2-0.3. If the acceptance ratio is too small, one usually needs to increase the number of images. However, too many images can also decrease the probability that all images visit all allowed temperatures. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>,
+<a href="/wiki/index.php/NTEMPER" title="NTEMPER">NTEMPER</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IMAGES%22_incategory:%22Examples%22" title='Special:Search/"IMAGES" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

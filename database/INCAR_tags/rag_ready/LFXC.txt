@@ -1,0 +1,1 @@
+LFXC = .TRUE. | .FALSE. Description: LFXC enables the local exchange-correlation kernel in TD-DFT and TDHF calculations. The local exchange-correlation kernel is determined via  where {\displaystyle c_{\rm x}} {\displaystyle c_{\rm x}} is the fraction of the exchange interaction set by AEXX . Related tags and articles BSE calculations References

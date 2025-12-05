@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LVDW_ONECELL</a> = [logical][logical][logical]<br/> Default: <b>LVDW_ONECELL</b> =  .FALSE. .FALSE. .FALSE.  
+</p>
+<p>Description: <a class="mw-selflink selflink">LVDW_ONECELL</a>  can be used to disable vdW interaction with mirror image in X Y Z direction. This is advisable for molecular calculations in the gas phase. In all other cases, use the default.
+</p>
+<p>Note: There is some confusing documentation on the ASE pages, which states that ".TRUE. .TRUE. .TRUE." enables the interaction with neighboring cells. However, the opposite is the case and <i>.TRUE.</i> disables the interaction (".FALSE. .FALSE. .FALSE." = interactions switched on, ".TRUE. .TRUE. .TRUE." = interactions switched off).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVD_ONECELL%22_incategory:%22Examples%22" title='Special:Search/"LVD ONECELL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

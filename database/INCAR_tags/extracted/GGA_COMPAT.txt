@@ -1,0 +1,65 @@
+<p><a class="mw-selflink selflink">GGA_COMPAT</a> = .TRUE. | .FALSE.<br/> Default: <b>GGA_COMPAT</b> = .TRUE. 
+</p>
+<p>Description: If set to <a class="mw-selflink selflink">GGA_COMPAT</a> = .<i>FALSE</i>., this tag restores the full lattice symmetry for gradient-corrected functionals.
+</p>
+<p><a href="/wiki/index.php/GGA" title="GGA">GGA</a> and <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> functionals might break the symmetry of
+the Bravais lattice slightly for cells that are not primitive cubic cells.
+The origin of this problem is subtle and relates to the fact that the gradient field breaks the lattice symmetry for noncubic lattices. This can be fixed by setting
+</p>
+<p>to apply a spherical cutoff to the gradient field. In other words, the gradient field, as well as the charge density are set to zero for all reciprocal lattice vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=11e9bba3630fff1a198b3b383d84ea2b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.101ex;"/></span> that exceed a certain cutoff length
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a7d3da0b37bf83756f1ea17228cfebb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.579ex;"/></span> before calculating the exchange-correlation energy and potential. 
+The cutoff <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>c</mi>
+<mi>u</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a7d3da0b37bf83756f1ea17228cfebb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.579ex;"/></span> is determined automatically so that the cutoff sphere is fully inscribed in the parallelepiped defined by the FFT grid in reciprocal space.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22GGA_COMPAT%22_incategory:%22Examples%22" title='Special:Search/"GGA COMPAT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

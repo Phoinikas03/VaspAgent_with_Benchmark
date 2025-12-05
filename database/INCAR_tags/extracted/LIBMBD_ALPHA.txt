@@ -1,0 +1,74 @@
+<p><a class="mw-selflink selflink">LIBMBD_ALPHA</a> = [real array] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_ALPHA</a> defines the free-atom polarizabilities <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha_{0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha_{0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha_{0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fdbc5fcfced7b0f661f8a414f6969ae5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.542ex;"/></span> (bohr<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle ^{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle ^{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle ^{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=26a99f9b2f21ca3ba6f222efa40c7958&amp;mode=mathml" style="vertical-align: -0.171ex; height: 2.509ex; width: 1.054ex;"/></span>) used in the <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_ALPHA</a> allows to set values for the free-atom polarizabilities <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha_{0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha_{0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha_{0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fdbc5fcfced7b0f661f8a414f6969ae5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.542ex;"/></span> (bohr<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle ^{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle ^{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle ^{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=26a99f9b2f21ca3ba6f222efa40c7958&amp;mode=mathml" style="vertical-align: -0.171ex; height: 2.509ex; width: 1.054ex;"/></span>) used in the <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-1"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-1"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>. For each atom listed in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, a value has to be provided. The values are internally passed to the first column of the libMBD input <b>free_values</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_4-0"><a href="#cite_note-libmbd_input-4">[4]</a></sup>.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-2"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/LIBMBD_C6AU" title="LIBMBD C6AU">LIBMBD_C6AU</a>,
+<a href="/wiki/index.php/LIBMBD_R0AU" title="LIBMBD R0AU">LIBMBD_R0AU</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_ALPHA%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD ALPHA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

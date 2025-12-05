@@ -1,0 +1,35 @@
+<p><a class="mw-selflink selflink">SCSRAD</a> = [real]<br/> Default: <b>SCSRAD</b> = 120 
+</p>
+<p>Description: <a class="mw-selflink selflink">SCSRAD</a> defines the cutoff radius (in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>) used in the calculation of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>τ<!-- τ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau_{ij}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau_{ij}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=feaf41fd2ceea1412e849ac39d91802b&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.343ex; width: 2.493ex;"/></span> within the Tkatchenko-Scheffler method <a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Self-consistent_screening_in_Tkatchenko-Scheffler_method" title="Self-consistent screening in Tkatchenko-Scheffler method">Self-consistent screening in Tkatchenko-Scheffler method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SCSRAD%22_incategory:%22Examples%22" title='Special:Search/"SCSRAD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

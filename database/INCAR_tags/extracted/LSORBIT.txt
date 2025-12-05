@@ -1,0 +1,150 @@
+<p><a class="mw-selflink selflink">LSORBIT</a> = .TRUE. | .FALSE.<br/> Default: <b>LSORBIT</b> = .FALSE. 
+</p>
+<p>Description: Switch on spin-orbit coupling.
+</p>
+<p><a class="mw-selflink selflink">LSORBIT</a> = True switches on spin-orbit coupling (SOC)<sup class="reference" id="cite_ref-Steiner:2016_1-0"><a href="#cite_note-Steiner:2016-1">[1]</a></sup> and automatically sets <a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a> = True.  It requires using <code>vasp_ncl</code>. SOC couples the spin degrees of freedom with the lattice degrees of freedom. We recommend carefully checking the symmetry and convergence of your results when using SOC; see below.
+</p>
+<p><a class="mw-selflink selflink">LSORBIT</a> only works for PAW potentials and is not supported by ultrasoft pseudopotentials. It is supported as of VASP.4.5. 
+</p>
+<h2><span class="mw-headline" id="Assumptions_and_output">Assumptions and output</span></h2>
+<ul><li>Switching on spin-orbit coupling (SOC) adds an additional term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle H^{\alpha\beta}_{soc}\propto\mathbf{\sigma}\cdot\mathbf{L}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>H</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>s</mi>
+<mi>o</mi>
+<mi>c</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>β<!-- β --></mi>
+</mrow>
+</msubsup>
+<mo>∝<!-- ∝ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mo>⋅<!-- ⋅ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">L</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle H^{\alpha\beta}_{soc}\propto\mathbf{\sigma}\cdot\mathbf{L}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle H^{\alpha\beta}_{soc}\propto\mathbf{\sigma}\cdot\mathbf{L}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=45fbd10a640401c3b51f090d413f44cf&amp;mode=mathml" style="vertical-align: -0.671ex; height: 3.176ex; width: 12.159ex;"/></span> to the Hamiltonian that couples the Pauli-spin operator <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=86263dddb1cdf828ffc3ab41e5baddef&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span> with the angular momentum operator <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{L}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">L</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{L}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{L}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bd89fae3b8bea60f5a113462481cb389&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.608ex;"/></span>.<sup class="reference" id="cite_ref-Steiner:2016_1-1"><a href="#cite_note-Steiner:2016-1">[1]</a></sup> As a relativistic correction, SOC acts predominantly in the immediate vicinity of the nuclei. Therefore, it is assumed that contributions of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle H_{soc}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>H</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>s</mi>
+<mi>o</mi>
+<mi>c</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle H_{soc}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle H_{soc}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8e8e5046f0725e04a729628d6836559c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.444ex;"/></span> outside the PAW spheres are negligible. Hence, VASP calculates the matrix elements of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle H_{soc}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>H</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>s</mi>
+<mi>o</mi>
+<mi>c</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle H_{soc}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle H_{soc}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8e8e5046f0725e04a729628d6836559c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.444ex;"/></span> only for the all-electron one-center contributions</li></ul>
+<ul><li>It is possible to write the partial magnetization by setting <a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a>, i.e., the site- and orbital-resolved expectation value of the Pauli-spin operator <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=86263dddb1cdf828ffc3ab41e5baddef&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.33ex;"/></span>. And the partial orbital angular momentum by setting <a href="/wiki/index.php/LORBMOM" title="LORBMOM">LORBMOM</a>, i.e., the site- and orbital-resolved expectation value of the orbital angular momentum operator <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{L}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">L</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{L}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{L}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bd89fae3b8bea60f5a113462481cb389&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.608ex;"/></span>.</li></ul>
+<ul><li>After a successful calculation including SOC, VASP writes the following results to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file:</li></ul>
+<h2><span class="mw-headline" id="Symmetry_and_convergence">Symmetry and convergence</span></h2>
+<p>In any spin-polarized (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2) or noncollinear (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=T) calculation, even without SOC, the total energy depends on the relative orientation of magnetic moments. For instance, two magnetic sites may couple ferromagnetically or antiferromagnetically. On the other hand, the total energy is independent of the orientation of the magnetic moments with respect to the lattice without SOC. For instance, in-plane and out-of-plane moments on a surface would yield the same energy in the absence of SOC.
+</p>
+<p>Switching on SOC couples the spin degrees of freedom that live in spinor space and the lattice degrees of freedom that live in real space, see <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>. Therefore, the in-plane and out-of-plane magnetic moments on a surface would yield different energies, when including SOC. Similarly, the ferromagnetically or antiferromagnetically ordered magnetic moments may additionally align with, e.g., the third lattice vector by setting <a class="mw-selflink selflink">LSORBIT</a> = True.
+</p>
+<p>Generally, be extremely diligent when using SOC: The energy differences can be of the order of few <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span>eV/atom, k-point convergence is tedious and slow, and the required compute time might be huge, even for small cells.
+</p>
+<p> Often, the k-point set changes from one to the other spin orientation, thus worsening the transferability of the results. Note that the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file cannot be reread properly if the number of k-points changes. Hence, restart the calculation without symmetry from a converged charge density by setting <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=1! Also, consider the setting of <a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>.
+</p>
+<p>We recommend setting <a href="/wiki/index.php/GGA_COMPAT" title="GGA COMPAT">GGA_COMPAT</a> = False for noncollinear calculations since this improves the numerical precision of GGA calculations.
+</p>
+<p>Please check the sections on <a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>, <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>, <a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>, and <a href="/wiki/index.php/GGA_COMPAT" title="GGA COMPAT">GGA_COMPAT</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>,
+<a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a>,
+<a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>,
+<a href="/wiki/index.php/LORBMOM" title="LORBMOM">LORBMOM</a>,
+<a href="/wiki/index.php/LORBIT" title="LORBIT">LORBIT</a>,
+<a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>,
+<a href="/wiki/index.php/GGA_COMPAT" title="GGA COMPAT">GGA_COMPAT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSORBIT%22_incategory:%22Examples%22" title='Special:Search/"LSORBIT" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

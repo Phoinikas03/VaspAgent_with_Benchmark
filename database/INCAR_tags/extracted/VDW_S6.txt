@@ -1,0 +1,42 @@
+<p><a class="mw-selflink selflink">VDW_S6</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_S6</a> defines the global scaling factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{6}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{6}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{6}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0ff997f8b5a1a349c449a73ae17268fe&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.145ex;"/></span>.
+</p>
+<p><a class="mw-selflink selflink">VDW_S6</a> sets the global scaling factor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s_{6}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>6</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s_{6}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle s_{6}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0ff997f8b5a1a349c449a73ae17268fe&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.145ex;"/></span> for the <a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>, <a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a>, <a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>, and <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/DFT-D2" title="DFT-D2">DFT-D2</a>,
+<a href="/wiki/index.php/DFT-D4" title="DFT-D4">DFT-D4</a>,
+<a href="/wiki/index.php/DFT-ulg" title="DFT-ulg">DFT-ulg</a>,
+<a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_S6%22_incategory:%22Examples%22" title='Special:Search/"VDW S6" incategory:"Examples"'>Examples that use this tag</a>
+</p>

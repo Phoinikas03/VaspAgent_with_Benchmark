@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>LATTICE_CONSTRAINTS - VASP Wiki</title>
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"30e2e59dffcf89a727e554df","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LATTICE_CONSTRAINTS","wgTitle":"LATTICE CONSTRAINTS","wgCurRevisionId":28162,"wgRevisionId":28162,"wgArticleId":456,
+"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["INCAR tag","Molecular dynamics","Symmetry"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LATTICE_CONSTRAINTS","wgRelevantArticleId":456,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgVector2022PreviewPages":[],"wgEditSubmitButtonLabelPublish":false};RLSTATE={"skins.vector.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.math.scripts","site","mediawiki.page.ready",
+"skins.vector.js","skins.vector.es6","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=ext.math.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.ui.button%2Cicon%7Cskins.vector.icons%2Cstyles&amp;only=styles&amp;skin=vector-2022"/>
+<script async="" src="/wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022"/>
+<meta name="generator" content="MediaWiki 1.40.1"/>
+<meta name="robots" content="max-image-preview:standard"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="VASP Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.vasp.at/wiki/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"/>
+<link rel="alternate" type="application/atom+xml" title="VASP Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-LATTICE_CONSTRAINTS rootpage-LATTICE_CONSTRAINTS skin-vector-2022 action-view skin--responsive"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+	<div class="mw-page-container-inner">
+		<input
+			type="checkbox"
+			id="mw-sidebar-checkbox"
+			class="mw-checkbox-hack-checkbox"
+			>
+		<header class="mw-header mw-ui-icon-flush-left mw-ui-icon-flush-right">
+			<div class="vector-header-start">
+					<label
+				id="mw-sidebar-button"
+				class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element mw-ui-icon-flush-right"
+				for="mw-sidebar-checkbox"
+				role="button"
+				aria-controls="mw-panel"
+				data-event-name="ui.sidebar"
+				tabindex="0"
+				title="Main menu">
+				<span>Toggle sidebar</span>
+			</label>
+		
+<a href="/wiki/index.php/Main_page" class="mw-logo">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="VASP Wiki"
+			src="/wiki/images/logo-on-white.png" style="width: 11.1875em; height: 2.5em;">
+	</span>
+</a>
+
+			</div>
+			<div class="vector-header-end">
+				
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box">
+	<a href="/wiki/index.php/Special:Search"
+	
+		
+		
+		
+		title="Search VASP Wiki [f]"
+		accesskey="f"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+	<div>
+		<form action="/wiki/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search VASP Wiki" aria-label="Search VASP Wiki" autocapitalize="sentences" title="Search VASP Wiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+				<nav class="vector-user-links" aria-label="Personal tools" role="navigation" >
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet mw-portlet-vector-user-menu-overflow"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login-2" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=LATTICE+CONSTRAINTS" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+<div id="vector-user-links-dropdown" class="vector-menu vector-dropdown vector-menu-dropdown vector-user-menu vector-user-menu-logged-out"  title="More options" >
+	<input type="checkbox"
+		id="vector-user-links-dropdown-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-user-links-dropdown"
+		class="vector-menu-checkbox "
+		
+		aria-label="Personal tools"
+		
+	/>
+	<label
+		id="vector-user-links-dropdown-label"
+		for="vector-user-links-dropdown-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=LATTICE+CONSTRAINTS" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="mw-ui-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+</nav>
+
+			</div>
+		</header>
+		<div class="vector-main-menu-container ">
+			<div id="mw-navigation">
+				<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+						
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	
+	
+<div id="p-navigation" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-navigation"  >
+	<div
+		id="p-navigation-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/index.php/Main_page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/index.php/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-tb" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-tb"  >
+	<div
+		id="p-tb-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/index.php/Special:WhatLinksHere/LATTICE_CONSTRAINTS" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChangesLinked/LATTICE_CONSTRAINTS" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;oldid=28162" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+
+</div>
+
+				</nav>
+			</div>
+		</div>
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="localNotice"><div class="sitenotice" lang="en" dir="ltr"><p>Requests for technical support from the VASP team should be posted in the <a rel="nofollow" class="external text" href="https://www.vasp.at/forum/">VASP Forum</a>.
+</p></div></div></div>
+		</div>
+		<input type="checkbox" id="vector-toc-collapsed-checkbox" class="mw-checkbox-hack-checkbox">
+		<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+			<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Orthorhombic_case"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Orthorhombic_case">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Orthorhombic case</div>
+		</a>
+		
+		<ul id="toc-Orthorhombic_case-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Non-orthorhombic_case"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Non-orthorhombic_case">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Non-orthorhombic case</div>
+		</a>
+		
+		<ul id="toc-Non-orthorhombic_case-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Related_tags_and_articles"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Related_tags_and_articles">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Related tags and articles</div>
+		</a>
+		
+		<ul id="toc-Related_tags_and_articles-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+			</div>
+		</nav>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<label
+						id="vector-toc-collapsed-button"
+						class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-flush-left mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+						for="vector-toc-collapsed-checkbox"
+						role="button"
+						aria-controls="toc-toggle-list"
+						data-event-name="vector.toc-toggle-list"
+						tabindex="0"
+						title="Table of Contents">
+						Toggle the table of contents
+					</label>
+				
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-menu vector-dropdown vector-menu-dropdown vector-page-titlebar-toc mw-ui-icon-flush-left"  >
+	<input type="checkbox"
+		id="vector-page-titlebar-toc-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-page-titlebar-toc"
+		class="vector-menu-checkbox "
+		
+		aria-label="Toggle the table of contents"
+		
+	/>
+	<label
+		id="vector-page-titlebar-toc-label"
+		for="vector-page-titlebar-toc-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+		<span class="vector-menu-heading-label">Toggle the table of contents</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading">LATTICE_CONSTRAINTS</h1>
+				
+				
+				</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/LATTICE_CONSTRAINTS" title="View the content page [c]" accesskey="c" class=""><span>Page</span></a>
+</li>
+<li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=Talk:LATTICE_CONSTRAINTS&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t" class=""><span>Discussion</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+								
+
+<div id="p-variants" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-variants emptyPortlet"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-label="Change language variant"
+		
+		
+	/>
+	<label
+		id="p-variants-label"
+		for="p-variants-checkbox"
+		class="vector-menu-heading "
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/LATTICE_CONSTRAINTS" class=""><span>Read</span></a>
+</li>
+<li id="ca-viewsource" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;action=edit" title="This page is protected.
+You can view its source [e]" accesskey="e" class=""><span>View source</span></a>
+</li>
+<li id="ca-history" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="More options">
+								
+
+<div id="p-cactions" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		
+		aria-label="More"
+		
+	/>
+	<label
+		id="p-cactions-label"
+		for="p-cactions-checkbox"
+		class="vector-menu-heading"
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php/LATTICE_CONSTRAINTS"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;action=history"><span>View history</span></a></li></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From VASP Wiki</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a>&#160;= [logical][logical][logical]&#160;
+</p><p>Description: Sets three boolean to selectively allow changes in the lattice vectors.
+</p>
+<hr />
+<p>The lattice vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{1}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1855a58e43081f2f17cb69861a3c69cd&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{1}}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{2}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ea7949e925ba367315f5b28cc73403cc&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{2}}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{3}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0c910430585ae95d17a59015e871d235&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{3}}"/></span>
+defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file can be represented by following matrix:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; a_{12} &amp; a_{13} \\
+     a_{21} &amp; a_{22} &amp; a_{23} \\
+     a_{31} &amp; a_{32} &amp; a_{33}
+  \end{bmatrix}.
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>11</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>12</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>13</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>21</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>22</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>23</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>31</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>32</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>33</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>]</mo>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; a_{12} &amp; a_{13} \\
+     a_{21} &amp; a_{22} &amp; a_{23} \\
+     a_{31} &amp; a_{32} &amp; a_{33}
+  \end{bmatrix}.
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=30b7a706fcb049193961a25186fe39bd&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.005ex; height: 9.176ex; width: 23.967ex;" alt="{\displaystyle &#10;   \mathbf{A} = &#10;   \begin{bmatrix}&#10;     a_{11} &amp; a_{12} &amp; a_{13} \\&#10;     a_{21} &amp; a_{22} &amp; a_{23} \\&#10;     a_{31} &amp; a_{32} &amp; a_{33}&#10;  \end{bmatrix}.&#10;}"/></span>
+</p><p><a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is used to constrain certain entries of this matrix during an MD run.
+</p>
+<h2><span class="mw-headline" id="Orthorhombic_case">Orthorhombic case</span></h2>
+<p>For orthorhombic unit cells <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{A}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;" alt="{\displaystyle \mathbf{A}}"/></span> is of diagonal form:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; 0      &amp; 0 \\
+      0     &amp; a_{22} &amp; 0 \\
+      0     &amp; 0      &amp; a_{33}
+  \end{bmatrix},
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>11</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>22</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>33</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>]</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{A} = 
+   \begin{bmatrix}
+     a_{11} &amp; 0      &amp; 0 \\
+      0     &amp; a_{22} &amp; 0 \\
+      0     &amp; 0      &amp; a_{33}
+  \end{bmatrix},
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=182013630ed6df0bfee2725344058475&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.005ex; height: 9.176ex; width: 23.967ex;" alt="{\displaystyle &#10;   \mathbf{A} = &#10;   \begin{bmatrix}&#10;     a_{11} &amp; 0      &amp; 0 \\&#10;      0     &amp; a_{22} &amp; 0 \\&#10;      0     &amp; 0      &amp; a_{33}&#10;  \end{bmatrix},&#10;}"/></span>
+</p><p>Therefore by setting one of the entries of <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> to FALSE the lattice parameter in this direction will not be allowed to change.                                                     
+For <a href="/wiki/index.php/MD" class="mw-redirect" title="MD">MD simulations</a> (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0), we recommend using <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> for (orthorhombic) liquids in the isobaric-isothermal (<a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT</a>) ensemble in the following way:
+</p>
+<pre><a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .FALSE. .FALSE. .TRUE.
+</pre>
+<p>Here, the first two lattice constants are not allowed to change. The third lattice constant needs to be free to allow volume changes for the barostat. The system is then like a piston. The constraints are necessary for liquids in <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT</a> simulations because if all lattice degrees of freedom are allowed to relax, irreversible deformations of the cell are very likely to happen. This can lead to undesirable results like a very flat supercell, which cannot be used to obtain valid MD trajectories.
+</p><p>For <a href="/wiki/index.php/Ionic_minimization" class="mw-redirect" title="Ionic minimization">structure relaxation</a> (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1,2), <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is useful to relax the lattice constants of 2D materials. In case of a slab in the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mn>1</mn>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_1}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4671bf394f59f7b599064f9f555d2fa3&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_1}"/></span>-<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_2}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mn>2</mn>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_2}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fc5a01b028c4747f953d1d46b872b3ea&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_2}"/></span> plane, add vacuum padding along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_3}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mn>3</mn>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_3}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9bc53f027409d9d4f95794c3f5ca645&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_3}"/></span> and set
+</p>
+<pre><a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .TRUE. .TRUE. .FALSE.
+</pre>
+<h2><span class="mw-headline" id="Non-orthorhombic_case">Non-orthorhombic case</span></h2>
+<p>For non-orthorhombic boxes <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> is more complicated to use. The tag will set certain rows and columns of the stress tensor
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     xx &amp; xy &amp; xz \\
+     yx &amp; yy &amp; yz \\
+     zx &amp; zy &amp; zz
+  \end{bmatrix},
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>&#x03C3;<!-- σ --></mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <mi>x</mi>
+                <mi>x</mi>
+              </mtd>
+              <mtd>
+                <mi>x</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mi>x</mi>
+                <mi>z</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>y</mi>
+                <mi>x</mi>
+              </mtd>
+              <mtd>
+                <mi>y</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mi>y</mi>
+                <mi>z</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>z</mi>
+                <mi>x</mi>
+              </mtd>
+              <mtd>
+                <mi>z</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mi>z</mi>
+                <mi>z</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>]</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     xx &amp; xy &amp; xz \\
+     yx &amp; yy &amp; yz \\
+     zx &amp; zy &amp; zz
+  \end{bmatrix},
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f8628f9fbff4ed7a8b0ccd464b2d1c39&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.171ex; height: 9.509ex; width: 21.522ex;" alt="{\displaystyle &#10;   \mathbf{\sigma} = &#10;   \begin{bmatrix}&#10;     xx &amp; xy &amp; xz \\&#10;     yx &amp; yy &amp; yz \\&#10;     zx &amp; zy &amp; zz&#10;  \end{bmatrix},&#10;}"/></span>
+</p><p>to zero. By setting certain entries of the stress tensor to zero the corresponding entries of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{A}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;" alt="{\displaystyle \mathbf{A}}"/></span> will not be updated.
+For example when setting <a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .FALSE. .TRUE. .TRUE. the used stress tensor will look like
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0 &amp; 0 \\
+     0 &amp; yy &amp; yz \\
+     0 &amp; zy &amp; zz
+  \end{bmatrix},
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>&#x03C3;<!-- σ --></mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mi>y</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mi>y</mi>
+                <mi>z</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mi>z</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mi>z</mi>
+                <mi>z</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>]</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0 &amp; 0 \\
+     0 &amp; yy &amp; yz \\
+     0 &amp; zy &amp; zz
+  \end{bmatrix},
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=75c14af30404be17e0a2394705d2f849&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.171ex; height: 9.509ex; width: 19.676ex;" alt="{\displaystyle &#10;   \mathbf{\sigma} = &#10;   \begin{bmatrix}&#10;     0 &amp; 0 &amp; 0 \\&#10;     0 &amp; yy &amp; yz \\&#10;     0 &amp; zy &amp; zz&#10;  \end{bmatrix},&#10;}"/></span>
+</p><p>and therefore the first row and the first column of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{A}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;" alt="{\displaystyle \mathbf{A}}"/></span> will not change.
+Another example would be to set <a class="mw-selflink selflink"><span style="color:black">LATTICE_CONSTRAINTS</span></a> = .FALSE. .TRUE. .FALSE. resulting in the following
+stress tensor
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0  &amp; 0 \\
+     0 &amp; yy &amp; 0 \\
+     0 &amp; 0  &amp; 0
+  \end{bmatrix}
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>&#x03C3;<!-- σ --></mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mi>y</mi>
+                <mi>y</mi>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+   \mathbf{\sigma} = 
+   \begin{bmatrix}
+     0 &amp; 0  &amp; 0 \\
+     0 &amp; yy &amp; 0 \\
+     0 &amp; 0  &amp; 0
+  \end{bmatrix}
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61e1f24065ad657efe94a0bdb042c118&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.171ex; height: 9.509ex; width: 17.561ex;" alt="{\displaystyle &#10;   \mathbf{\sigma} = &#10;   \begin{bmatrix}&#10;     0 &amp; 0  &amp; 0 \\&#10;     0 &amp; yy &amp; 0 \\&#10;     0 &amp; 0  &amp; 0&#10;  \end{bmatrix}&#10;}"/></span>
+</p><p>So only the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle yy}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle yy}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2fb1c5cf58867b5bbc9a1b145a86f3a0&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.311ex;" alt="{\displaystyle yy}"/></span>/<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{22}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f0742941894eb318ac076c8ffb880b4&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 3.106ex;" alt="{\displaystyle a_{22}}"/></span> entry of the lattice <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{A}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">A</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{A}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c6404adc033dfed51422fdaf7fa0494&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.019ex;" alt="{\displaystyle \mathbf{A}}"/></span> will change. 
+</p>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b>  Note that for non-orthorhombic boxes the angles between the lattice vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{1}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=1855a58e43081f2f17cb69861a3c69cd&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{1}}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{2}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ea7949e925ba367315f5b28cc73403cc&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{2}}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf{a}_{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">a</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf{a}_{3}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0c910430585ae95d17a59015e871d235&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.354ex;" alt="{\displaystyle \mathbf{a}_{3}}"/></span> will not be conserved.
+</td></tr></tbody></table>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b>  <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> in combination with <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1,2 is available from VASP 6.4.3.
+</td></tr></tbody></table>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b>  <a class="mw-selflink selflink">LATTICE_CONSTRAINTS</a> in combination with <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>=4,5 is available from VASP 6.5.1.
+</td></tr></tbody></table>
+<table style="border: 0px solid #A82C35; padding: 5px; background: #F1B3BA">
+<tbody><tr>
+<td><b><span style="color: #A82C35;">Warning:</span></b>  Be aware of a bug in versions &lt; 6.5.0 as described in following forum post<a rel="nofollow" class="external autonumber" href="https://www.vasp.at/forum/viewtopic.php?p=29882#p29882">[1]</a>.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>, <a href="/wiki/index.php/Category:Interface_pinning" title="Category:Interface pinning">Interface pinning</a>
+</p><p><a href="/wiki/index.php/Special:Search/%22LATTICE_CONSTRAINTS%22_incategory:%22Examples%22" title="Special:Search/&quot;LATTICE CONSTRAINTS&quot; incategory:&quot;Examples&quot;">Examples that use this tag</a>
+</p>
+<hr />
+<!-- 
+NewPP limit report
+Cached time: 20250304111148
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [no‐toc‐conversion]
+CPU time usage: 0.036 seconds
+Real time usage: 0.099 seconds
+Preprocessor visited node count: 311/1000000
+Post‐expand include size: 2822/2097152 bytes
+Template argument size: 1005/2097152 bytes
+Highest expansion depth: 6/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 720/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.655      1 -total
+ 23.76%    2.056      4 Template:NB
+ 13.23%    1.145      1 Template:TAGDEF
+ 11.86%    1.026     13 Template:TAG
+  8.99%    0.778      4 Template:TAGBL
+  7.20%    0.623      1 Template:FILE
+  5.21%    0.451      1 Template:Sc
+-->
+
+<!-- Saved in parser cache with key mediawiki-vw:pcache:idhash:456-0!canonical and timestamp 20250304111148 and revision id 28162. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://www.vasp.at/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;oldid=28162">https://www.vasp.at/wiki/index.php?title=LATTICE_CONSTRAINTS&amp;oldid=28162</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/index.php/Category:INCAR_tag" title="Category:INCAR tag">INCAR tag</a></li><li><a href="/wiki/index.php/Category:Molecular_dynamics" title="Category:Molecular dynamics">Molecular dynamics</a></li><li><a href="/wiki/index.php/Category:Symmetry" title="Category:Symmetry">Symmetry</a></li></ul></div></div>
+					
+				</div>
+				
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 17 February 2025, at 14:33.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/wiki/index.php/VASP_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/index.php/VASP_Wiki:About">About VASP Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/index.php/VASP_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"><img src="/wiki/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/wiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":141,"wgPageParseReport":{"limitreport":{"cputime":"0.036","walltime":"0.099","ppvisitednodes":{"value":311,"limit":1000000},"postexpandincludesize":{"value":2822,"limit":2097152},"templateargumentsize":{"value":1005,"limit":2097152},"expansiondepth":{"value":6,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":720,"limit":5000000},"timingprofile":["100.00%    8.655      1 -total"," 23.76%    2.056      4 Template:NB"," 13.23%    1.145      1 Template:TAGDEF"," 11.86%    1.026     13 Template:TAG","  8.99%    0.778      4 Template:TAGBL","  7.20%    0.623      1 Template:FILE","  5.21%    0.451      1 Template:Sc"]},"cachereport":{"timestamp":"20250304111148","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20250304111212 -->
+</html>

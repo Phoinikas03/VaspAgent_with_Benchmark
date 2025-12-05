@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">INCREM</a> = [real array]<br/> Default: <b>INCREM</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">INCREM</a> controls the transformation velocity in the slow-growth approach (in case VASP was compiled with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>).
+</p>
+<p>In <a href="/wiki/index.php/Slow-growth_approach" title="Slow-growth approach">slow-growth simulations</a> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=1 | 2), the value of each controlled geometric parameter with <tt>STATUS=0</tt> is increased by <a class="mw-selflink selflink">INCREM</a> in every simulation step.
+</p>
+<p>It must be supplied for each controlled geometric parameter for which <tt>STATUS=0</tt> was specified in the <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>-file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>,
+<a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22INCREM%22_incategory:%22Examples%22" title='Special:Search/"INCREM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

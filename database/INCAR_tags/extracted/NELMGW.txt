@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">NELMGW</a> = [integer]<br/> Default: <b>NELMGW</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">NELMGW</a> sets the number of self-consistent GW steps.
+Available as of 6.3.0.
+</p>
+<p>This tag is effective for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=EVGW[0] | QPGW[0] | GW[0][R][K] and ignored otherwise.
+For instance
+</p>
+<p>performs a <a class="mw-redirect" href="/wiki/index.php/GW_calculations#gw0" title="GW calculations"> partially self-consistent GW calculations</a>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dfcf28d0734569a6a693bc8194de62bf&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.827ex;"/></span> is updated four times. 
+</p>
+<p>Omit <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> and <a href="/wiki/index.php/NELM" title="NELM">NELM</a> to select the <a class="mw-redirect" href="/wiki/index.php/GW_calculations#GW_in_one_go" title="GW calculations">single-step GW procedure</a>.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>, <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NELMGW%22_incategory:%22Examples%22" title='Special:Search/"NELMGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

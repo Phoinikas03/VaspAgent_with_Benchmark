@@ -1,0 +1,102 @@
+<p><a class="mw-selflink selflink">METAGGA</a> = SCAN | LIBXC | MBJ | ... 
+</p>
+<p>Default: The functional specified by <a href="/wiki/index.php/LEXCH" title="LEXCH">LEXCH</a> in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> if <a href="/wiki/index.php/GGA" title="GGA">GGA</a> and <a href="/wiki/index.php/XC" title="XC">XC</a> are also not specified.
+</p>
+<p>Description: Selects a meta-GGA exchange-correlation functional.
+</p>
+<h2><span class="mw-headline" id="Available_functionals">Available functionals</span></h2>
+<p>This table lists the meta-GGA functionals available in VASP. There are essentially two types of meta-GGAs, that differ in the variable on which they depend (in addition to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \nabla n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \nabla n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \nabla n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6dc5084279d2b0373f1be0ca98fdc227&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 3.331ex;"/></span>): the kinetic-energy density <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \tau}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>τ<!-- τ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \tau}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \tau}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a6f317b268ae825d94f832f970af607c&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.202ex;"/></span> or the Laplacian of the density <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \nabla^2n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi mathvariant="normal">∇<!-- ∇ --></mi>
+<mn>2</mn>
+</msup>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \nabla^2n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \nabla^2n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d4f311a009c79fcaf658d2eb51bb9752&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.385ex;"/></span>. The names of functionals which end with "_X" and "_C" correspond to exchange-only and correlation functionals, respectively. 
+</p>
+<p><span style="color:blue">(1)</span> The exchange-only and correlation-only implementations are available since VASP.6.4.3.
+</p>
+<p><span style="color:blue">(2)</span> In Ref. <sup class="reference" id="cite_ref-aschebrock:prr:2019_14-1"><a href="#cite_note-aschebrock:prr:2019-14">[14]</a></sup> TASK exchange is combined with LDA-PW92 correlation.<sup class="reference" id="cite_ref-perdew1992_27-0"><a href="#cite_note-perdew1992-27">[27]</a></sup> This can be done with <a href="/wiki/index.php/XC" title="XC">XC</a>=TASK_X PW92_C in <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a>.
+</p>
+<p><span style="color:blue">(3)</span> A few points about the MBJ and LMBJ potentials:
+</p>
+<h2><span class="mw-headline" id="POTCAR_files:_required_information">POTCAR files: required information</span></h2>
+<p>Calculations with a meta-GGA that depends on the kinetic-energy density require <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files that include information on the kinetic-energy density of the core electrons. Almost all recent <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files do fulfill this requirement, but there are some notable exceptions like O_GW. To check whether a particular <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> contains this information, type:
+</p>
+<p>This should yield at least the following lines (for each element on the file):
+</p>
+<p>and for PAW datasets with partial core corrections:
+</p>
+<h2><span class="mw-headline" id="Aspherical_contributions_related_to_one-center_terms">Aspherical contributions related to one-center terms</span></h2>
+<p><a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> =.TRUE. should be selected if a meta-GGA functional is selected. If <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> =.FALSE.,
+the one-center contributions are only calculated for a spherically averaged density and kinetic-energy
+density. This means that the one-center contributions to the Kohn-Sham potential are also spherical. 
+Since the PAW method describes the entire space using plane waves, errors are often small even
+if the non-spherical contributions to the Kohn-Sham potential are neglected inside the PAW spheres
+(additive augmentation, as opposed to the APW or FLAPW method where the plane wave contribution only
+describes the interstitial region between the atoms). Anyhow, if the density is strongly non-spherical
+around some atoms in your structure, <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> =.TRUE. must be selected. Non-spherical terms are particularly encountered
+in d- and f-elements, dimers, molecules, and solids with strong directional bonds.
+</p>
+<h2><span class="mw-headline" id="Convergence_issues">Convergence issues</span></h2>
+<p>If convergence problems are encountered, it is recommended to preconverge the
+calculations using the PBE functional and start the calculation from the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file corresponding to the PBE ground state. Furthermore,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = A (conjugate gradient algorithm for orbitals) is often more stable
+than charge density mixing, in particular if the system contains vacuum regions.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/XC" title="XC">XC</a>,
+<a href="/wiki/index.php/CMBJ" title="CMBJ">CMBJ</a>,
+<a href="/wiki/index.php/CMBJA" title="CMBJA">CMBJA</a>,
+<a href="/wiki/index.php/CMBJB" title="CMBJB">CMBJB</a>,
+<a href="/wiki/index.php/CMBJE" title="CMBJE">CMBJE</a>,
+<a href="/wiki/index.php/SMBJ" title="SMBJ">SMBJ</a>,
+<a href="/wiki/index.php/RSMBJ" title="RSMBJ">RSMBJ</a>,
+<a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a>,
+<a href="/wiki/index.php/LMAXTAU" title="LMAXTAU">LMAXTAU</a>,
+<a href="/wiki/index.php/LMIXTAU" title="LMIXTAU">LMIXTAU</a>,
+<a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>,
+<a href="/wiki/index.php/Band-structure_calculation_using_meta-GGA_functionals" title="Band-structure calculation using meta-GGA functionals">Band-structure calculation using meta-GGA functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22METAGGA%22_incategory:%22Examples%22" title='Special:Search/"METAGGA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

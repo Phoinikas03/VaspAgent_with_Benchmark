@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">NGYROMAG</a> = [real array]<br/> Default: <b>NGYROMAG</b> = NTYP*1.0 
+</p>
+<p>Description: <a class="mw-selflink selflink">NGYROMAG</a> specifies the nuclear gyromagnetic ratios (in MHz, for H<sub>0</sub> = 1 T) for the atomic types on the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file. 
+</p>
+<p>By means of the <a class="mw-selflink selflink">NGYROMAG</a>-tag one can specify the nuclear gyromagnetic ratio:
+</p>
+<p>where one should specify one number for each of the <i>N</i> species on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+If one does not set <a class="mw-selflink selflink">NGYROMAG</a> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file, VASP assumes a factor of 1 for each species.
+</p>
+<p><a class="mw-selflink selflink">NGYROMAG</a> is given in units of MHz/T, see Ref. <sup class="reference" id="cite_ref-gyromag:web_1-0"><a href="#cite_note-gyromag:web-1">[1]</a></sup> for a table of different gyromagnetic ratios. A more extensive list is available on <sup class="reference" id="cite_ref-gyromag:database:web_2-0"><a href="#cite_note-gyromag:database:web-2">[2]</a></sup> which converts isotopic magnetic moments from Ref. <sup class="reference" id="cite_ref-gyromag:book:2019_3-0"><a href="#cite_note-gyromag:book:2019-3">[3]</a></sup> and converts them using the definition of the gyromagnetic raion defined in Ref. <sup class="reference" id="cite_ref-tiesinga:revmodphys:2021_4-0"><a href="#cite_note-tiesinga:revmodphys:2021-4">[4]</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHYPERFINE" title="LHYPERFINE">LHYPERFINE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NGYROMAG%22_incategory:%22Examples%22" title='Special:Search/"NGYROMAG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

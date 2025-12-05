@@ -1,0 +1,43 @@
+<p><a class="mw-selflink selflink">HILLS_W</a> = [Real]<br/> Default: <b>HILLS_W</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 10^{-3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 10^{-3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 10^{-3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=599ba39d43ef5e5056aa8b82d12608b2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.658ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">HILLS_W</a> specifies the width of the Gaussian hill (in units of the corresponding collective variable) used in metadynamics (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>In <a href="/wiki/index.php/Metadynamics" title="Metadynamics">metadynamics</a> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=11 | 21), the bias potential is given as 
+</p>
+<p>Thre parameters (<a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>, <a class="mw-selflink selflink">HILLS_W</a>, and <a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>) must be provided by the user.
+</p>
+<p>The width of the Gaussian hills  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle w}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>w</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle w}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle w}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f1290186a5d0b1ceab27f4e77c0c5d68&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.664ex;"/></span> (in units of the corresponding collective variable) is set by <a class="mw-selflink selflink">HILLS_W</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Category:Metadynamics" title="Category:Metadynamics">Metadynamics</a>,
+<a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>,
+<a href="/wiki/index.php/HILLS_BIN" title="HILLS BIN">HILLS_BIN</a>,
+<a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HILLS_W%22_incategory:%22Examples%22" title='Special:Search/"HILLS W" incategory:"Examples"'>Examples that use this tag</a>
+</p>

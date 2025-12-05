@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">POTIM</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">POTIM</a> sets the time step in molecular dynamics or the step width in ionic relaxations. 
+</p>
+<ul><li>For <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> = 0, <a class="mw-selflink selflink">POTIM</a> gives the time step (in fs) in all ab-initio Molecular Dynamics runs, it <i>has</i> to be supplied therefore, otherwise VASP crashes immediately after having started.</li></ul>
+<ul><li>For <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> =1, 2, and 3, which corresponds to ionic relaxation using a quasi-Newton algorithm, conjugate-gradient algorithm, and damped molecular dynamics, respectively, the <a class="mw-selflink selflink">POTIM</a> tag serves as a scaling constant for the step widths. The quasi-Newton algorithm is especially sensitive to the choice of this parameter.</li></ul>
+<ul><li>For <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a> = 5, and 6, a phonon calculations using the finite differences approach is done, where <a class="mw-selflink selflink">POTIM</a> is the width of the displacement of each ion to calculate the Hessian Matrix.</li></ul>
+<p class="mw-empty-elt">
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Structure_optimization" title="Structure optimization">structure optimization</a>, <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/NFREE" title="NFREE">NFREE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22POTIM%22_incategory:%22Examples%22" title='Special:Search/"POTIM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

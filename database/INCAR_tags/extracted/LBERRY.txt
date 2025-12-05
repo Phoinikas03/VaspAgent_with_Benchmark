@@ -1,0 +1,904 @@
+<p><a class="mw-selflink selflink">LBERRY</a> = [logical]<br/> Default: <b>LBERRY</b> = .FALSE. 
+</p>
+<p>Description: This tag is used in the the evaluation of the Berry phase expression for the electronic polarization of an insulating system.
+</p>
+<p>As of VASP.5.2, calculating the macroscopic polarization and Born effective charges along the lines of the following example (using <a class="mw-selflink selflink">LBERRY</a>=<i>.TRUE.</i> etc) is unnecessary. The use of <a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a> or <a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a> is much more convenient.
+</p>
+<p>Setting <a class="mw-selflink selflink">LBERRY</a>=<i>.TRUE.</i> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file switches on the evaluation of the Berry phase expression for the electronic polarization of an insulating system, as modified for the application of USPP's and PAW datasets <sup class="reference" id="cite_ref-berryformalism1_1-0"><a href="#cite_note-berryformalism1-1">[1]</a></sup><sup class="reference" id="cite_ref-berryformalism2_2-0"><a href="#cite_note-berryformalism2-2">[2]</a></sup><sup class="reference" id="cite_ref-berryformalism3_3-0"><a href="#cite_note-berryformalism3-3">[3]</a></sup><sup class="reference" id="cite_ref-berryformalism4_4-0"><a href="#cite_note-berryformalism4-4">[4]</a></sup><sup class="reference" id="cite_ref-berryformalism5_5-0"><a href="#cite_note-berryformalism5-5">[5]</a></sup><sup class="reference" id="cite_ref-berryultrasoft_6-0"><a href="#cite_note-berryultrasoft-6">[6]</a></sup><sup class="reference" id="cite_ref-berrymmars_7-0"><a href="#cite_note-berrymmars-7">[7]</a></sup>.
+In addition, the following keywords must be specified in order to generate the mesh of k-points:
+</p>
+<p><a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a> tag specifies the socalled parallel or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{\parallel}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∥<!-- ∥ --></mo>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{\parallel}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{\parallel}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bb3142c3a54ee1931763157d8b1f0160&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.009ex; width: 3.155ex;"/></span> direction in the integration over the reciprocal space unit cell.
+</p>
+<p><a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a> specifies the number of k-points on the strings <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>⊥<!-- ⊥ --></mo>
+</mrow>
+</msub>
+<mo>+</mo>
+<mi>j</mi>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∥<!-- ∥ --></mo>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">R</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{k}_{j} = \bold{k}_{\perp} + j\bold{G}_{\parallel}/\mathrm{NPPSTR} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=36993d891cd68331e041956841a1fd73&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.176ex; width: 26.047ex;"/></span> (with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+<mo>=</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mo>.</mo>
+<mo>.</mo>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">N</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">R</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  j=0,..,\mathrm{NPPSTR}-1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b0e9b2be92e915c5aba22514605fde68&amp;mode=mathml" style="vertical-align: -0.671ex; margin-left: -0.027ex; height: 2.509ex; width: 22.974ex;"/></span>).
+</p>
+<p><a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a> specifies the origin with respect to which the ionic contribution to the dipole moment in the cell is calculated. When comparing changes in this contribution due to the displacement of an ion, this center should be chosen in such a way that the ions in the distorted and the undistorted structure remain on the same side of <a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a> (in terms of a minimum image convention).
+</p>
+<p><br/>
+</p>
+<h2><span id="An_example:_The_fluorine_displacement_dipole_.28Born_effective_charge.29_in_NaF"></span><span class="mw-headline" id="An_example:_The_fluorine_displacement_dipole_(Born_effective_charge)_in_NaF">An example: The fluorine displacement dipole (Born effective charge) in NaF</span></h2>
+<p>First one needs to determine the electronic polarization of the undistorted NaF.
+</p>
+<p>Caluclation1:
+It is usually convenient to calculate the self-consistent Kohn-Sham potential of the undistorted structure, using a symmetry reduced <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 6\times6\times6}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>6</mn>
+<mo>×<!-- × --></mo>
+<mn>6</mn>
+<mo>×<!-- × --></mo>
+<mn>6</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 6\times6\times6}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 6\times6\times6}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c8c4f90d56f61153ee0c0d336b60d5d9&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 9.168ex;"/></span> Monkhorst-Pack sampling of the Brillouin zone. Using for instance the following <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file:
+</p>
+<p><a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> file:
+</p>
+<p><a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file:
+</p>
+<p>and LDA Na_sv and F PAW datasets.
+</p>
+<p><br/>
+Calculation 2:
+To calculate the electronic contribution to the polarization, along the reciprocal lattice vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{1}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{1}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c86b95ddee17bfcb0f748e167ca86f48&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.155ex;"/></span> (i.e. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \bold{P} \cdot \bold{G}_{1} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">P</mi>
+</mrow>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \bold{P} \cdot \bold{G}_{1} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \bold{P} \cdot \bold{G}_{1} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9f0daeebc6498ff50bde083f71d263f7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.661ex;"/></span>), add the following lines to the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file:
+</p>
+<p>Setting <a class="mw-selflink selflink">LBERRY</a>=<i>.TRUE.</i> automatically sets <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11, i.e., the charge density of the previous calculation is read and kept fixed, and only the orbitals and one-electron eigenenergies are recalculated for the new k-point set. This is advantageous, since the number of k-points used to evaluate the Berry phase expression can be quite large, and precalculating the charge density (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11) saves significant CPU time.
+</p>
+<p>The <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> will now contain the following lines:
+</p>
+<p><br/>
+Calculations 3 and 4:
+The procedure mentioned under Calculation 2 now has to be repeated with <a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>=2 and <a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>=3 (again using the charge density obtained from Calculation 1), to obtain the contributions to the electronic polarization along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f3fde0d9d3c7599b1f3bd164e996c930&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.155ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \bold{G}_{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \bold{G}_{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \bold{G}_{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9485bc9496b67a05a1a64e5efb890ae7&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.155ex;"/></span>, respectively.
+</p>
+<p><br/>
+Calculations 5 to 8:
+To calculate the change in the electronic polarization of NaF due to the displacement of the fluorine sublattice, one should repeat Calculations 1 to 4, using the following <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file: 
+</p>
+<p>This corresponds to a displacement of the F ion by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 0.01\times 4.51\AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>0.01</mn>
+<mo>×<!-- × --></mo>
+<mn>4.51</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 0.01\times 4.51\AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 0.01\times 4.51\AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8eb0fc4a6f8b87df63e96cec21c8a7ba&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 12.525ex;"/></span> along the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \hat{z}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \hat{z}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \hat{z}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=972e98812fd2f1ffa9f4a417e808cbdf&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.296ex;"/></span> direction. The output of the Berry phase calculation using <a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>=1 should now look similar to:
+</p>
+<p><br/>
+Collecting the results:
+The change in the electronic contribution to the polarization due to the F-sublattice displacement should be calculated as follows:
+</p>
+<ul><li>Take the average of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_\mathrm{ev}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">v</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_\mathrm{ev}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_\mathrm{ev}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3f972f104e508c51f0c9aa52793c3cac&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.176ex; width: 9.377ex;"/></span> terms obtained in calculations 2 to 4. Lets call this <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">v</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=be1ad4297e8af58763d6d5edd35957d8&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 14.321ex;"/></span></li></ul>
+<ul><li>Add the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dd62b4b76cecee9ff237061059cc5a55&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 9.607ex;"/></span> terms obtained in calculations 2 to 4. Lets call this <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=77566e9680dd168b64875cab638b3ac3&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 14.551ex;"/></span></li></ul>
+<ul><li>The electronic polarization of the undistorted structure is then given by:</li></ul>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}=e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}+e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mo>=</mo>
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">v</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mo>+</mo>
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}=e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}+e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}=e&lt;\mathrm{r}&gt;_{\mathrm{ev,undist}}+e&lt;\mathrm{r}&gt;_{\mathrm{bp,undist}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4412fdbcf5d9a81af27a43cf9eb6bc7e&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.676ex; width: 47.69ex;"/></span>
+</p>
+<ul><li>Repeat the above three steps for the results obtained using the distorted structure (Calculations 6 to 8), to evaluate <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,dist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">v</mi>
+<mo>,</mo>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,dist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{ev,dist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=81cfdd3ed97d87f52a4925c0420d5129&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 12.493ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,dist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+<mo>,</mo>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,dist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{bp,dist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=48b26e697307b2e5f84cf3b7f951b1ca&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 12.723ex;"/></span>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+<mo>,</mo>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0050eb6f68223a32e54e2281f4aeb0b3&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 12.083ex;"/></span></li></ul>
+<ul><li>The change in the electronic contribution to the polarization due to the F-sublattice displacement, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e\Delta&lt;\mathrm{r}&gt;_\mathrm{el}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e\Delta&lt;\mathrm{r}&gt;_\mathrm{el}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e\Delta&lt;\mathrm{r}&gt;_\mathrm{el}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e4c48e3d41f8a995d1d4e2d98c2bc4c5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 10.902ex;"/></span> is then given by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}-e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+<mo>,</mo>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<mi>e</mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+<mo>,</mo>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}-e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e&lt;\mathrm{r}&gt;_{\mathrm{el,dist}}-e&lt;\mathrm{r}&gt;_{\mathrm{el,undist}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=032aba7ea184c46e3f5bcd4f2f2baeb1&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.676ex; width: 28.447ex;"/></span></li></ul>
+<p><br/>
+To calculate the total change in polarization, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle e\Delta&lt;\mathrm{r}&gt; }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mo>&gt;</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle e\Delta&lt;\mathrm{r}&gt; }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle e\Delta&lt;\mathrm{r}&gt; }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=eb625c728f2a868db8382ada40ba1f3f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 9.483ex;"/></span>, one should account for the ionic contribution to this change. This contribution can be calculated from p[ion] as given above from
+Calculations 2 and 5:
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \Delta\mathrm{p[ion]}=\mathrm{p[ion]}_{\mathrm{dist}}-\mathrm{p[ion]}_{\mathrm{undist}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mo>=</mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">n</mi>
+<mi mathvariant="normal">d</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \Delta\mathrm{p[ion]}=\mathrm{p[ion]}_{\mathrm{dist}}-\mathrm{p[ion]}_{\mathrm{undist}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \Delta\mathrm{p[ion]}=\mathrm{p[ion]}_{\mathrm{dist}}-\mathrm{p[ion]}_{\mathrm{undist}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=39d8462812297eab2d1c850564e6f50e&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 32.549ex;"/></span>.
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  e\Delta&lt;\mathrm{r}&gt; }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mo>&gt;</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  e\Delta&lt;\mathrm{r}&gt; }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  e\Delta&lt;\mathrm{r}&gt; }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2a97b287ce6f31629fb3b094686b82c7&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 9.483ex;"/></span> is then given by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \Delta \mathrm{p[ion]}+e\Delta&lt;\mathrm{r}&gt;_\mathrm{el} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">p</mi>
+<mo stretchy="false">[</mo>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">n</mi>
+<mo stretchy="false">]</mo>
+</mrow>
+<mo>+</mo>
+<mi>e</mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">l</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \Delta \mathrm{p[ion]}+e\Delta&lt;\mathrm{r}&gt;_\mathrm{el} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \Delta \mathrm{p[ion]}+e\Delta&lt;\mathrm{r}&gt;_\mathrm{el} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a4472a0db8002f382b33588d01449e26&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 21.367ex;"/></span>. In this example we find <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  e\Delta&lt;\mathrm{r}&gt;=0.04489}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>e</mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mo>&gt;=</mo>
+<mn>0.04489</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  e\Delta&lt;\mathrm{r}&gt;=0.04489}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  e\Delta&lt;\mathrm{r}&gt;=0.04489}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4f2f8af8dfa975a71f4f845b4bee1ec0&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 19.558ex;"/></span> electrons <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b5869abe9cabf712bf4e3d7ffb7d798c&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>. Considering that the moved F-sublattice was displaced by 0.045102 <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \AA }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo>Å</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \AA }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \AA }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ec581a6aaa78fa044ef10470e39ccf49&amp;mode=mathml" style="vertical-align: -1.171ex; height: 3.343ex; width: 1.417ex;"/></span>, this calculation yields a Born effective charge for fluorine in NaF of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Z^{*}=-0.995 }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>Z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>∗<!-- ∗ --></mo>
+</mrow>
+</msup>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>0.995</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Z^{*}=-0.995 }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle Z^{*}=-0.995 }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=213c27f09076c2a69836af5f9023e3ca&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.509ex; width: 12.966ex;"/></span>.
+</p>
+<p>N.B.(I) In the case of spinpolarized calculations (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2),the Berry phase of the orbitals is evaluated separately for each spin direction. This means a <i>grep</i> on "<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle &lt;\mathrm{r}&gt; }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<mo>&gt;</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle &lt;\mathrm{r}&gt; }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle &lt;\mathrm{r}&gt; }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=221924dff20360b7c1fe7bc9dbf7d24b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.843ex; width: 5.818ex;"/></span>" will yield two sets of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{ev}} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">v</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{ev}} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{ev}} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b4a5c913c27c86c135d057f21579d5df&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.176ex; width: 7.648ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c87731472900b11faed3696f845ab1d6&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 7.878ex;"/></span> terms, which have to be added to oneanother to obtain the total electronic polarization of the system.
+</p>
+<p>N.B.(II) One should take care of the fact that the calculated "Berry phase" term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">r</mi>
+</mrow>
+<msub>
+<mo>&gt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">b</mi>
+<mi mathvariant="normal">p</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  &lt;\mathrm{r}&gt;_{\mathrm{bp}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c87731472900b11faed3696f845ab1d6&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.509ex; width: 7.878ex;"/></span> along <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=32cc288a2e5f5596c515e4c40aa26232&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.9ex;"/></span> is, in principle, obtained modulo a certain period, determined by the lattice vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \mathbf{R}_{i} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \mathbf{R}_{i} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \mathbf{R}_{i} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=148af16bb36e4b4a9045382bdae08dcb&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.803ex;"/></span> (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{R}_{i} \cdot \mathbf{G}_{i} = 2 \pi }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">R</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>⋅<!-- ⋅ --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π<!-- π --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{R}_{i} \cdot \mathbf{G}_{i} = 2 \pi }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{R}_{i} \cdot \mathbf{G}_{i} = 2 \pi }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=01e94d1dc758208d20bf3ea89329a1cd&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 12.975ex;"/></span>), the spin multiplicity of the orbitals, the volume of the unit cell, the number of k-point in the "perpendicular" grid, and some aspects of the symmetry of the system. More information on this particular aspect of the Berry phase calculations can be found in references <sup class="reference" id="cite_ref-berryformalism1_1-1"><a href="#cite_note-berryformalism1-1">[1]</a></sup><sup class="reference" id="cite_ref-berryformalism2_2-1"><a href="#cite_note-berryformalism2-2">[2]</a></sup><sup class="reference" id="cite_ref-berryformalism3_3-1"><a href="#cite_note-berryformalism3-3">[3]</a></sup><sup class="reference" id="cite_ref-berryformalism4_4-1"><a href="#cite_note-berryformalism4-4">[4]</a></sup><sup class="reference" id="cite_ref-berryformalism5_5-1"><a href="#cite_note-berryformalism5-5">[5]</a></sup><sup class="reference" id="cite_ref-berrymmars_7-1"><a href="#cite_note-berrymmars-7">[7]</a></sup>.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IGPAR" title="IGPAR">IGPAR</a>, <a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>, <a href="/wiki/index.php/NPPSTR" title="NPPSTR">NPPSTR</a>, <a href="/wiki/index.php/LCALCPOL" title="LCALCPOL">LCALCPOL</a>, <a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>, <a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>, <a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>, <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LBERRY%22_incategory:%22Examples%22" title='Special:Search/"LBERRY" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

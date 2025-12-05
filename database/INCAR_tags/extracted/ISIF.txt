@@ -1,0 +1,82 @@
+<p><a class="mw-selflink selflink">ISIF</a> = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 
+</p>
+<p>Description: Determines if the stress tensor is calculated and which ionic degrees of freedom are varied.
+</p>
+<p>For <a class="mw-selflink selflink">ISIF</a><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ge}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≥<!-- ≥ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ge}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \ge}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4edc933d28bfe3f5effe94bf892dad38&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.176ex; width: 1.808ex;"/></span>2, the stress tensor is calculated. It is defined as the negative of the derivative of the energy
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle   E }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>E</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle   E }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle   E }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3f44fda7c640dc44a392205dbfe843f9&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.776ex;"/></span> with respect to the strain tensor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \eta_{ji}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>η<!-- η --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \eta_{ji}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \eta_{ji}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fcedf4f44d8bf4aeadbf3837826974e5&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.343ex; width: 2.633ex;"/></span>:
+</p>
+<p>This might be different from other first principles codes.
+A positive in the diagonals means that the system is under compressive strain and wants to expand. A negative value implies that the system is under tensile strain and wants to reduce its volume. The stress tensor is symmetric <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_{ij}=\sigma_{ji}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_{ij}=\sigma_{ji}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_{ij}=\sigma_{ji}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=bab3c8b6baa9141dfb56703a2203f961&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.343ex; width: 8.707ex;"/></span>, and, thus, it has six independent entries. 
+The calculation of the stress tensor is relatively time-consuming, and, therefore, by default, it is switched off in some cases. The forces are always calculated.
+</p>
+<p><a class="mw-selflink selflink">ISIF</a> also determines which degrees of freedom (ionic positions, cell volume, and cell shape) of the structure are allowed to change.
+</p>
+<ul><li>For <code style="padding: 2px"><a class="mw-selflink selflink">ISIF</a> = 1</code>, only the trace of the stress tensor is calculated. This means only the total pressure is correct and can be read off in the line:</li></ul>
+<ul><li>Accuracy</li></ul>
+<ul><li>To further control the ionic degrees of freedom that can vary during the calculation, set `Selective dynamics` in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ISIF</a> = 8</code> is only available as of VASP.6.4.1.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/Structure_optimization" title="Structure optimization">structure optimization</a>,
+<a href="/wiki/index.php/Category:Ensembles" title="Category:Ensembles"> Ensembles</a>,
+Selective-dynamics mode of the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file,
+<a href="/wiki/index.php/LATTICE_CONSTRAINTS" title="LATTICE CONSTRAINTS">LATTICE_CONSTRAINTS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ISIF%22_incategory:%22Examples%22" title='Special:Search/"ISIF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

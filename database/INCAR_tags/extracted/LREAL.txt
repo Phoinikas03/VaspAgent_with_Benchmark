@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">LREAL</a> = .FALSE. | Auto (or A) | On (or O) | .TRUE.<br/> Default: <b>LREAL</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LREAL</a> determines whether the projection operators are evaluated in real-space or in reciprocal space.
+</p>
+<p><br/>
+The nonlocal part of the <a href="/wiki/index.php/Category:Pseudopotentials" title="Category:Pseudopotentials">pseudopotential</a> requires the evaluation of an expression:
+</p>
+<p><br/>
+</p>
+<p>where the "projected wavefunction character" is defined as:
+</p>
+<p><span id="cproj">
+</span></p>
+<p class="mw-empty-elt">
+</p>
+<p>This expression can be evaluated in reciprocal or real space: In reciprocal space (second line), the number of operations scales with the size of the basis set, i.e., number of plane waves. In real space (first line), the projection operators are confined to spheres around each atom. Therefore, the number of operations necessary to evaluate one C<sub>in<b>k</b></sub> does not increase with the system size (usually, the number of grid points within the cutoff sphere is between 500 and 2000). One of the major obstacles to the method working in real space is that the projection operators must be optimized, i.e., all high Fourier components must be removed from the projection operators. If this is not done, <a href="/wiki/index.php/Wrap-around_errors" title="Wrap-around errors">aliasing</a> can happen, i.e., the high Fourier components of the projection operators are downfolded to low Fourier components, and random noise is introduced).
+</p>
+<p>Currently, VASP supports three different schemes to remove the high Fourier components from the projectors. <a class="mw-selflink selflink">LREAL</a>=.TRUE. is the simplest one. For <a class="mw-selflink selflink">LREAL</a>=.TRUE., the real-space projectors that the pseudopotential generation code has generated are used. This requires no user interference but is potentially very inaccurate. For the outdated <a class="mw-selflink selflink">LREAL</a>=On, the real space projectors are optimized by VASP using an algorithm proposed by King-Smith et al.<sup class="reference" id="cite_ref-king-smith:prb:1991_1-0"><a href="#cite_note-king-smith:prb:1991-1">[1]</a></sup> For the recommended <a class="mw-selflink selflink">LREAL</a>=Auto, an unpublished scheme<sup class="reference" id="cite_ref-kresse:tobepublished_2-0"><a href="#cite_note-kresse:tobepublished-2">[2]</a></sup> is used which results in simultaneously more accurate and localized projector functions than for the King-Smith et al. method. To fine-tune the optimization procedure, the tag <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a> can and should be used, if <a class="mw-selflink selflink">LREAL</a>=Auto (or <a class="mw-selflink selflink">LREAL</a>=On) is used. Specifically, perform first reference calculations using <a class="mw-selflink selflink">LREAL</a>=.False. and decrease <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a> until an acceptable accuracy, e.g., 1 meV/atom, is attained. Please also check carefully the documentation for <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a>.
+</p>
+<p>We recommend using the real-space projection scheme for systems containing more than about 30 atoms. We also strongly recommend using only <a class="mw-selflink selflink">LREAL</a>=Auto.
+</p>
+<p>For <a class="mw-selflink selflink">LREAL</a>=A (and <a class="mw-selflink selflink">LREAL</a>=O) the projection operators are optimized by VASP on the fly (i.e. on startup). Several tags influence the optimization:
+</p>
+<ul><li><a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> (i.e., the energy cutoff), components beyond the energy cutoff are 'removed' from the projection operators.</li></ul>
+<ul><li><a href="/wiki/index.php/PREC" title="PREC">PREC</a> tag specifies how precise the real-space projectors should be and sets the variables <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a> accordingly to the following values:</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LREAL%22_incategory:%22Examples%22" title='Special:Search/"LREAL" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

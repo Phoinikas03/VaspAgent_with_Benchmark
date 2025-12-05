@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">NBANDSGW</a> = [integer]<br/> Default: <b>NBANDSGW</b> =  twice the number of occupied states 
+</p>
+<p>Description: The flag determines how many QP energies are calculated and updated in GW type calculations. 
+</p>
+<p>This value usually needs to be increased somewhat for partially or fully self-consistent calculations. Very accurate results
+are only obtained when <a class="mw-selflink selflink">NBANDSGW</a> approaches <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>, although this  dramatically increases the computational requirements.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBANDSGW%22_incategory:%22Examples%22" title='Special:Search/"NBANDSGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

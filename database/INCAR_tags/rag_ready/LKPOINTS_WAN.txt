@@ -1,0 +1,1 @@
+LKPOINTS_WAN = .TRUE.| .FALSE. Description: LKPOINTS_WAN controlls whether VASP reads the KPOINTS_WAN file. To avoid reading the KPOINTS_WAN file without removing it from the working directory, the LKPOINTS_WAN tag can be set to .FALSE. in the INCAR file. Related tags and articles KPOINTS_WAN Examples that use this tag

@@ -1,0 +1,42 @@
+<p><a class="mw-selflink selflink">BANDGAP</a> = COMPACT | WEIGHT | KPOINT<br/> Default: <b>BANDGAP</b> = COMPACT 
+</p>
+<p>Description: <a class="mw-selflink selflink">BANDGAP</a> determines the verbosity for reporting the bandgap to the OUTCAR file.
+Only the first character is significant.
+</p>
+<p>The bandgap of the system separates the occupied valence bands from the unoccupied conduction bands.
+Of particular interest are the fundamental bandgap between valence band maximum (VBM) and conduction band minimum (CBM) and the direct bandgap at a single <b>k</b> point.
+</p>
+<p><a class="mw-selflink selflink">BANDGAP</a> controls how VASP reports the bandgap information.
+The following options exist:
+</p>
+<ul><li><a class="mw-selflink selflink">BANDGAP</a>=COMPACT</li></ul>
+<ul><li><a class="mw-selflink selflink">BANDGAP</a>=WEIGHT</li></ul>
+<ul><li><a class="mw-selflink selflink">BANDGAP</a>=KPOINT</li></ul>
+<h2><span class="mw-headline" id="Difference_between_WEIGHT_and_KPOINT">Difference between WEIGHT and KPOINT</span></h2>
+<p>The figure illustrates different possible properties of electronic band structures.
+For semiconductors, the bandgap is well defined so that the choice of <a class="mw-selflink selflink">BANDGAP</a> only affects whether the output is compact or verbose.
+For metals, there is no straightforward definition of a bandgap so the default of <a class="mw-selflink selflink">BANDGAP</a>=COMPACT is sufficient.
+A semimetal shares properties with metals (Fermi energy crosses bands) and with semiconductors (visible bandgap in the band structure).
+</p>
+<p><a class="mw-selflink selflink">BANDGAP</a>=WEIGHT interprets systems like a metal; valence (conduction) states are more (less) than half-filled.
+In this case, the bandgap of a semimetal converges to zero with an increasing number of <b>k</b> points similar to a metal.
+For N number of electrons, the number of valence states is not in general equal to N for all <b>k</b> points.
+Hence, the direct bandgap is not necessarily between the N-th and the (N + 1)-th state.
+</p>
+<p><a class="mw-selflink selflink">BANDGAP</a>=KPOINT considers systems like a semiconductor where every <b>k</b> point may be treated individually.
+The number of valence bands is equal to the number of electrons N for all <b>k</b> points and the direct bandgap is equal to the smallest difference between the N-th and (N + 1)-th state.
+In a semimetal, this approach produces a negative bandgap because the Fermi energy crosses the bands.
+For collinear calculations (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2), this method will allow for a different number of up and down electrons at every <b>k</b> point.
+</p>
+<h2><span class="mw-headline" id="Example_of_the_verbose_output">Example of the verbose output</span></h2>
+<p>The column <i>spin independent</i> is always present and reports the bandgap ignoring the spin of the electron.
+The other two columns are only visible for <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2 and describe the bandgap for a given spin of the electron.
+The first block of rows show the band edges of the fundamental bandgap and their corresponding <b>k</b>-point coordinates.
+The second block reports analogous values for the direct gap.
+In each case the energy difference of the band edges is computed and printed as fundamental and direct gap, respectively.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/EFERMI" title="EFERMI">EFERMI</a>, <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>, <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22BANDGAP%22_incategory:%22Examples%22" title='Special:Search/"BANDGAP" incategory:"Examples"'>Examples that use this tag</a>
+</p>

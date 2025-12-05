@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">ML_ISCALE_TOTEN</a> = [integer]<br/> Default: <b>ML_ISCALE_TOTEN</b> = 2 
+</p>
+<p>Description: This tag specifies how to scale the energy data in the machine learning force field method.
+</p>
+<p>The following cases are possible:
+</p>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ML_ISCALE_TOTEN</a> = 1</code>: The total energy is scaled to the total energy of the isolated atoms given by <a href="/wiki/index.php/ML_EATOM_REF" title="ML EATOM REF">ML_EATOM_REF</a>.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ML_ISCALE_TOTEN</a> = 2</code>: The total energy is scaled to the average of the training data. This is the default setting.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_EATOM_REF" title="ML EATOM REF">ML_EATOM_REF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_ISCALE_TOTEN%22_incategory:%22Examples%22" title='Special:Search/"ML ISCALE TOTEN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

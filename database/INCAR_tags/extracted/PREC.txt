@@ -1,0 +1,102 @@
+<p><a class="mw-selflink selflink">PREC</a> = Normal | Single | SingleN | Accurate | Low | Medium | High 
+</p>
+<p>Description: <a class="mw-selflink selflink">PREC</a> specifies the "precision" mode.
+</p>
+<p><a class="mw-selflink selflink">PREC</a> sets default values for the energy cutoff <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>, the FFT grids (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>) and (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>), and the accuracy of the projectors in real space <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a> (used only when <a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>=.TRUE.). Details are given below in the table.
+</p>
+<p>We recommend using <a class="mw-selflink selflink">PREC</a>=Normal or <a class="mw-selflink selflink">PREC</a>=Accurate. <a class="mw-selflink selflink">PREC</a>=Normal can be used for most routine calculations. <a class="mw-selflink selflink">PREC</a>=Accurate leads to a denser grid (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>). Thus, it reduces egg-box effects and strictly avoids any <a href="/wiki/index.php/Wrap-around_errors" title="Wrap-around errors">aliasing/wrap-around errors</a>. <a class="mw-selflink selflink">PREC</a>=Normal and <a class="mw-selflink selflink">PREC</a>=Accurate use an augmentation fine grid (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>) that is twice larger than the grid (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>) used for the representation of the pseudo-orbitals. <a class="mw-selflink selflink">PREC</a>=Accurate increases the memory requirements somewhat, but it should be used (in combination with an increased value for <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>) when a very good accuracy is required, e.g., for accurate forces, for phonons and stress tensor or in general when second derivatives are computed. The accuracy of forces can also be sometimes further improved by specifying <a href="/wiki/index.php/ADDGRID" title="ADDGRID">ADDGRID</a>=.TRUE., however, reports from users are somewhat contradictory about whether this really helps.
+</p>
+<h2><span class="mw-headline" id="Default_values_set_by_PREC">Default values set by <a class="mw-selflink selflink">PREC</a></span></h2>
+<p>Default values set by <a class="mw-selflink selflink">PREC</a> for the parameters <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>, (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>), (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>) and <a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a>:
+</p>
+<p>where max(<a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a>) and max(<a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a>) are the maxima of <a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a> and <a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a> found in the <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> file, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G_{\rm cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G_{\rm cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G_{\rm cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=034ce40e717ff011f3fe575cf1cb816f&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.343ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G_{\rm aug}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">g</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G_{\rm aug}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G_{\rm aug}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c41fc321e441facceec8c79bdf5c169f&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 4.617ex;"/></span> are defined by
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\rm cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\rm cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\rm cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c63d0b49e3f12c9726e77b840b70718c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.231ex;"/></span>=<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\rm aug}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">g</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\rm aug}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\rm aug}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7c4a24959a977feefafc49160a4038e6&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 4.505ex;"/></span>=<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>.
+</p>
+<h2><span class="mw-headline" id="Further_remarks">Further remarks</span></h2>
+<ul><li>With <a class="mw-selflink selflink">PREC</a>=Normal, Single, and Accurate the grid (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>) representing the augmentation charges, charge densities and potentials has either the same size (<a class="mw-selflink selflink">PREC</a>=Single) or the double size (<a class="mw-selflink selflink">PREC</a>=Normal or Accurate) as the grid (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>). With the deprecated (and no longer recommended) settings for <a class="mw-selflink selflink">PREC</a> (Low, Medium and High), the grid (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>) is determined by some heuristic formula from <a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>.</li></ul>
+<ul><li><a class="mw-selflink selflink">PREC</a>=Single uses the same grid (<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>) as <a class="mw-selflink selflink">PREC</a>=Normal in VASP.5, but the same grid as <a class="mw-selflink selflink">PREC</a>=Accurate in VASP.6. However, the double grid technique is not used, i.e., (<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>)=(<a href="/wiki/index.php/NGX" title="NGX">NGX</a>,<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>). This is convenient if one needs to cut down on storage demands or if one wants to reduce the size of the files <a href="/wiki/index.php/CHG" title="CHG">CHG</a> and <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>. Furthermore, <a class="mw-selflink selflink">PREC</a>=Single avoids high-frequency oscillations caused by the double-grid technique and the resulting Fourier interpolation. It is often expedient for scanning tunneling simulations or other calculations where high-frequency wiggles of the charge density in the vacuum region are undesirable.</li></ul>
+<ul><li><a class="mw-selflink selflink">PREC</a>=Medium and <a class="mw-selflink selflink">PREC</a>=Normal should usually be sufficiently accurate and lead to errors of less than 1 meV/atom.</li></ul>
+<ul><li><a class="mw-selflink selflink">PREC</a>=High should guarantee that the absolute energies are converged to a few meV and the stress tensor converged within a few kBar.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NGX" title="NGX">NGX</a>,
+<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,
+<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>,
+<a href="/wiki/index.php/NGXF" title="NGXF">NGXF</a>,
+<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,
+<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>,
+<a href="/wiki/index.php/ENMIN" title="ENMIN">ENMIN</a>,
+<a class="mw-redirect" href="/wiki/index.php/ENMAX" title="ENMAX">ENMAX</a>,
+<a href="/wiki/index.php/ROPT" title="ROPT">ROPT</a>,
+<a href="/wiki/index.php/LREAL" title="LREAL">LREAL</a>,
+<a href="/wiki/index.php/ADDGRID" title="ADDGRID">ADDGRID</a>,
+<a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PREC%22_incategory:%22Examples%22" title='Special:Search/"PREC" incategory:"Examples"'>Examples that use this tag</a>
+</p>

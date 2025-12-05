@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">HILLS_BIN</a> = [Integer]<br/> Default: <b>HILLS_BIN</b> = <a href="/wiki/index.php/NSW" title="NSW">NSW</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">HILLS_BIN</a> sets the number of steps after which the bias potential is updated in a metadynamics run (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>In <a href="/wiki/index.php/Metadynamics" title="Metadynamics">metadynamics</a> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=11 | 21), the bias potential is given as 
+</p>
+<p>Thre parameters (<a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>, <a href="/wiki/index.php/HILLS_W" title="HILLS W">HILLS_W</a>, and <a class="mw-selflink selflink">HILLS_BIN</a>) must be provided by the user.
+</p>
+<p><br/>
+The number of steps after which the bias potential is updated is set by <a class="mw-selflink selflink">HILLS_BIN</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Category:Metadynamics" title="Category:Metadynamics">Metadynamics</a>,
+<a href="/wiki/index.php/HILLS_H" title="HILLS H">HILLS_H</a>,
+<a href="/wiki/index.php/HILLS_W" title="HILLS W">HILLS_W</a>,
+<a href="/wiki/index.php/HILLSPOT" title="HILLSPOT">HILLSPOT</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HILLS_BIN%22_incategory:%22Examples%22" title='Special:Search/"HILLS BIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

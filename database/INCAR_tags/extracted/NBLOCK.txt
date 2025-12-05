@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">NBLOCK</a> = [integer]<br/> Default: <b>NBLOCK</b> = 1 
+</p>
+<p>Description: After <a class="mw-selflink selflink">NBLOCK</a> ionic steps the pair-correlation function and the DOS are calculated
+and the ionic configuration is written to the <a href="/wiki/index.php/XDATCAR" title="XDATCAR">XDATCAR</a>-file.
+</p>
+<p>It is recommended to leave  <a class="mw-selflink selflink">NBLOCK</a> to 1, since the computational overhead to determine the DOS and pair correlation function is minimal. Only for  molecular dynamics simulations with many 1000 steps or when using machine-learned force fields, it might be expedient to increase <a class="mw-selflink selflink">NBLOCK</a> to say 10 or even 100, to avoid large <a href="/wiki/index.php/XDATCAR" title="XDATCAR">XDATCAR</a>-files and the evaluation of the pair correlation function at every step. 
+</p>
+<p>In addition
+</p>
+<ul><li><a class="mw-selflink selflink">NBLOCK</a> controls how often the kinetic energy is scaled if <code style="padding: 2px"><a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a> = -1</code>.</li></ul>
+<ul><li>After <code><a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a> * <a class="mw-selflink selflink">NBLOCK</a></code> ionic steps the averaged pair correlation function and DOS are written to the files <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>  and <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>. The internal accumulators are reset, and after another <code><a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a> * <a class="mw-selflink selflink">NBLOCK</a></code> steps the new averaged quantities are written out.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>, <a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>, <a href="/wiki/index.php/XDATCAR" title="XDATCAR">XDATCAR</a>, <a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a>, <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NBLOCK%22_incategory:%22Examples%22" title='Special:Search/"NBLOCK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

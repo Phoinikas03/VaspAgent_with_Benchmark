@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">EFIELD</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">EFIELD</a> controls the magnitude of the applied electric force field.
+</p>
+<p>It is possible to apply an external electrostatic field in slab, or molecular calculations. Presently only a single value can be supplied and the field is applied in the direction selected by <a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>=1-4. The electric force field is supplied in units of eV/Å. Dipole corrections to the potential (<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>=.TRUE.) can and should be turned on to avoid interactions between the periodically repeated images.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections" title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and Quadrupole corrections</a>,
+<a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>,
+<a href="/wiki/index.php/EPSILON" title="EPSILON">EPSILON</a>,
+<a href="/wiki/index.php/IDIPOL" title="IDIPOL">IDIPOL</a>,
+<a href="/wiki/index.php/DIPOL" title="DIPOL">DIPOL</a>,
+<a href="/wiki/index.php/LMONO" title="LMONO">LMONO</a>,
+<a href="/wiki/index.php/LDIPOL" title="LDIPOL">LDIPOL</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EFIELD%22_incategory:%22Examples%22" title='Special:Search/"EFIELD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

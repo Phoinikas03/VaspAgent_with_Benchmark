@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">FMP_ACTIVE</a> = logical (aray) 
+</p>
+<p>Description: Select which atom types in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a>-file participate in swapping within the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>.
+</p>
+<p><a class="mw-selflink selflink">FMP_ACTIVE</a> specifies whether or not (.TRUE. or .FALSE., respectively) an atomic type allowed for swapping within the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>. One item for each of the atomic types defined in <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> must be supplied.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>,
+<a href="/wiki/index.php/FMP_DIRECTION" title="FMP DIRECTION">FMP_DIRECTION</a>, 
+<a href="/wiki/index.php/FMP_SNUMBER" title="FMP SNUMBER">FMP_SNUMBER</a>,
+<a href="/wiki/index.php/FMP_SWAPNUM" title="FMP SWAPNUM">FMP_SWAPNUM</a>,
+<a href="/wiki/index.php/FMP_PERIOD" title="FMP PERIOD">FMP_PERIOD</a>
+</p>

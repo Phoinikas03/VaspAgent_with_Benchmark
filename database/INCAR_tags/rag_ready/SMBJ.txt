@@ -1,0 +1,1 @@
+SMBJ =  Default: SMBJ = 2 Description: sets the {\displaystyle \sigma} {\displaystyle \sigma} parameter (in {\displaystyle \AA} {\displaystyle \AA} ) in the LMBJ potential. See the description of the METAGGA tag. Related tags and articles METAGGA , CMBJ , CMBJA , CMBJB , CMBJE , RSMBJ , LASPH , LMAXTAU , LMIXTAU Examples that use this tag

@@ -1,0 +1,18 @@
+<p><a class="mw-selflink selflink">LNABLA</a> = .TRUE. | .FALSE.<br/> Default: <b>LNABLA</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LNABLA</a>=.TRUE. evaluates the transversal expression for the frequency dependent dielectric matrix.
+</p>
+<p>Usually VASP uses the <a href="/wiki/index.php/LOPTICS#epsilon" title="LOPTICS">longitudinal expression for the frequency dependent dielectric matrix</a>.
+It is however possible to switch to the computationally somewhat simpler transversal expressions by selecting <a class="mw-selflink selflink">LNABLA</a>=.TRUE. (Eqs. 17 and 20 in Ref.<sup class="reference" id="cite_ref-gajdos:prb:06_1-0"><a href="#cite_note-gajdos:prb:06-1">[1]</a></sup>).
+In this simplification the imaginary part of the macroscopic dielectric function is given by
+</p>
+<p>Except for the purpose of testing, there is however hardly ever a reason
+to use the transversal expression, since it is less accurate.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>,
+<a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LNABLA%22_incategory:%22Examples%22" title='Special:Search/"LNABLA" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,1 @@
+LKPOINTS_OPT = .TRUE.| .FALSE. Description: LKPOINTS_OPT controlls whether VASP reads the KPOINTS_OPT file. To avoid reading the KPOINTS_OPT file without removing it from the working directory, the LKPOINTS_OPT tag can be set to .FALSE. in the INCAR file. Related tags and articles KPOINTS_OPT , PROCAR_OPT Examples that use this tag

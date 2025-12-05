@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">NUM_WANN</a> = [integer]<br/> Default: <b>NUM_WANN</b> = <a href="/wiki/index.php/NBANDS" title="NBANDS">NBANDS</a> 
+</p>
+<p>Description: Controls the number of Wannier orbitals to be constructed.
+</p>
+<p>This tag is used to determine the number of Wannier orbitals to be constructed in the <a href="/wiki/index.php/Category:Wannier_functions#Selected_columns_of_the_density_matrix_(SCDM)" title="Category:Wannier functions">SCDM method</a>.
+</p>
+<p>Since VASP 6.2.0, <a class="mw-selflink selflink">NUM_WANN</a> also determines the number of Wannier orbitals to be used with wannier90.
+Note that the <code>num_wann</code> value written to the <code>wannier90.win</code> file is always the value of <a class="mw-selflink selflink">NUM_WANN</a> known by vasp.
+</p>
+<p>When using <a href="/wiki/index.php/LOCPROJ" title="LOCPROJ">LOCPROJ</a> for Wannierization, it is not necessary to set <a class="mw-selflink selflink">NUM_WANN</a>.
+In this case, the number of Wannier orbitals is automatically set equal to the number of local functions.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LSCDM" title="LSCDM">LSCDM</a>,
+<a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a>
+</p>

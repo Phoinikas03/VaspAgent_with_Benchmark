@@ -1,0 +1,85 @@
+<p><a class="mw-selflink selflink">BSEPREC</a> = Low | Medium | High |  Accurate<br/> Default: <b>BSEPREC</b> =  Medium 
+</p>
+<p>Description: <a class="mw-selflink selflink">BSEPREC</a> determines the precision of the time-evolution algorithm for solving the Bethe-Salpeter or Casida equations, i.e., the timestep and the number of steps. 
+</p>
+<p>The timestep in the time-evolution calculation is inversely proportional to the maximum transition energy <a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a> and the number of steps is inversely proportional to the broadening <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>. Depending on the <a class="mw-selflink selflink">BSEPREC</a>  stable these parameters are scaled depending on the precision tag <a class="mw-selflink selflink">BSEPREC</a>.
+</p>
+<p>For example, the number of steps <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{\rm steps}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">p</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{\rm steps}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{\rm steps}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a7de5ce685250b93e8bf1c42f69617c1&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 5.678ex;"/></span> for <a class="mw-selflink selflink">BSEPREC</a> = Low can be found via <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_{\rm steps}=\frac{{\rm OMEGAMAX}\times 2}{{\rm CSHIFT}/5}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">s</mi>
+<mi mathvariant="normal">t</mi>
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">p</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">O</mi>
+<mi mathvariant="normal">M</mi>
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">M</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">X</mi>
+</mrow>
+<mo>×<!-- × --></mo>
+<mn>2</mn>
+</mrow>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">H</mi>
+<mi mathvariant="normal">I</mi>
+<mi mathvariant="normal">F</mi>
+<mi mathvariant="normal">T</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>5</mn>
+</mrow>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_{\rm steps}=\frac{{\rm OMEGAMAX}\times 2}{{\rm CSHIFT}/5}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_{\rm steps}=\frac{{\rm OMEGAMAX}\times 2}{{\rm CSHIFT}/5}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=63e3d1182a367b9bffdaaf0c0ae134a9&amp;mode=mathml" style="vertical-align: -2.671ex; height: 6.176ex; width: 28.322ex;"/></span>
+</p>
+<h2><span class="mw-headline" id="Related_tag_and_articles">Related tag and articles</span></h2>
+<p><a href="/wiki/index.php/IBSE" title="IBSE">IBSE</a>,
+<a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>,
+<a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>,
+<a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>,
+<a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>,
+<a href="/wiki/index.php/Time-dependent_density-functional_theory_calculations" title="Time-dependent density-functional theory calculations">Time-dependent density-functional theory calculations</a>,
+<a class="mw-redirect" href="/wiki/index.php/Bethe-Salpeter_equations" title="Bethe-Salpeter equations">Bethe-Salpeter equations</a>
+</p>

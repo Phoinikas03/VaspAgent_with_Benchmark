@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">NHC_NCHAINS</a> = [integer]<br/> Default: <b>NHC_NCHAINS</b> = 0 
+</p>
+<p>Description: Length of the Nosé-Hoover chain. 
+</p>
+<p><a class="mw-selflink selflink">NHC_NCHAINS</a> sets the length of the chain for the  <a href="/wiki/index.php/Nose-Hoover-chain_thermostat" title="Nose-Hoover-chain thermostat">Nosé-Hoover–chain (NHC) thermostat</a>. Typically, this tag is set to a value between 1 and 5. The maximal allowed value is 20. 
+</p>
+<p>In case <a class="mw-selflink selflink">NHC_NCHAINS</a>=0, the thermostat is switched off and the underlying dynamics generate a <a href="/wiki/index.php/NVE_ensemble" title="NVE ensemble">microcanonical (NVE) ensemble</a>. <a class="mw-selflink selflink">NHC_NCHAINS</a>=1 corresponds to the <a href="/wiki/index.php/Nose-Hoover_thermostat" title="Nose-Hoover thermostat">standard Nosé-Hoover thermostat</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NHC_PERIOD" title="NHC PERIOD">NHC_PERIOD</a>, <a class="mw-redirect" href="/wiki/index.php/NHC_thermostat" title="NHC thermostat">NHC thermostat</a>
+</p>

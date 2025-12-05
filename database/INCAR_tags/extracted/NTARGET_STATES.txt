@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">NTARGET_STATES</a> = [integer array] 
+</p>
+<p>Description: Controls which Wannier states are excluded in constrained random phase approximation. Check also <a href="/wiki/index.php/NCRPA_BANDS" title="NCRPA BANDS">NCRPA_BANDS</a>.
+</p>
+<p>This tag is effective for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=CRPA and ignored otherwise.
+For instance 
+</p>
+<p>selects the Wannier state 1, 2 and 4, where the ordering of the Wannier states depends on the chosen basis set.
+</p>
+<h3><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h3>
+<p><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>,
+<a href="/wiki/index.php/NCRPA_BANDS" title="NCRPA BANDS">NCRPA_BANDS</a>,
+<a href="/wiki/index.php/DMFT_BASIS" title="DMFT BASIS">DMFT_BASIS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NTARGET_STATES%22_incategory:%22Examples%22" title='Special:Search/"NTARGET STATES" incategory:"Examples"'>Examples that use this tag</a>
+</p>

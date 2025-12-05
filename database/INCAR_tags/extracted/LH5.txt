@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">LH5</a> = [logical]<br/> Default: <b>LH5</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LH5</a> determines whether the output is written to the legacy files (<a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a>, <a href="/wiki/index.php/CHG" title="CHG">CHG</a>, <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a>) or the <a href="/wiki/index.php/Vaspwave.h5" title="Vaspwave.h5">vaspwave.h5</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWAVE" title="LWAVE">LWAVE</a>, <a href="/wiki/index.php/LWAVEH5" title="LWAVEH5">LWAVEH5</a>, <a href="/wiki/index.php/LCHARG" title="LCHARG">LCHARG</a>, <a href="/wiki/index.php/LCHARGH5" title="LCHARGH5">LCHARGH5</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LH5%22_incategory:%22Examples%22" title='Special:Search/"LH5" incategory:"Examples"'>Examples that use this tag</a>
+</p>

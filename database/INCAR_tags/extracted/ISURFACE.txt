@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> =  1 | 2 | 3 
+</p>
+<p>Description: <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> specifies the non-periodic dimension when performing calculations with 2D kernel truncation methods.
+</p>
+<p>When performing 2D kernel truncation with <a href="/wiki/index.php/KERNEL_TRUNCATION/IDIMENSIONALITY" title="KERNEL TRUNCATION/IDIMENSIONALITY">KERNEL_TRUNCATION/IDIMENSIONALITY</a>=2, <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> specifies which direction is non-periodic.
+The most common use case is to set <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> to the dimension along the surface normal.
+</p>
+<p>If the surface normal points in the direction of the x-axis <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> = 1, if it is along the y-axis, <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> = 2 and if it is along the z-axis, <a class="mw-selflink selflink">KERNEL_TRUNCATION/ISURFACE</a> = 3.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KERNEL_TRUNCATION/LTRUNCATE" title="KERNEL TRUNCATION/LTRUNCATE">KERNEL_TRUNCATION/LTRUNCATE</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/LCOARSEN" title="KERNEL TRUNCATION/LCOARSEN">KERNEL_TRUNCATION/LCOARSEN</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/IDIMENSIONALITY" title="KERNEL TRUNCATION/IDIMENSIONALITY">KERNEL_TRUNCATION/IDIMENSIONALITY</a>
+</p>

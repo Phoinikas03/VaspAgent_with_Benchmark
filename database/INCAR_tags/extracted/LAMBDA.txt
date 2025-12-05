@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">LAMBDA</a> = [real]<br/> Default: <b>LAMBDA</b> = 0 
+</p>
+<p>Description: <a class="mw-selflink selflink">LAMBDA</a> sets the weight with which the penalty terms of the constrained local moment approach enter into the total energy expression and the Hamiltonian.
+</p>
+<p>See the explanation given in the description of the <a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a> tag.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/I_CONSTRAINED_M" title="I CONSTRAINED M">I_CONSTRAINED_M</a>,
+<a href="/wiki/index.php/M_CONSTR" title="M CONSTR">M_CONSTR</a>,
+<a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>,
+<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LAMBDA%22_incategory:%22Examples%22" title='Special:Search/"LAMBDA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

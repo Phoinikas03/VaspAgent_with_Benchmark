@@ -1,0 +1,1 @@
+OFIELD_Q6_NEAR =  Description: OFIELD_Q6_NEAR sets the near-fading distance (in {\displaystyle \AA} {\displaystyle \AA} ) for the computation of a continuous {\displaystyle Q_6} {\displaystyle Q_6} parameter in the interface-pinning method. Related tags and articles Interface pinning Examples that use this tag

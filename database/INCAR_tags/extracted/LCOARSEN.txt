@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">KERNEL_TRUNCATION/LCOARSEN</a> =  .True. | .False.<br/> Default: <b>KERNEL_TRUNCATION/LCOARSEN</b> = .True. 
+</p>
+<p>Description: <a class="mw-selflink selflink">KERNEL_TRUNCATION/LCOARSEN</a> speeds up computation of the local potential in the kernel truncation method by coarsening the charge density before padding it
+</p>
+<p>Kernel truncation methods pad the computational cell with vacuum.
+This padded cell is expensive to compute due to FFTs being performed on a larger grid.
+The <a class="mw-selflink selflink">KERNEL_TRUNCATION/LCOARSEN</a> method selectively replaces the long range potential with the truncated potential instead of computing the entire potential on a padded grid.
+This selective replacement of the potential bypasses the need for padding, speeding up the computation of the kernel truncation methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KERNEL_TRUNCATION/LTRUNCATE" title="KERNEL TRUNCATION/LTRUNCATE">KERNEL_TRUNCATION/LTRUNCATE</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/IDIMENSIONALITY" title="KERNEL TRUNCATION/IDIMENSIONALITY">KERNEL_TRUNCATION/IDIMENSIONALITY</a>,
+<a href="/wiki/index.php/KERNEL_TRUNCATION/ISURFACE" title="KERNEL TRUNCATION/ISURFACE">KERNEL_TRUNCATION/ISURFACE</a>
+</p>

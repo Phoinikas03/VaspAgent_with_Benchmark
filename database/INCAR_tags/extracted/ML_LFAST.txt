@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_LFAST</a> = [logical] 
+</p>
+<p>Description: This tag switches on the descriptors for refitting in the fast execution mode within machine learning force fields. This tag is usually switched on by <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code> and doesn't need to be set explicitely.
+</p>
+<p>This tag switches on the descriptors for the fast execution mode. To use the fast execution mode the force field first has to be refit with the fast descriptors. This is done by setting <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code>, which will automatically set <a class="mw-selflink selflink">ML_LFAST</a>. As usual, the resulting <a href="/wiki/index.php/ML_FFN" title="ML FFN">ML_FFN</a> has to be copied to <a href="/wiki/index.php/ML_FF" title="ML FF">ML_FF</a> and the fast code will be automatically run in production mode runs by setting <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>.
+</p>
+<p>The speedup of the fast method compared to the regular method is increasing with increasing number of local reference configurations.
+</p>
+<p>It should be noted that in the fast version no Bayesian error estimation is available. 
+</p>
+<p>Since the calculation time of the fast version is of the same order of magnitude as the timing for the output of the molecular-dynamics results, we advise decreasing the output frequency for molecular dynamics by the tag <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>. Additionally, the calculation and output of the pair-correlation function can be suppressed by <code style="padding: 2px"><a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a> = 0</code> as default. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_IERR" title="ML IERR">ML_IERR</a>, <a href="/wiki/index.php/ML_OUTBLOCK" title="ML OUTBLOCK">ML_OUTBLOCK</a>, <a href="/wiki/index.php/ML_OUTPUT_MODE" title="ML OUTPUT MODE">ML_OUTPUT_MODE</a>
+</p>

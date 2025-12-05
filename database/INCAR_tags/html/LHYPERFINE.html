@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>LHYPERFINE - VASP Wiki</title>
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"158b9efeee09091e8666b26d","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LHYPERFINE","wgTitle":"LHYPERFINE","wgCurRevisionId":29690,"wgRevisionId":29690,"wgArticleId":276,"wgIsArticle":true,
+"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["INCAR tag","NMR"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LHYPERFINE","wgRelevantArticleId":276,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgVector2022PreviewPages":[],"wgEditSubmitButtonLabelPublish":false};RLSTATE={"skins.vector.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.ready",
+"mediawiki.toc","skins.vector.js","skins.vector.es6","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.ui.button%2Cicon%7Cskins.vector.icons%2Cstyles&amp;only=styles&amp;skin=vector-2022"/>
+<script async="" src="/wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022"/>
+<meta name="generator" content="MediaWiki 1.40.1"/>
+<meta name="robots" content="max-image-preview:standard"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="VASP Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.vasp.at/wiki/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"/>
+<link rel="alternate" type="application/atom+xml" title="VASP Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-LHYPERFINE rootpage-LHYPERFINE skin-vector-2022 action-view skin--responsive"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+	<div class="mw-page-container-inner">
+		<input
+			type="checkbox"
+			id="mw-sidebar-checkbox"
+			class="mw-checkbox-hack-checkbox"
+			>
+		<header class="mw-header mw-ui-icon-flush-left mw-ui-icon-flush-right">
+			<div class="vector-header-start">
+					<label
+				id="mw-sidebar-button"
+				class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element mw-ui-icon-flush-right"
+				for="mw-sidebar-checkbox"
+				role="button"
+				aria-controls="mw-panel"
+				data-event-name="ui.sidebar"
+				tabindex="0"
+				title="Main menu">
+				<span>Toggle sidebar</span>
+			</label>
+		
+<a href="/wiki/index.php/Main_page" class="mw-logo">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="VASP Wiki"
+			src="/wiki/images/logo-on-white.png" style="width: 11.1875em; height: 2.5em;">
+	</span>
+</a>
+
+			</div>
+			<div class="vector-header-end">
+				
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box">
+	<a href="/wiki/index.php/Special:Search"
+	
+		
+		
+		
+		title="Search VASP Wiki [f]"
+		accesskey="f"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+	<div>
+		<form action="/wiki/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search VASP Wiki" aria-label="Search VASP Wiki" autocapitalize="sentences" title="Search VASP Wiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+				<nav class="vector-user-links" aria-label="Personal tools" role="navigation" >
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet mw-portlet-vector-user-menu-overflow"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login-2" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=LHYPERFINE" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+<div id="vector-user-links-dropdown" class="vector-menu vector-dropdown vector-menu-dropdown vector-user-menu vector-user-menu-logged-out"  title="More options" >
+	<input type="checkbox"
+		id="vector-user-links-dropdown-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-user-links-dropdown"
+		class="vector-menu-checkbox "
+		
+		aria-label="Personal tools"
+		
+	/>
+	<label
+		id="vector-user-links-dropdown-label"
+		for="vector-user-links-dropdown-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=LHYPERFINE" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="mw-ui-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+</nav>
+
+			</div>
+		</header>
+		<div class="vector-main-menu-container ">
+			<div id="mw-navigation">
+				<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+						
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	
+	
+<div id="p-navigation" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-navigation"  >
+	<div
+		id="p-navigation-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/index.php/Main_page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/index.php/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-tb" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-tb"  >
+	<div
+		id="p-tb-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/index.php/Special:WhatLinksHere/LHYPERFINE" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChangesLinked/LHYPERFINE" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/wiki/index.php?title=LHYPERFINE&amp;oldid=29690" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/wiki/index.php?title=LHYPERFINE&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+
+</div>
+
+				</nav>
+			</div>
+		</div>
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="localNotice"><div class="sitenotice" lang="en" dir="ltr"><p>Requests for technical support from the VASP team should be posted in the <a rel="nofollow" class="external text" href="https://www.vasp.at/forum/">VASP Forum</a>.
+</p></div></div></div>
+		</div>
+		<input type="checkbox" id="vector-toc-collapsed-checkbox" class="mw-checkbox-hack-checkbox">
+		<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+			<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Input"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Input">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Input</div>
+		</a>
+		
+		<ul id="toc-Input-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Output"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Output">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Output</div>
+		</a>
+		
+		<ul id="toc-Output-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Units"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Units">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Units</div>
+		</a>
+		
+		<ul id="toc-Units-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Advice"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Advice">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>Advice</div>
+		</a>
+		
+			<button aria-controls="toc-Advice-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small vector-toc-toggle">
+				Toggle Advice subsection
+			</button>
+		
+		<ul id="toc-Advice-sublist" class="vector-toc-list">
+			<li id="toc-PAW_pseudopotentials"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#PAW_pseudopotentials">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.1</span>PAW pseudopotentials</div>
+			</a>
+			
+			<ul id="toc-PAW_pseudopotentials-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Core_contributions_and_hybrid_functionals"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Core_contributions_and_hybrid_functionals">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.2</span>Core contributions and hybrid functionals</div>
+			</a>
+			
+			<ul id="toc-Core_contributions_and_hybrid_functionals-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Input_parameters"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Input_parameters">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.3</span>Input parameters</div>
+			</a>
+			
+			<ul id="toc-Input_parameters-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Converging_to_non-magnetic_states"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Converging_to_non-magnetic_states">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.4</span>Converging to non-magnetic states</div>
+			</a>
+			
+			<ul id="toc-Converging_to_non-magnetic_states-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Related_tags_and_articles"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Related_tags_and_articles">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>Related tags and articles</div>
+		</a>
+		
+		<ul id="toc-Related_tags_and_articles-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">6</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+			</div>
+		</nav>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<label
+						id="vector-toc-collapsed-button"
+						class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-flush-left mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+						for="vector-toc-collapsed-checkbox"
+						role="button"
+						aria-controls="toc-toggle-list"
+						data-event-name="vector.toc-toggle-list"
+						tabindex="0"
+						title="Table of Contents">
+						Toggle the table of contents
+					</label>
+				
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-menu vector-dropdown vector-menu-dropdown vector-page-titlebar-toc mw-ui-icon-flush-left"  >
+	<input type="checkbox"
+		id="vector-page-titlebar-toc-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-page-titlebar-toc"
+		class="vector-menu-checkbox "
+		
+		aria-label="Toggle the table of contents"
+		
+	/>
+	<label
+		id="vector-page-titlebar-toc-label"
+		for="vector-page-titlebar-toc-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+		<span class="vector-menu-heading-label">Toggle the table of contents</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">LHYPERFINE</span></h1>
+				
+				
+				</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/LHYPERFINE" title="View the content page [c]" accesskey="c" class=""><span>Page</span></a>
+</li>
+<li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=Talk:LHYPERFINE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t" class=""><span>Discussion</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+								
+
+<div id="p-variants" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-variants emptyPortlet"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-label="Change language variant"
+		
+		
+	/>
+	<label
+		id="p-variants-label"
+		for="p-variants-checkbox"
+		class="vector-menu-heading "
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/LHYPERFINE" class=""><span>Read</span></a>
+</li>
+<li id="ca-viewsource" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=LHYPERFINE&amp;action=edit" title="This page is protected.
+You can view its source [e]" accesskey="e" class=""><span>View source</span></a>
+</li>
+<li id="ca-history" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=LHYPERFINE&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="More options">
+								
+
+<div id="p-cactions" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		
+		aria-label="More"
+		
+	/>
+	<label
+		id="p-cactions-label"
+		for="p-cactions-checkbox"
+		class="vector-menu-heading"
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php/LHYPERFINE"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=LHYPERFINE&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=LHYPERFINE&amp;action=history"><span>View history</span></a></li></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From VASP Wiki</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><a class="mw-selflink selflink">LHYPERFINE</a>&#160;= .TRUE. | .FALSE.<br /> Default: <b>LHYPERFINE</b> =  .FALSE.&#160;
+</p><p>Description: compute the hyperfine tensors at the atomic sites (available as of vasp.5.3.2).
+</p>
+<hr />
+<p>To have VASP compute the hyperfine tensors at the atomic sites, set
+</p>
+<pre>LHYPERFINE = .TRUE.
+</pre>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b> Either spin-polarized calclulations <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2 or noncollinear calculations <a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a> = .TRUE. <b>must</b> be used.
+</td></tr></tbody></table>
+<p>The hyperfine tensor A<sup>I</sup> describes the interaction between a nuclear spin S<sup>I</sup> (located at site <b>R</b><sub>I</sub>) and the electronic spin distribution S<sup>e</sup> (in most cases associated with a paramagnetic defect state) <sup id="cite_ref-szasz:prb:2013_1-0" class="reference"><a href="#cite_note-szasz:prb:2013-1">&#91;1&#93;</a></sup>:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+E=\sum_{ij} S^e_i A^I_{ij} S^I_j
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </munder>
+        <msubsup>
+          <mi>S</mi>
+          <mi>i</mi>
+          <mi>e</mi>
+        </msubsup>
+        <msubsup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+          <mi>I</mi>
+        </msubsup>
+        <msubsup>
+          <mi>S</mi>
+          <mi>j</mi>
+          <mi>I</mi>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+E=\sum_{ij} S^e_i A^I_{ij} S^I_j
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2d0c9a064b34c1e5e69d5d2f4d242508&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; height: 5.843ex; width: 16.939ex;" alt="{\displaystyle &#10;E=\sum_{ij} S^e_i A^I_{ij} S^I_j&#10;}"/></span></dd></dl>
+<p>In general it is written as the sum of an isotropic part, the so-called Fermi contact term, and an anisotropic (dipolar) part.
+</p><p>The Fermi contact term is given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+(A^I_{\mathrm{iso}})_{ij}= \frac{2}{3}\frac{\mu_0\gamma_e\gamma_I}{\langle S_z\rangle}\delta_{ij}\int \delta_T(\mathbf{r})\rho_s(\mathbf{r}+\mathbf{R}_I)d\mathbf{r}
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msubsup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">i</mi>
+              <mi mathvariant="normal">s</mi>
+              <mi mathvariant="normal">o</mi>
+            </mrow>
+          </mrow>
+          <mi>I</mi>
+        </msubsup>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mn>2</mn>
+          <mn>3</mn>
+        </mfrac>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mn>0</mn>
+            </msub>
+            <msub>
+              <mi>&#x03B3;<!-- γ --></mi>
+              <mi>e</mi>
+            </msub>
+            <msub>
+              <mi>&#x03B3;<!-- γ --></mi>
+              <mi>I</mi>
+            </msub>
+          </mrow>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+            <msub>
+              <mi>S</mi>
+              <mi>z</mi>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+          </mrow>
+        </mfrac>
+        <msub>
+          <mi>&#x03B4;<!-- δ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>&#x222B;<!-- ∫ --></mo>
+        <msub>
+          <mi>&#x03B4;<!-- δ --></mi>
+          <mi>T</mi>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">r</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>&#x03C1;<!-- ρ --></mi>
+          <mi>s</mi>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">r</mi>
+        </mrow>
+        <mo>+</mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">R</mi>
+          </mrow>
+          <mi>I</mi>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">r</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+(A^I_{\mathrm{iso}})_{ij}= \frac{2}{3}\frac{\mu_0\gamma_e\gamma_I}{\langle S_z\rangle}\delta_{ij}\int \delta_T(\mathbf{r})\rho_s(\mathbf{r}+\mathbf{R}_I)d\mathbf{r}
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2bdc76e3851ca2c2a0e1099807642833&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; height: 6.009ex; width: 44.195ex;" alt="{\displaystyle &#10;(A^I_{\mathrm{iso}})_{ij}= \frac{2}{3}\frac{\mu_0\gamma_e\gamma_I}{\langle S_z\rangle}\delta_{ij}\int \delta_T(\mathbf{r})\rho_s(\mathbf{r}+\mathbf{R}_I)d\mathbf{r}&#10;}"/></span></dd></dl>
+<p>where ρ<sub>s</sub> is the spin density, μ<sub>0</sub> is the magnetic susceptibility of free space,
+γ<sub>e</sub> the electron gyromagnetic ratio, γ<sub>I</sub> the nuclear gyromagnetic ratio of the nucleus at <b>R</b><sub>I</sub>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \langle S_z \rangle}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>S</mi>
+          <mi>z</mi>
+        </msub>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \langle S_z \rangle}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4e719e2fd50e9f4c93a0ee0f383ffd2d&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.236ex;" alt="{\displaystyle \langle S_z \rangle}"/></span> the expectation value of the <i>z</i>-component of the total electronic spin.
+</p><p>δ<sub>T</sub>(<b>r</b>) is a smeared out δ function, as described in
+the Appendix of Ref. <sup id="cite_ref-bloechl:prb:2000_2-0" class="reference"><a href="#cite_note-bloechl:prb:2000-2">&#91;2&#93;</a></sup>.
+</p><p>The dipolar contributions to the hyperfine tensor are given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+(A^I_{\mathrm{ani}})_{ij}=\frac{\mu_0}{4\pi}\frac{\gamma_e\gamma_I}{\langle S_z\rangle}
+\int \frac{\rho_s(\mathbf{r}+\mathbf{R}_I)}{r^3}\frac{3r_ir_j-\delta_{ij}r^2}{r^2} d\mathbf{r}
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msubsup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">a</mi>
+              <mi mathvariant="normal">n</mi>
+              <mi mathvariant="normal">i</mi>
+            </mrow>
+          </mrow>
+          <mi>I</mi>
+        </msubsup>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <msub>
+            <mi>&#x03BC;<!-- μ --></mi>
+            <mn>0</mn>
+          </msub>
+          <mrow>
+            <mn>4</mn>
+            <mi>&#x03C0;<!-- π --></mi>
+          </mrow>
+        </mfrac>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>&#x03B3;<!-- γ --></mi>
+              <mi>e</mi>
+            </msub>
+            <msub>
+              <mi>&#x03B3;<!-- γ --></mi>
+              <mi>I</mi>
+            </msub>
+          </mrow>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+            <msub>
+              <mi>S</mi>
+              <mi>z</mi>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+          </mrow>
+        </mfrac>
+        <mo>&#x222B;<!-- ∫ --></mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>&#x03C1;<!-- ρ --></mi>
+              <mi>s</mi>
+            </msub>
+            <mo stretchy="false">(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="bold">r</mi>
+            </mrow>
+            <mo>+</mo>
+            <msub>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi mathvariant="bold">R</mi>
+              </mrow>
+              <mi>I</mi>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <msup>
+            <mi>r</mi>
+            <mn>3</mn>
+          </msup>
+        </mfrac>
+        <mfrac>
+          <mrow>
+            <mn>3</mn>
+            <msub>
+              <mi>r</mi>
+              <mi>i</mi>
+            </msub>
+            <msub>
+              <mi>r</mi>
+              <mi>j</mi>
+            </msub>
+            <mo>&#x2212;<!-- − --></mo>
+            <msub>
+              <mi>&#x03B4;<!-- δ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+                <mi>j</mi>
+              </mrow>
+            </msub>
+            <msup>
+              <mi>r</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+          <msup>
+            <mi>r</mi>
+            <mn>2</mn>
+          </msup>
+        </mfrac>
+        <mi>d</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">r</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+(A^I_{\mathrm{ani}})_{ij}=\frac{\mu_0}{4\pi}\frac{\gamma_e\gamma_I}{\langle S_z\rangle}
+\int \frac{\rho_s(\mathbf{r}+\mathbf{R}_I)}{r^3}\frac{3r_ir_j-\delta_{ij}r^2}{r^2} d\mathbf{r}
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fccfcecd04a1a7fa86993770813c7126&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; height: 6.676ex; width: 49.589ex;" alt="{\displaystyle &#10;(A^I_{\mathrm{ani}})_{ij}=\frac{\mu_0}{4\pi}\frac{\gamma_e\gamma_I}{\langle S_z\rangle}&#10;\int \frac{\rho_s(\mathbf{r}+\mathbf{R}_I)}{r^3}\frac{3r_ir_j-\delta_{ij}r^2}{r^2} d\mathbf{r}&#10;}"/></span></dd></dl>
+<p>In the equations above <i>r</i>=|<b>r</b>|, <i>r</i><sub>i</sub> the i-th component of <b>r</b>, and <b>r</b> is
+taken relative to the position of the nucleus <b>R</b><sub>I</sub>.
+</p><p>The nuclear gyromagnetic ratios should be specified by means of the <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>-tag:
+</p>
+<pre>NGYROMAG = gamma_1  gamma_2 ... gamma_N
+</pre>
+<p>where one should specify one number for each of the <i>N</i> species on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, i.e. if C, H, N, and O are listed as species in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file, then there should be four numbers in <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>, regardless of how many total atoms there are. 
+</p>
+<table style="border: 0px solid #8342A4; padding: 5px; background: #DEC4EB">
+<tbody><tr>
+<td><b><span style="color: #8342A4;">Important:</span></b> If one does not set <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file, VASP assumes a factor of 1 for each species.
+</td></tr></tbody></table>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="Input">Input</span></h2>
+<p>An example <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> is presented below used for a Nitrogen-vacancy (NV) center in diamond:
+</p>
+<pre> PREC = Accurate  
+ ENCUT = 400         
+ EDIFF = 1E-6  
+ ISMEAR = 0; SIGMA = 0.01 
+
+ LHYPERFINE = .TRUE.
+ NGYROMAG = 10.7084 3.077
+
+ #LASPH = .TRUE.
+
+ ISPIN = 2
+</pre> 
+<p>Change the values of <a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a> to your corresponding system. <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> is commented out. For crystals, it is not generally important; however, for molecules, it is very important.
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>As usual, all output is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. VASP writes three blocks of data. The first is for the Fermi contact coupling parameter:
+</p>
+<pre> Fermi contact (isotropic) hyperfine coupling parameter (MHz)
+ -------------------------------------------------------------
+  ion      A_pw      A_1PS     A_1AE     A_1c      A_tot
+ -------------------------------------------------------------
+   1       ...       ...       ...       ...       ...
+  ..       ...       ...       ...       ...       ...
+
+ -------------------------------------------------------------
+</pre>
+<p>with an entry for each ion on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+A<sub>pw</sub>, A<sub>1PS</sub>, A<sub>1AE</sub>, and A<sub>1c</sub> are the plane wave, pseudo one-center, all-electron one-center, and one-center core contributions to the Fermi contact term, respectively.
+The total Fermi contact term is given by A<sub>tot</sub>. 
+</p>
+<table style="border: 0px solid #8342A4; padding: 5px; background: #DEC4EB">
+<tbody><tr>
+<td><b><span style="color: #8342A4;">Important:</span></b> We have chosen <b>NOT</b> to include the core contributions A<sub>1c</sub> in A<sub>tot</sub>. These are important to add when comparing to experiment where they can contribute a significant proportion to the hyperfine coupling constant (up to ~50&#160;% for <sup>13</sup>C <sup id="cite_ref-szasz:prb:2013_1-1" class="reference"><a href="#cite_note-szasz:prb:2013-1">&#91;1&#93;</a></sup>). If you want them to be included, you should add them by hand to A<sub>tot</sub>:
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 
+A_{tot + 1c} = A_{tot} + A_{1c} = (A_{pw} + A_{PS} + A_{AE}) + A_{1c}
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+            <mi>o</mi>
+            <mi>t</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+            <mi>o</mi>
+            <mi>t</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>p</mi>
+            <mi>w</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>P</mi>
+            <mi>S</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>A</mi>
+            <mi>E</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+            <mi>c</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 
+A_{tot + 1c} = A_{tot} + A_{1c} = (A_{pw} + A_{PS} + A_{AE}) + A_{1c}
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ae53f8a6c63e1738c2a8366bc907e5c3&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; height: 3.009ex; width: 49.831ex;" alt="{\displaystyle &#10;A_{tot + 1c} = A_{tot} + A_{1c} = (A_{pw} + A_{PS} + A_{AE}) + A_{1c}&#10;}"/></span></dd></dl>
+<p>Core electronic contributions to the Fermi contact term are calculated in the frozen valence approximation as proposed by Yazyev <i>et al.</i><sup id="cite_ref-yazyev:prb:2005_3-0" class="reference"><a href="#cite_note-yazyev:prb:2005-3">&#91;3&#93;</a></sup>.
+</p>
+</td></tr></tbody></table>
+<p>The dipolar contributions are listed next:
+</p>
+<pre> Dipolar hyperfine coupling parameters (MHz)
+ ---------------------------------------------------------------------
+  ion      A_xx      A_yy      A_zz      A_xy      A_xz      A_yz
+ ---------------------------------------------------------------------
+   1       ...       ...       ...       ...       ...       ...
+  ..       ...       ...       ...       ...       ...       ...
+
+ ---------------------------------------------------------------------
+</pre>
+<p>Again one line per ion in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p><p>The total hyperfine tensors are written as:
+</p>
+<pre> Total hyperfine coupling parameters after diagonalization (MHz)
+ (convention: |A_zz| &gt; |A_xx| &gt; |A_yy|)
+ ----------------------------------------------------------------------
+  ion      A_xx      A_yy      A_zz     asymmetry (A_yy - A_xx)/ A_zz
+ ----------------------------------------------------------------------
+   1       ...       ...       ...         ...
+  ..       ...       ...       ...         ...
+
+ ----------------------------------------------------------------------
+</pre>
+<p>i.e., the tensors have been diagonalized and rearranged.
+</p>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b> The Fermi contact term is strongly dominated by the all-electron one-center contribution A<sub>1AE</sub>.
+<p>Unfortunately, this particular term is quite sensitive to the number and eigenenergy of the all-electron partial waves that
+make up the one-center basis set, <i>i.e.</i>, to the particulars of the PAW dataset you are using.
+As a result, the Fermi contact term may strongly depend on the choice of PAW dataset.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Units">Units</span></h2>
+<p>The Fermi contact term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7fc56270e7a70fa81a5935b72eacbe29&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.743ex;" alt="{\displaystyle A}"/></span> is measured in following units
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle [A]=
+\left[\mu_0\right]\times 
+\left[g_e \mu_e\right]\times 
+\left[g_j \mu_j\right]\times
+\left[|\psi(0)|^2\right] = 
+\frac{T^2m^3}{J}\times 
+\frac{J}{T}\times 
+\frac{MHz}{T}\times
+\frac{1}{m^3} = MHz
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>A</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <msub>
+            <mi>&#x03BC;<!-- μ --></mi>
+            <mn>0</mn>
+          </msub>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>g</mi>
+              <mi>e</mi>
+            </msub>
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mi>e</mi>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>g</mi>
+              <mi>j</mi>
+            </msub>
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mi>j</mi>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>&#x03C8;<!-- ψ --></mi>
+            <mo stretchy="false">(</mo>
+            <mn>0</mn>
+            <mo stretchy="false">)</mo>
+            <msup>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo stretchy="false">|</mo>
+              </mrow>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>T</mi>
+              <mn>2</mn>
+            </msup>
+            <msup>
+              <mi>m</mi>
+              <mn>3</mn>
+            </msup>
+          </mrow>
+          <mi>J</mi>
+        </mfrac>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mfrac>
+          <mi>J</mi>
+          <mi>T</mi>
+        </mfrac>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mfrac>
+          <mrow>
+            <mi>M</mi>
+            <mi>H</mi>
+            <mi>z</mi>
+          </mrow>
+          <mi>T</mi>
+        </mfrac>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mi>m</mi>
+            <mn>3</mn>
+          </msup>
+        </mfrac>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mi>H</mi>
+        <mi>z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [A]=
+\left[\mu_0\right]\times 
+\left[g_e \mu_e\right]\times 
+\left[g_j \mu_j\right]\times
+\left[|\psi(0)|^2\right] = 
+\frac{T^2m^3}{J}\times 
+\frac{J}{T}\times 
+\frac{MHz}{T}\times
+\frac{1}{m^3} = MHz
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8106e90df6247e41c42dc11722e33dd3&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.171ex; height: 6.009ex; width: 78.709ex;" alt="{\displaystyle [A]=&#10;\left[\mu_0\right]\times &#10;\left[g_e \mu_e\right]\times &#10;\left[g_j \mu_j\right]\times&#10;\left[|\psi(0)|^2\right] = &#10;\frac{T^2m^3}{J}\times &#10;\frac{J}{T}\times &#10;\frac{MHz}{T}\times&#10;\frac{1}{m^3} = MHz&#10;}"/></span>
+</p><p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03BC;<!-- μ --></mi>
+          <mn>0</mn>
+        </msub>
+        <mo>=</mo>
+        <mn>4</mn>
+        <mi>&#x03C0;<!-- π --></mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>7</mn>
+          </mrow>
+        </msup>
+        <msup>
+          <mi>T</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mi>m</mi>
+          <mn>3</mn>
+        </msup>
+        <msup>
+          <mi>J</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2abf4e8feb75e12518bf6f20196be4e9&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; height: 3.176ex; width: 25.274ex;" alt="{\displaystyle \mu_0=4\pi\times 10^{-7} T^2 m^3 J^{-1}}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mi>e</mi>
+        </msub>
+        <msub>
+          <mi>&#x03BC;<!-- μ --></mi>
+          <mi>e</mi>
+        </msub>
+        <mo>=</mo>
+        <mn>9.28476377</mn>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>24</mn>
+          </mrow>
+        </msup>
+        <mi>J</mi>
+        <msup>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mn>10</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>30</mn>
+          </mrow>
+        </msup>
+        <msup>
+          <mi>m</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>3</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2246f4e0ff20350d6d4065504cb59967&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; height: 3.343ex; width: 52.099ex;" alt="{\displaystyle g_e\mu_e=9.28476377\times 10^{-24} J T^{-1}, |\psi(0)|^2=10^{30}m^{-3}}"/></span>. 
+<a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a> is given in units of MHz/T.
+</p>
+<h2><span class="mw-headline" id="Advice">Advice</span></h2>
+<h3><span class="mw-headline" id="PAW_pseudopotentials">PAW pseudopotentials</span></h3>
+<ul><li><a href="/wiki/index.php/Choosing_pseudopotentials" title="Choosing pseudopotentials">Choice of PAW potentials</a>: The hyperfine coupling parameter can be sensitive to the specific <a href="/wiki/index.php/Category:Pseudopotentials" title="Category:Pseudopotentials">PAW potential</a> used, as different <a href="/wiki/index.php/Category:Pseudopotentials" title="Category:Pseudopotentials">pseudopotentials</a> include a varying number of electrons in the valence (i.e. _sv, _pv). It is important to match the all-electron (AE) wavefunction.</li>
+<li><a href="/wiki/index.php/Available_pseudopotentials" title="Available pseudopotentials">GW pseudopotentials</a> (i.e. _GW) often offer a better description than standard potentials.</li></ul>
+<h3><span class="mw-headline" id="Core_contributions_and_hybrid_functionals">Core contributions and hybrid functionals</span></h3>
+<ul><li>Make sure to include core contributions when reporting Fermi contact terms <sup id="cite_ref-yazyev:prb:2005_3-1" class="reference"><a href="#cite_note-yazyev:prb:2005-3">&#91;3&#93;</a></sup>. These are very important and their inclusion improves comparison to experiment <sup id="cite_ref-szasz:prb:2013_1-2" class="reference"><a href="#cite_note-szasz:prb:2013-1">&#91;1&#93;</a></sup>.</li>
+<li>The use of hybrid functionals can also improve the hyperfine coupling constants when compared to experiment. E.g., for defects in silicon, HSE06 localizes the defect relative to PBE, significantly improving the description <sup id="cite_ref-szasz:prb:2013_1-3" class="reference"><a href="#cite_note-szasz:prb:2013-1">&#91;1&#93;</a></sup>.</li></ul>
+<h3><span class="mw-headline" id="Input_parameters">Input parameters</span></h3>
+<ul><li>We recommend using tightly converged settings:</li></ul>
+<pre><a href="/wiki/index.php/PREC" title="PREC">PREC</a> = Accurate
+<a href="/wiki/index.php/EDIFF" title="EDIFF">EDIFF</a> = 1E-6 # Note that some systems might require tighter settings, e.g. 1E-8
+</pre>
+<ul><li>Additionally, we recommend performing convergence tests with respect to the plane-wave energy cutoff <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and k-point mesh <a href="/wiki/index.php/KPOINTS" title="KPOINTS">KPOINTS</a> to ensure convergence has been achieved for your system.
+<ul><li>Convergence is generally quick with respect to energy cutoff.</li>
+<li>Convergence can be very dependent on k-point mesh density. In some cases, e.g. if your cell is too small, then increasing the k-point mesh can result in convergence to a non-magnetic solution, eliminating the hyperfine coupling.</li></ul></li>
+<li>Test your system with <a href="/wiki/index.php/LASPH" title="LASPH">LASPH</a> = .TRUE. and .FALSE. In some cases, non-spherical contributions may be important.</li></ul>
+<h3><span class="mw-headline" id="Converging_to_non-magnetic_states">Converging to non-magnetic states</span></h3>
+<ul><li>It is possible that your system relaxes to a non-magnetic solution, causing the hyperfine splitting to disappear (i.e. all zeros). If you think your system should be magnetic, you can enforce it using <a href="/wiki/index.php/NUPDOWN" title="NUPDOWN">NUPDOWN</a>, which will return the hyperfine splitting, cf. forum post: <a rel="nofollow" class="external free" href="https://vasp.at/forum/viewtopic.php?t=16921">https://vasp.at/forum/viewtopic.php?t=16921</a>. <a href="/wiki/index.php/NUPDOWN" title="NUPDOWN">NUPDOWN</a> will change the <code>Total magnetic moment S=</code> at the start of the hyperfine coupling section in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>.</li></ul>
+<table style="border: 0px solid #8342A4; padding: 5px; background: #DEC4EB">
+<tbody><tr>
+<td><b><span style="color: #8342A4;">Important:</span></b> For some cells, the total magnetic moment S can be very small (<code>grep " mag=" OSZICAR</code>), near zero. In the above equations, the isotropic and anisotropic components of the hyperfine coupling parameter (A<sup>I</sup><sub>iso</sub> and A<sup>I</sup><sub>ani</sub>) are calculated by dividing through by S (cf. ⟨S<sub>z</sub>⟩). To avoid division by zero, S is reset to 1 when S &lt; 10<sup>-3</sup>. <code>Total magnetic moment S=</code> is changed, changing the hyperfine coupling constants, too. These hyperfine coupling constants are therefore not meaningful as far as we know. In future versions of the code, there will be a warning message stating that S has been reset and printing the correct total magnetic moment.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NGYROMAG" title="NGYROMAG">NGYROMAG</a>
+</p><p><a href="/wiki/index.php/Special:Search/%22LHYPERFINE%22_incategory:%22Examples%22" title="Special:Search/&quot;LHYPERFINE&quot; incategory:&quot;Examples&quot;">Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<hr />
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-szasz:prb:2013-1">↑ <sup><a href="#cite_ref-szasz:prb:2013_1-0">a</a></sup> <sup><a href="#cite_ref-szasz:prb:2013_1-1">b</a></sup> <sup><a href="#cite_ref-szasz:prb:2013_1-2">c</a></sup> <sup><a href="#cite_ref-szasz:prb:2013_1-3">d</a></sup> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1103/PhysRevB.88.075202">K. Szasz, T. Hornos, M. Marsman, and A. Gali, <i>Hyperfine coupling of point defects in semiconductors by hybrid density functional calculations: The role of core spin polarization</i>, Phys. Rev. B, <b>88</b>, 075202 (2013).</a></span>
+</li>
+<li id="cite_note-bloechl:prb:2000-2"><a href="#cite_ref-bloechl:prb:2000_2-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1103/PhysRevB.62.6158">P. Bloechl, <i>First-principles calculations of defects in oxygen-deficient silica exposed to hydrogen</i>, Phys. Rev. B, <b>62</b>, 6158 (2000).</a></span>
+</li>
+<li id="cite_note-yazyev:prb:2005-3">↑ <sup><a href="#cite_ref-yazyev:prb:2005_3-0">a</a></sup> <sup><a href="#cite_ref-yazyev:prb:2005_3-1">b</a></sup> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1103/PhysRevB.71.115110">O. V. Yazyev, I. Tavernelli, L. Helm, and U. R. Roethlisberger, <i>Core spin-polarization correction in pseudopotential-based electronic structure calculations</i>, Phys. Rev. B <b>71</b>, 115110 (2006).</a></span>
+</li>
+</ol></div>
+<!-- 
+NewPP limit report
+Cached time: 20250305154126
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc, no‐toc‐conversion]
+CPU time usage: 0.713 seconds
+Real time usage: 0.819 seconds
+Preprocessor visited node count: 41841/1000000
+Post‐expand include size: 6698/2097152 bytes
+Template argument size: 134899/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2713/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  765.556      1 -total
+ 98.61%  754.893      7 Template:Cite
+ 57.14%  437.465   2954 Template:Reference
+ 31.08%  237.941      5 Template:NB
+  0.17%    1.292     16 Template:TAG
+  0.16%    1.237      1 Template:TAGDEF
+  0.13%    1.021      8 Template:FILE
+  0.12%    0.937      1 Template:Sc
+-->
+
+<!-- Saved in parser cache with key mediawiki-vw:pcache:idhash:276-0!canonical and timestamp 20250305154125 and revision id 29690. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://www.vasp.at/wiki/index.php?title=LHYPERFINE&amp;oldid=29690">https://www.vasp.at/wiki/index.php?title=LHYPERFINE&amp;oldid=29690</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/index.php/Category:INCAR_tag" title="Category:INCAR tag">INCAR tag</a></li><li><a href="/wiki/index.php/Category:NMR" title="Category:NMR">NMR</a></li></ul></div></div>
+					
+				</div>
+				
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 5 March 2025, at 15:38.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/wiki/index.php/VASP_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/index.php/VASP_Wiki:About">About VASP Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/index.php/VASP_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"><img src="/wiki/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/wiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":144,"wgPageParseReport":{"limitreport":{"cputime":"0.713","walltime":"0.819","ppvisitednodes":{"value":41841,"limit":1000000},"postexpandincludesize":{"value":6698,"limit":2097152},"templateargumentsize":{"value":134899,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2713,"limit":5000000},"timingprofile":["100.00%  765.556      1 -total"," 98.61%  754.893      7 Template:Cite"," 57.14%  437.465   2954 Template:Reference"," 31.08%  237.941      5 Template:NB","  0.17%    1.292     16 Template:TAG","  0.16%    1.237      1 Template:TAGDEF","  0.13%    1.021      8 Template:FILE","  0.12%    0.937      1 Template:Sc"]},"cachereport":{"timestamp":"20250305154126","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20250305154259 -->
+</html>

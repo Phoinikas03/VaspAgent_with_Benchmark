@@ -1,0 +1,22 @@
+<p><a class="mw-selflink selflink">IMIX</a> = 0 | 1 | 2 | 4<br/> Default: <b>IMIX</b> = 4 
+</p>
+<p>Description: <a class="mw-selflink selflink">IMIX</a> specifies the type of <a href="/wiki/index.php/Category:Density_mixing" title="Category:Density mixing">density mixing</a>.
+</p>
+<h2><span id="IMIX.3D0:_No_mixing"></span><span class="mw-headline" id="IMIX=0:_No_mixing"><a class="mw-selflink selflink">IMIX</a>=0: No mixing</span></h2>
+<h2><span id="IMIX.3D1:_Kerker_mixing"></span><span class="mw-headline" id="IMIX=1:_Kerker_mixing"><a class="mw-selflink selflink">IMIX</a>=1: Kerker mixing</span></h2>
+<h2><span id="IMIX.3D2:_Variant_of_Tchebycheff_mixing"></span><span class="mw-headline" id="IMIX=2:_Variant_of_Tchebycheff_mixing"><a class="mw-selflink selflink">IMIX</a>=2: Variant of Tchebycheff mixing</span></h2>
+<h2><span id="IMIX.3D4:_Broyden.27s_2nd_method_and_Pulay-mixing_method_.28default.29"></span><span class="mw-headline" id="IMIX=4:_Broyden's_2nd_method_and_Pulay-mixing_method_(default)"><a class="mw-selflink selflink">IMIX</a>=4: Broyden's 2<sup>nd</sup> method and Pulay-mixing method (default)</span></h2>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/MAXMIX" title="MAXMIX">MAXMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IMIX%22_incategory:%22Examples%22" title='Special:Search/"IMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

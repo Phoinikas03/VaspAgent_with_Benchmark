@@ -1,0 +1,50 @@
+<p><a class="mw-selflink selflink">SPRING</a> = [integer]<br/> Default: <b>SPRING</b> = -5 
+</p>
+<p>Description: <a class="mw-selflink selflink">SPRING</a> gives the <i>spring constant</i> between the images as used in the elastic band method.
+</p>
+<p><a class="mw-selflink selflink">SPRING</a> has to be set together with <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a> if the elastic band method is used to calculate energy barriers between two ionic configurations of a system.
+</p>
+<p>For <a class="mw-selflink selflink">SPRING</a> = 0, each image is only allowed
+to move into the direction perpendicular to the current
+hyper-tangent, which is calculated as the normal vector
+between two neighboring images.
+This algorithm keeps the distance between the images
+constant to <i>first order</i>. It is therefore possible to start
+with a dense image spacing around the saddle point to obtain
+a finer resolution around this point.
+</p>
+<p>The nudged elastic band method<sup class="reference" id="cite_ref-jons95_1-0"><a href="#cite_note-jons95-1">[1]</a></sup><sup class="reference" id="cite_ref-jons98_2-0"><a href="#cite_note-jons98-2">[2]</a></sup>
+is applied when <a class="mw-selflink selflink">SPRING</a> is set to a negative value e.g.
+</p>
+<p>This is also the recommended setting.
+Compared to the previous case, additional tangential springs
+are introduced to keep the images equidistant
+during the relaxation (remember the constraint is only
+conserved to first order otherwise). Do not use too large values,
+because this can slow down convergence. The default value
+usually works quite reliably.
+</p>
+<p>One problem of the nudged elastic band method is
+that the constraint (i.e movements only
+in the hyper-plane perpendicular to the current tangent) is
+non linear. Therefore, the CG algorithm usually fails
+to converge, and  we recommended to use
+the RMM-DIIS algorithm (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1) or the quick-min algorithm (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=3).
+Additionally,
+the non-linear constraint (equidistant images) tends to be  violated
+significantly during the first few steps (it is only enforced to first order).
+If this problem is
+encountered, a very low dimensionality parameter (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=1, <a href="/wiki/index.php/NFREE" title="NFREE">NFREE</a>=2)
+should be applied in the first few steps, or a steepest
+descent minimization without line optimization (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=3, <a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>=2).
+should be used, to  pre-converge the images.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>,
+<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>,
+<a href="/wiki/index.php/NFREE" title="NFREE">NFREE</a>,
+<a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22SPRING%22_incategory:%22Examples%22" title='Special:Search/"SPRING" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

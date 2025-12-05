@@ -1,0 +1,35 @@
+<p><a class="mw-selflink selflink">LIBMBD_MBD_A</a> = [real]<br/> Default: <b>LIBMBD_MBD_A</b> = 6.0 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_MBD_A</a> sets the value of the damping parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>a</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0cc175b9c0f1b6a831c399e269772661&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.23ex;"/></span> in the many-body methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_MBD_A</a> allows to choose the value of the damping parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>a</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0cc175b9c0f1b6a831c399e269772661&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.23ex;"/></span> in the many-body methods as implemented in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-1"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-1"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>. The value is internally passed to the libMBD input <b>mbd_a</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_4-0"><a href="#cite_note-libmbd_input-4">[4]</a></sup>.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-2"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/LIBMBD_XC" title="LIBMBD XC">LIBMBD_XC</a>,
+<a href="/wiki/index.php/LIBMBD_MBD_BETA" title="LIBMBD MBD BETA">LIBMBD_MBD_BETA</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_MBD_A%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD MBD A" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

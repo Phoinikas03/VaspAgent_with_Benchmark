@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LKPOINTS_WAN</a> = .TRUE.| .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LKPOINTS_WAN</a> controlls whether VASP reads the <a href="/wiki/index.php/KPOINTS_WAN" title="KPOINTS WAN">KPOINTS_WAN</a> file.
+</p>
+<p>To avoid reading the <a href="/wiki/index.php/KPOINTS_WAN" title="KPOINTS WAN">KPOINTS_WAN</a> file without removing it from the working directory, the <a class="mw-selflink selflink">LKPOINTS_WAN</a> tag can be set to <code>.FALSE.</code> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/KPOINTS_WAN" title="KPOINTS WAN">KPOINTS_WAN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LKPOINTS_WAN%22_incategory:%22Examples%22" title='Special:Search/"LKPOINTS WAN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

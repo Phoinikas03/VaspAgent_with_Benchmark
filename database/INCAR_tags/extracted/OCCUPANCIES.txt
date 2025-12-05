@@ -1,0 +1,26 @@
+<p><a class="mw-selflink selflink">PLUGINS/OCCUPANCIES</a> =  .True. | .False.<br/> Default: <b>PLUGINS/OCCUPANCIES</b> = .False. 
+</p>
+<p>Description: <a class="mw-selflink selflink">PLUGINS/OCCUPANCIES</a> calls the Python plugin for the occupancies interface for each ionic relaxation step
+</p>
+<p>When <a class="mw-selflink selflink">PLUGINS/OCCUPANCIES</a>=.TRUE., VASP calls the <code>occupancies</code> Python function at the end of each ionic relaxation step. 
+The primary use-case of this tag to recompute the occupancies after performing modifications through other plugins such as <a href="/wiki/index.php/PLUGINS/LOCAL_POTENTIAL" title="PLUGINS/LOCAL POTENTIAL">PLUGINS/LOCAL_POTENTIAL</a>. It also allows changing <a href="/wiki/index.php/NELECT" title="NELECT">NELECT</a>, <a href="/wiki/index.php/EFERMI" title="EFERMI">EFERMI</a>, <a href="/wiki/index.php/NUPDOWN" title="NUPDOWN">NUPDOWN</a>, <a href="/wiki/index.php/ISMEAR" title="ISMEAR">ISMEAR</a>, <a href="/wiki/index.php/SIGMA" title="SIGMA">SIGMA</a>, <a href="/wiki/index.php/EMIN" title="EMIN">EMIN</a> and <a href="/wiki/index.php/EMAX" title="EMAX">EMAX</a> at the end of each SCF step, to be reflected in the next step.
+</p>
+<h2><span class="mw-headline" id="Expected_inputs">Expected inputs</span></h2>
+<p>The <code>occupancies</code> Python function expects the following inputs,
+</p>
+<p>where <code>constants</code> and <code>additions</code> and <a class="external text" href="https://docs.python.org/3/library/dataclasses.html" rel="nofollow">Python dataclasses</a>.
+The <code>constants</code> dataclass consists of the following inputs, listed here with their associated <a class="external text" href="https://numpy.org/doc/stable/user/basics.types.html" rel="nofollow">datatypes</a>
+</p>
+<p>The <code>additions</code> dataclass consists of the same quantities as the <code>constants</code> tag.
+</p>
+<h2><span class="mw-headline" id="Modifying_quantities">Modifying quantities</span></h2>
+<p>Modify the quantities listed in additions by adding to them.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Plugins" title="Plugins">Plugins</a>,
+<a href="/wiki/index.php/PLUGINS/FORCE_AND_STRESS" title="PLUGINS/FORCE AND STRESS">PLUGINS/FORCE_AND_STRESS</a>,
+<a href="/wiki/index.php/PLUGINS/LOCAL_POTENTIAL" title="PLUGINS/LOCAL POTENTIAL">PLUGINS/LOCAL_POTENTIAL</a>,
+<a href="/wiki/index.php/PLUGINS/STRUCTURE" title="PLUGINS/STRUCTURE">PLUGINS/STRUCTURE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PLUGINS/OCCUPANCIES%22_incategory:%22Examples%22" title='Special:Search/"PLUGINS/OCCUPANCIES" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,1 @@
+LWRITE_WANPROJ =  Default: LWRITE_WANPROJ = .FALSE. Description: LWRITE_WANPROJ determines whether the Wannier projection file WANPROJ is written. If WANPROJ is present, VASP skips the Wannier projection and reads the effective projectors U nk from the WANPROJ file for each k point. Related tags and articles LWANNIER90 , LWANNIER90_RUN , LDOWNSAMPLE Examples that use this tag

@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">ML_WTOTEN</a> = [real] 
+</p>
+<p>Description: Sets a scaling of the fitted potential energy. 
+</p>
+<p>For <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>=2 and 3 (default), the potential energy in the training data set is multiplied by <a class="mw-selflink selflink">ML_WTOTEN</a> (unitless). We recommend increasing <a class="mw-selflink selflink">ML_WTOTEN</a> if you plan to apply the force field in a simulation where the accuracy of the total energy is most important. This puts a focus on the energy error and is desirable, for instance, for the computation of defect-formation energies.
+</p>
+<p>For <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>=1, <a class="mw-selflink selflink">ML_WTOTEN</a> has the unit of eV/atom, and the potential energy in the training data set is divided by it.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a>, <a href="/wiki/index.php/ML_IALGO_LINREG" title="ML IALGO LINREG">ML_IALGO_LINREG</a>, <a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_WTOTEN%22_incategory:%22Examples%22" title='Special:Search/"ML WTOTEN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

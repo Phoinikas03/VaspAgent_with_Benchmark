@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_NRANK_SPARSDES</a> = [integer]<br/> Default: <b>ML_NRANK_SPARSDES</b> = 5 
+</p>
+<p>Description: This tag sets the number of highest eigenvalues to which the correlation is measured within the angular descriptor sparsification (within the machine learning force field method).
+</p>
+<p>This tag usually does not need to be changed by the user!
+</p>
+<p>For details on the theory of angular descriptor sparsification see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sparsification_of_angular_descriptors" title="Machine learning force field: Theory">here</a>.
+</p>
+<p>For details on how to use the sparsification see the tag <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>, <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>, <a href="/wiki/index.php/ML_DESC_TYPE" title="ML DESC TYPE">ML_DESC_TYPE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_EPS_LOW%22_incategory:%22Examples%22" title='Special:Search/"ML EPS LOW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

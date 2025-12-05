@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ML_LAFILT2</a> = [logical]<br/> Default: <b>ML_LAFILT2</b> = .TRUE. 
+</p>
+<p>Description: This tag specifies whether angular filtering is applied or not within the machine learning force field method.
+</p>
+<p>For the desciption of the filters please see: <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a> and <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>.
+</p>
+<p>The applied angular filter is also briefly described <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Basis_set_expansion" title="Machine learning force field: Theory">here</a>.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_IAFILT2" title="ML IAFILT2">ML_IAFILT2</a>, <a href="/wiki/index.php/ML_AFILT2" title="ML AFILT2">ML_AFILT2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LAFILT2%22_incategory:%22Examples%22" title='Special:Search/"ML LAFILT2" incategory:"Examples"'>Examples that use this tag</a>
+</p>

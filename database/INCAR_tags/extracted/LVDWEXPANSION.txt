@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LVDWEXPANSION</a> = .TRUE. | .FALSE.<br/> Default: <b>LVDWEXPANSION</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LVDWEXPANSION</a>  decides whether to write the two- to six- body contributions to MBD dispersion energy in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IVDW" title="IVDW">IVDW</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>,
+<a href="/wiki/index.php/LSCSGRAD" title="LSCSGRAD">LSCSGRAD</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVDWEXPANSION%22_incategory:%22Examples%22" title='Special:Search/"LVDWEXPANSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

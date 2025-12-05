@@ -1,0 +1,1 @@
+NPACO =  Default: NPACO = 256 Description: NPACO sets the number of slots in the pair-correlation function written to PCDAT . VASP evaluates the pair-correlation function each NBLOCK steps and writes the PC-function after NBLOCK x KBLOCK steps to the PCDAT file. Related tags and articles APACO , NBLOCK , KBLOCK , PCDAT Examples that use this tag

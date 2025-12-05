@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">CLNT</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">CLNT</a> selects the type of the excited atoms in XAS calculations with <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>&gt;0.
+</p>
+<p>All atoms of the selected type are excited in the XAS calculation with <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>=2. Hence, it is recommended that the  excited atom is separated into a dedicated type with a single atom. Exciting multiple atoms in the supercell core-hole approach causes the interaction between core holes in neighboring atoms and should be avoided. Exciting multiple atoms in BSE proportionately increases the number of core states included in the BSE Hamiltonian and, hence, increases the computational cost of the calculation. 
+</p>
+<p>See a detailed description on how to set this tag in the <a href="/wiki/index.php/Supercell_core-hole_calculations" title="Supercell core-hole calculations">SCH</a> and <a href="/wiki/index.php/Bethe-Salpeter_equation_for_core_excitations" title="Bethe-Salpeter equation for core excitations">BSE</a> calculations. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, <a href="/wiki/index.php/CLN" title="CLN">CLN</a>, <a href="/wiki/index.php/CLL" title="CLL">CLL</a>, <a href="/wiki/index.php/CLZ" title="CLZ">CLZ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CLNT%22_incategory:%22Examples%22" title='Special:Search/"CLNT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

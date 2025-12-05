@@ -1,0 +1,65 @@
+<p><a class="mw-selflink selflink">LANCZOSTHR</a> = [real]<br/> Default: <b>LANCZOSTHR</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 10^{-3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 10^{-3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 10^{-3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=599ba39d43ef5e5056aa8b82d12608b2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.658ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LANCZOSTHR</a> is used by the BSE Lanczos algorithm to stop the iterative procedure, once the dielectric function has reached numerical convergence.
+</p>
+<p>The difference between the dielectric function at two consecutive iterations, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i+1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i+1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i+1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=15ab2d2b0b92c13f328635e5c4bdbe64&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.343ex; width: 4.805ex;"/></span>, is computed as root-mean-square over the frequency grid
+</p>
+<p>and once <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm{RMS}[\epsilon]&lt;=}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">R</mi>
+<mi mathvariant="normal">M</mi>
+<mi mathvariant="normal">S</mi>
+</mrow>
+<mo stretchy="false">[</mo>
+<mi>ϵ<!-- ϵ --></mi>
+<mo stretchy="false">]</mo>
+<mo>&lt;=</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm{RMS}[\epsilon]&lt;=}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathrm{RMS}[\epsilon]&lt;=}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=10a5f0769491311de6fce0a7b1ae5967&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 11.633ex;"/></span>LANCZOSTHR the iterative algorithm stops. 
+</p>
+<h2><span class="mw-headline" id="Related_tag_and_articles">Related tag and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE" title="BSE">BSE</a>,
+<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>,
+<a class="mw-redirect" href="/wiki/index.php/Bethe-Salpeter_equations" title="Bethe-Salpeter equations">Bethe-Salpeter equations</a>
+</p>

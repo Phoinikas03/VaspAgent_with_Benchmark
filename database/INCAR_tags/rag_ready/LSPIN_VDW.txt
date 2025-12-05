@@ -1,0 +1,1 @@
+LSPIN_VDW =  Default: LSPIN_VDW = .FALSE. Description: LSPIN_VDW =.TRUE. switches on the use of the spin-polarized formulation  for the nonlocal part of a van der Waals functional (available as of VASP.6.4.0). Related tags and articles LUSE_VDW , IVDW_NL , Nonlocal vdW-DF functionals References

@@ -1,0 +1,546 @@
+<p><a class="mw-selflink selflink">LORBIT</a> = 0 | 1 | 2 | 5 | 10 | 11 | 12<br/> Default: <b>LORBIT</b> =  0 
+</p>
+<p>Description: Selects a projection method onto local quantum numbers (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle lm}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+<mi>m</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle lm}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle lm}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=192292e35fbe73f6d2b8d96bd1b6697d&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.734ex;"/></span>) and writes <a href="/wiki/index.php/PROCAR" title="PROCAR">PROCAR</a>/<a href="/wiki/index.php/PROOUT" title="PROOUT">PROOUT</a> file.
+</p>
+<p>When <a class="mw-selflink selflink">LORBIT</a> is set, VASP performs a post-processing step of the Kohn-Sham (KS) orbitals to decompose the KS orbitals into local quantum numbers (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle lm}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+<mi>m</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle lm}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle lm}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=192292e35fbe73f6d2b8d96bd1b6697d&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.734ex;"/></span>) and obtain local properties, e.g., the on-site charge density or on-site magnetic moments due to the spin degrees of freedom. The decomposition is achieved by means of one of several projection methods selected by <a class="mw-selflink selflink">LORBIT</a>. All these projections rely on the fact that most of the charge density is close to the ion center, and interstitial regions separate them well. This is merely a qualitative approach in contrast to performing a <a class="mw-redirect" href="/wiki/index.php/Wannier_functions" title="Wannier functions">wannierization</a> in order to obtain a localized basis, but often it serves as a good estimate. 
+</p>
+<p>For VASP version &lt; 6 with <a class="mw-selflink selflink">LORBIT</a> &gt;= 11 and <a href="/wiki/index.php/ISYM" title="ISYM">ISYM</a> = 2, see <a href="/wiki/index.php/Known_issues" title="Known issues">known issues</a>. 
+</p>
+<h2><span class="mw-headline" id="Projection_methods">Projection methods</span></h2>
+<p>See the table for an overview:
+</p>
+<h3><span id="For_LORBIT_.3C_10"></span><span class="mw-headline" id="For_LORBIT_&lt;_10">For <a class="mw-selflink selflink">LORBIT</a> &lt; 10</span></h3>
+<p>The projection is onto spherical harmonics at each ionic site within a sphere defined by <a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>. The radius must be specified for each atomic species, and there is some uncertainty introduced depending on the size of the sphere.
+</p>
+<h3><span id="For_LORBIT_.3E.3D_10"></span><span class="mw-headline" id="For_LORBIT_&gt;=_10">For <a class="mw-selflink selflink">LORBIT</a> &gt;= 10</span></h3>
+<p>The projection uses the projector functions that are provided by the <a class="mw-redirect" href="/wiki/index.php/PAW_formalism" title="PAW formalism">PAW method</a>. This is, of course, still a qualitative approach because also, for the PAW projectors, the radius was somehow defined, and it is not guaranteed to be the best choice for that particular system as it depends on the chemical composition and crystal or molecular structure.
+</p>
+<h3><span class="mw-headline" id="Phase_factors">Phase factors</span></h3>
+<p>For <a class="mw-selflink selflink">LORBIT</a>&gt;=12:
+The <b>phase factors</b> written by VASP can usually only be used as a qualitative measure of the projection of the orbitals into the atomic sphere. The main issue is that most VASP <a href="/wiki/index.php/POTCAR" title="POTCAR">POTCAR</a> files have two or three projectors per <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>-quantum number, and projecting an orbital onto two projectors will yield two complex numbers. VASP combines these two numbers into a single number. The precise algorithms differ in different versions of VASP, and we recommend that you inspect the source code for more details. From vasp.6 onward, an improved scheme has been implemented and can be selected using <a class="mw-selflink selflink">LORBIT</a>=14. In this case, VASP first selects a single projector for each <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>-quantum number by linearly combining all projectors with the same <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>-quantum number. This is done in such a way that the new projector is optimally chosen to represent the calculated orbitals in the energy interval specified by <a href="/wiki/index.php/EMAX" title="EMAX">EMAX</a> and <a href="/wiki/index.php/EMIN" title="EMIN">EMIN</a>. In the second step, VASP projects onto these optimized projectors, yielding a single complex number for each orbital, site and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>-quantum number, which is written to the <a href="/wiki/index.php/PROCAR" title="PROCAR">PROCAR</a> file. For details we also refer to <sup class="reference" id="cite_ref-Schuler:JPCM:2018_1-0"><a href="#cite_note-Schuler:JPCM:2018-1">[1]</a></sup>.
+<a class="mw-selflink selflink">LORBIT</a>=12 should no longer be used except for qualitative calculations. LORBIT=13 chooses the projectors also automatically, but allows for different optimal linear combinations for each orbital.
+Note that this is generally not desirable, since the  resultant projection is not compatible with the required properties of a projection operator (a projection operator needs to use energy and orbital independent projectors).
+Hence, do not use <a class="mw-selflink selflink">LORBIT</a>=13 for anything but a qualitative analysis.
+</p>
+<p><a class="mw-selflink selflink">LORBIT</a>=13 and <a class="mw-selflink selflink">LORBIT</a>=14 are only supported by version &gt;=5.4.4. 
+</p>
+<h2><span class="mw-headline" id="On-site_partial_charge_densities_and_magnetization">On-site partial charge densities and magnetization</span></h2>
+<p>The partial charge densities can be found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>
+</p>
+<p>Here, the first column corresponds to the ion index <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span>, the s, p, d,... columns correspond to the partial charges for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l=0,1,2,\cdots}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+<mo>=</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>⋯<!-- ⋯ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l=0,1,2,\cdots}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l=0,1,2,\cdots}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a91928a51d66a7788d2f5fa95d1aef34&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 13.104ex;"/></span> defined as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \rho_{\alpha l}=\frac{1}{N_{\bf k}} \sum_{n{\bf k}}f_{n{\bf k}} \sum_{m=-l}^{l}|\langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle|^2
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</msub>
+</mfrac>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</munder>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</munderover>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \rho_{\alpha l}=\frac{1}{N_{\bf k}} \sum_{n{\bf k}}f_{n{\bf k}} \sum_{m=-l}^{l}|\langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle|^2
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \rho_{\alpha l}=\frac{1}{N_{\bf k}} \sum_{n{\bf k}}f_{n{\bf k}} \sum_{m=-l}^{l}|\langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle|^2
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a764779b9b47547398e49dabc03681ac&amp;mode=mathml" style="vertical-align: -3.171ex; height: 7.509ex; width: 34.677ex;"/></span>
+</p>
+<p>The <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msubsup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \langle Y_{lm}^{\alpha}|\phi_{n\mathbf{k}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2bdd906ea02cb5712d0d7cf9babaeeee&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.009ex; width: 9.574ex;"/></span> are obtained from the projection of the (occupied) KS orbitals <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |\phi_{n{\bf k}}\rangle}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |\phi_{n{\bf k}}\rangle}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |\phi_{n{\bf k}}\rangle}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0e4365114118efe8700e28e4cd3a2ced&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 5.153ex;"/></span> onto spherical harmonics that are non zero within spheres of a radius <a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a> centered at ion <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span> and the last column is the sum <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sum_{l}\rho_{\alpha l}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</munder>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sum_{l}\rho_{\alpha l}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sum_{l}\rho_{\alpha l}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7774e8c59e5a3427eba1d58084c3f047&amp;mode=mathml" style="vertical-align: -3.005ex; height: 5.509ex; width: 6.718ex;"/></span>. 
+</p>
+<p>Note that depending on the system, an "f" column is written as well. 
+</p>
+<ul><li>In case of spin-polarized magnetic calculations (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2), the partial magnetization densities are written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a></li></ul>
+<p>Here, the magnetization density is calculated from the difference in the up and down spin channel <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle m^{\alpha l}_z = \rho_{\alpha l}^{\uparrow}-\rho_{\alpha l}^{\downarrow}
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>m</mi>
+<mi>z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+</msubsup>
+<mo>=</mo>
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↑<!-- ↑ --></mo>
+</mrow>
+</msubsup>
+<mo>−<!-- − --></mo>
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↓<!-- ↓ --></mo>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle m^{\alpha l}_z = \rho_{\alpha l}^{\uparrow}-\rho_{\alpha l}^{\downarrow}
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle m^{\alpha l}_z = \rho_{\alpha l}^{\uparrow}-\rho_{\alpha l}^{\downarrow}
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=eff4910c713d4b0b6f2ed822f629ae29&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.509ex; width: 15.706ex;"/></span>
+Although the direction of the magnetization densities is meaningless in a spin-polarized calculation (no spin-orbit coupling, see <a href="/wiki/index.php/LSORBIT" title="LSORBIT">LSORBIT</a>), here the projection axis is the z-axis. This is consistent withe the behavior upon restarting a noncollinear calculation from a spin-polarized one with default <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>.
+</p>
+<ul><li>In case of noncollinear calculations (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>=.TRUE.), the lines after "total charge" correspond to the diagonal average</li></ul>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \frac{\rho_{\alpha l}^{\uparrow\uparrow} - \rho_{\alpha l}^{\downarrow \downarrow}}{2} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mfrac>
+<mrow>
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↑<!-- ↑ -->↑<!-- ↑ --></mo>
+</mrow>
+</msubsup>
+<mo>−<!-- − --></mo>
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↓<!-- ↓ -->↓<!-- ↓ --></mo>
+</mrow>
+</msubsup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \frac{\rho_{\alpha l}^{\uparrow\uparrow} - \rho_{\alpha l}^{\downarrow \downarrow}}{2} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \frac{\rho_{\alpha l}^{\uparrow\uparrow} - \rho_{\alpha l}^{\downarrow \downarrow}}{2} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6c2b11cc0bda59d0c435683b022bd46d&amp;mode=mathml" style="vertical-align: -1.838ex; height: 6.343ex; width: 9.833ex;"/></span>
+of the density tensor
+</p>
+<p>which is determined from the projected components 
+</p>
+<p>of the spinor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle |\Psi_{n{\bf k}}\rangle=\left(\begin{matrix}\chi_{n{\bf k}}^\uparrow \\\chi_{n{\bf k}}^\downarrow \end{matrix}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi mathvariant="normal">Ψ<!-- Ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo>=</mo>
+<mrow>
+<mo>(</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">↑<!-- ↑ --></mo>
+</msubsup>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">↓<!-- ↓ --></mo>
+</msubsup>
+</mtd>
+</mtr>
+</mtable>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle |\Psi_{n{\bf k}}\rangle=\left(\begin{matrix}\chi_{n{\bf k}}^\uparrow \\\chi_{n{\bf k}}^\downarrow \end{matrix}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle |\Psi_{n{\bf k}}\rangle=\left(\begin{matrix}\chi_{n{\bf k}}^\uparrow \\\chi_{n{\bf k}}^\downarrow \end{matrix}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ec2971ead7593c6f923a1063613f02ae&amp;mode=mathml" style="vertical-align: -3.171ex; height: 7.509ex; width: 16.778ex;"/></span>
+</p>
+<p>Similarly, the lines after "magnetization (x)", "magnetization (y)", and "magnetization (z)"correspond to the partial magnetization density 
+</p>
+<p>projected onto Pauli matrices <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\sigma_1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\sigma_1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\sigma_1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cb5c2f61508f101086a7a8864790dd71&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=89d48f4844eee467865884fc3cb40f8d&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.382ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{\sigma}_3\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>σ<!-- σ --></mi>
+</mrow>
+<mn>3</mn>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{\sigma}_3\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{\sigma}_3\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8cfbb347eec57d0f275d4f1f7d10a0e9&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 3.544ex;"/></span>. By default, this corresponds to Cartesian directions <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_1=\hat x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>x</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_1=\hat x}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_1=\hat x}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=73849afedcda56194a8d21c6ba04bfab&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.81ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_2 =\hat y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>y</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_2 =\hat y}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_2 =\hat y}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5e92fcd0bce2cbaaa66970287e376a42&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.782ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \sigma_3 = \hat z}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>σ<!-- σ --></mi>
+<mn>3</mn>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mi>z</mi>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \sigma_3 = \hat z}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \sigma_3 = \hat z}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61c76ccb9d30d7b60ef441452afda149&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 6.776ex;"/></span>, but the orientation can be changed using <a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>.
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/RWIGS" title="RWIGS">RWIGS</a>,
+<a href="/wiki/index.php/PROCAR" title="PROCAR">PROCAR</a>,
+<a href="/wiki/index.php/PROOUT" title="PROOUT">PROOUT</a>,
+<a href="/wiki/index.php/DOSCAR" title="DOSCAR">DOSCAR</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LORBIT%22_incategory:%22Examples%22" title='Special:Search/"LORBIT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

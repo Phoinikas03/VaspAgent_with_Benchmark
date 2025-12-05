@@ -1,0 +1,87 @@
+<p><a class="mw-selflink selflink">FOCKCORR</a> = 1 | 2 
+</p>
+<p>Description: The tag <a class="mw-selflink selflink">FOCKCORR</a> determines how the Coulomb convergence corrections are applied.
+</p>
+<p>The Coulomb potential in reciprocal space 
+</p>
+<p>diverges for small G vectors.
+To alleviate this issue and improve the convergence of the exact exchange integral with respect to supercell size (or k-point mesh density) different methods have been proposed: the auxiliary function methods<sup class="reference" id="cite_ref-gygi:prb:86_1-0"><a href="#cite_note-gygi:prb:86-1">[1]</a></sup>, probe-charge Ewald <sup class="reference" id="cite_ref-massidda:prb:93_2-0"><a href="#cite_note-massidda:prb:93-2">[2]</a></sup> (<a href="/wiki/index.php/HFALPHA" title="HFALPHA">HFALPHA</a>), and Coulomb truncation methods<sup class="reference" id="cite_ref-spenceralavi:prb:08_3-0"><a href="#cite_note-spenceralavi:prb:08-3">[3]</a></sup> (<a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a>).
+These mostly involve modifying the Coulomb Kernel in a way that yields the same result as the unmodified kernel within the limit of large supercell sizes.
+</p>
+<p>These corrections are implemented in VASP either by changing the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{G}=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{G}=0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{G}=0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fdfea9a726925dccb2afa0d450b619a5&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 6.362ex;"/></span> component of the Coulomb kernel when <a class="mw-selflink selflink">FOCKCORR</a>=1 
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>χ<!-- χ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=acd0b9a53431f92783e0597d54d13fc9&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 1.455ex;"/></span> being the value of the correction and depends on whether <a href="/wiki/index.php/HFALPHA" title="HFALPHA">HFALPHA</a> or <a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a> are set,
+or by including the original orbital scaled by the convergence correction when <a class="mw-selflink selflink">FOCKCORR</a>=2
+</p>
+<p>For Hartree-Fock or hybrid functional calculations, either <a class="mw-selflink selflink">FOCKCORR</a>=1 or <a class="mw-selflink selflink">FOCKCORR</a>=2 can be used and should yield the same results when <a class="mw-redirect" href="/wiki/index.php/LMAXFOCKAE" title="LMAXFOCKAE">LMAXFOCKAE</a>=-1 and there are no aliasing errors in the exact exchange (see <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> for more details).
+For post-DFT methods such as ACDFT, GW, and BSE the <a class="mw-selflink selflink">FOCKCORR</a>=2 should be used because the overlap densities are reconstructed in the plane-wave grid (see <a class="mw-redirect" href="/wiki/index.php/LMAXFOCKAE" title="LMAXFOCKAE">LMAXFOCKAE</a> tag).
+</p>
+<p>Note that in the case <a class="mw-selflink selflink">FOCKCORR</a>=2 the corrections are only applied to orbitals in the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{q}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{q}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{q}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f7a0cb4a478010e6d3f9adbc28eeedf1&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 1.416ex;"/></span> regular grid used to describe the exact exchange potential so this method cannot be used to compute band structures where this potential is applied to orbitals <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n\mathbf{k}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n\mathbf{k}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n\mathbf{k}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=70d6c1afa3395eeba89d87e13eba8ef6&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.806ex;"/></span> not in the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle m\mathbf{q}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>m</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle m\mathbf{q}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle m\mathbf{q}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3aafa989da3a519e6a16a5091099849b&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 3.456ex;"/></span> set.
+</p>
+<p>In previous versions of VASP, 
+<a class="mw-selflink selflink">FOCKCORR</a>=1 was used when <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Normal; <a href="/wiki/index.php/LFOCKACE" title="LFOCKACE">LFOCKACE</a>=.FALSE. and
+<a class="mw-selflink selflink">FOCKCORR</a>=2 when <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=All or <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=Normal; <a href="/wiki/index.php/LFOCKACE" title="LFOCKACE">LFOCKACE</a>=.TRUE. .
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/HFRCUT" title="HFRCUT">HFRCUT</a>,
+<a href="/wiki/index.php/HFALPHA" title="HFALPHA">HFALPHA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22HFRCUT%22_incategory:%22Examples%22" title='Special:Search/"HFRCUT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

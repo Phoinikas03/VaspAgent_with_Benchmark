@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">RANDOM_SEED</a> = [integer][integer][integer]<br/> Default: <b>RANDOM_SEED</b> = based on the system clock 
+</p>
+<p>Description: <a class="mw-selflink selflink">RANDOM_SEED</a> specifies the seed of the random-number generator (compile VASP with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>). 
+</p>
+<p>The random-number generator (RNG) generates a sequence of random numbers, which is initialized by the tag <a class="mw-selflink selflink">RANDOM_SEED</a>.
+For example, in molecular dynamics simulations, the RNG can be used to initialize atomic velocities. Hence, the seed for the RNG influences the trajectory of a molecular dynamics simulation.
+The three integers of <a class="mw-selflink selflink">RANDOM_SEED</a> must fulfill these conditions:
+</p>
+<p>A typical input for the <a class="mw-selflink selflink">RANDOM_SEED</a> looks like this:
+</p>
+<p>The initial value of <a class="mw-selflink selflink">RANDOM_SEED</a> and the value after each MD step are written to the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22RANDOM_SEED%22_incategory:%22Examples%22" title='Special:Search/"RANDOM SEED" incategory:"Examples"'>Examples that use this tag</a>
+</p>

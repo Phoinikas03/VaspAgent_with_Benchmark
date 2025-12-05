@@ -1,0 +1,389 @@
+<p><a class="mw-selflink selflink">ODDONLYGW</a> = [logical]<br/> Default: <b>ODDONLYGW</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">ODDONLYGW</a> allows to avoid the inclusion of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point in the evaluation of response functions (in <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>).
+</p>
+<p>The independent particle polarizability  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+<mn>0</mn>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>,</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=69f92cbd1e711125a3080eb8abfc7f26&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.176ex; width: 12.898ex;"/></span> is given by:
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega) =
+\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}  (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta } }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+<mn>0</mn>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>,</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi mathvariant="normal">Ω<!-- Ω --></mi>
+</mfrac>
+<munder>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>,</mo>
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</munder>
+<mn>2</mn>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+<mo>×<!-- × --></mo>
+<mfrac>
+<mrow>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>i</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+</mrow>
+</mrow>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</mrow>
+</mrow>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mrow>
+<mrow>
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>n</mi>
+<mo>′</mo>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>ϵ<!-- ϵ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<mi>ω<!-- ω --></mi>
+<mo>−<!-- − --></mo>
+<mi>i</mi>
+<mi>η<!-- η --></mi>
+</mrow>
+</mfrac>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega) =
+\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}  (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta } }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{{\mathbf{q}}}^0 ({\mathbf{G}}, {\mathbf{G}}', \omega) =
+\frac{1}{\Omega} \sum_{n,n',{\mathbf{k}}}2 w_{{\mathbf{k}}}  (f_{n'{\mathbf{k}}+{\mathbf{q}}} - f_{n{\mathbf{k}}})  
+\times  \frac{\langle \psi_{n{\mathbf{k}}}| e^{-i ({\mathbf{q}}+{\mathbf{G}}){\mathbf{r}}} | \psi_{n'{\mathbf{k}}+{\mathbf{q}}}\rangle
+\langle \psi_{n'{\mathbf{k}}+{\mathbf{q}}}| e^{i ({\mathbf{q}}+{\mathbf{G}}'){\mathbf{r'}}} | \psi_{n{\mathbf{k}}}\rangle}
+ { \epsilon_{n'{\mathbf{k}}+{\mathbf{q}}}-\epsilon_{n{\mathbf{k}}} -  \omega - i \eta } }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f3ab4e9788d9e65165c848e425453d38&amp;mode=mathml" style="vertical-align: -3.505ex; height: 8.009ex; width: 90.107ex;"/></span>
+</p>
+<p>If the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Gamma}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=07710b5c43702a8bb7b9104eacc6ba71&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.453ex;"/></span> point is included in the summation over <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{k}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{k}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{k}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2960d4135902c2432b7ae490e7f60d65&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.411ex;"/></span>, convergence is very slow for some materials  (e.g. GaAs).
+</p>
+<p>To deal with this problem the flag <a class="mw-selflink selflink">ODDONLYGW</a> has been included.
+In the automatic mode,  the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{k}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{k}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{k}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2960d4135902c2432b7ae490e7f60d65&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.411ex;"/></span>-grid is given by (see Sec. \ref{sec:autok}): 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/EVENONLYGW" title="EVENONLYGW">EVENONLYGW</a>,
+<a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ODDONLYGW%22_incategory:%22Examples%22" title='Special:Search/"ODDONLYGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,23 @@
+<p><a class="mw-selflink selflink">LPARD</a> = [logical]<br/> Default: <b>LPARD</b> = .FALSE. 
+</p>
+<p>Description: Determines whether partial (band and/or <b>k</b>-point-decomposed) charge densities are evaluated. 
+</p>
+<p>An <a class="mw-selflink selflink">LPARD</a> run is a postprocessing step that requires a pre-converged calculation. It writes the partial density, or multiple partial charge densities, to one <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> file or several PARCHG.*.* files, depending on the setting of <a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a> and <a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>.
+If <a href="/wiki/index.php/LPARDH5" title="LPARDH5">LPARDH5</a> = .TRUE., the output is redirected from <a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a> to <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>.
+</p>
+<p>There are various ways to divide the partial charge density. You can pick the contributing bands either by index (refer to <a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a> and <a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>) or by energy range (refer to <a href="/wiki/index.php/EINT" title="EINT">EINT</a>), and select contributing <b>k</b> points through <a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBAND" title="IBAND">IBAND</a>,
+<a href="/wiki/index.php/EINT" title="EINT">EINT</a>,
+<a href="/wiki/index.php/NBMOD" title="NBMOD">NBMOD</a>,
+<a href="/wiki/index.php/KPUSE" title="KPUSE">KPUSE</a>,
+<a href="/wiki/index.php/LSEPB" title="LSEPB">LSEPB</a>,
+<a href="/wiki/index.php/LSEPK" title="LSEPK">LSEPK</a>,
+<a href="/wiki/index.php/LPARDH5" title="LPARDH5">LPARDH5</a>,
+<a href="/wiki/index.php/PARCHG" title="PARCHG">PARCHG</a>,
+<a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>,
+<a class="mw-redirect" href="/wiki/index.php/Band-decomposed_charge_densities" title="Band-decomposed charge densities">Band-decomposed charge densities</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPARD%22_incategory:%22Examples%22" title='Special:Search/"LPARD" incategory:"Examples"'>Examples that use this tag</a>
+</p>

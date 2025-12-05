@@ -1,0 +1,58 @@
+<p><a class="mw-selflink selflink">NGXF</a> = [integer]<br/> Default: <b>NGXF</b> = set in accordance with <a href="/wiki/index.php/PREC" title="PREC">PREC</a>, <a href="/wiki/index.php/NGX" title="NGX">NGX</a>, <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and <a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">NGXF</a> sets the number of grid points in the "fine" FFT grid along the first lattice vector.
+</p>
+<p>On this "fine" FFT mesh the localized augmentation charges are represented if ultrasoft pseudopotentials (USPPs) or the PAW method are used. In case USPPs are used, the local potentials (exchange-correlation, Hartree-potential and ionic potentials) are also calculated on this "fine" FFT-mesh.
+</p>
+<p>By default <a class="mw-selflink selflink">NGXF</a> is set in accordance with the requested "precision" mode <a href="/wiki/index.php/PREC" title="PREC">PREC</a>, <a href="/wiki/index.php/NGX" title="NGX">NGX</a>, and the plane wave kinetic energy cutoffs <a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and <a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>:
+</p>
+<p>where
+</p>
+<p>with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\rm cut}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\rm cut}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\rm cut}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c63d0b49e3f12c9726e77b840b70718c&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.231ex;"/></span>=<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E_{\rm aug}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">g</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E_{\rm aug}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E_{\rm aug}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7c4a24959a977feefafc49160a4038e6&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 4.505ex;"/></span>=<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>.
+</p>
+<p>Alternatively, <a class="mw-selflink selflink">NGXF</a> can be set to a specific value in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NGX" title="NGX">NGX</a>,
+<a href="/wiki/index.php/NGY" title="NGY">NGY</a>,
+<a href="/wiki/index.php/NGZ" title="NGZ">NGZ</a>,
+<a href="/wiki/index.php/NGYF" title="NGYF">NGYF</a>,
+<a href="/wiki/index.php/NGZF" title="NGZF">NGZF</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/ENAUG" title="ENAUG">ENAUG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NGXF%22_incategory:%22Examples%22" title='Special:Search/"NGXF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

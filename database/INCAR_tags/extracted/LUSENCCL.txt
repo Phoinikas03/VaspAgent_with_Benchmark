@@ -1,0 +1,4 @@
+<p><a class="mw-selflink selflink">LUSENCCL</a> = [logical]<br/> Default: <b>LUSENCCL</b> = .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LUSENCCL</a> allows deactivating the NVIDIA Collective Communications Library (NCCL) during runtime when the code was compiled with the <a href="/wiki/index.php/Precompiler_options#-DUSENCCL" title="Precompiler options">-DUSENCCL</a> option.
+</p>

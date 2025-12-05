@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> = [real]<br/> Default: <b>ML_SCLC_CTIFOR</b> = 0.6 
+</p>
+<p>Description: Sets fraction by which the error threshold for the maximum forces is lowered in the selection of local reference calculations.
+</p>
+<p><a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> determines whether a first-principles calculation is performed when training an MLFF. 
+Whenever a first-principles calculation is performed, additional functions are added to the sparse representation of the kernel (local-reference configurations). <a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> determines how many local-reference configurations are added to the sparse representation of the kernel.
+Specifically, the local environment of those atoms with an estimated error larger than <a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> * <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> are
+added as candidates for the sparse representational of the kernel. Note that changing <a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> does not change the decision of whether a first-principles calculation is carried out or not, since this decision is entirely based on <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>. 
+</p>
+<p>The default value of 0.6 is often a reasonably good compromise. If the value is decreased, obviously more functions are used for the sparse representation of the kernel. This always improves the initial learning efficiency but might slow the force-field calculations. 
+So <a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> compromises either learning efficiency or the speed of the evaluation of the MLFF.
+For polymers and liquids, we found that decreasing <a class="mw-selflink selflink">ML_SCLC_CTIFOR</a> to values around  0.4 (or even smaller) can significantly improve learning efficiency.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>, <a href="/wiki/index.php/ML_CX" title="ML CX">ML_CX</a>, <a href="/wiki/index.php/ML_EPS_LOW" title="ML EPS LOW">ML_EPS_LOW</a>
+</p>

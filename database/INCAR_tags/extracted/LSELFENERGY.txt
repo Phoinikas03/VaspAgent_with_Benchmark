@@ -1,0 +1,69 @@
+<p><a class="mw-selflink selflink">LSELFENERGY</a> = [logical]<br/> Default: <b>LSELFENERGY</b> = .FALSE. 
+</p>
+<p>Description: Controls whether the frequency-dependent self-energy is calculated or not.
+</p>
+<ul><li>If <code style="padding: 2px"><a class="mw-selflink selflink">LSELFENERGY</a> = .FALSE.</code> (default),  quasi-particle (QP) shifts are evaluated.</li></ul>
+<ul><li>If <code style="padding: 2px"><a class="mw-selflink selflink">LSELFENERGY</a> = .TRUE.</code>, the frequency dependent self-energy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \langle \psi_{n {\mathbf{k}}} | \Sigma(\omega) |\psi_{n {\mathbf{k}}} \rangle }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi mathvariant="normal">Σ<!-- Σ --></mi>
+<mo stretchy="false">(</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<msub>
+<mi>ψ<!-- ψ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \langle \psi_{n {\mathbf{k}}} | \Sigma(\omega) |\psi_{n {\mathbf{k}}} \rangle }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \langle \psi_{n {\mathbf{k}}} | \Sigma(\omega) |\psi_{n {\mathbf{k}}} \rangle }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=66796ea4023513670f83d40627fea7b3&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 15.495ex;"/></span> is evaluated and printed to <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a>. An example output looks like the following:</li></ul>
+<h2><span class="mw-headline" id="Format">Format</span></h2>
+<h3><span class="mw-headline" id="Real_frequencies">Real frequencies</span></h3>
+<p>If <b>quartic-scaling GW algorithms</b> are selected, e.g. <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>=EVGW0, the first column corresponds to points on the real-frequency axis (in eV). The second and third columns are the real and imaginary parts of the self-energy (in eV) at a given band index and <b>k</b> point. To identify the band index and <b>k</b> point, the ordering has to be taken from the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>: Instead of the QP shifts, a small set of self-energy points are printed to <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>, similar to the following output
+</p>
+<p>Here, the first and second band at the Gamma point are printed. 
+The line with <code>selfenergy along real axis</code> contains band No., the KS energy, and the occupation of this state. 
+The output in <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> has the same ordering of bands and <b>k</b> points, i.e., the band index is always the fastest. The frequency grid cannot be controlled. It is always 1000 points in the range of -150 to 150.
+</p>
+<h3><span class="mw-headline" id="Imaginary_frequencies">Imaginary frequencies</span></h3>
+<p>For <a href="/wiki/index.php/Practical_guide_to_GW_calculations#Low_scaling_GW_algorithms" title="Practical guide to GW calculations">low-scaling GW algorithms</a>, the QP shifts are evaluated and printed to <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> for both, <a class="mw-selflink selflink">LSELFENERGY</a>=T and F. For <a class="mw-selflink selflink">LSELFENERGY</a>=T, the <a class="new" href="/wiki/index.php?title=Vasprun.xml&amp;action=edit&amp;redlink=1" title="Vasprun.xml (page does not exist)">vasprun.xml</a> file additionally contains the self-energy for a given band index and <b>k</b> point on the imaginary-frequency axis:
+</p>
+<p>To identify the band index and <b>k</b> point, the ordering has to be taken from the QP shifts block in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>. The band index is faster than the <b>k</b> point.
+The imaginary frequency is selected by the Minimax routines<sup class="reference" id="cite_ref-Kaltak:PRB:2020_1-0"><a href="#cite_note-Kaltak:PRB:2020-1">[1]</a></sup>, and the number of points depends on <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<ul><li>for a practical guide to <a class="mw-redirect" href="/wiki/index.php/GW_calculations" title="GW calculations">GW calculations</a></li>
+<li><a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> for response functions and <i>RPA</i> calculations</li>
+<li><a href="/wiki/index.php/LFINITE_TEMPERATURE" title="LFINITE TEMPERATURE">LFINITE_TEMPERATURE</a> finite temperature formalism</li>
+<li><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> number of real or imaginary frequency points</li></ul>
+<p><a href="/wiki/index.php/Special:Search/%22LSELFENERGY%22_incategory:%22Examples%22" title='Special:Search/"LSELFENERGY" incategory:"Examples"'>Examples that use this tag</a>
+</p>

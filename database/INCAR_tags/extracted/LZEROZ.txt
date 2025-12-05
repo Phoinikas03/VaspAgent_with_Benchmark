@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">LZEROZ</a> = .TRUE. | .FALSE.<br/> Default: <b>LZEROZ</b> = .FALSE. 
+</p>
+<p>Description: for <a class="mw-selflink selflink">LZEROZ</a>=.TRUE. the <i>z</i>-component of the spin-spiral magnetisation density will be forced to be and to remain zero.
+</p>
+<p>See the <a href="/wiki/index.php/Spin_spirals" title="Spin spirals">description of spin spiral calculations</a> for more details.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Spin_spirals" title="Spin spirals">Spin spirals</a>,
+<a href="/wiki/index.php/LSPIRAL" title="LSPIRAL">LSPIRAL</a>,
+<a href="/wiki/index.php/QSPIRAL" title="QSPIRAL">QSPIRAL</a>
+</p>

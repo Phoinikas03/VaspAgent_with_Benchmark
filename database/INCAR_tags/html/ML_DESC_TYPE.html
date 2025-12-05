@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>ML_DESC_TYPE - VASP Wiki</title>
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-page-tools-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ad5f66b5d92e748876eef22a","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ML_DESC_TYPE","wgTitle":"ML DESC TYPE","wgCurRevisionId":28241,"wgRevisionId":28241,"wgArticleId":1835,"wgIsArticle":true,
+"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["INCAR tag","Machine-learned force fields"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ML_DESC_TYPE","wgRelevantArticleId":1835,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgVector2022PreviewPages":[],"wgEditSubmitButtonLabelPublish":false};RLSTATE={"skins.vector.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site",
+"mediawiki.page.ready","mediawiki.toc","skins.vector.js","skins.vector.es6","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.ui.button%2Cicon%7Cskins.vector.icons%2Cstyles&amp;only=styles&amp;skin=vector-2022"/>
+<script async="" src="/wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022"/>
+<meta name="generator" content="MediaWiki 1.40.1"/>
+<meta name="robots" content="max-image-preview:standard"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="VASP Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.vasp.at/wiki/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"/>
+<link rel="alternate" type="application/atom+xml" title="VASP Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ML_DESC_TYPE rootpage-ML_DESC_TYPE skin-vector-2022 action-view skin--responsive"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+	<div class="mw-page-container-inner">
+		<input
+			type="checkbox"
+			id="mw-sidebar-checkbox"
+			class="mw-checkbox-hack-checkbox"
+			>
+		<header class="mw-header mw-ui-icon-flush-left mw-ui-icon-flush-right">
+			<div class="vector-header-start">
+					<label
+				id="mw-sidebar-button"
+				class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element mw-ui-icon-flush-right"
+				for="mw-sidebar-checkbox"
+				role="button"
+				aria-controls="mw-panel"
+				data-event-name="ui.sidebar"
+				tabindex="0"
+				title="Main menu">
+				<span>Toggle sidebar</span>
+			</label>
+		
+<a href="/wiki/index.php/Main_page" class="mw-logo">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="VASP Wiki"
+			src="/wiki/images/logo-on-white.png" style="width: 11.1875em; height: 2.5em;">
+	</span>
+</a>
+
+			</div>
+			<div class="vector-header-end">
+				
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box">
+	<a href="/wiki/index.php/Special:Search"
+	
+		
+		
+		
+		title="Search VASP Wiki [f]"
+		accesskey="f"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+	<div>
+		<form action="/wiki/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search VASP Wiki" aria-label="Search VASP Wiki" autocapitalize="sentences" title="Search VASP Wiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+				<nav class="vector-user-links" aria-label="Personal tools" role="navigation" >
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet mw-portlet-vector-user-menu-overflow"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login-2" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=ML+DESC+TYPE" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+<div id="vector-user-links-dropdown" class="vector-menu vector-dropdown vector-menu-dropdown vector-user-menu vector-user-menu-logged-out"  title="More options" >
+	<input type="checkbox"
+		id="vector-user-links-dropdown-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-user-links-dropdown"
+		class="vector-menu-checkbox "
+		
+		aria-label="Personal tools"
+		
+	/>
+	<label
+		id="vector-user-links-dropdown-label"
+		for="vector-user-links-dropdown-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=ML+DESC+TYPE" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="mw-ui-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+</nav>
+
+			</div>
+		</header>
+		<div class="vector-main-menu-container ">
+			<div id="mw-navigation">
+				<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+						
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	
+	
+<div id="p-navigation" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-navigation"  >
+	<div
+		id="p-navigation-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/index.php/Main_page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/index.php/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-tb" class="vector-main-menu-group vector-menu mw-portlet mw-portlet-tb"  >
+	<div
+		id="p-tb-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/index.php/Special:WhatLinksHere/ML_DESC_TYPE" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/index.php/Special:RecentChangesLinked/ML_DESC_TYPE" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/wiki/index.php?title=ML_DESC_TYPE&amp;oldid=28241" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/wiki/index.php?title=ML_DESC_TYPE&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+
+</div>
+
+				</nav>
+			</div>
+		</div>
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="localNotice"><div class="sitenotice" lang="en" dir="ltr"><p>Requests for technical support from the VASP team should be posted in the <a rel="nofollow" class="external text" href="https://www.vasp.at/forum/">VASP Forum</a>.
+</p></div></div></div>
+		</div>
+		<input type="checkbox" id="vector-toc-collapsed-checkbox" class="mw-checkbox-hack-checkbox">
+		<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+			<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Standard_descriptor"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Standard_descriptor">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Standard descriptor</div>
+		</a>
+		
+		<ul id="toc-Standard_descriptor-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Element_reduced_descriptor"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Element_reduced_descriptor">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Element reduced descriptor</div>
+		</a>
+		
+		<ul id="toc-Element_reduced_descriptor-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Additional_sparsification"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Additional_sparsification">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>Additional sparsification</div>
+		</a>
+		
+		<ul id="toc-Additional_sparsification-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Related_tags_and_articles"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Related_tags_and_articles">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>Related tags and articles</div>
+		</a>
+		
+		<ul id="toc-Related_tags_and_articles-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>References</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+			</div>
+		</nav>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<label
+						id="vector-toc-collapsed-button"
+						class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-flush-left mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+						for="vector-toc-collapsed-checkbox"
+						role="button"
+						aria-controls="toc-toggle-list"
+						data-event-name="vector.toc-toggle-list"
+						tabindex="0"
+						title="Table of Contents">
+						Toggle the table of contents
+					</label>
+				
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-menu vector-dropdown vector-menu-dropdown vector-page-titlebar-toc mw-ui-icon-flush-left"  >
+	<input type="checkbox"
+		id="vector-page-titlebar-toc-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-vector-page-titlebar-toc"
+		class="vector-menu-checkbox "
+		
+		aria-label="Toggle the table of contents"
+		
+	/>
+	<label
+		id="vector-page-titlebar-toc-label"
+		for="vector-page-titlebar-toc-checkbox"
+		class="vector-menu-heading mw-checkbox-hack-button mw-ui-button mw-ui-quiet mw-ui-icon-element "
+		aria-hidden="true"
+		
+	>
+		<span class="mw-ui-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+		<span class="vector-menu-heading-label">Toggle the table of contents</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading">ML_DESC_TYPE</h1>
+				
+				
+				</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/ML_DESC_TYPE" title="View the content page [c]" accesskey="c" class=""><span>Page</span></a>
+</li>
+<li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=Talk:ML_DESC_TYPE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t" class=""><span>Discussion</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+								
+
+<div id="p-variants" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-variants emptyPortlet"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-label="Change language variant"
+		
+		
+	/>
+	<label
+		id="p-variants-label"
+		for="p-variants-checkbox"
+		class="vector-menu-heading "
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php/ML_DESC_TYPE" class=""><span>Read</span></a>
+</li>
+<li id="ca-viewsource" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=ML_DESC_TYPE&amp;action=edit" title="This page is protected.
+You can view its source [e]" accesskey="e" class=""><span>View source</span></a>
+</li>
+<li id="ca-history" class="vector-tab-noicon mw-list-item"><a data-mw="interface" href="/wiki/index.php?title=ML_DESC_TYPE&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="More options">
+								
+
+<div id="p-cactions" class="vector-menu vector-dropdown vector-menu-dropdown mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		
+		aria-label="More"
+		
+	/>
+	<label
+		id="p-cactions-label"
+		for="p-cactions-checkbox"
+		class="vector-menu-heading"
+		aria-hidden="true"
+		
+	>
+		
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content vector-dropdown-content">
+
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php/ML_DESC_TYPE"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=ML_DESC_TYPE&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/wiki/index.php?title=ML_DESC_TYPE&amp;action=history"><span>View history</span></a></li></ul>
+		
+	</div>
+
+	</div>
+</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From VASP Wiki</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><a class="mw-selflink selflink">ML_DESC_TYPE</a>&#160;= [integer]<br /> Default: <b>ML_DESC_TYPE</b> = 0&#160;
+</p><p>Description: This tag selects the descriptor type of the three-body descriptor used in machine learning force fields.
+</p>
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b> This tag is only available as of VASP 6.4.3 or higher.
+</td></tr></tbody></table>
+<hr />
+<table style="border: 0px solid #35CABF; padding: 5px; background: #D9F8F5">
+<tbody><tr>
+<td><b><span style="color: #35CABF;">Mind:</span></b> This tag is available for all options of <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> since VASP 6.5.0. Before that it was only available for <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = refit</code> and <code style="padding: 2px"><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = run</code>.
+</td></tr></tbody></table>
+<p>This tag selects how the three-body descriptor is calculated and the following options are available:
+</p>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ML_DESC_TYPE</a> = 0</code>: Standard three-body descriptor. The number of descriptors in the calculations scales quadratically with the number of elements.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ML_DESC_TYPE</a> = 1</code>: Descriptor for which the number of descriptors is linearly scaling with respect to the number of chemical species.</li></ul>
+<meta property="mw:PageProp/toc" />
+<h2><span class="mw-headline" id="Standard_descriptor">Standard descriptor</span></h2>
+<p>The standard three-body descriptor (<a class="mw-selflink selflink">ML_DESC_TYPE</a>=0) without self-interaction corrections for the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle i}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>i</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;" alt="{\displaystyle i}"/></span>th atom looks like the following
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle  
+p_{n\nu l}^{iJJ'}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ'}.
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>J</mi>
+            <msup>
+              <mi>J</mi>
+              <mo>&#x2032;</mo>
+            </msup>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <msqrt>
+          <mfrac>
+            <mrow>
+              <mn>8</mn>
+              <msup>
+                <mi>&#x03C0;<!-- π --></mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>l</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </mfrac>
+        </msqrt>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+            <mo>=</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>l</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>l</mi>
+          </mrow>
+        </munderover>
+        <msubsup>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>J</mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <msup>
+              <mi>J</mi>
+              <mo>&#x2032;</mo>
+            </msup>
+          </mrow>
+        </msubsup>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle  
+p_{n\nu l}^{iJJ'}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ'}.
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a18723c5961ed005a55a4e28735ad31&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; margin-left: -0.089ex; height: 7.676ex; width: 30.939ex;" alt="{\displaystyle  &#10;p_{n\nu l}^{iJJ&#039;}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ&#039;}.&#10;}"/></span>
+</p><p>Here <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;" alt="{\displaystyle n}"/></span>/<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \nu}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BD;<!-- ν --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \nu}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4fdefba26320686bb2bd0579a0df421c&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.232ex;" alt="{\displaystyle \nu}"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle l}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>l</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;" alt="{\displaystyle l}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f8f57715090da2632453988d9a1501b&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 1.676ex; width: 2.04ex;" alt="{\displaystyle m}"/></span> are radial, angular, and magnetic quantum numbers, respectively. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle J}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>J</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle J}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ff44570aca8241914870afbc310cdb85&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.471ex;" alt="{\displaystyle J}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle J'}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>J</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle J'}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4aad50798b24cebd0f55e4700d1543c2&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.509ex; width: 2.211ex;" alt="{\displaystyle J&#039;}"/></span> are indices for the element types. Both indices go over all elements in the structure. So one can see that the number of three-body descriptors grows quadratically with the number of element types. 
+</p>
+<h2><span class="mw-headline" id="Element_reduced_descriptor">Element reduced descriptor</span></h2>
+<p>Another type of descriptor (<a class="mw-selflink selflink">ML_DESC_TYPE</a>=1) which was proposed in Ref. <sup id="cite_ref-csanyi:npj:2022_1-0" class="reference"><a href="#cite_note-csanyi:npj:2022-1">&#91;1&#93;</a></sup> applies a reduction of one of the intermediate coefficients <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c_{nlm}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c_{nlm}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ef4c0d096821d2264a580cde2cc17586&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; height: 2.009ex; width: 4.158ex;" alt="{\displaystyle c_{nlm}}"/></span> and is written as
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle  
+p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J'}c_{\nu lm}^{iJ'}.
+}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>J</mi>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <msqrt>
+          <mfrac>
+            <mrow>
+              <mn>8</mn>
+              <msup>
+                <mi>&#x03C0;<!-- π --></mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>l</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </mfrac>
+        </msqrt>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+            <mo>=</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>l</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>l</mi>
+          </mrow>
+        </munderover>
+        <msubsup>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>J</mi>
+          </mrow>
+        </msubsup>
+        <munder>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mi>J</mi>
+              <mo>&#x2032;</mo>
+            </msup>
+          </mrow>
+        </munder>
+        <msubsup>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <msup>
+              <mi>J</mi>
+              <mo>&#x2032;</mo>
+            </msup>
+          </mrow>
+        </msubsup>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle  
+p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J'}c_{\nu lm}^{iJ'}.
+}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7f3fdcdd51b2f8639122babde4e95e7f&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; margin-left: -0.089ex; height: 7.843ex; width: 34.198ex;" alt="{\displaystyle  &#10;p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J&#039;}c_{\nu lm}^{iJ&#039;}.&#10;}"/></span>
+</p><p>In contrast to the standard three-body descriptor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle p_{n\nu l}^{iJ}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>J</mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p_{n\nu l}^{iJ}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f61b7fea5455c0c644e5a2508f70b9a&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; margin-left: -0.089ex; height: 3.176ex; width: 3.839ex;" alt="{\displaystyle p_{n\nu l}^{iJ}}"/></span> depends only linearly on the number of chemical species, since summing over <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle J'}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>J</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle J'}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4aad50798b24cebd0f55e4700d1543c2&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; height: 2.509ex; width: 2.211ex;" alt="{\displaystyle J&#039;}"/></span> for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c_{\nu lm}^{iJ'}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mi>l</mi>
+            <mi>m</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <msup>
+              <mi>J</mi>
+              <mo>&#x2032;</mo>
+            </msup>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c_{\nu lm}^{iJ'}}</annotation>
+  </semantics>
+</math></span><img src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5cabcd68ed4c4661b6f8f3514365266a&amp;mode=mathml" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; height: 3.509ex; width: 4.043ex;" alt="{\displaystyle c_{\nu lm}^{iJ&#039;}}"/></span> is equivalent to having element agnostic intermediate coefficients. When using this descriptor everything up to the calculation of the descriptors takes the same time to calculate as for the standard descriptor, but everything that comes after that, such as e.g. kernels and forces, scales linearly with respect to the number of chemical species. Hence the factor that is gained in computational efficiency is less than the number of chemical species but the factor increases with an increasing number of local reference configurations employed in the calculations. The improved computational efficiency comes at the price of decreased accuracy. The accuracy loss is system-dependent and is typically around 5 to 20 percent.  
+</p>
+<h2><span class="mw-headline" id="Additional_sparsification">Additional sparsification</span></h2>
+<p>All descriptors can be further combined with <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sparsification_of_angular_descriptors" title="Machine learning force field: Theory">descriptor sparsification</a>   (<a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>=<b>.TRUE.</b>). Generally, the sparsification of descriptors results in a trade-off between accuracy and efficiency. The fraction of descriptors that is kept is specified by <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>. We advise the user to adjust this parameter carefully and test it individually for each system. However, we have experienced the following trends for our test cases: For <a class="mw-selflink selflink">ML_DESC_TYPE</a>=0 a descriptor sparsification of 50 percent <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>=0.5 leaves the accuracy almost untouched. Since <a class="mw-selflink selflink">ML_DESC_TYPE</a>=1 contains already much fewer descriptors than <a class="mw-selflink selflink">ML_DESC_TYPE</a>=0, a 50 percent sparsification for <a class="mw-selflink selflink">ML_DESC_TYPE</a>=1 results in noticeable accuracy loss (additionally to the 5 to 20 percent by the descriptor itself).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>, <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>
+</p><p><a href="/wiki/index.php/Special:Search/%22ML_IALGO_LINREG%22_incategory:%22Examples%22" title="Special:Search/&quot;ML IALGO LINREG&quot; incategory:&quot;Examples&quot;">Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-csanyi:npj:2022-1"><a href="#cite_ref-csanyi:npj:2022_1-0">↑</a> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1038/s41524-022-00847-y">J. P. Darby, J. R. Kermode, and G. Csanyi, <i>Compressing local atomic neighbourhood descriptors</i>, New Phys. J. <b>8</b>, 166 (2022).</a></span>
+</li>
+</ol></div>
+<p><br />
+</p>
+<hr />
+<!-- 
+NewPP limit report
+Cached time: 20250305181800
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc, no‐toc‐conversion]
+CPU time usage: 0.094 seconds
+Real time usage: 0.114 seconds
+Preprocessor visited node count: 6252/1000000
+Post‐expand include size: 2325/2097152 bytes
+Template argument size: 19843/2097152 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1010/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   82.285      1 -total
+ 93.05%   76.569      1 Template:Cite
+ 60.31%   49.628    422 Template:Reference
+  2.71%    2.229      2 Template:NB
+  1.34%    1.099      4 Template:TAGO
+  0.98%    0.808      1 Template:TAGDEF
+  0.90%    0.744     14 Template:TAG
+  0.76%    0.624      1 Template:Sc
+-->
+
+<!-- Saved in parser cache with key mediawiki-vw:pcache:idhash:1835-0!canonical and timestamp 20250305181800 and revision id 28241. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://www.vasp.at/wiki/index.php?title=ML_DESC_TYPE&amp;oldid=28241">https://www.vasp.at/wiki/index.php?title=ML_DESC_TYPE&amp;oldid=28241</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/index.php/Category:INCAR_tag" title="Category:INCAR tag">INCAR tag</a></li><li><a href="/wiki/index.php/Category:Machine-learned_force_fields" title="Category:Machine-learned force fields">Machine-learned force fields</a></li></ul></div></div>
+					
+				</div>
+				
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 18 February 2025, at 16:33.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/wiki/index.php/VASP_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/index.php/VASP_Wiki:About">About VASP Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/index.php/VASP_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt"><img src="/wiki/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/wiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":288,"wgPageParseReport":{"limitreport":{"cputime":"0.094","walltime":"0.114","ppvisitednodes":{"value":6252,"limit":1000000},"postexpandincludesize":{"value":2325,"limit":2097152},"templateargumentsize":{"value":19843,"limit":2097152},"expansiondepth":{"value":8,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1010,"limit":5000000},"timingprofile":["100.00%   82.285      1 -total"," 93.05%   76.569      1 Template:Cite"," 60.31%   49.628    422 Template:Reference","  2.71%    2.229      2 Template:NB","  1.34%    1.099      4 Template:TAGO","  0.98%    0.808      1 Template:TAGDEF","  0.90%    0.744     14 Template:TAG","  0.76%    0.624      1 Template:Sc"]},"cachereport":{"timestamp":"20250305181800","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+<!-- Cached 20250305181800 -->
+</html>

@@ -1,0 +1,532 @@
+<p><a class="mw-selflink selflink">ML_MRB2</a> = [integer]<br/> Default: <b>ML_MRB2</b> = 8 
+</p>
+<p>Description: This tag sets the number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_\text{R}^l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>N</mi>
+<mtext>R</mtext>
+<mi>l</mi>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_\text{R}^l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_\text{R}^l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2be7ed840a9845f4e7d32bbc7751664e&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.176ex; width: 3.308ex;"/></span> (for all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>) of radial basis functions used to expand the angular descriptor within the machine learning force field method. 
+</p>
+<p>The angular descriptor is constructed from
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>3</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+</msubsup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>r</mi>
+<mo>,</mo>
+<mi>s</mi>
+<mo>,</mo>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mo>∬<!-- ∬ --></mo>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mi>δ<!-- δ --></mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>⋅<!-- ⋅ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mo>≠<!-- ≠ --></mo>
+<mi>j</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>s</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mover>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">s</mi>
+</mrow>
+<mo stretchy="false">^<!-- ^ --></mo>
+</mover>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+<mspace width="1em"></mspace>
+<mtext>where</mtext>
+<mspace width="1em"></mspace>
+<msub>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">u</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<msub>
+<mi>r</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>)</mo>
+</mrow>
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \iint d\hat{\mathbf{r}} d\hat{\mathbf{s}}  \delta\left(\hat{\mathbf{r}}\cdot\hat{\mathbf{s}} - \mathrm{cos}\theta\right) \sum\limits_{j=1}^{N_{a}} \sum\limits_{k \ne j}^{N_{a}} \rho_{ik} \left(r\hat{\mathbf{r}}\right) \rho_{ij} \left(s\hat{\mathbf{s}}\right), \quad \text{where} \quad
+\rho_{ij}\left(\mathbf{r}\right) = f_{\mathrm{cut}}\left(r_{ij}\right) g\left(\mathbf{r}-\mathbf{r}_{ij}\right)
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=38f02482be2b76bfed8b993ef4585248&amp;mode=mathml" style="vertical-align: -3.505ex; height: 7.843ex; width: 99.323ex;"/></span>
+</p>
+<p>and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g\left(\mathbf{r}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>g</mi>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g\left(\mathbf{r}\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g\left(\mathbf{r}\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a3a21ffaf3d6fa2e9bef79efc6360523&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.414ex;"/></span> is an approximation of the delta function. In practice, the continuous function above is transformed into a discrete set of numbers <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{n\nu l}^{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{n\nu l}^{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle p_{n\nu l}^{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=18516de434ffe6549e026e5c4e9874c1&amp;mode=mathml" style="vertical-align: -1.005ex; margin-left: -0.089ex; height: 3.176ex; width: 3.839ex;"/></span> by expanding it into a set of radial basis functions <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{nl}(r)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>r</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{nl}(r)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{nl}(r)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2937862f88b77016f4e065ed3a7e5bec&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 6.022ex;"/></span> and Legendre polynomials <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle P_{l}\left(\mathrm{cos}\theta\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle P_{l}\left(\mathrm{cos}\theta\right)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle P_{l}\left(\mathrm{cos}\theta\right)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3d289120ea27c7926070855b0674b7ad&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 8.613ex;"/></span> (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Basis_set_expansion" title="Machine learning force field: Theory">this section</a> for more details):
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{n=1}^{N^{l}_{\mathrm{R}}}\sum\limits_{\nu=1}^{N^{l}_{\mathrm{R}}} \sqrt{\frac{2l+1}{2}} p_{n\nu l}^{i}\chi_{nl}\left(r\right)\chi_{\nu l}\left(s\right)P_{l}\left(\mathrm{cos}\theta\right).
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>ρ<!-- ρ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>3</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+</msubsup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>r</mi>
+<mo>,</mo>
+<mi>s</mi>
+<mo>,</mo>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>L</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">a</mi>
+<mi mathvariant="normal">x</mi>
+</mrow>
+</mrow>
+</msub>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">R</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msubsup>
+</mrow>
+</munderover>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ν<!-- ν --></mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msubsup>
+<mi>N</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">R</mi>
+</mrow>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msubsup>
+</mrow>
+</munderover>
+<msqrt>
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</msqrt>
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msubsup>
+<msub>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mi>r</mi>
+<mo>)</mo>
+</mrow>
+<msub>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mi>s</mi>
+<mo>)</mo>
+</mrow>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msub>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">s</mi>
+</mrow>
+<mi>θ<!-- θ --></mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{n=1}^{N^{l}_{\mathrm{R}}}\sum\limits_{\nu=1}^{N^{l}_{\mathrm{R}}} \sqrt{\frac{2l+1}{2}} p_{n\nu l}^{i}\chi_{nl}\left(r\right)\chi_{\nu l}\left(s\right)P_{l}\left(\mathrm{cos}\theta\right).
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+\rho_{i}^{(3)}\left(r,s,\theta\right) = \sum\limits_{l=1}^{L_{\mathrm{max}}} \sum\limits_{n=1}^{N^{l}_{\mathrm{R}}}\sum\limits_{\nu=1}^{N^{l}_{\mathrm{R}}} \sqrt{\frac{2l+1}{2}} p_{n\nu l}^{i}\chi_{nl}\left(r\right)\chi_{\nu l}\left(s\right)P_{l}\left(\mathrm{cos}\theta\right).
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=63ed2a19c979c708d61cbabe38aef170&amp;mode=mathml" style="vertical-align: -3.005ex; height: 8.176ex; width: 61.699ex;"/></span>
+</p>
+<p>The tag <a class="mw-selflink selflink">ML_MRB2</a> sets the number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle N_\text{R}^l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>N</mi>
+<mtext>R</mtext>
+<mi>l</mi>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle N_\text{R}^l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle N_\text{R}^l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2be7ed840a9845f4e7d32bbc7751664e&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.176ex; width: 3.308ex;"/></span> of radial basis functions to use in this expansion. The same number is used for all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_LMAX2" title="ML LMAX2">ML_LMAX2</a>, <a href="/wiki/index.php/ML_MRB1" title="ML MRB1">ML_MRB1</a>, <a href="/wiki/index.php/ML_W1" title="ML W1">ML_W1</a>, <a href="/wiki/index.php/ML_RCUT2" title="ML RCUT2">ML_RCUT2</a>, <a href="/wiki/index.php/ML_SION2" title="ML SION2">ML_SION2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_MRB2%22_incategory:%22Examples%22" title='Special:Search/"ML MRB2" incategory:"Examples"'>Examples that use this tag</a>
+</p>

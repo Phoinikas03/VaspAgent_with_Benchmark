@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">CLN</a> = [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">CLN</a> selects the main quantum number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span> of the excited core electron when using <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>&gt;0.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, 
+<a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>, 
+<a class="mw-selflink selflink">CLN</a>, 
+<a href="/wiki/index.php/CLL" title="CLL">CLL</a>
+<a href="/wiki/index.php/LADDER" title="LADDER">LADDER</a>,
+<a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>,
+<a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>,
+<a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>,
+<a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a href="/wiki/index.php/ANTIRES" title="ANTIRES">ANTIRES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CLN%22_incategory:%22Examples%22" title='Special:Search/"CLN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,86 @@
+<p><a class="mw-selflink selflink">LSPECTRALGW</a> = .FALSE. | .TRUE.<br/> Default: <b>LSPECTRALGW</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSPECTRALGW</a> specifies to use the spectral method for calculating the self-energy.
+</p>
+<p>If <a class="mw-selflink selflink">LSPECTRALGW</a> = .TRUE. is set, the imaginary part of the self-energy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Sigma(\omega)= G W}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Σ<!-- Σ --></mi>
+<mo stretchy="false">(</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>G</mi>
+<mi>W</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Sigma(\omega)= G W}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \Sigma(\omega)= G W}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e487e1ff0bb0424c2577c9a257846289&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 12.294ex;"/></span> is calculated from the imaginary part of screened potential <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W(\omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>W</mi>
+<mo stretchy="false">(</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W(\omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W(\omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=387261f5dfaa70d437d88a4ccec74a23&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 5.69ex;"/></span> by shifting the poles of
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>W</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e184b373abebe3221ccc255ddc7e1678&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.435ex;"/></span> by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \pm \epsilon }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>±<!-- ± --></mo>
+<mi>ϵ<!-- ϵ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \pm \epsilon }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \pm \epsilon }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=dc4506a78c23bca094c793d6a8a8a578&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.752ex;"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \epsilon }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ϵ<!-- ϵ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \epsilon }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \epsilon }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=cefb1500e542b58fe3e37f87f4e5d1af&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 0.944ex;"/></span> are the poles of the Green's function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  G}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  G}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  G}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3e930f0a3454099567948adf2496873e&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.827ex;"/></span>.
+Generally, <a class="mw-selflink selflink">LSPECTRALGW</a> affects the compute time very little. QP energies also hardly
+change when <a class="mw-selflink selflink">LSPECTRALGW</a>  is modified.
+However, <a class="mw-selflink selflink">LSPECTRALGW</a> = .TRUE. is usually slightly more robust,
+and should be selected for molecules and other systems with flat dispersion-less bands.  
+One the other hand, <a class="mw-selflink selflink">LSPECTRALGW</a> = .TRUE. seems to converge slightly slower, 
+as the complex shift <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> is decreased. Set this flag, if the QP energies
+show erratic behavior, for instance, if QP energies or Z-factors are not in the expected
+range of values (0.5&lt;Z&lt;0.9).
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LSPECTRAL" title="LSPECTRAL">LSPECTRAL</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSPECTRALGW%22_incategory:%22Examples%22" title='Special:Search/"LSPECTRALGW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

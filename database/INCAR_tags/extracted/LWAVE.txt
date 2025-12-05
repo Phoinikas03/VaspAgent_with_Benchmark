@@ -1,0 +1,10 @@
+<p><a class="mw-selflink selflink">LWAVE</a> = [logical]<br/> Default: <b>LWAVE</b> = .NOT.<a href="/wiki/index.php/LH5" title="LH5">LH5</a> 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWAVE</a> determines whether the wavefunctions are written to the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file at the end of a run.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHARG" title="LCHARG">LCHARG</a>, <a href="/wiki/index.php/LCHARGH5" title="LCHARGH5">LCHARGH5</a>, <a href="/wiki/index.php/LWAVEH5" title="LWAVEH5">LWAVEH5</a>, <a href="/wiki/index.php/LH5" title="LH5">LH5</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LWAVE%22_incategory:%22Examples%22" title='Special:Search/"LWAVE" incategory:"Examples"'>Examples that use this tag</a>
+</p>

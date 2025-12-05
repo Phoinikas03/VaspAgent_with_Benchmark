@@ -1,0 +1,42 @@
+<p><a class="mw-selflink selflink">OMEGAMAX</a> = [real]<br/> Default: <b>OMEGAMAX</b> = outermost node in dielectric function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \epsilon(\omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ϵ<!-- ϵ --></mi>
+<mo stretchy="false">(</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \epsilon(\omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \epsilon(\omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=d78e602be0b0ea5ecba9e79283fb6417&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 4.199ex;"/></span>/1.3 
+</p>
+<p>Description: <a class="mw-selflink selflink">OMEGAMAX</a> specifies the maximum frequency for the dense part of the frequency grid for GW calculations (old GW code, does not apply to GWR). 
+For CRPA calculations, <a class="mw-selflink selflink">OMEGAMAX</a> is the frequency point of the interaction. 
+For BSE calculations <a class="mw-selflink selflink">OMEGAMAX</a> determines the maximum energy difference for excitation pairs to be included. Since the flag controls different aspects of the code, be careful when setting it (and remember to remove the tag, when you change the type of calculations).
+</p>
+<p>GW type calculations:
+</p>
+<p>For the frequency grid along the real and imaginary axis sophisticated schemes are used, which are based on simple model functions for the macroscopic dielectric function. The grid spacing is dense up to roughly 1.3*<a class="mw-selflink selflink">OMEGAMAX</a> and becomes coarser for larger frequencies. The default value for <a class="mw-selflink selflink">OMEGAMAX</a> is either determined by the outermost node in the dielectric function (corresponding to a singularity in the inverse of the dielectric function) or the energy difference between the valence band minimum and the conduction band minimum. The larger of these two values is used. Except for pseudopotentials with deep lying core states, <a class="mw-selflink selflink">OMEGAMAX</a> is usually determined by the node in the dielectric function.
+</p>
+<p>For <a class="mw-redirect" href="/wiki/index.php/ACFDT_calculations" title="ACFDT calculations">ACFDT calculations</a>, only <a href="/wiki/index.php/OMEGAMIN" title="OMEGAMIN">OMEGAMIN</a> and <a href="/wiki/index.php/OMEGATL" title="OMEGATL">OMEGATL</a> determine the frequency grid (using a minimax algorithm). 
+</p>
+<p>The defaults have been carefully tested, and it is recommended to leave them unmodified, whenever possible. The grid should be solely controlled by <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>. The only other value that can be modified is the complex shift <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>. In principle, <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> should NOT be chosen independently of <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> and <a class="mw-selflink selflink">OMEGAMAX</a>: e.g. for less dense grids (smaller <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>) the complex shift must be accordingly increased. The default for <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> has been chosen such that the calculations are converged to 10 meV with respect to <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>: i.e. if <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> is kept constant and <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> is increased, the QP shifts should not change by more than 10 meV; at least for <a href="/wiki/index.php/LSPECTRAL" title="LSPECTRAL">LSPECTRAL</a> = .TRUE.. This was the case for the considered test materials. For <a href="/wiki/index.php/LSPECTRAL" title="LSPECTRAL">LSPECTRAL</a> = .FALSE. this does not apply. In this case it is recommended to set <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> manually and to perform careful convergence tests.
+</p>
+<p>For <a href="/wiki/index.php/LSPECTRAL" title="LSPECTRAL">LSPECTRAL</a> = .TRUE. independent convergence tests with respect to <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> and <a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a> are usually not required, and it should be sufficient to control the technical parameters via the single parameter <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>. Also note that too large values for <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a> in combination with coarse k-point grids can cause a decrease in precision (see <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>). 
+</p>
+<p><br/>
+BSE and TD-DFT type calculations (see <a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>):
+</p>
+<p>In this case, <a class="mw-selflink selflink">OMEGAMAX</a> allows to reduce the number of conduction/ valence band pairs. Usually these are determined by <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a> and <a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>. The number of pairs is roughly proportional to the products of <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>, <a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>, and the number of k-points in the full Brillouin zone. If <a class="mw-selflink selflink">OMEGAMAX</a> is set, pairs for which the difference of the independent particle energy is larger than 
+<a class="mw-selflink selflink">OMEGAMAX</a> will be removed from the basis set (and from the BSE calculations). This can improve performance, without significantly affecting the imaginary part of the dielectric function. The real part of the dielectric function is, however, rather sensitive to reducing <a class="mw-selflink selflink">OMEGAMAX</a>, <a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>, <a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OMEGATL" title="OMEGATL">OMEGATL</a>,
+<a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>,
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>,
+<a href="/wiki/index.php/OMEGAMIN" title="OMEGAMIN">OMEGAMIN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22OMEGAMAX%22_incategory:%22Examples%22" title='Special:Search/"OMEGAMAX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

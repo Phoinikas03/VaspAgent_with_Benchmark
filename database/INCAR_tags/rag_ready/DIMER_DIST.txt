@@ -1,0 +1,1 @@
+DIMER_DIST =  Default: DIMER_DIST = 0.01 Description: The flag DIMER_DIST defines the step size for the numerical differentiation (in {\displaystyle \AA} {\displaystyle \AA} ) for the Improved Dimer Method . Related tags and articles Improved Dimer Method Examples that use this tag

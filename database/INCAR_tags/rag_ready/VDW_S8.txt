@@ -1,0 +1,1 @@
+VDW_S8 =  Description: VDW_S8 defines the damping function parameter {\displaystyle s_{8}} {\displaystyle s_{8}} . VDW_S8 sets the damping function parameter {\displaystyle s_{8}} {\displaystyle s_{8}} in the DFT-D3 and DFT-D4 methods. Related tags and articles DFT-D3 , DFT-D4 Examples that use this tag

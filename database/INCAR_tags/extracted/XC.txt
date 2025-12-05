@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">XC</a> = Combination of functionals 
+</p>
+<p>Description: Specifies a combination of exchange-correlation functionals.
+</p>
+<p>A combination of semilocal (LDA, GGA, and METAGGA) functionals can be set with the <a class="mw-selflink selflink">XC</a> tag, which provides much more flexibility in the choice of the functional compared to the <a href="/wiki/index.php/GGA" title="GGA">GGA</a> and <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> tags. The functionals that can be combined are the functionals implemented in VASP (listed at <a href="/wiki/index.php/GGA" title="GGA">GGA</a> and <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>) and the functionals implemented in Libxc<sup class="reference" id="cite_ref-marques:cpc:2012_1-0"><a href="#cite_note-marques:cpc:2012-1">[1]</a></sup><sup class="reference" id="cite_ref-lehtola:sx:2018_2-0"><a href="#cite_note-lehtola:sx:2018-2">[2]</a></sup><sup class="reference" id="cite_ref-libxc_3-0"><a href="#cite_note-libxc-3">[3]</a></sup> (listed on the Libxc website<sup class="reference" id="cite_ref-libxc_list_4-0"><a href="#cite_note-libxc_list-4">[4]</a></sup>). The combination can consist of up to 100 components; for each, a multiplication factor can be set with the <a href="/wiki/index.php/XC_C" title="XC C">XC_C</a> tag.
+</p>
+<h2><span class="mw-headline" id="Examples_of_INCAR">Examples of <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a></span></h2>
+<ul><li>50% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-0"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup> and 50% of PBEsol<sup class="reference" id="cite_ref-perdew:prl:2008_6-0"><a href="#cite_note-perdew:prl:2008-6">[6]</a></sup></li></ul>
+<ul><li>SCAN exchange<sup class="reference" id="cite_ref-sun:prl:15_7-0"><a href="#cite_note-sun:prl:15-7">[7]</a></sup> combined with PBE correlation<sup class="reference" id="cite_ref-perdew:prl:1996_5-1"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup></li></ul>
+<ul><li>70% of B88<sup class="reference" id="cite_ref-becke:pra:1988_8-0"><a href="#cite_note-becke:pra:1988-8">[8]</a></sup> (from Libxc) and 30% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-2"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup> for exchange and 100% of LYP (from Libxc) for correlation<sup class="reference" id="cite_ref-lee:prb:1988_9-0"><a href="#cite_note-lee:prb:1988-9">[9]</a></sup></li></ul>
+<ul><li>15% of HF, 63.75% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-3"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup>, and 21.25% of B88<sup class="reference" id="cite_ref-becke:pra:1988_8-1"><a href="#cite_note-becke:pra:1988-8">[8]</a></sup> (from Libxc) for exchange and 75% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-4"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup> and 25% of LYP<sup class="reference" id="cite_ref-lee:prb:1988_9-1"><a href="#cite_note-lee:prb:1988-9">[9]</a></sup> (from Libxc) for correlation</li></ul>
+<ul><li>15% of HF, 63.75% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-5"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup>, and 21.25% of SCAN<sup class="reference" id="cite_ref-sun:prl:15_7-1"><a href="#cite_note-sun:prl:15-7">[7]</a></sup> for exchange and 75% of PBE<sup class="reference" id="cite_ref-perdew:prl:1996_5-6"><a href="#cite_note-perdew:prl:1996-5">[5]</a></sup> and 25% of SCAN<sup class="reference" id="cite_ref-sun:prl:15_7-2"><a href="#cite_note-sun:prl:15-7">[7]</a></sup> for correlation</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/XC_C" title="XC C">XC_C</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>
+<a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC2" title="LIBXC2">LIBXC2</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/AMGGAX" title="AMGGAX">AMGGAX</a>,
+<a href="/wiki/index.php/AMGGAC" title="AMGGAC">AMGGAC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22XC%22_incategory:%22Examples%22" title='Special:Search/"XC" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

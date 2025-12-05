@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">IEPSILON</a> = 1 | 2 | 3 | 4 
+</p>
+<p>Description: <a class="mw-selflink selflink">IEPSILON</a> determines along which Cartesian direction the E field is applied.
+</p>
+<ul><li><a class="mw-selflink selflink">IEPSILON</a>=1 x direction</li>
+<li><a class="mw-selflink selflink">IEPSILON</a>=2 y direction</li>
+<li><a class="mw-selflink selflink">IEPSILON</a>=3 z direction</li>
+<li><a class="mw-selflink selflink">IEPSILON</a>=4 x, y and z direction; three indpendent calculations are performed</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IEPSILON%22_incategory:%22Examples%22" title='Special:Search/"IEPSILON" incategory:"Examples"'>Examples that use this tag</a>
+</p>

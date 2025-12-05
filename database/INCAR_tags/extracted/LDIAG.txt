@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">LDIAG</a> = [logical]<br/> Default: <b>LDIAG</b> = .TRUE. 
+</p>
+<p>Description: Determines whether a subspace diagonalization is performed within the algorithm selected by <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> or <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>.
+</p>
+<p>For <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>Normal</tt>, <tt>Fast</tt>, and <tt>VeryFast</tt>, VASP performs a diagonalization in the subspace spanned by all orbitals. This is often referred to as the <a class="external text" href="https://en.wikipedia.org/wiki/Rayleigh%E2%80%93Ritz_method" rel="nofollow">Rayleigh–Ritz method</a>. 
+This step increases the convergence rate and thus is expedient in most cases.
+Furthermore, the subspace diagonalization sorts the orbital/eigenvalues in ascending order.
+</p>
+<p>For the direct optimization algorithms (for instance <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>All</tt> or <tt>Damped</tt>),
+a subspace diagonalization is usually not performed, but in order to improve the accuracy of the calculated forces,
+after convergence has been reached one single diagonalization in the subspace spanned by all orbitals is performed.
+</p>
+<p>For <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>VeryFast</tt> and <tt>Damped</tt> it is possible to switch off the subspace diagonalization by specifying <a class="mw-selflink selflink">LDIAG</a> = <tt>.FALSE.</tt> in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+Specifically, for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>VeryFast</tt>, <a class="mw-selflink selflink">LDIAG</a> = <tt>.FALSE.</tt> changes from an exact Rayleigh–Ritz diagonalization to Loewdin perturbation theory.
+</p>
+<p>Note, Loewdin perturbation theory strictly conserves the orbital order, <i>i.e.</i>, the <i>n</i>-th orbital will remain stored in the <i>n</i>-th storage slot and only small rotations into that orbital can occur.
+For <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>Damped</tt> and <tt>All</tt>, the final subspace diagonalization is simply skipped if <a class="mw-selflink selflink">LDIAG</a> = <tt>.FALSE.</tt> is set.
+Generally using <a class="mw-selflink selflink">LDIAG</a> = <tt>.FALSE.</tt> is only advised, if one wants to maintain a certain orbital order, for instance, when reading the orbitals from an existing <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file.
+</p>
+<p>For the algorithms <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>Normal</tt> or <tt>Fast</tt>, by construction it is not possible to switch off subspace diagonalization, as these algorithms require subspace diagonalizations during the iterative refinement of the orbitals.
+Furthermore, algorithms that minimize the total energy (<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a> = <tt>All</tt>) are often too "greedy" and tend to alternate the orbital order in the course of the SCF cycle and energy optimization.  
+</p>
+<p>In summary, the following combinations are potentially useful: 
+</p>
+<p>Other combinations using <a class="mw-selflink selflink">LDIAG</a> = <tt>.FALSE.</tt> are likely to yield undesirable results.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>,
+<a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDIAG%22_incategory:%22Examples%22" title='Special:Search/"LDIAG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

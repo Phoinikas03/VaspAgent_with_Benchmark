@@ -1,0 +1,67 @@
+<p><a class="mw-selflink selflink">CUTOFF_MU</a> =  [real] ( [real] ) 
+</p>
+<p>Description: <a class="mw-selflink selflink">CUTOFF_MU</a> specifies the energy cutoff <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> in eV for the function specified by <a class="mw-selflink selflink">CUTOFF_MU</a>.
+</p>
+<p>The value <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> of <a class="mw-selflink selflink">CUTOFF_MU</a> corresponds to the energy cutoff of the cutoff function used to obtain Wannier functions with the
+<a class="mw-redirect" href="/wiki/index.php/Wannier_functions#One-shot_single_value_decomposition_(SVD)" title="Wannier functions"> one-shot method</a>.
+The meaning of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9faf6ead2cd2c2187bd943488de1d0a&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 1.402ex;"/></span> depends on the <a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a> tag.
+</p>
+<p>For spin-polarized calculations (<code style="padding: 2px"><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2</code>), two values can be specified for <a class="mw-selflink selflink">CUTOFF_MU</a>, one for each spin channel.
+If only a single value is specified, it will be used for both spin channels.
+</p>
+<p>The default value is computed by first determining the Fermi level 
+of the system if it had <a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a> orbitals occupied and multiplying by 0.8. This gives reasonable freedom to determine the unitary transformation <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle U_{mn\mathbf{k}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>U</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">k</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle U_{mn\mathbf{k}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle U_{mn\mathbf{k}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=91b5602115556544b67c5c7583be6910&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 5.246ex;"/></span> from Bloch states to Wannier functions.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/CUTOFF_TYPE" title="CUTOFF TYPE">CUTOFF_TYPE</a>,
+<a href="/wiki/index.php/CUTOFF_SIGMA" title="CUTOFF SIGMA">CUTOFF_SIGMA</a>,
+<a href="/wiki/index.php/LSCDM" title="LSCDM">LSCDM</a>,
+<a href="/wiki/index.php/LOCPROJ" title="LOCPROJ">LOCPROJ</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CUTOFF_MU%22_incategory:%22Examples%22" title='Special:Search/"CUTOFF MU" incategory:"Examples"'>Examples that use this tag</a>
+</p>

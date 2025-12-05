@@ -1,0 +1,27 @@
+<p><a class="mw-selflink selflink">LDAUTYPE</a> = 1 | 2 | 4<br/> Default: <b>LDAUTYPE</b> = 2 
+</p>
+<p>Description: <a class="mw-selflink selflink">LDAUTYPE</a> specifies the DFT+U variant that will be used.
+</p>
+<p>The following variants of the <a href="/wiki/index.php/Category:DFT%2BU" title="Category:DFT+U">DFT+U</a> are available:
+</p>
+<ul><li><a class="mw-selflink selflink">LDAUTYPE</a>=1: The rotationally invariant DFT+U introduced by Liechtenstein <i>et al.</i><sup class="reference" id="cite_ref-liechtenstein:prb:95_1-0"><a href="#cite_note-liechtenstein:prb:95-1">[1]</a></sup></li></ul>
+<ul><li><a class="mw-selflink selflink">LDAUTYPE</a>=2: The simplified (rotationally invariant) approach to DFT+U, introduced by Dudarev <i>et al.</i><sup class="reference" id="cite_ref-dudarev:prb:98_2-0"><a href="#cite_note-dudarev:prb:98-2">[2]</a></sup></li></ul>
+<ul><li><a class="mw-selflink selflink">LDAUTYPE</a>=3: Linear response ansatz of Cococcioni et al. <sup class="reference" id="cite_ref-cococcioni:2005_3-0"><a href="#cite_note-cococcioni:2005-3">[3]</a></sup> to compute U. See <a href="/wiki/index.php/Calculate_U_for_LSDA%2BU" title="Calculate U for LSDA+U">how to calculate U</a>.</li></ul>
+<ul><li><a class="mw-selflink selflink">LDAUTYPE</a>=4: Same as <a class="mw-selflink selflink">LDAUTYPE</a>=1, but without exchange splitting.</li></ul>
+<p>A method to estimate the parameters for DFT+U is the <a class="mw-redirect" href="/wiki/index.php/Constrained-random-phase_approximation" title="Constrained-random-phase approximation">constrained-random-phase approximation</a>. Another method is the linear response ansatz with <a class="mw-selflink selflink">LDAUTYPE</a>=3, mentioned above. On the other hand, in many applications, the DFT+U parameters are used as tuning parameters to fit experimental data.
+</p>
+<p>This is because the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file contains only information up to angular momentum quantum number set by <a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a> for the <a class="mw-selflink-fragment" href="#occmat">on-site PAW occupancy matrices</a>. When the <a href="/wiki/index.php/CHGCAR" title="CHGCAR">CHGCAR</a> file is read and kept fixed in the course of the calculations (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11), the results will necessarily not be identical to a self-consistent run. The deviations are often large for DFT+U calculations.
+</p>
+<p>It is possible to use <a class="mw-selflink selflink">LDAUTYPE</a>=1, 2, and 3 for a non–spin-polarized calculation with <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=1.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LDAU" title="LDAU">LDAU</a>,
+<a href="/wiki/index.php/LDAUL" title="LDAUL">LDAUL</a>,
+<a href="/wiki/index.php/LDAUU" title="LDAUU">LDAUU</a>,
+<a href="/wiki/index.php/LDAUJ" title="LDAUJ">LDAUJ</a>,
+<a href="/wiki/index.php/LDAUPRINT" title="LDAUPRINT">LDAUPRINT</a>,
+<a href="/wiki/index.php/LMAXMIX" title="LMAXMIX">LMAXMIX</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LDAUTYPE%22_incategory:%22Examples%22" title='Special:Search/"LDAUTYPE" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

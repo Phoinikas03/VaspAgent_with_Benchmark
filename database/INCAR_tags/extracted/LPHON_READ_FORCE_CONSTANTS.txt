@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">LPHON_READ_FORCE_CONSTANTS</a> = .TRUE. | .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LPHON_READ_FORCE_CONSTANTS</a> read the force constants from a vaspin.h5 file containing the force constants computed with a previous VASP run.
+</p>
+<p>After the computation of the force constants using finite-differences (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=5,6) or density-functional perturbation theory (<a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=7,8) on a supercell the force constants are written to the vaspout.h5 file.
+To plot the phonon dispersion on a different path the user can modify the <a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a> file and read the force constants computed previously (i.e. without performing the finite-differences computations on supercells again).
+To do so copy vaspout.h5 to vaspin.h5 and set <a class="mw-selflink selflink">LPHON_READ_FORCE_CONSTANTS</a>=.TRUE. in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+Note that when this is set only the phonon dispersion is performed and then VASP quits without running any additional calculation specified in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/QPOINTS" title="QPOINTS">QPOINTS</a>,
+<a href="/wiki/index.php/LPHON_DISPERSION" title="LPHON DISPERSION">LPHON_DISPERSION</a>,
+<a href="/wiki/index.php/PHON_NWRITE" title="PHON NWRITE">PHON_NWRITE</a>,
+<a href="/wiki/index.php/LPHON_POLAR" title="LPHON POLAR">LPHON_POLAR</a>,
+<a href="/wiki/index.php/PHON_DIELECTRIC" title="PHON DIELECTRIC">PHON_DIELECTRIC</a>,
+<a href="/wiki/index.php/PHON_BORN_CHARGES" title="PHON BORN CHARGES">PHON_BORN_CHARGES</a>,
+<a href="/wiki/index.php/PHON_G_CUTOFF" title="PHON G CUTOFF">PHON_G_CUTOFF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LPHON_DISPERSION%22_incategory:%22Examples%22" title='Special:Search/"LPHON DISPERSION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

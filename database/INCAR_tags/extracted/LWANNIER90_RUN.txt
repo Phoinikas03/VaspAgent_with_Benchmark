@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">LWANNIER90_RUN</a> = .TRUE. | .FALSE.<br/> Default: <b>LWANNIER90_RUN</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LWANNIER90_RUN</a> executes <tt>wannier_setup</tt> (see <a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>=.TRUE.) and subsequently runs <a class="external text" href="http://www.wannier.org" rel="nofollow">WANNIER90</a> in library mode (<tt>wannier_run</tt>).
+</p>
+<p>For details on the execution of <tt>wannier_setup</tt> in VASP, see the description of the <a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>-tag.
+For information on the many tags one may set in the <a class="new" href="/wiki/index.php?title=Wannier90.win&amp;action=edit&amp;redlink=1" title="Wannier90.win (page does not exist)">wannier90.win</a> file to control the execution of WANNIER90 (be it standalone or in library mode) we refer to the <a class="external text" href="http://www.wannier.org/doc/user_guide.pdf" rel="nofollow">WANNIER90 manual</a>.
+</p>
+<p><b>Mind</b>: when running WANNIER90 in library mode, the <a class="new" href="/wiki/index.php?title=Wannier90.mmn&amp;action=edit&amp;redlink=1" title="Wannier90.mmn (page does not exist)">wannier90.mmn</a> and <a class="new" href="/wiki/index.php?title=Wannier90.amn&amp;action=edit&amp;redlink=1" title="Wannier90.amn (page does not exist)">wannier90.amn</a> files are not written. The information these files normally contain is passed on to <tt>wannier_run</tt> internally. If you want these files to be written anyway, for instance to be able to run WANNIER90 standalone later on, one should add
+</p>
+<p>to the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LWANNIER90" title="LWANNIER90">LWANNIER90</a>,
+<a href="/wiki/index.php/LWRITE_MMN_AMN" title="LWRITE MMN AMN">LWRITE_MMN_AMN</a>,
+<a href="/wiki/index.php/LWRITE_UNK" title="LWRITE UNK">LWRITE_UNK</a>,
+<a href="/wiki/index.php/NUM_WANN" title="NUM WANN">NUM_WANN</a>,
+<a href="/wiki/index.php/LWRITE_SPN" title="LWRITE SPN">LWRITE_SPN</a>,
+<a href="/wiki/index.php/WANNIER90_WIN" title="WANNIER90 WIN">WANNIER90_WIN</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LWANNIER90_RUN%22_incategory:%22Examples%22" title='Special:Search/"LWANNIER90 RUN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

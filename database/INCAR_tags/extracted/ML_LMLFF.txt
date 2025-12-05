@@ -1,0 +1,11 @@
+<p><a class="mw-selflink selflink">ML_LMLFF</a> = [logical]<br/> Default: <b>ML_LMLFF</b> = .FALSE. 
+</p>
+<p>Description: Main control tag which enables/disables the use of machine learning force fields.
+</p>
+<p>If <a class="mw-selflink selflink">ML_LMLFF</a> = .FALSE. machine learning force fields are disabled and all related <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> tags, i.e. all tags starting with "<b>ML_</b>", are ignored. If machine learning force fields are used by setting <a class="mw-selflink selflink">ML_LMLFF</a> = .TRUE., the VASP mode of operation depends on the choice of <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>. If <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> is not supplied in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file then the default mode of operation is to run an MD simulation with on-the-fly machine learning, i.e., <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>. This training is started "from scratch" if no <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> file is provided, otherwise a continuation run is performed.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_IALGO_LINREG" title="ML IALGO LINREG">ML_IALGO_LINREG</a>, <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_IREG" title="ML IREG">ML_IREG</a>, <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>, <a href="/wiki/index.php/ML_ISCALE_TOTEN" title="ML ISCALE TOTEN">ML_ISCALE_TOTEN</a>, <a href="/wiki/index.php/ML_LCOUPLE" title="ML LCOUPLE">ML_LCOUPLE</a>, <a href="/wiki/index.php/ML_LHEAT" title="ML LHEAT">ML_LHEAT</a>, <a href="/wiki/index.php/ML_LEATOM" title="ML LEATOM">ML_LEATOM</a>, <a href="/wiki/index.php/ML_MB" title="ML MB">ML_MB</a>, <a href="/wiki/index.php/ML_MCONF" title="ML MCONF">ML_MCONF</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LMLFF%22_incategory:%22Examples%22" title='Special:Search/"ML LMLFF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

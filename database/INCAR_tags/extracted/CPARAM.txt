@@ -1,0 +1,17 @@
+<p><a class="mw-selflink selflink">CPARAM</a> = [real]<br/> Default: <b>CPARAM</b> = 0.0093 
+</p>
+<p>Description: The tag <a class="mw-selflink selflink">CPARAM</a> allows to specify the value of the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle C}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>C</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle C}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle C}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0d61f8370cad1d412f80b84d143e1257&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.766ex;"/></span> in the kernel of the nonlocal rVV10 correlation functional.<sup class="reference" id="cite_ref-sabatini:prb:2013_1-0"><a href="#cite_note-sabatini:prb:2013-1">[1]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/BPARAM" title="BPARAM">BPARAM</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

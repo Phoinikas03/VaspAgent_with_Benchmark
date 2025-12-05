@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">LSYNCH5</a> = [logical]<br/> Default: <b>LSYNCH5</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSYNCH5</a> determines whether the output in <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a> is always synchronized with VASP while the calculation is running.
+</p>
+<p>If you set this flag, VASP will enable single-writer-multiple-reader mode for the HDF5 file.
+This allows you to monitor the output using <a class="external text" href="https://vasp.at/py4vasp/latest/index.html" rel="nofollow">py4vasp</a> while the calculation is still running.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LH5" title="LH5">LH5</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSYNCH5%22_incategory:%22Examples%22" title='Special:Search/"LSYNCH5" incategory:"Examples"'>Examples that use this tag</a>
+</p>

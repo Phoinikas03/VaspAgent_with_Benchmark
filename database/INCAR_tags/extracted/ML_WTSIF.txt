@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">ML_WTSIF</a> = [real] 
+</p>
+<p>Description: This tag sets the weight for the scaling of the stress in the training data within the machine learning force field method.
+</p>
+<p><a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a class="mw-selflink selflink">ML_WTSIF</a> form a group of tags which set the normalization and weighting of ab initio training data, i.e.  energies, forces and stresses of the training structures. The main control tag is <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>, please also have a look at its detailed description. If <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>=1 the weight has unit kBar and is used to divide the data by it. For <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>=2 and 3 the weights are unitless and multiplicative.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_IWEIGHT" title="ML IWEIGHT">ML_IWEIGHT</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_IALGO_LINREG" title="ML IALGO LINREG">ML_IALGO_LINREG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_WTSIF%22_incategory:%22Examples%22" title='Special:Search/"ML WTSIF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,355 @@
+<p><a class="mw-selflink selflink">ML_DESC_TYPE</a> = [integer]<br/> Default: <b>ML_DESC_TYPE</b> = 0 
+</p>
+<p>Description: This tag selects the descriptor type of the three-body descriptor used in machine learning force fields.
+</p>
+<p>This tag selects how the three-body descriptor is calculated and the following options are available:
+</p>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">ML_DESC_TYPE</a> = 0</code>: Standard three-body descriptor. The number of descriptors in the calculations scales quadratically with the number of elements.</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">ML_DESC_TYPE</a> = 1</code>: Descriptor for which the number of descriptors is linearly scaling with respect to the number of chemical species.</li></ul>
+<h2><span class="mw-headline" id="Standard_descriptor">Standard descriptor</span></h2>
+<p>The standard three-body descriptor (<a class="mw-selflink selflink">ML_DESC_TYPE</a>=0) without self-interaction corrections for the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span>th atom looks like the following
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  
+p_{n\nu l}^{iJJ'}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ'}.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>J</mi>
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</msubsup>
+<mo>=</mo>
+<msqrt>
+<mfrac>
+<mrow>
+<mn>8</mn>
+<msup>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</mfrac>
+</msqrt>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</munderover>
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>J</mi>
+</mrow>
+</msubsup>
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</msubsup>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  
+p_{n\nu l}^{iJJ'}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ'}.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  
+p_{n\nu l}^{iJJ'}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l} c_{nlm}^{iJ} c_{\nu lm}^{iJ'}.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4a18723c5961ed005a55a4e28735ad31&amp;mode=mathml" style="vertical-align: -3.171ex; margin-left: -0.089ex; height: 7.676ex; width: 30.939ex;"/></span>
+</p>
+<p>Here <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b8b965ad4bca0e41ab51de7b31363a1&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.395ex;"/></span>/<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \nu}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ν<!-- ν --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \nu}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \nu}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4fdefba26320686bb2bd0579a0df421c&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.232ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle l}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle l}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=2db95e8e1a9267b7a1188556b2013b33&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.693ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle m}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>m</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle m}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f8f57715090da2632453988d9a1501b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 2.04ex;"/></span> are radial, angular, and magnetic quantum numbers, respectively. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>J</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle J}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ff44570aca8241914870afbc310cdb85&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.471ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J'}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J'}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle J'}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4aad50798b24cebd0f55e4700d1543c2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.509ex; width: 2.211ex;"/></span> are indices for the element types. Both indices go over all elements in the structure. So one can see that the number of three-body descriptors grows quadratically with the number of element types. 
+</p>
+<h2><span class="mw-headline" id="Element_reduced_descriptor">Element reduced descriptor</span></h2>
+<p>Another type of descriptor (<a class="mw-selflink selflink">ML_DESC_TYPE</a>=1) which was proposed in Ref. <sup class="reference" id="cite_ref-csanyi:npj:2022_1-0"><a href="#cite_note-csanyi:npj:2022-1">[1]</a></sup> applies a reduction of one of the intermediate coefficients <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c_{nlm}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c_{nlm}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c_{nlm}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ef4c0d096821d2264a580cde2cc17586&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 4.158ex;"/></span> and is written as
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  
+p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J'}c_{\nu lm}^{iJ'}.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>J</mi>
+</mrow>
+</msubsup>
+<mo>=</mo>
+<msqrt>
+<mfrac>
+<mrow>
+<mn>8</mn>
+<msup>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<mi>l</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</mfrac>
+</msqrt>
+<munderover>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</munderover>
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>J</mi>
+</mrow>
+</msubsup>
+<munder>
+<mo movablelimits="false">∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</munder>
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</msubsup>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  
+p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J'}c_{\nu lm}^{iJ'}.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  
+p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}  c_{nlm}^{iJ} \sum\limits_{J'}c_{\nu lm}^{iJ'}.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7f3fdcdd51b2f8639122babde4e95e7f&amp;mode=mathml" style="vertical-align: -3.338ex; margin-left: -0.089ex; height: 7.843ex; width: 34.198ex;"/></span>
+</p>
+<p>In contrast to the standard three-body descriptor <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{n\nu l}^{iJ}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>J</mi>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{n\nu l}^{iJ}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle p_{n\nu l}^{iJ}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6f61b7fea5455c0c644e5a2508f70b9a&amp;mode=mathml" style="vertical-align: -1.005ex; margin-left: -0.089ex; height: 3.176ex; width: 3.839ex;"/></span> depends only linearly on the number of chemical species, since summing over <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J'}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J'}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle J'}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4aad50798b24cebd0f55e4700d1543c2&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.509ex; width: 2.211ex;"/></span> for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle c_{\nu lm}^{iJ'}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>ν<!-- ν --></mi>
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<msup>
+<mi>J</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</msubsup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle c_{\nu lm}^{iJ'}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle c_{\nu lm}^{iJ'}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=5cabcd68ed4c4661b6f8f3514365266a&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.509ex; width: 4.043ex;"/></span> is equivalent to having element agnostic intermediate coefficients. When using this descriptor everything up to the calculation of the descriptors takes the same time to calculate as for the standard descriptor, but everything that comes after that, such as e.g. kernels and forces, scales linearly with respect to the number of chemical species. Hence the factor that is gained in computational efficiency is less than the number of chemical species but the factor increases with an increasing number of local reference configurations employed in the calculations. The improved computational efficiency comes at the price of decreased accuracy. The accuracy loss is system-dependent and is typically around 5 to 20 percent.  
+</p>
+<h2><span class="mw-headline" id="Additional_sparsification">Additional sparsification</span></h2>
+<p>All descriptors can be further combined with <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Sparsification_of_angular_descriptors" title="Machine learning force field: Theory">descriptor sparsification</a>   (<a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>=<b>.TRUE.</b>). Generally, the sparsification of descriptors results in a trade-off between accuracy and efficiency. The fraction of descriptors that is kept is specified by <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>. We advise the user to adjust this parameter carefully and test it individually for each system. However, we have experienced the following trends for our test cases: For <a class="mw-selflink selflink">ML_DESC_TYPE</a>=0 a descriptor sparsification of 50 percent <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>=0.5 leaves the accuracy almost untouched. Since <a class="mw-selflink selflink">ML_DESC_TYPE</a>=1 contains already much fewer descriptors than <a class="mw-selflink selflink">ML_DESC_TYPE</a>=0, a 50 percent sparsification for <a class="mw-selflink selflink">ML_DESC_TYPE</a>=1 results in noticeable accuracy loss (additionally to the 5 to 20 percent by the descriptor itself).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_LSPARSDES" title="ML LSPARSDES">ML_LSPARSDES</a>, <a href="/wiki/index.php/ML_RDES_SPARSDES" title="ML RDES SPARSDES">ML_RDES_SPARSDES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IALGO_LINREG%22_incategory:%22Examples%22" title='Special:Search/"ML IALGO LINREG" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><br/>
+</p>

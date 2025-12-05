@@ -1,0 +1,103 @@
+<p><a class="mw-selflink selflink">ML_IALGO_LINREG</a> = [integer]<br/> Default: <b>ML_IALGO_LINREG</b> = 1 
+</p>
+<p>Description: This tag determines the algorithm that is employed to solve the system of linear equations in the ridge regression method for machine learning.
+</p>
+<p>In the ridge regression method for machine learning one needs to solve for the unknown weights <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{w}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">w</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{w}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{w}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=17227d892ae518eab12eb3f0e596f1a0&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.931ex;"/></span> minimizing
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+ || \mathbf{Y} - \mathbf{\Phi} \mathbf{w} || \rightarrow \mbox{min}.
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">Y</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">Φ<!-- Φ --></mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">w</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo stretchy="false">→<!-- → --></mo>
+<mstyle displaystyle="false" scriptlevel="0">
+<mtext>min</mtext>
+</mstyle>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+ || \mathbf{Y} - \mathbf{\Phi} \mathbf{w} || \rightarrow \mbox{min}.
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+ || \mathbf{Y} - \mathbf{\Phi} \mathbf{w} || \rightarrow \mbox{min}.
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b807a9e12c97b1504083f93214dbd41f&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 19.446ex;"/></span>
+</p>
+<p>For the theory of the available methods please see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Regression" title="Machine learning force field: Theory">here</a>.
+</p>
+<p>The following options are available to solve for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathbf{w}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">w</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathbf{w}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mathbf{w}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=17227d892ae518eab12eb3f0e596f1a0&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.931ex;"/></span>:
+</p>
+<ul><li><a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1: Bayesian linear regression (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Bayesian_error_estimation" title="Machine learning force field: Theory">here</a>). Recommended for <a href="/wiki/index.php/NSW" title="NSW">NSW</a><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ge}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≥<!-- ≥ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ge}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \ge}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4edc933d28bfe3f5effe94bf892dad38&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.176ex; width: 1.808ex;"/></span>1. Usable with <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>TRAIN</i>, <i>SELECT</i>, and <i>REFITBAYESIAN</i>.</li>
+<li><a class="mw-selflink selflink">ML_IALGO_LINREG</a>=2: QR factorization. Usable with <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>REFIT</i> and <i>REFITBAYESIAN</i>.</li>
+<li><a class="mw-selflink selflink">ML_IALGO_LINREG</a>=3: Singular value decomposition. Usable with <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>REFIT</i> and <i>REFITBAYESIAN</i>.</li>
+<li><a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4: Singular value decomposition with Tikhonov regularization. The regularization can be controlled via <a href="/wiki/index.php/ML_SIGW0" title="ML SIGW0">ML_SIGW0</a>. Usable with <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>REFIT</i> and <i>REFITBAYESIAN</i>.</li></ul>
+<p>For on the fly learning <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>TRAIN</i> and reselection of local reference configurations <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a> = <i>SELECT</i>, it is strictly necessary to use Bayesian regression (<a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1), since uncertainty estimates are only available for Bayesian regression. 
+</p>
+<p><b>Refitting</b>:
+Although the above modes result in an <a href="/wiki/index.php/ML_FFN" title="ML FFN">ML_FFN</a> file that could be used for production runs, we strongly advise to refit the <a href="/wiki/index.php/ML_ABN" title="ML ABN">ML_ABN</a> files. For that copy the <a href="/wiki/index.php/ML_ABN" title="ML ABN">ML_ABN</a> file to the <a href="/wiki/index.php/ML_AB" title="ML AB">ML_AB</a> file and use <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>= <i>REFIT</i> (if Bayesian error estimation is required during production runs <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>= <i>REFITBAYESIAN</i> is an option, but at the cost of significatnly slower calculation time). <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>= <i>REFIT</i> employs <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 by default.
+</p>
+<p>For <a class="mw-selflink selflink">ML_IALGO_LINREG</a>&gt;1, <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=3 and 4 are the most tested approaches and we use <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 routinely before employing a machine learned force field. <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 gives more stable force fields and better fitting accuracy than <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=3, due to the regularization term employed (for details please see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Solution_via_regularized_SVD" title="Machine learning force field: Theory">here</a>). 
+</p>
+<p><a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 dramatically improves the condition number of the fitting compared to <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1 since it directly uses the design matrix. In contrast <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1 requires to use the covariance matrix (square of the design matrix), which effectively doubles the condition number.
+However, <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 needs significantly more memory than <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1 (at least twice that much). Please always monitor the memory estimates in the <a href="/wiki/index.php/ML_LOGFILE" title="ML LOGFILE">ML_LOGFILE</a>! It should be also noted that <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=4 is computationally somewhat more demanding than <a class="mw-selflink selflink">ML_IALGO_LINREG</a>=1, but it typically requires between a few minutes and an hour. So usually the extra cost is negligible compared to the original training.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_W1" title="ML W1">ML_W1</a>, <a href="/wiki/index.php/ML_WTOTEN" title="ML WTOTEN">ML_WTOTEN</a>, <a href="/wiki/index.php/ML_WTIFOR" title="ML WTIFOR">ML_WTIFOR</a>, <a href="/wiki/index.php/ML_WTSIF" title="ML WTSIF">ML_WTSIF</a>, <a href="/wiki/index.php/ML_SIGW0" title="ML SIGW0">ML_SIGW0</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_IALGO_LINREG%22_incategory:%22Examples%22" title='Special:Search/"ML IALGO LINREG" incategory:"Examples"'>Examples that use this tag</a>
+</p>

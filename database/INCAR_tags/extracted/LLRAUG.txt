@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">LLRAUG</a> = .TRUE. | .FALSE.<br/> Default: <b>LLRAUG</b> =  .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LLRAUG</a> calculates the two-center contributions to the chemical shift tensor.
+</p>
+<p><a class="mw-selflink selflink">LLRAUG</a> switches on two-center contributions to the NMR chemical shift tensor.
+These are contributions due to the augmentation
+currents in other PAW spheres than the sphere with the atom for which the shift tensor is calculated.
+Typically these contributions are safely neglected.
+It makes sense to include them for accurate calculations with hard potentials (<tt>*_h</tt>)
+on systems containing also (non-hydrogen) atoms from the top rows of the periodic
+table (B, C, N, O, F), typically with short bonds, e.g. C<sub>2</sub>H<sub>2</sub>, where
+effects up to a few ppm are possible. Effects are most significant for the H shift. For such systems using standard potentials
+typically introduces larger inaccuracies. The two-center contributions are calculated using
+a multipole expansion of the current density that is represented on the plane wave grid; as in Sec. III.A.3 of. Ref. <sup class="reference" id="cite_ref-dewijs:jcp:2013_1-0"><a href="#cite_note-dewijs:jcp:2013-1">[1]</a></sup>.  
+The relevance of <a class="mw-selflink selflink">LLRAUG</a> to achieve basis-set completeness for shieldings is discussed in 
+Ref. <sup class="reference" id="cite_ref-dewijs:jcp:2021_2-0"><a href="#cite_note-dewijs:jcp:2021-2">[2]</a></sup> that compares to basis-set converged quantum chemical calculations <sup class="reference" id="cite_ref-jenssen:pccp:2016_3-0"><a href="#cite_note-jenssen:pccp:2016-3">[3]</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">IRC_VNORM0</a> = real<br/> Default: <b>IRC_VNORM0</b> =  0.002 
+</p>
+<p>Description: The constant velocity vector (in Å/fs) in an <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculation</a>.
+</p>
+<p>In the damped-velocity-Verlet algorithm for <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>, the damping is realized via rescaling the velocity vector to a constant value (in Å/fs) defined via the parameter <a class="mw-selflink selflink">IRC_VNORM0</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a href="/wiki/index.php/IRC_DIRECTION" title="IRC DIRECTION">IRC_DIRECTION </a>,
+<a href="/wiki/index.php/IRC_STOP" title="IRC STOP">IRC_STOP</a>,
+<a href="/wiki/index.php/IRC_DELTA0" title="IRC DELTA0">IRC_DELTA0</a>,
+<a href="/wiki/index.php/IRC_MINSTEP" title="IRC MINSTEP">IRC_MINSTEP</a>,
+<a href="/wiki/index.php/IRC_MAXSTEP" title="IRC MAXSTEP">IRC_MAXSTEP</a>
+</p>

@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">EDIFF</a> = [real]<br/> Default: <b>EDIFF</b> = <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 10^{-4}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>10</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>4</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 10^{-4}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 10^{-4}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6edf763703b89d98480ec50f62ab6b47&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 4.658ex;"/></span> 
+</p>
+<p>Description: <a class="mw-selflink selflink">EDIFF</a> specifies the global break condition for the electronic SC-loop. <a class="mw-selflink selflink">EDIFF</a> is specified in units of eV.
+</p>
+<p>The relaxation of the electronic degrees of freedom stops if the total (free) energy change and the band-structure-energy change ('change of eigenvalues') between two steps are both smaller than <a class="mw-selflink selflink">EDIFF</a> (in eV). For <a class="mw-selflink selflink">EDIFF</a>=0, strictly <a href="/wiki/index.php/NELM" title="NELM">NELM</a> electronic self-consistency steps will be performed.
+</p>
+<p>In most cases, the convergence speed is quadratic, so often the cost for the additional iterations is small. Hence, for well converged calculations, we strongly recommend to decrease <a class="mw-selflink selflink">EDIFF</a> to 1E-6. For finite difference calculations (e.g. phonons), even <a class="mw-selflink selflink">EDIFF</a> = 1E-7 might be required in order to obtain precise results. On the other hand, for large systems with many atoms and/or when using <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a> functionals, attaining an energy convergence of 1E-8 or even 1E-7 might be difficult. So, overall <a class="mw-selflink selflink">EDIFF</a>= 1E-6 is likely the best compromise.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/EDIFFG" title="EDIFFG">EDIFFG</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22EDIFF%22_incategory:%22Examples%22" title='Special:Search/"EDIFF" incategory:"Examples"'>Examples that use this tag</a>
+</p>

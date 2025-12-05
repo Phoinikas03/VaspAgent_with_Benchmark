@@ -1,0 +1,12 @@
+<p><a class="mw-selflink selflink">OMEGAMIN</a> = [real]<br/> Default: <b>OMEGAMIN</b> = minimum transition energy (0.05 for metals) 
+</p>
+<p>Description: <a class="mw-selflink selflink">OMEGAMIN</a> sets the minimum frequency in the frequency grid. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a href="/wiki/index.php/OMEGATL" title="OMEGATL">OMEGATL</a>,
+<a href="/wiki/index.php/CSHIFT" title="CSHIFT">CSHIFT</a>,
+<a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22OMEGAMIN%22_incategory:%22Examples%22" title='Special:Search/"OMEGAMIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

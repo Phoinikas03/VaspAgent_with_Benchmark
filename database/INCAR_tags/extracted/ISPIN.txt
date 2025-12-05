@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">ISPIN</a> = 1 | 2<br/> Default: <b>ISPIN</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">ISPIN</a> specifies spin polarization.
+</p>
+<ul><li><a class="mw-selflink selflink">ISPIN</a>=1: non-spin-polarized calculations are performed.</li>
+<li><a class="mw-selflink selflink">ISPIN</a>=2: spin-polarized calculations (collinear) are performed.</li></ul>
+<p>By combining <a class="mw-selflink selflink">ISPIN</a> with <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> collinear magnetism can be studied.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ISPIN%22_incategory:%22Examples%22" title='Special:Search/"ISPIN" incategory:"Examples"'>Examples that use this tag</a>
+</p>

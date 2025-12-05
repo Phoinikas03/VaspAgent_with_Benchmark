@@ -1,0 +1,20 @@
+<p><a class="mw-selflink selflink">CLZ</a> = [real] 
+</p>
+<p>Description: <a class="mw-selflink selflink">CLZ</a> selects a fractional or the full electron charge for the core hole in the core-excitation calculations with <a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>=2.
+</p>
+<p>In <a href="/wiki/index.php/Supercell_core-hole_theory" title="Supercell core-hole theory">SCH</a> <a class="mw-selflink selflink">CLZ</a> can be used to introduce a fraction of the core hole. For example, a half-core hole can be created to simulate a transition state in the X-ray excitation process.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ICORELEVEL" title="ICORELEVEL">ICORELEVEL</a>, 
+<a href="/wiki/index.php/CLNT" title="CLNT">CLNT</a>, 
+<a href="/wiki/index.php/CLN" title="CLN">CLN</a>, 
+<a href="/wiki/index.php/CLL" title="CLL">CLL</a>
+<a href="/wiki/index.php/LADDER" title="LADDER">LADDER</a>,
+<a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>,
+<a href="/wiki/index.php/NBANDSV" title="NBANDSV">NBANDSV</a>,
+<a href="/wiki/index.php/NBANDSO" title="NBANDSO">NBANDSO</a>,
+<a href="/wiki/index.php/OMEGAMAX" title="OMEGAMAX">OMEGAMAX</a>,
+<a href="/wiki/index.php/ANTIRES" title="ANTIRES">ANTIRES</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22CLZ%22_incategory:%22Examples%22" title='Special:Search/"CLZ" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,1 @@
+APACO =  Default: APACO = 10 Description: APACO sets the maximum distance in the evaluation of the pair-correlation function (in Angstrom). VASP evaluates the pair-correlation function each NBLOCK steps and writes it after NBLOCK x KBLOCK steps to the PCDAT file. Related tags and articles NPACO , NBLOCK , KBLOCK , PCDAT Examples that use this tag

@@ -1,0 +1,45 @@
+<p><a class="mw-selflink selflink">LSPECTRAL</a> = .FALSE. | .TRUE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LSPECTRAL</a> specifies to use the spectral method.
+</p>
+<p>If <a class="mw-selflink selflink">LSPECTRAL</a> = .TRUE. is set, the imaginary part of the independent particle polarizability <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \chi_{\mathbf{q}}^0 (\mathbf{G}, \mathbf{G}', \omega)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msubsup>
+<mi>χ<!-- χ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">q</mi>
+</mrow>
+</mrow>
+<mn>0</mn>
+</msubsup>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mo>,</mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">G</mi>
+</mrow>
+<mo>′</mo>
+</msup>
+<mo>,</mo>
+<mi>ω<!-- ω --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \chi_{\mathbf{q}}^0 (\mathbf{G}, \mathbf{G}', \omega)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \chi_{\mathbf{q}}^0 (\mathbf{G}, \mathbf{G}', \omega)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e2918512c405e8b50068e221e96e0365&amp;mode=mathml" style="vertical-align: -1.005ex; height: 3.176ex; width: 12.898ex;"/></span> is calculated first, and afterwards the full independent particle polarizability is determined using a Kramers-Kronig (or Hilbert) transform. This reduces the computational workload by almost a factor <a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>/2. The downside of the coin is that the response function must be kept in memory for all considered frequencies, which can cause excessive memory requirements. VASP, therefore, distributes the dielectric functions among the available compute nodes.
+</p>
+<p>A similar trick is used when the QP-shifts are calculated. In general it is strongly recommended to set <a class="mw-selflink selflink">LSPECTRAL</a> = .TRUE., except if memory requirements are too excessive.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NOMEGA" title="NOMEGA">NOMEGA</a>,
+<a href="/wiki/index.php/LSPECTRALGW" title="LSPECTRALGW">LSPECTRALGW</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LSPECTRAL%22_incategory:%22Examples%22" title='Special:Search/"LSPECTRAL" incategory:"Examples"'>Examples that use this tag</a>
+</p>

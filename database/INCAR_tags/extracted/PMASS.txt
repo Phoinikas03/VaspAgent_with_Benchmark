@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">PMASS</a> = [Real]<br/> Default: <b>PMASS</b> = 1000 
+</p>
+<p>Description: <a class="mw-selflink selflink">PMASS</a> assigns a fictitious mass (in amu) to the lattice degrees-of-freedom in case of Parrinello-Rahman dynamics (in case VASP was compiled with <a href="/wiki/index.php/Precompiler_options#-Dtbdyn" title="Precompiler options">-Dtbdyn</a>).
+</p>
+<p>When running <i>NpT</i> simulations with a <a href="/wiki/index.php/MDALGO#LangevinEOM" title="MDALGO">Langevin thermostat</a><sup class="reference" id="cite_ref-Allen91_1-0"><a href="#cite_note-Allen91-1">[1]</a></sup> (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=3), using the method of <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">Parrinello and Rahman</a>,<sup class="reference" id="cite_ref-Parrinello80_2-0"><a href="#cite_note-Parrinello80-2">[2]</a></sup><sup class="reference" id="cite_ref-Parrinello81_3-0"><a href="#cite_note-Parrinello81-3">[3]</a></sup> a fictitious mass (in amu) for the lattice degrees-of-freedom has to be assigned using the <a class="mw-selflink selflink">PMASS</a> tag.
+The friction coefficient for lattice degrees-of-freedom have to be specified (in ps<sup>-1</sup>) by means of the <a href="/wiki/index.php/LANGEVIN_GAMMA_L" title="LANGEVIN GAMMA L">LANGEVIN_GAMMA_L</a> tag.
+</p>
+<p>The friction coefficients γ for the atomic degrees-of-freedom are specified using the <a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a> tag.
+</p>
+<p>The optimal setting for <a class="mw-selflink selflink">PMASS</a> depends very much on the particular system at hand and can be considered as a compromise between two opposing factors: too large values lead to very slow variation of lattice degrees of freedom (and hence the sampling becomes inefficient) while too small value can lead to too large geometric changes in an MD step and hence may cause numerical problems. We strongly recommend to make careful tests with various settings before performing the production run.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LANGEVIN_GAMMA_L" title="LANGEVIN GAMMA L">LANGEVIN_GAMMA_L</a>,
+<a href="/wiki/index.php/LANGEVIN_GAMMA" title="LANGEVIN GAMMA">LANGEVIN_GAMMA</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<p><a href="/wiki/index.php/Special:Search/%22PMASS%22_incategory:%22Examples%22" title='Special:Search/"PMASS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

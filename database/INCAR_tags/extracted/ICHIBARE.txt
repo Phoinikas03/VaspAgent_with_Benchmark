@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">ICHIBARE</a> =  1 | 2 | 3<br/> Default: <b>ICHIBARE</b> =  1 
+</p>
+<p>Description: determines the order of the finite difference stencil used to calculate the magnetic susceptibility.
+</p>
+<p><a class="mw-selflink selflink">ICHIBARE</a> specifies the order of the finite difference stencil used to calculate the magnetic susceptibility (second order derivative in Eq. 47 of Yates <i>et al.</i><sup class="reference" id="cite_ref-yates:prb:2007_1-0"><a href="#cite_note-yates:prb:2007-1">[1]</a></sup>). <a class="mw-selflink selflink">ICHIBARE</a> may be set to 1, 2, or 3. Often the default (<a class="mw-selflink selflink">ICHIBARE</a>=1) is sufficient. A higher <a class="mw-selflink selflink">ICHIBARE</a> results in a substantial increase of the computational load.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LCHIMAG" title="LCHIMAG">LCHIMAG</a>,
+<a href="/wiki/index.php/DQ" title="DQ">DQ</a>,
+<a href="/wiki/index.php/LNMR_SYM_RED" title="LNMR SYM RED">LNMR_SYM_RED</a>,
+<a href="/wiki/index.php/NLSPLINE" title="NLSPLINE">NLSPLINE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ICHIBARE%22_incategory:%22Examples%22" title='Special:Search/"ICHIBARE" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

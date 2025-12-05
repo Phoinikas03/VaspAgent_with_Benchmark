@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">NKRED</a> = [integer]<br/> Default: <b>NKRED</b> = 1 
+</p>
+<p>Description: <a class="mw-selflink selflink">NKRED</a> specifies an uniform reduction factor for the <b>q</b>-point grid representation of the exact exchange potential and the correlation part in GW calculations.
+</p>
+<p>One may restrict the sum over <b>q</b> in the <a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Fock exchange potential</a> (or one of its short range counterparts) to a subset, {<b>q</b><sub><b>k</b></sub>}, of the full (<i>N</i><sub>1</sub>×<i>N</i><sub>2</sub>×<i>N</i><sub>3</sub>)  <b>k</b>-point set, {<b>k</b>}, for which the following holds
+</p>
+<p>where <b>b</b><sub>1,2,3</sub> are the reciprocal lattice vectors of the primitive cell,
+and <i>C</i><sub>i</sub> is the integer grid reduction factor along reciprocal lattice direction
+<b>b</b><sub>i</sub>. This leads to a reduction in the computational workload by a factor:
+</p>
+<p>In case one sets <a class="mw-selflink selflink">NKRED</a>, the grid reduction factors will be uniformly set to <i>C</i><sub>1</sub>=<i>C</i><sub>2</sub>=<i>C</i><sub>3</sub>=<a class="mw-selflink selflink">NKRED</a>. If one wants to specify separate grid reduction factors for <i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, and <i>C</i><sub>3</sub> one should use <i>C</i><sub>1</sub>=<a href="/wiki/index.php/NKREDX" title="NKREDX">NKREDX</a>, <i>C</i><sub>2</sub>=<a href="/wiki/index.php/NKREDY" title="NKREDY">NKREDY</a>, and <i>C</i><sub>3</sub>=<a href="/wiki/index.php/NKREDZ" title="NKREDZ">NKREDZ</a>, respectively.
+</p>
+<p>This flag also applies to GW and RPA calculations with a similar speedup. In GW and RPA type calculations,
+analogously to hybrid functional calculations the outermost loop over the momentum transfer <b>q</b> 
+is reduced to a subgrid specified by the <a class="mw-selflink selflink">NKRED</a> parameters.
+</p>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/NKREDX" title="NKREDX">NKREDX</a>,
+<a href="/wiki/index.php/NKREDY" title="NKREDY">NKREDY</a>,
+<a href="/wiki/index.php/NKREDZ" title="NKREDZ">NKREDZ</a>,
+<a href="/wiki/index.php/EVENONLY" title="EVENONLY">EVENONLY</a>,
+<a href="/wiki/index.php/ODDONLY" title="ODDONLY">ODDONLY</a>,
+<a href="/wiki/index.php/Downsampling_of_the_Hartree-Fock_operator" title="Downsampling of the Hartree-Fock operator">downsampling</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NKRED%22_incategory:%22Examples%22" title='Special:Search/"NKRED" incategory:"Examples"'>Examples that use this tag</a>
+</p>

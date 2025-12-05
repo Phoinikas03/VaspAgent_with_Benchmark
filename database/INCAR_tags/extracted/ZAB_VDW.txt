@@ -1,0 +1,43 @@
+<p><a class="mw-selflink selflink">ZAB_VDW</a> = [real]<br/> Default: <b>ZAB_VDW</b> = -0.8491 
+</p>
+<p>Description: The tag <a class="mw-selflink selflink">ZAB_VDW</a> specifies the value of the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Z_{ab}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>Z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+<mi>b</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Z_{ab}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle Z_{ab}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=604a4ea99ca1a97a7394c6367f23f5db&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.395ex;"/></span> in the kernel of the <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">nonlocal vdW-DF functional of Dion <i>et al</i>.</a><sup class="reference" id="cite_ref-dion:prl:2004_1-0"><a href="#cite_note-dion:prl:2004-1">[1]</a></sup>
+</p>
+<p>In a revised version of the vdW correlation functional from Lee <i>et al</i>.<sup class="reference" id="cite_ref-lee:prb:2010_2-0"><a href="#cite_note-lee:prb:2010-2">[2]</a></sup>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Z_{ab}=-1.8867}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>Z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>a</mi>
+<mi>b</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1.8867</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Z_{ab}=-1.8867}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle Z_{ab}=-1.8867}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=9d528737cab0761a20c1b818d05dcfd3&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 14.76ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>, <a href="/wiki/index.php/PARAM1" title="PARAM1">PARAM1</a>, <a href="/wiki/index.php/PARAM2" title="PARAM2">PARAM2</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

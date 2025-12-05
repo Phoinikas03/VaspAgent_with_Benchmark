@@ -1,0 +1,1 @@
+LDAUU =  Default: LDAUU = NTYP*0.0 Description: Sets the effective on-site Coulomb interactions (eV). LDAUU specifies the strength of the effective on-site Coulomb interactions in eV. It must hold one value for each atomic species. Related tags and articles LDAU , LDAUTYPE , LDAUL , LDAUJ , LDAUPRINT , LMAXMIX Examples that use this tag

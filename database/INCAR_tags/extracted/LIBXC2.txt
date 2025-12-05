@@ -1,0 +1,25 @@
+<p><a class="mw-selflink selflink">LIBXC2</a> = [string] or [integer] 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBXC2</a> specifies the correlation functional from the library of exchange-correlation functionals Libxc<sup class="reference" id="cite_ref-marques:cpc:2012_1-0"><a href="#cite_note-marques:cpc:2012-1">[1]</a></sup><sup class="reference" id="cite_ref-lehtola:sx:2018_2-0"><a href="#cite_note-lehtola:sx:2018-2">[2]</a></sup><sup class="reference" id="cite_ref-libxc_3-0"><a href="#cite_note-libxc-3">[3]</a></sup>. <a class="mw-selflink selflink">LIBXC2</a> can be used only if the functional specified with <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a> corresponds to only exchange and not to exchange and correlation.
+</p>
+<p>A detailed explanation of how to use <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a> and <a class="mw-selflink selflink">LIBXC2</a> and examples can be found on the <a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a> page.
+</p>
+<h2><span class="mw-headline" id="Related_Tags_and_Sections">Related Tags and Sections</span></h2>
+<p><a href="/wiki/index.php/LIBXC1" title="LIBXC1">LIBXC1</a>,
+<a href="/wiki/index.php/LIBXC1_Pn" title="LIBXC1 Pn">LIBXC1_Pn</a>,
+<a href="/wiki/index.php/LIBXC2_Pn" title="LIBXC2 Pn">LIBXC2_Pn</a>,
+<a href="/wiki/index.php/LTBOUNDLIBXC" title="LTBOUNDLIBXC">LTBOUNDLIBXC</a>,
+<a href="/wiki/index.php/GGA" title="GGA">GGA</a>,
+<a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>,
+<a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>,
+<a href="/wiki/index.php/AEXX" title="AEXX">AEXX</a>,
+<a href="/wiki/index.php/ALDAX" title="ALDAX">ALDAX</a>,
+<a href="/wiki/index.php/ALDAC" title="ALDAC">ALDAC</a>,
+<a href="/wiki/index.php/AGGAX" title="AGGAX">AGGAX</a>,
+<a href="/wiki/index.php/AGGAC" title="AGGAC">AGGAC</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>
+</p>
+<p><br/>
+<a href="/wiki/index.php/Special:Search/%22LIBXC2%22_incategory:%22Examples%22" title='Special:Search/"LIBXC2" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,30 @@
+<p><a class="mw-selflink selflink">SCALEE</a> = [real]<br/> Default: <b>SCALEE</b> = 1 
+</p>
+<p>Description: This tag specifies the coupling parameter of the energies and forces between a fully interacting system and a reference system.
+</p>
+<p>The tag <a class="mw-selflink selflink">SCALEE</a> sets the coupling parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \lambda}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \lambda}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \lambda}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c6a6eb61fd9c6c913da73b3642ca147d&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.355ex;"/></span> and hence controls the Hamiltonian of the calculation. 
+By default <a class="mw-selflink selflink">SCALEE</a>=1 and the scaling of the energies and forces via the coupling constant is internally skipped in the code. To enable the scaling <a class="mw-selflink selflink">SCALEE</a><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ne}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≠<!-- ≠ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ne}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \ne}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f9bb70af966a4abbd08b776e6c5971ad&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.676ex; width: 1.808ex;"/></span>1 has to be specified.
+</p>
+<p>More information using this tag is given <a href="/wiki/index.php/Thermodynamic_integration_calculations" title="Thermodynamic integration calculations">here</a>. 
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/VCAIMAGES" title="VCAIMAGES">VCAIMAGES</a>, <a href="/wiki/index.php/IMAGES" title="IMAGES">IMAGES</a>, <a href="/wiki/index.php/NCORE_IN_IMAGE1" title="NCORE IN IMAGE1">NCORE IN IMAGE1</a>, <a href="/wiki/index.php/PHON_NSTRUCT" title="PHON NSTRUCT">PHON_NSTRUCT</a>, <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>
+</p>

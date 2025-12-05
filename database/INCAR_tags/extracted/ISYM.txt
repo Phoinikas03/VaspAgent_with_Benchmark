@@ -1,0 +1,47 @@
+<p><a class="mw-selflink selflink">ISYM</a> = -1 | 0 | 1 | 2 | 3 
+</p>
+<p>Description: <a class="mw-selflink selflink">ISYM</a> determines the way VASP treats symmetry.
+</p>
+<p><a class="mw-selflink selflink">ISYM</a>=1 | 2 | 3, switches on the use of symmetry.
+For <a class="mw-selflink selflink">ISYM</a>=-1 | 0, the use of symmetry is switched off.
+</p>
+<p>For <a class="mw-selflink selflink">ISYM</a>=2 a more efficient, memory conserving symmetrization of the charge density is used (than for <a class="mw-selflink selflink">ISYM</a>=1). This reduces memory requirements in particular for the parallel version.
+</p>
+<p>For <a class="mw-selflink selflink">ISYM</a>=3, VASP does not directly symmetrize the charge density. Instead, the charge density is constructed by applying the relevant symmetry operations to the orbitals at the <b>k</b>-points in the irreducible part of the Brillouin zone. This method of symmetrization is used when <a href="/wiki/index.php/LHFCALC" title="LHFCALC">LHFCALC</a>=.TRUE.
+</p>
+<p>For <a class="mw-selflink selflink">ISYM</a>=0, VASP does not use symmetry, but it will assume that Ψ<sub><b>k</b></sub>=Ψ<sup>*</sup><sub><b>-k</b></sub> and reduces the sampling of the Brillouin zone accordingly. This value should be set for molecular dynamics, i.e. <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>=0. 
+</p>
+<p>For <a class="mw-selflink selflink">ISYM</a>=-1 the use of symmetry is switched off completely.
+</p>
+<p>When the use of symmetry is switched on, VASP determines the point group symmetry and the space group consistent with the structure and initial velocities found on the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file (this is written out to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file for each <a href="/wiki/index.php/NWRITE" title="NWRITE">NWRITE</a> option), and the initial magnetic moments specified through the <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> tag in the <a href="/wiki/index.php/INCAR" title="INCAR">INCAR</a> file. The <a href="/wiki/index.php/SYMPREC" title="SYMPREC">SYMPREC</a>-tag (VASP.4.4.4 and newer versions) determines by how much atomic positions may differ and still be judged to be equivalent by the symmetry detection algorithms. The default is 10<sup>-5</sup>, which is usually sufficiently large even if the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file has been generated with a single precision program. Increasing the <a href="/wiki/index.php/SYMPREC" title="SYMPREC">SYMPREC</a> tag means, that the positions in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file can be less accurate. During the symmetry analysis, VASP determines
+</p>
+<ul><li>the Bravais lattice type of the supercell,</li>
+<li>the point group symmetry and the space group of the supercell with basis (static and dynamic) - and prints the names of the group (space group: only 'family'),</li>
+<li>the type of the generating elementary (primitive) cell if the supercell is a non-primitive cell,</li>
+<li>all 'trivial non-trivial' translations (= trivial translations of the generating elementary cell within the supercell) -- needed for symmetrization of the charge,</li>
+<li>the symmetry-irreducible set of k-points if automatic k-mesh generation was used and additionally the symmetry-irreducible set of tetrahedra if the tetrahedron method was chosen together with the automatic k-mesh generation and of course also the corresponding weights ('symmetry degeneracy'),</li>
+<li>and tables marking and connecting symmetry equivalent ions.</li></ul>
+<p>The symmetry analysis is done in four steps:
+</p>
+<ul><li>First the point group symmetry of the lattice (as supplied by the user) is determined.</li>
+<li>Then tests are performed, on whether the basis breaks the symmetry. Accordingly, these symmetry operations are removed.</li>
+<li>The initial velocities are checked for symmetry breaking.</li>
+<li>Finally, it is checked whether <a href="/wiki/index.php/MAGMOM" title="MAGMOM">MAGMOM</a> breaks the symmetry. Correspondingly the magnetic symmetry group is determined.</li></ul>
+<p>The program symmetrizes automatically:
+</p>
+<ul><li>The total charge density according to the determined space group</li>
+<li>The forces on the ions according to the determined space group.</li>
+<li>The stress tensor according to the determined space group</li></ul>
+<p>Why is symmetrization necessary: Within LDA the symmetry of the supercell and the charge density is always the same. This symmetry is broken because a symmetry-irreducible set of <b>k</b> points is used for the calculation. To restore the correct charge density and the correct forces it is necessary to symmetrize these quantities.
+</p>
+<p>It must be stressed that VASP does not determine the symmetry elements of the primitive cell. If the supercell has a lower symmetry than the primitive cell only the lower symmetry of the supercell is used in the calculation. In this case, one should not expect that forces that should be zero according to symmetry will be precisely zero in actual calculations. The symmetry of the primitive cell is in fact broken in several places in VASP:
+</p>
+<ul><li>Local potential:</li></ul>
+<ul><li><b>k</b>-points:</li></ul>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a>, <a href="/wiki/index.php/IALGO" title="IALGO">IALGO</a>, <a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>, <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>, <a href="/wiki/index.php/NWRITE" title="NWRITE">NWRITE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ISYM%22_incategory:%22Examples%22" title='Special:Search/"ISYM" incategory:"Examples"'>Examples that use this tag</a>
+</p>

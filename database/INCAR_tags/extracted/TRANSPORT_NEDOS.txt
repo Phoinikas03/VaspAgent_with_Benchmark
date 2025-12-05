@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">TRANSPORT_NEDOS</a> = [integer]<br/> Default: <b>TRANSPORT_NEDOS</b> = 501 
+</p>
+<p>Description: Choose the number of points in the Gauss-Legendre integration grid for the computation of the Onsager coefficients, which in turn are used to compute the transport coefficients.
+</p>
+<p>By a variable change in the integral of the transport function, it is possible to use Gauss-Legendre quadrature to evaluate the Onsager coefficients.
+By increasing the number of points, one defines the energy window inside which we need to compute the electron group velocities and the electronic lifetimes due to electron-phonon coupling and the precision of the integral.
+</p>
+<p>A convergence study is recommended since having a very large number of integration points can greatly increase the number of states for which the electronic lifetimes need to be computed, sometimes without a significant change in the final transport coefficients. Lower values of the number of integration points can significantly speed up the calculation, specially for very dense grids.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<ul><li><a href="/wiki/index.php/Transport_coefficients_including_electron-phonon_scattering" title="Transport coefficients including electron-phonon scattering">Transport calculations</a></li>
+<li><a href="/wiki/index.php/ELPH_RUN" title="ELPH RUN">ELPH_RUN</a></li>
+<li><a href="/wiki/index.php/ELPH_TRANSPORT" title="ELPH TRANSPORT">ELPH_TRANSPORT</a></li>
+<li><a href="/wiki/index.php/ELPH_TRANSPORT_DRIVER" title="ELPH TRANSPORT DRIVER">ELPH_TRANSPORT_DRIVER</a></li></ul>

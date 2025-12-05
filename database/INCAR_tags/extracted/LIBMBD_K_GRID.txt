@@ -1,0 +1,15 @@
+<p><a class="mw-selflink selflink">LIBMBD_K_GRID</a> = [array of three integers]<br/> Default: <b>LIBMBD_K_GRID</b> = determined in libMBD according to the cell shape 
+</p>
+<p>Description: <a class="mw-selflink selflink">LIBMBD_K_GRID</a> sets the k-mesh of the collective oscillations defined in the methods available in the library libMBD of many-body dispersion methods<sup class="reference" id="cite_ref-libmbd_1_1-0"><a href="#cite_note-libmbd_1-1">[1]</a></sup><sup class="reference" id="cite_ref-libmbd_2_2-0"><a href="#cite_note-libmbd_2-2">[2]</a></sup><sup class="reference" id="cite_ref-hermann:jcp:2023_3-0"><a href="#cite_note-hermann:jcp:2023-3">[3]</a></sup>.
+</p>
+<p><a class="mw-selflink selflink">LIBMBD_K_GRID</a> allows to choose the k-mesh of the collective oscillations defined in the methods available in the library libMBD of many-body dispersion methods. The three integers correspond to the number of k-points along the axes of the cell in the reciprocal space. The values are internally passed to the libMBD input <b>k_grid</b> described at the page <sup class="reference" id="cite_ref-libmbd_input_4-0"><a href="#cite_note-libmbd_input-4">[4]</a></sup>.
+</p>
+<p>libMBD is a separate library package that has to be downloaded<sup class="reference" id="cite_ref-libmbd_2_2-1"><a href="#cite_note-libmbd_2-2">[2]</a></sup> and compiled before VASP is compiled with the corresponding <a href="/wiki/index.php/Precompiler_options#-DLIBMBD" title="Precompiler options">precompiler options</a> and <a href="/wiki/index.php/Makefile.include#LIBMBD_.28optional.29" title="Makefile.include">links to the libraries</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LIBMBD_METHOD" title="LIBMBD METHOD">LIBMBD_METHOD</a>,
+<a href="/wiki/index.php/LIBMBD_K_GRID_SHIFT" title="LIBMBD K GRID SHIFT">LIBMBD_K_GRID_SHIFT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LIBMBD_K_GRID%22_incategory:%22Examples%22" title='Special:Search/"LIBMBD K GRID" incategory:"Examples"'>Examples that use this tag</a>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>

@@ -1,0 +1,173 @@
+<p><a class="mw-selflink selflink">BEXT</a> = [real] ( [real] [real] ) 
+</p>
+<p>Description: Specifies an external magnetic field in eV.
+</p>
+<p><a class="mw-selflink selflink">BEXT</a> tag sets an external magnetic field that acts on the electrons in a Zeeman-like manner.
+An additional potential of the following form carries this interaction:
+</p>
+<ul><li>For spin-polarized calculations (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a> = 2):</li></ul>
+<ul><li>For noncollinear calculations (<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a> = .TRUE.):</li></ul>
+<p>The effect of the above is most easily understood for the collinear case (<a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2):
+The eigenenergies of spin-up states are raised by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_{\rm ext}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">x</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_{\rm ext}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_{\rm ext}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=76b5bb5cbc529bf9e256b1916be6a431&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.234ex;"/></span> eV, whereas the eigenenergies of spin-down states are lowered by the same amount. The total energy changes by:
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n^{\uparrow}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↑<!-- ↑ --></mo>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n^{\uparrow}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n^{\uparrow}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=0e760a32a92d8a91d6dcc0a749a4c222&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 2.449ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n^{\downarrow}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">↓<!-- ↓ --></mo>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n^{\downarrow}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle n^{\downarrow}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=722013cad122d655750155f7c644963f&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.676ex; width: 2.449ex;"/></span> are the number of up- and down-spin electrons in the system. 
+</p>
+<p><a class="mw-selflink selflink">BEXT</a> is applied during the self-consistent <a class="mw-redirect" href="/wiki/index.php/Electronic_minimization" title="Electronic minimization">electronic minimization</a> and effectively shifts the eigenenergies of the spin-up and spin-down states w.r.t. each other at each step. Consequently, the electrons redistribute (changing the occupancies) <i>and</i> the density changes. The change in the density (,e.g., charge density and magnetization) also affects the scf potential and KS orbitals. For a rigid-band Zeeman splitting, converge the charge density with <a class="mw-selflink selflink">BEXT</a>=0 and restart with <a class="mw-selflink selflink">BEXT</a><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \neq}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≠<!-- ≠ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \neq}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \neq}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=e0067ea8fed5882d830dbcda1122f776&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.676ex; width: 1.808ex;"/></span>0 and fixed charge density (<a href="/wiki/index.php/ICHARG" title="ICHARG">ICHARG</a>=11).
+</p>
+<h2><span class="mw-headline" id="Units">Units</span></h2>
+<p>For an applied magnetic field <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c04ce5bbcf0b34afa4487b552a897d34&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span>, the energy difference between two Zeeman-splitted electronic states is given by:
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu_B}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>μ<!-- μ --></mi>
+<mi>B</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu_B}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu_B}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4b7a4c54b57c9297141ab648398f6dfc&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 2.881ex;"/></span> is the Bohr magneton and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g_e}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>g</mi>
+<mi>e</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g_e}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g_e}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b774f8da4d7cf41c7fe4d16a2801755a&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.107ex;"/></span> is the electron spin <i>g</i>-factor.
+</p>
+<p>For <a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>=2, rigid-band Zeeman-splitted states imply:
+</p>
+<p>This leads to the following relationship between our definition of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_{\rm ext}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">e</mi>
+<mi mathvariant="normal">x</mi>
+<mi mathvariant="normal">t</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_{\rm ext}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_{\rm ext}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=76b5bb5cbc529bf9e256b1916be6a431&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 4.234ex;"/></span> (in eV) and the magnetic field <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle B_0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>B</mi>
+<mn>0</mn>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle B_0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle B_0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c04ce5bbcf0b34afa4487b552a897d34&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 2.818ex;"/></span> (in T): 
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu_B}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>μ<!-- μ --></mi>
+<mi>B</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu_B}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \mu_B}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4b7a4c54b57c9297141ab648398f6dfc&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.176ex; width: 2.881ex;"/></span>= 5.788 381 8060 x 10<sup>-5</sup> eV T<sup>-1</sup>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle g_e}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>g</mi>
+<mi>e</mi>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle g_e}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle g_e}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=b774f8da4d7cf41c7fe4d16a2801755a&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.107ex;"/></span>= 2.002 319 304 362 56.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ISPIN" title="ISPIN">ISPIN</a>,
+<a href="/wiki/index.php/LNONCOLLINEAR" title="LNONCOLLINEAR">LNONCOLLINEAR</a>,
+<a href="/wiki/index.php/SAXIS" title="SAXIS">SAXIS</a>
+</p>

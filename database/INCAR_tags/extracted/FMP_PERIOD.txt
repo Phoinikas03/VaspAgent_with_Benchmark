@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">FMP_PERIOD</a> = integer<br/> Default: <b>FMP_PERIOD</b> =  10 
+</p>
+<p>Description: Number of time steps between two swapping events in the <a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>.
+</p>
+<p>This tag defines how many MD steps are done between two consecutive velocity-swapping events. The period is counted in MD steps and not in simulation time.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/M%C3%BCller-Plathe_method" title="Müller-Plathe method">Müller-Plathe method</a>,
+<a href="/wiki/index.php/FMP_ACTIVE" title="FMP ACTIVE">FMP_ACTIVE</a>,
+<a href="/wiki/index.php/FMP_DIRECTION" title="FMP DIRECTION">FMP_DIRECTION</a>,
+<a href="/wiki/index.php/FMP_SNUMBER" title="FMP SNUMBER">FMP_SNUMBER</a>,
+<a href="/wiki/index.php/FMP_SWAPNUM" title="FMP SWAPNUM">FMP_SWAPNUM</a>
+</p>

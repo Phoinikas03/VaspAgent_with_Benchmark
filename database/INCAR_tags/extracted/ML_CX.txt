@@ -1,0 +1,19 @@
+<p><a class="mw-selflink selflink">ML_CX</a> = [real]<br/> Default: <b>ML_CX</b> = 0.0 
+</p>
+<p>Description: The parameter determines to which value the threshold  (<a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>) is updated within the machine learning force field methods.
+</p>
+<p>The use of this tag in combination with the learning algorithms is described here: <a href="/wiki/index.php/Machine_learning_force_field_calculations:_Basics#Threshold_for_error_of_forces" title="Machine learning force field calculations: Basics">here</a>.
+</p>
+<p>If <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>&gt;0, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> is set to the average of the errors of the forces stored in a history. Note that <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=1 and <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2, average over different data. In the first case the average is performed over errors after updates of the force fields, and in the second case over all recent error estimates (see <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>). In both cases, if <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> is updated, it is set to 
+</p>
+<p><a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a> = (average of the stored errors in the history) *(1.0 + <a class="mw-selflink selflink">ML_CX</a>).
+</p>
+<p>Obviously setting  <a class="mw-selflink selflink">ML_CX</a> to a positive value will result in fewer first principles calculations and fewer updates of the MLFF, whereas negative values result in more frequent first principles calculations (as well as updates of the MLFF). Typical values of  <a class="mw-selflink selflink">ML_CX</a> are between -0.2 and 0.0 for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=1, and 0.0 and 0.3 for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2 (a good starting value is 0.2 for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2). For training runs using heating, the default usually results in very well balanced machine learned force fields. When the training is performed at a fixed temperature, it is often desirable to decrease to <a class="mw-selflink selflink">ML_CX</a>=-0.1, in order to increase the number of first principle calculations and thus the size of the training set (the default can result in too few training data).
+</p>
+<p>The number of entries in the history are controlled by  <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a> for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=1, and it is currently fixed to 400 for <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=2 (in future releases 50 x <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>, <a href="/wiki/index.php/ML_MHIS" title="ML MHIS">ML_MHIS</a>, <a href="/wiki/index.php/ML_CSIG" title="ML CSIG">ML_CSIG</a>, <a href="/wiki/index.php/ML_CSLOPE" title="ML CSLOPE">ML_CSLOPE</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_LCRITERIA%22_incategory:%22Examples%22" title='Special:Search/"ML LCRITERIA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

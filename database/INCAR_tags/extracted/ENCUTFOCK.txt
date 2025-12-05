@@ -1,0 +1,32 @@
+<p><a class="mw-selflink selflink">ENCUTFOCK</a> = [real] 
+</p>
+<p>Default: none
+</p>
+<p>Description: The <a class="mw-selflink selflink">ENCUTFOCK</a> tag sets the energy cutoff that determines the FFT grids used by the Hartree-Fock routines.
+</p>
+<p>The flag <a class="mw-selflink selflink">ENCUTFOCK</a> is no longer supported in VASP.5.2.4 and newer versions.
+Please use <a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a> instead.
+</p>
+<p><br/>
+The only sensible value for <a class="mw-selflink selflink">ENCUTFOCK</a> is <a class="mw-selflink selflink">ENCUTFOCK</a>=0.
+This implies that the smallest possible FFT grid, which just encloses the cutoff sphere
+corresponding to the plane wave cutoff, is used. 
+This accelerates the calculations by roughly a factor two to three,
+but causes slight changes in the total energies and  some noise in the calculated forces.
+The FFT grid used internally in the exact exchange (Hartree-Fock) routines
+is written to the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file. Simply search for lines starting with
+</p>
+<p><br/>
+In many cases, a sensible approach is to determine the electronic and ionic groundstate 
+using <a class="mw-selflink selflink">ENCUTFOCK</a>=0, and to make one final total energy calculation
+without the flag <a class="mw-selflink selflink">ENCUTFOCK</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/PRECFOCK" title="PRECFOCK">PRECFOCK</a>,
+<a href="/wiki/index.php/PREC" title="PREC">PREC</a>,
+<a href="/wiki/index.php/ENCUT" title="ENCUT">ENCUT</a>,
+<a href="/wiki/index.php/List_of_hybrid_functionals" title="List of hybrid functionals">List of hybrid functionals</a>,
+<a href="/wiki/index.php/Hybrid_functionals:_formalism" title="Hybrid functionals: formalism">Hybrid functionals: formalism</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ENCUTFOCK%22_incategory:%22Examples%22" title='Special:Search/"ENCUTFOCK" incategory:"Examples"'>Examples that use this tag</a>
+</p>

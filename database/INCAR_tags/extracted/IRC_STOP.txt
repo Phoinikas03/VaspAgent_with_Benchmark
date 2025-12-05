@@ -1,0 +1,16 @@
+<p><a class="mw-selflink selflink">IRC_STOP</a> = integer<br/> Default: <b>IRC_STOP</b> =  20 
+</p>
+<p>Description: Sets the number of steps in which the energy must monotonously increase before an <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculation</a> terminates. 
+</p>
+<p>Along the IRC pathway, from a higher energy state, i.e., the transition state or the excited state, towards a lower energy state, i.e., reactants or products, the energy generally decreases. In some cases, the IRC pathway may encounter regions with relatively constant energy (plateaus) or fluctuations due to numerical noise or complex interactions, particularly in the vicinity of transition states.
+</p>
+<p><a class="mw-selflink selflink">IRC_STOP</a> sets the number of time steps with increasing energy, after which the damped-velocity-Verlet algorithm in an <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculation</a> terminates. In order to avoid a premature termination, especially close to transition states, <a class="mw-selflink selflink">IRC_STOP</a> should always be greater than 1.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a href="/wiki/index.php/IRC_DIRECTION" title="IRC DIRECTION">IRC_DIRECTION </a>,
+<a href="/wiki/index.php/IRC_DELTA0" title="IRC DELTA0">IRC_DELTA0</a>,
+<a href="/wiki/index.php/IRC_MINSTEP" title="IRC MINSTEP">IRC_MINSTEP</a>,
+<a href="/wiki/index.php/IRC_MAXSTEP" title="IRC MAXSTEP">IRC_MAXSTEP</a>,
+<a href="/wiki/index.php/IRC_VNORM0" title="IRC VNORM0">IRC_VNORM0</a>
+</p>

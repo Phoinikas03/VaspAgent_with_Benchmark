@@ -1,0 +1,213 @@
+<p><a class="mw-selflink selflink">LVHAR</a> = [logical]<br/> Default: <b>LVHAR</b> = .FALSE. 
+</p>
+<p>Description: Determines whether the local potential <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>hartree</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f00e019870e2e4e079c353407ba018f6&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 20.344ex;"/></span> (in eV) is written to the <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> file.
+</p>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 
+V_{\text{ionic}}(\mathbf{r})+V_{\text{hartree}}(\mathbf{r}) =
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}
+}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>hartree</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mo>∫<!-- ∫ --></mo>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msup>
+<mi mathvariant="bold">r</mi>
+<mo>′</mo>
+</msup>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 
+V_{\text{ionic}}(\mathbf{r})+V_{\text{hartree}}(\mathbf{r}) =
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}
+}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 
+V_{\text{ionic}}(\mathbf{r})+V_{\text{hartree}}(\mathbf{r}) =
+V_{\text{ionic}}(\mathbf{r}) + 
+\int \frac{n(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d\mathbf{r'}
+}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=8a75d2d04df6847c918739ad5a99d556&amp;mode=mathml" style="vertical-align: -2.671ex; height: 6.509ex; width: 47.605ex;"/></span>
+</p>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{ionic}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{ionic}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{ionic}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=c9a8acf5f12bda003cd522ddc3e3fe59&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 7.88ex;"/></span> is the ionic potential as mimicked by the pseudopotentials and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{hartree}}(\mathbf{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>hartree</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{hartree}}(\mathbf{r})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{hartree}}(\mathbf{r})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=a5e5acdbd0172809f1efe6da220e7025&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 9.624ex;"/></span> is the Hartree potential.
+</p>
+<p>The local potential is written to the <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> file and hence to the same file as the local potential for <a href="/wiki/index.php/LVTOT" title="LVTOT">LVTOT</a>=T. Carefully check that the <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> file contains the potential you expect.
+<a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a> also gives access to the ionic and Hartree potentials and offers more options.
+</p>
+<p>See <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a> to find out how to write <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>ionic</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<msub>
+<mi>V</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>hartree</mtext>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="bold">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle V_{\text{ionic}}(\mathbf{r}) +V_{\text{hartree}}(\mathbf{r}) }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=f00e019870e2e4e079c353407ba018f6&amp;mode=mathml" style="vertical-align: -0.838ex; height: 2.843ex; width: 20.344ex;"/></span> in VASP &lt; 5.2.12.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Computing_the_work_function" title="Computing the work function">Computing the work function</a>, <a href="/wiki/index.php/LVTOT" title="LVTOT">LVTOT</a>, <a href="/wiki/index.php/LOCPOT" title="LOCPOT">LOCPOT</a>, <a href="/wiki/index.php/WRT_POTENTIAL" title="WRT POTENTIAL">WRT_POTENTIAL</a>, <a href="/wiki/index.php/LVACPOTAV" title="LVACPOTAV">LVACPOTAV</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LVHAR%22_incategory:%22Examples%22" title='Special:Search/"LVHAR" incategory:"Examples"'>Examples that use this tag</a>
+</p>

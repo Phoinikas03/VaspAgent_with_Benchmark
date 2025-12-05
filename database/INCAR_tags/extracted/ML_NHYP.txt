@@ -1,0 +1,29 @@
+<p><a class="mw-selflink selflink">ML_NHYP</a> = [integer]<br/> Default: <b>ML_NHYP</b> = 4 
+</p>
+<p>Description: This tag specifies the polynomial power <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  \zeta}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ζ<!-- ζ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  \zeta}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  \zeta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=6878583a6277711f19eb4c29bc65d5bc&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 1.095ex;"/></span> of the kernel within the machine learning force field method (see <a href="/wiki/index.php/Machine_learning_force_field:_Theory#Potential_energy_fitting" title="Machine learning force field: Theory">this section</a>).
+</p>
+<p>The value of <a class="mw-selflink selflink">ML_NHYP</a> must be an integer number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ge}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>≥<!-- ≥ --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ge}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \ge}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=4edc933d28bfe3f5effe94bf892dad38&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.176ex; width: 1.808ex;"/></span> 1.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_RCUT1" title="ML RCUT1">ML_RCUT1</a>, <a href="/wiki/index.php/ML_SION1" title="ML SION1">ML_SION1</a>, <a href="/wiki/index.php/ML_RCUT2" title="ML RCUT2">ML_RCUT2</a>, <a href="/wiki/index.php/ML_SION2" title="ML SION2">ML_SION2</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22ML_NHYP%22_incategory:%22Examples%22" title='Special:Search/"ML NHYP" incategory:"Examples"'>Examples that use this tag</a>
+</p>

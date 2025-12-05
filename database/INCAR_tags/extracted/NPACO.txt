@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">NPACO</a> = [integer]<br/> Default: <b>NPACO</b> = 256 
+</p>
+<p>Description: <a class="mw-selflink selflink">NPACO</a> sets the number of slots in the pair-correlation function written to <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>.
+</p>
+<p>VASP evaluates the pair-correlation function each <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a> steps and writes the PC-function after <a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>×<a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a> steps to the <a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/APACO" title="APACO">APACO</a>,
+<a href="/wiki/index.php/NBLOCK" title="NBLOCK">NBLOCK</a>,
+<a href="/wiki/index.php/KBLOCK" title="KBLOCK">KBLOCK</a>,
+<a href="/wiki/index.php/PCDAT" title="PCDAT">PCDAT</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22NPACO%22_incategory:%22Examples%22" title='Special:Search/"NPACO" incategory:"Examples"'>Examples that use this tag</a>
+</p>

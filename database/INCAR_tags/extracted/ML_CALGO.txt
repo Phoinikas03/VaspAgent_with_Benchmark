@@ -1,0 +1,14 @@
+<p><a class="mw-selflink selflink">ML_CALGO</a> = [integer]<br/> Default: <b>ML_CALGO</b> = 0 
+</p>
+<p>Description: Chooses error estimation type for on-the-fly training or reselection of local referenc configurations.
+</p>
+<p>This tag chooes which algorithm is employed for the error estimation in <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>=<i>TRAIN</i> or <i>SELECT</i>. The following two choices are available:
+</p>
+<ul><li><a class="mw-selflink selflink">ML_CALGO</a>=0: Bayesian error estimation. Constant or variable threshold. Default.</li>
+<li><a class="mw-selflink selflink">ML_CALGO</a>=1: Spilling factor. Constant threhold.</li></ul>
+<p>In both modes an ab-initio calculation is carried out if the value of the error estimate is above a threshold specified by <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>. In both algorithms the estimators have different units, values and hence defaults for this threshold. 
+In contrast to the Bayesian error estimation which can be run in many different modes for the threhold update (see <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>), the spilling factor can only be used with a constant threshold (<a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>=0).
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/ML_LMLFF" title="ML LMLFF">ML_LMLFF</a>, <a href="/wiki/index.php/ML_MODE" title="ML MODE">ML_MODE</a>, <a href="/wiki/index.php/ML_ICRITERIA" title="ML ICRITERIA">ML_ICRITERIA</a>, <a href="/wiki/index.php/ML_CTIFOR" title="ML CTIFOR">ML_CTIFOR</a>
+</p>

@@ -1,0 +1,143 @@
+<p><a class="mw-selflink selflink">IBRION</a> = -1 | 0 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 11 | 12 | 40 | 44 
+</p>
+<p>Description: determines how the crystal structure changes during the calculation:
+</p>
+<h2><span class="mw-headline" id="Molecular_dynamics">Molecular dynamics</span></h2>
+<p>In <a href="/wiki/index.php/Category:Molecular_dynamics" title="Category:Molecular dynamics">molecular-dynamics (MD) simulations</a> the positions of the ions are updated using a classical equation of motion for the ions. There are several algorithms for the <a href="/wiki/index.php/Time-propagation_algorithms_in_molecular_dynamics" title="Time-propagation algorithms in molecular dynamics">time propagation in MD</a> controlled by selecting <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a> and the choice of the <a class="mw-redirect" href="/wiki/index.php/Thermostats" title="Thermostats">thermostats</a>. The MD run performs <a href="/wiki/index.php/NSW" title="NSW">NSW</a> timesteps of length <a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>.
+</p>
+<p>Frequently, performing an <a class="mw-redirect" href="/wiki/index.php/Electronic_minimization" title="Electronic minimization">ab-initio calculations</a> in every step of an MD simulation is too expensive so that <a href="/wiki/index.php/Category:Machine-learned_force_fields" title="Category:Machine-learned force fields">machine-learned force fields</a> are needed.
+</p>
+<h2><span class="mw-headline" id="Structure_optimization">Structure optimization</span></h2>
+<p>VASP optimizes the structure based on the degrees of freedom selected with the <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a> tag and (if used) the selective dynamics <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+Generally, the larger the number of degrees of freedom, the harder it is to find the optimal solution.
+To find the solution, VASP provides multiple algorithms:
+</p>
+<ul><li>RMM-DIIS (<a class="mw-selflink selflink">IBRION</a>=1) reduces the forces by linear combination of previous positions. It is the method of choice for larger systems (&gt;20 degrees of freedom) that are reasonably close to the ground-state structure.</li>
+<li>Conjugate gradient (<a class="mw-selflink selflink">IBRION</a>=2) finds the optimal step size along a search direction. It is a robust default choice but may need more iterations than RMM-DIIS.</li>
+<li>Damped molecular dynamics (<a class="mw-selflink selflink">IBRION</a>=3) runs a MD simulation with decreasing velocity of the ions. Use this for large systems far away from the minimum to get to a better starting point for the other algorithms.</li></ul>
+<p>Consult the <a href="/wiki/index.php/Structure_optimization" title="Structure optimization">structure optimization</a> page for advise on how to choose the optimization algorithm.
+</p>
+<h2><span class="mw-headline" id="Computing_the_phonon_modes">Computing the phonon modes</span></h2>
+<p>The second-order derivatives of the total energy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle E}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>E</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle E}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle E}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3a3ea00cfc35332cedf6e5e9a32e94da&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 1.776ex;"/></span> with respect to ionic positions <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R_{\alpha i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R_{\alpha i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle R_{\alpha i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ce70ac2fe146369050c1748eb7c433bd&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.509ex; width: 3.616ex;"/></span> of ion <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=7b7f9dbfea05c83784f8b85149852f08&amp;mode=mathml" style="vertical-align: -0.338ex; height: 1.676ex; width: 1.488ex;"/></span> in the direction <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=865c0c0b4ab0e063e5caa3387c1a8741&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 0.802ex;"/></span>, is computed using a first-order derivative of the <a class="mw-redirect" href="/wiki/index.php/Forces" title="Forces">forces</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle F_{\beta j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>F</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle F_{\beta j}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle F_{\beta j}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=ab20999dbde000c10755c01f7eb528ae&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 3.346ex;"/></span>. Then, the dynamical matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle D_{\alpha i \beta j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>D</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>i</mi>
+<mi>β<!-- β --></mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle D_{\alpha i \beta j}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle D_{\alpha i \beta j}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=23ce095f82e9301feb1c9c673cb29d32&amp;mode=mathml" style="vertical-align: -1.005ex; height: 2.843ex; width: 5.395ex;"/></span> is constructed, diagonalized, and the phonon modes and frequencies of the system are reported in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file and <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>. Also see <a href="/wiki/index.php/Phonons:_Theory" title="Phonons: Theory">theory on phonons</a>.
+</p>
+<p>VASP implements two different methods to compute the phonon modes and can use symmetry to reduce the number of computed displacements:
+</p>
+<ul><li><code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 5</code> <a href="/wiki/index.php/Phonons_from_finite_differences" title="Phonons from finite differences">finite differences</a> <b>without</b> symmetry</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 6</code> <a href="/wiki/index.php/Phonons_from_finite_differences" title="Phonons from finite differences">finite differences</a> <b>with</b> symmetry</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 7</code> <a href="/wiki/index.php/Phonons_from_density-functional-perturbation_theory" title="Phonons from density-functional-perturbation theory">density-functional-perturbation theory</a> <b>without</b> symmetry</li>
+<li><code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 8</code> <a href="/wiki/index.php/Phonons_from_density-functional-perturbation_theory" title="Phonons from density-functional-perturbation theory">density-functional-perturbation theory</a> <b>with</b> symmetry</li></ul>
+<p>For finite differences, the elastic tensors and internal strain tensors is computed for <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>&gt;=3.
+Compute Born-effective charges, piezoelectric constants, and the ionic contribution to the dielectric tensor by specifying <code style="padding: 2px"><a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a> = .TRUE.</code> (<a class="mw-redirect" href="/wiki/index.php/Linear_response" title="Linear response">linear response theory</a>) or <code style="padding: 2px"><a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a> = .TRUE.</code> (finite external field).
+</p>
+<p>Also see <a href="/wiki/index.php/Computing_the_phonon_dispersion_and_DOS" title="Computing the phonon dispersion and DOS">computing the phonon dispersion and DOS</a>.
+</p>
+<h2><span class="mw-headline" id="Analyzing_transition_states">Analyzing transition states</span></h2>
+<p>To study the kinetics of chemical reactions, one may want to construct <a class="mw-redirect" href="/wiki/index.php/Transition_states" title="Transition states">transition states</a> or follow the reaction path.
+For the analysis of transition states the following methods are available:
+</p>
+<ul><li>Setting <code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 40</code>, you can start from a transition state and monitor the energy along an intrinsic-reaction coordinate (IRC). The <a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a> section describes this method.</li>
+<li>With the <a href="/wiki/index.php/Improved_dimer_method" title="Improved dimer method">improved dimer method</a> (<code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 44</code>), you can search for a the transition state starting from an arbitrary structure in the investigated phase space.</li>
+<li>The <a href="/wiki/index.php/Nudged_elastic_bands" title="Nudged elastic bands">nudged elastic bands</a> method finds an approximate reaction path based on the initial and final structure, i.e., reactant and product.</li></ul>
+<h2><span class="mw-headline" id="Interactively_supplied_positions_and_lattice_vectors">Interactively supplied positions and lattice vectors</span></h2>
+<p>Occasionally, you may want to run VASP for related structures where the overhead of restarting VASP is significant.
+In these scenarios, VASP provides the following alternatives
+</p>
+<ul><li>With <code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 11</code>, you can provide new structures via the standard input. For <a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>&gt;=3, a complete <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file is read, otherwise just the positions in fractional coordinates.</li></ul>
+<ul><li>If you <a href="/wiki/index.php/Makefile.include#Plugins_(optional)" title="Makefile.include">linked VASP with Python</a>, you can <a href="/wiki/index.php/Plugins" title="Plugins">write a Python plugin</a> to modify the structure. Set <code style="padding: 2px"><a class="mw-selflink selflink">IBRION</a> = 12</code> or <code style="padding: 2px"><a href="/wiki/index.php/PLUGINS/STRUCTURE" title="PLUGINS/STRUCTURE">PLUGINS/STRUCTURE</a> = T</code> to activate it.</li></ul>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p>Related tags: <a href="/wiki/index.php/NSW" title="NSW">NSW</a>,
+<a href="/wiki/index.php/POTIM" title="POTIM">POTIM</a>,
+<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>,
+<a href="/wiki/index.php/SMASS" title="SMASS">SMASS</a>,
+<a href="/wiki/index.php/NFREE" title="NFREE">NFREE</a>,
+<a href="/wiki/index.php/ISIF" title="ISIF">ISIF</a>,
+<a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>
+</p>
+<p>Related files: <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a>, <a href="/wiki/index.php/CONTCAR" title="CONTCAR">CONTCAR</a>, <a href="/wiki/index.php/XDATCAR" title="XDATCAR">XDATCAR</a>, <a href="/wiki/index.php/Vaspout.h5" title="Vaspout.h5">vaspout.h5</a>
+</p>
+<p>Related topics and how-to pages:  <a href="/wiki/index.php/Time-propagation_algorithms_in_molecular_dynamics" title="Time-propagation algorithms in molecular dynamics">Time-propagation algorithms in molecular dynamics</a>,
+<a href="/wiki/index.php/Structure_optimization" title="Structure optimization">Structure optimization</a>,
+<a href="/wiki/index.php/POSCAR#Full_format_specification" title="POSCAR">Selective dynamics</a>,
+<a href="/wiki/index.php/Computing_the_phonon_dispersion_and_DOS" title="Computing the phonon dispersion and DOS">Computing the phonon dispersion and DOS</a>,
+<a class="mw-redirect" href="/wiki/index.php/Transition_states" title="Transition states">Transition states</a>,
+<a class="mw-redirect" href="/wiki/index.php/IRC_calculations" title="IRC calculations">IRC calculations</a>,
+<a class="mw-redirect" href="/wiki/index.php/Improved_Dimer_Method" title="Improved Dimer Method">Improved Dimer Method</a>,
+<a href="/wiki/index.php/Plugins" title="Plugins">Writing a Python plugin</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22IBRION%22_incategory:%22Examples%22" title='Special:Search/"IBRION" incategory:"Examples"'>Examples that use this tag</a>
+</p>

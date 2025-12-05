@@ -1,0 +1,9 @@
+<p><a class="mw-selflink selflink">LUSE_VDW</a> = [logical]<br/> Default: <b>LUSE_VDW</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LUSE_VDW</a>=.TRUE. switches on the use of a nonlocal vdW-DF functional. These functionals depend on the electron density at two points in space and model long-range van der Waals (dispersion) correlation effects.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/GGA" title="GGA">GGA</a>, <a href="/wiki/index.php/METAGGA" title="METAGGA">METAGGA</a>, <a href="/wiki/index.php/IVDW_NL" title="IVDW NL">IVDW_NL</a>, <a href="/wiki/index.php/LSPIN_VDW" title="LSPIN VDW">LSPIN_VDW</a>, <a href="/wiki/index.php/Nonlocal_vdW-DF_functionals" title="Nonlocal vdW-DF functionals">Nonlocal vdW-DF functionals</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LUSE_VDW%22_incategory:%22Examples%22" title='Special:Search/"LUSE VDW" incategory:"Examples"'>Examples that use this tag</a>
+</p>

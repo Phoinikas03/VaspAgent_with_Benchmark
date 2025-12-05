@@ -1,0 +1,68 @@
+<p><a class="mw-selflink selflink">VDW_ALPHA</a> = [real (array)] 
+</p>
+<p>Description: <a class="mw-selflink selflink">VDW_ALPHA</a> defines the polarizability <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha_{0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha_{0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha_{0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fdbc5fcfced7b0f661f8a414f6969ae5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.542ex;"/></span> (bohr<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle ^{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle ^{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle ^{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=26a99f9b2f21ca3ba6f222efa40c7958&amp;mode=mathml" style="vertical-align: -0.171ex; height: 2.509ex; width: 1.054ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file.
+</p>
+<p><a class="mw-selflink selflink">VDW_ALPHA</a> sets the polarizability <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha_{0}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha_{0}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha_{0}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=fdbc5fcfced7b0f661f8a414f6969ae5&amp;mode=mathml" style="vertical-align: -0.671ex; height: 2.009ex; width: 2.542ex;"/></span> (bohr<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle ^{3}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle ^{3}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle ^{3}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=26a99f9b2f21ca3ba6f222efa40c7958&amp;mode=mathml" style="vertical-align: -0.171ex; height: 2.509ex; width: 1.054ex;"/></span>) for each species defined in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file for the <a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler</a> and <a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a> methods.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/Tkatchenko-Scheffler_method" title="Tkatchenko-Scheffler method">Tkatchenko-Scheffler method</a>,
+<a href="/wiki/index.php/Many-body_dispersion_energy" title="Many-body dispersion energy">Many-body dispersion energy</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22VDW_ALPHA%22_incategory:%22Examples%22" title='Special:Search/"VDW ALPHA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

@@ -1,0 +1,13 @@
+<p><a class="mw-selflink selflink">LBLUEOUT</a> = .TRUE.|.FALSE.<br/> Default: <b>LBLUEOUT</b> = .FALSE. 
+</p>
+<p>Description: for <a class="mw-selflink selflink">LBLUEOUT</a>=.TRUE., VASP writes output for the free-energy gradient calculation to the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a> file (in case VASP was compiled with <a class="mw-redirect" href="/wiki/index.php/Precompiler_flags" title="Precompiler flags">-Dtbdyn</a>).
+</p>
+<p>If LBLUEOUT=.TRUE., the information needed to compute the free-energy gradient is written in the <a href="/wiki/index.php/REPORT" title="REPORT">REPORT</a> file after each molecular-dynamics step (<a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>=1 | 2), check the lines after the header:
+</p>
+<p>For the theory of the blue-moon ensemble we refer to <a class="mw-redirect" href="/wiki/index.php/Blue-moon_ensemble" title="Blue-moon ensemble">here</a>.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IBRION" title="IBRION">IBRION</a>, <a href="/wiki/index.php/MDALGO" title="MDALGO">MDALGO</a>, <a href="/wiki/index.php/ICONST" title="ICONST">ICONST</a>, <a class="mw-redirect" href="/wiki/index.php/Blue-moon_ensemble" title="Blue-moon ensemble">Blue-moon ensemble</a>, <a href="/wiki/index.php/Slow-growth_approach" title="Slow-growth approach">Slow-growth approach</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LBLUEOUT%22_incategory:%22Examples%22" title='Special:Search/"LBLUEOUT" incategory:"Examples"'>Examples that use this tag</a>
+</p>

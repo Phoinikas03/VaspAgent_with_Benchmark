@@ -1,0 +1,21 @@
+<p><a class="mw-selflink selflink">LRPA</a> = .TRUE. | .FALSE.<br/> Default: <b>LRPA</b> = .FALSE. 
+</p>
+<p>Description: <a class="mw-selflink selflink">LRPA</a>=.TRUE. includes local field effect on the Hartree level only.
+</p>
+<p>For <a class="mw-selflink selflink">LRPA</a>=.TRUE. local field effects are included on the Hartree level only. This means that cell periodic microscopic changes of the local potential related to the change of the Hartree potential are included.
+</p>
+<p>For <a class="mw-selflink selflink">LRPA</a>=.FALSE. changes of the Hartree <i>and the exchange-correlation potential</i> are included. This usually increases the dielectric constants. The final values for the dielectric tensor can be found in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file after the lines.
+</p>
+<p>For <a class="mw-selflink selflink">LRPA</a>=.FALSE. the dielectric tensor is written after the lines:
+</p>
+<p>The dielectric tensor <i>excluding</i> local field effects is always calculated (regardless of <a class="mw-selflink selflink">LRPA</a>). The piezoelectric tensors and the Born effective charges as well as the ionic contributions the to dielectric tensor are only calculated for <a class="mw-selflink selflink">LRPA</a>=.FALSE..
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LEPSILON" title="LEPSILON">LEPSILON</a>,
+<a href="/wiki/index.php/LCALCEPS" title="LCALCEPS">LCALCEPS</a>,
+<a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>,
+<a href="/wiki/index.php/LADDER" title="LADDER">LADDER</a>,
+<a href="/wiki/index.php/LFXC" title="LFXC">LFXC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LRPA%22_incategory:%22Examples%22" title='Special:Search/"LRPA" incategory:"Examples"'>Examples that use this tag</a>
+</p>

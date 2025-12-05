@@ -1,0 +1,48 @@
+<p><a class="mw-selflink selflink">PSTRESS</a> = [real]<br/> Default: <b>PSTRESS</b> = 0 
+</p>
+<p>Description: Sets the external pressure in kB or adds corrections to the stress tensor.
+</p>
+<p>The unit of <a class="mw-selflink selflink">PSTRESS</a> is kB.
+</p>
+<p>During <a class="mw-redirect" href="/wiki/index.php/Ionic_minimization" title="Ionic minimization">ionic minimization</a>, an energy term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  E= V \times \mathrm{PSTRESS} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>E</mi>
+<mo>=</mo>
+<mi>V</mi>
+<mo>×<!-- × --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">P</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">R</mi>
+<mi mathvariant="normal">E</mi>
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">S</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  E= V \times \mathrm{PSTRESS} }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  E= V \times \mathrm{PSTRESS} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=503cf9e71fa3d268abf6dcc61e9e8f9b&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 19.934ex;"/></span> is added to the total energy and the value of  <a class="mw-selflink selflink">PSTRESS</a> is subtracted from  the diagonals of the stress tensor. This allows to perform structure optimization at a specific external pressure.
+</p>
+<p>In <a class="mw-redirect" href="/wiki/index.php/Molecular_dynamics" title="Molecular dynamics">molecular-dynamics calculations</a> within the <a href="/wiki/index.php/NpT_ensemble" title="NpT ensemble">NpT ensemble</a>, <a class="mw-selflink selflink">PSTRESS</a> controls the target pressure for the Parinello-Rahman<sup class="reference" id="cite_ref-parrinello:prl:1980_1-0"><a href="#cite_note-parrinello:prl:1980-1">[1]</a></sup><sup class="reference" id="cite_ref-parrinello:jap:1981_2-0"><a href="#cite_note-parrinello:jap:1981-2">[2]</a></sup> barostat. 
+</p>
+<p>Generally, if a negative value is supplied, the system is under effective tensile strain and during relaxations (or molecular dynamics simulations) the volume 
+will increase. If a positive value is supplied, the system is under compressive strain; this will decrease the volume during relaxations and molecular dynamics simulations.
+</p>
+<p><a class="mw-selflink selflink">PSTRESS</a> can also be used to correct errors caused by the Pulay stress, i.e., errors in the calculated stress tensor caused by the incomplete plane wave basis set. To correct for Pulay-stress errors, set <a class="mw-selflink selflink">PSTRESS</a> to the negative value of the Pulay stress. The Pulay stress is computed by taking the difference between the external pressure at the desired cutoff and a very large energy cutoff (check the  lines 'external pressure' in the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file and calculate 
+pressure at cutoff you want to use <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle  -  }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>−<!-- − --></mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle  -  }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle  -  }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=3d584d0c078e9724d16be2ba7eb8cb3d&amp;mode=mathml" style="vertical-align: -0.505ex; height: 2.176ex; width: 1.808ex;"/></span> pressure at large cutoff; this must be a negative value). Before using this tag in this manner, please read the following section carefully: <a href="/wiki/index.php/Volume_relaxation" title="Volume relaxation">Volume relaxation</a>.
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22PSTRESS%22_incategory:%22Examples%22" title='Special:Search/"PSTRESS" incategory:"Examples"'>Examples that use this tag</a>
+</p>

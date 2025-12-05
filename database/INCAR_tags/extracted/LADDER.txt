@@ -1,0 +1,28 @@
+<p><a class="mw-selflink selflink">LADDER</a> = [logical]<br/> Default: <b>LADDER</b> =  .NOT. <a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a> 
+</p>
+<p>Description: Controls whether the ladder diagrams are included in the <a class="mw-redirect" href="/wiki/index.php/BSE" title="BSE">BSE</a> calculation. Note that the default for <a href="/wiki/index.php/LRPA" title="LRPA">LRPA</a> and therefore LADDER is somewhat convoluted; so better to always double-check the <a href="/wiki/index.php/OUTCAR" title="OUTCAR">OUTCAR</a> file whether VASP behaves as expected. Generally, VASP will select ladder diagrams whenever this seems reasonable. This is for instance the case for <a href="/wiki/index.php/ALGO" title="ALGO">ALGO</a>="BSE" or "TDHF" calculations.
+</p>
+<p><a class="mw-selflink selflink">LADDER</a> is used together with <a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>. If <a class="mw-selflink selflink">LADDER</a>=<i>.FALSE.</i>, the ladder diagrams (i.e. the exchange terms related to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle W}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>W</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle W}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle W}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="/wiki/index.php?title=Special:MathShowImage&amp;hash=61e9c06ea9a85a5088a499df6458d276&amp;mode=mathml" style="vertical-align: -0.338ex; height: 2.176ex; width: 2.435ex;"/></span> or the screened exchange) are not included.
+If <a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>=<i>.FALSE.</i>, the Hartree diagrams or bubble diagrams are not included. The following table summarizes all possible combinations:
+</p>
+<p>The last combination can be useful for sanity checks: the results must be identical to the results obtained using
+<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>=<i>.TRUE.</i> in the preceding calculations. If this is not the case, it usually implies that the one-electron
+energies have been updated in the <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file, or that the  <a href="/wiki/index.php/WAVEDER" title="WAVEDER">WAVEDER</a> file is not properly set up. The end of <a class="mw-redirect" href="/wiki/index.php/BSE" title="BSE">BSE</a> explains how to recalculate
+the <a href="/wiki/index.php/WAVEDER" title="WAVEDER">WAVEDER</a> file from an existing <a href="/wiki/index.php/WAVECAR" title="WAVECAR">WAVECAR</a> file.
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/LHARTREE" title="LHARTREE">LHARTREE</a>,
+<a href="/wiki/index.php/LOPTICS" title="LOPTICS">LOPTICS</a>,
+<a class="mw-redirect" href="/wiki/index.php/BSE_calculations" title="BSE calculations">BSE_calculations</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22LADDER%22_incategory:%22Examples%22" title='Special:Search/"LADDER" incategory:"Examples"'>Examples that use this tag</a>
+</p>

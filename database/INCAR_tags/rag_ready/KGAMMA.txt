@@ -1,0 +1,1 @@
+KGAMMA =  Default: KGAMMA = .TRUE. Description: Determines whether the k points (specified by the KSPACING tag ) include ( KGAMMA =.TRUE.) the {\displaystyle \Gamma} {\displaystyle \Gamma} point. Related tags and articles KSPACING Examples that use this tag

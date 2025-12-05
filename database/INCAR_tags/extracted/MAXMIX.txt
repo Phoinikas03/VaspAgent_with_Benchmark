@@ -1,0 +1,24 @@
+<p><a class="mw-selflink selflink">MAXMIX</a> = [integer]<br/> Default: <b>MAXMIX</b> = -45 
+</p>
+<p>Description: <a class="mw-selflink selflink">MAXMIX</a> specifies the maximum number of steps stored in the Broyden mixer (<a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>=4).
+</p>
+<p><a class="mw-selflink selflink">MAXMIX</a> specifies the maximum number of vectors stored in the Broyden/Pulay mixer, in other words, it corresponds to the maximal rank of the approximation of the charge-dielectric function build up by the mixer. <a class="mw-selflink selflink">MAXMIX</a> can be either negative or positive:
+</p>
+<ul><li><a class="mw-selflink selflink">MAXMIX</a>&lt;0</li></ul>
+<ul><li><a class="mw-selflink selflink">MAXMIX</a>&gt;0</li></ul>
+<ul><li>Caution: do not set <a class="mw-selflink selflink">MAXMIX</a>&gt;0 in the following cases. (i) If your initial positions in the <a href="/wiki/index.php/POSCAR" title="POSCAR">POSCAR</a> file are far from the fully relaxed positions, the ions might move considerably during relaxation. In this case, it is not expedient to "reuse" charge mixing information from the previous ionic steps. (ii) During machine learning, the first-principles calculations are often bypassed for hundreds or even thousands of ionic steps, and the ions might move considerably between first-principles calculations. In these cases using <a class="mw-selflink selflink">MAXMIX</a> will very often lead to electronic divergence or strange errors during the self-consistency cycle. In general, whenever the column RMS(c) in the <a href="/wiki/index.php/OSZICAR" title="OSZICAR">OSZICAR</a> files shows a sudden increase in the norm of the charge density residual vector, try to remove the tag <a class="mw-selflink selflink">MAXMIX</a> from the INCAR file.</li></ul>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Related_tags_and_articles">Related tags and articles</span></h2>
+<p><a href="/wiki/index.php/IMIX" title="IMIX">IMIX</a>,
+<a href="/wiki/index.php/INIMIX" title="INIMIX">INIMIX</a>,
+<a href="/wiki/index.php/AMIX" title="AMIX">AMIX</a>,
+<a href="/wiki/index.php/BMIX" title="BMIX">BMIX</a>,
+<a href="/wiki/index.php/AMIX_MAG" title="AMIX MAG">AMIX_MAG</a>,
+<a href="/wiki/index.php/BMIX_MAG" title="BMIX MAG">BMIX_MAG</a>,
+<a href="/wiki/index.php/AMIN" title="AMIN">AMIN</a>,
+<a href="/wiki/index.php/MIXPRE" title="MIXPRE">MIXPRE</a>,
+<a href="/wiki/index.php/WC" title="WC">WC</a>
+</p>
+<p><a href="/wiki/index.php/Special:Search/%22MAXMIX%22_incategory:%22Examples%22" title='Special:Search/"MAXMIX" incategory:"Examples"'>Examples that use this tag</a>
+</p>

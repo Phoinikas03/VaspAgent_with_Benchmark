@@ -1,0 +1,1 @@
+LCHARGH5 =  Default: LCHARGH5 = LH5 Description: LCHARGH5 determines whether the charge densities are written to vaspwave.h5 . Related tags and articles LWAVE , LWAVEH5 , LCHARG , LH5 Examples that use this tag
