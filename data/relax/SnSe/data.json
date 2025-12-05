@@ -1,0 +1,14 @@
+[
+    {
+        "instruction": "You are a materials science expert responsible for optimizing the structure of SnSe based on the given initial structure to achieve the lowest total energy. The goal of the optimization is to find the most stable structure of the material under the given conditions. The paths of POSCAR, KPOINTS, POTCAR file path are 'POSCAR', 'KPOINTS', 'POTCAR'. You need to write an INCAR file for structure optimization. You should not specify the magnetic moment. The ENCUT parameter usually needs to be set relatively high. The EDIFF parameter is typically on the order of 10^(-5) to 10^(-6), and EDIFFG is usually ten times larger than EDIFF.",
+        "domain_knowledge": "ALGO = Fast\nEDIFF = 0.0004\nENCUT = 520.0\nIBRION = 2\nISIF = 3\nISMEAR = -5\nISPIN = 2\nLASPH = True\nLMAXMIX = 4\nLORBIT = 11\nLREAL = Auto\nLWAVE = False\nMAGMOM = 31*-0.0\nNELM = 100\nNSW = 99\nPREC = Accurate\nSIGMA = 0.05\n",
+        "filename": "INCAR",
+        "command": "bash run_vasp.sh"
+    },
+    {
+        "command": "cp INCAR INCAR1"
+    },
+    {
+        "command": "python get_energy.py"
+    }
+]

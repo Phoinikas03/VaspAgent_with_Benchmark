@@ -1,0 +1,23 @@
+[
+    {
+        "instruction": "Using VASP to calculate the bandgap of PbSe with hse method. The paths of POSCAR, KPOINTS, POTCAR file path are 'POSCAR', 'KPOINTS', 'POTCAR'. The procedure mainly consists of three steps. Step 1: Calculate the ground state with pbe. You need to write an INCAR file for pbe groundstate calculation",
+        "domain_knowledge": "",
+        "filename": "INCAR",
+        "command": "bash run_vasp.sh"
+    },
+    {
+        "command": "cp INCAR INCAR1"
+    },
+    {
+        "instruction": "Step 2: Writing a vasp INCAR to perform hse calculation. Note when starting a hybrid function calculation with a existing WAVECAR, you still need to calculate the charge density, and therefore ICHARG cannot be larger than 10. You should not specify the magnetic moment. Do not specify NBAND and NELECT parameters. ",
+        "domain_knowledge": "\nPREC=Normal\nENCUT=450\nNELM=500\nIBRION=-1\nISPIN=1\nNSW=0\nISIF=2\nEDIFF=1E-5\nEDIFFG=-5E-3\nISTART=0\nICHARG=0\nISMEAR=0\nSIGMA=0.05\nLWAVE=.T.\nLCHARG=.T.\nLREAL=Auto\nLPLANE=.TRUE.\nNPAR=1\nKPAR=4\nNCORE=1\n\nLORBIT=11\nALGO=All\nLHFCALC=.TRUE.\nHSE06=.TRUE.\nHFSCREEN=0.2\nTIME=0.4\nAEXX=0.25\nAGGAX=0.75\nLMAXFOCK=4\nPRECFOCK=Fast\n",
+        "filename": "INCAR",
+        "command": "bash run_vasp.sh"
+    },
+    {
+        "command": "cp INCAR INCAR2"
+    },
+    {
+        "command": "python gap.py"
+    }
+]

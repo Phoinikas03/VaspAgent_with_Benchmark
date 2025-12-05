@@ -1,0 +1,9 @@
+{
+    "task_name": "relax",
+    "directory_or_folders": "data/relax",
+    "num_threads": 1,
+    "model": "gpt-4o",
+    "prompt_keys": [
+        "instruction"
+    ]
+}

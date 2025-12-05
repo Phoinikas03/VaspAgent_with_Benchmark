@@ -1,0 +1,9 @@
+{
+    "task_name": "bandgap_hse",
+    "directory_or_folders": "data/bandgap",
+    "num_threads": 1,
+    "model": "gpt-4o",
+    "prompt_keys": [
+        "instruction"
+    ]
+}
