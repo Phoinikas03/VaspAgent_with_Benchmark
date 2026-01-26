@@ -1,0 +1,9 @@
+{
+    "task_name": "test",
+    "directory_or_folders": "data/test",
+    "num_threads": 1,
+    "model": "gpt-4o",
+    "prompt_keys": [
+        "instruction"
+    ]
+}
