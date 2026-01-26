@@ -1,4 +1,4 @@
-# Project Guide
+# VASP-Agent Project Guide
 This repository contains the implementation of the paper [**[An Agentic Framework for Autonomous Materials Computation]**](https://arxiv.org/abs/2512.19458).
 This document outlines the steps for environment setup, basic benchmarking, and custom dataset evaluation.
 
@@ -13,6 +13,10 @@ Please verify that `vasp_std` is accessible in your system's PATH and is executa
 
 ### 1.2 Python Dependencies
 Install the required Python packages using the following command:
+```bash
+pip install -r requirements.txt
+```
+
 ## 2. Basic Benchmark
 To evaluate all bandgap tasks, run the main script with the bandgap configuration:
 
