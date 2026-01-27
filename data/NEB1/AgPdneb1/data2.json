@@ -1,0 +1,37 @@
+[
+    {
+        "task description": "I need to use VASP to calculate the transition state energy barrier for the hydrogenation of ethylene on single-metal or alloy surfaces, using the NEB (Nudged Elastic Band) method.The process consists of five steps, and I would like you to provide the corresponding INCAR files where necessary.Please note:1.For all metal surfaces, I do not want to include spin polarization.2.I do not need to optimize the unit cell.3.The initial structures I provide may not be ideal, so it may be necessary to run with a larger number of NSW.4.The force convergence criterion does not need to be too strict; 0.05 eV/Å is sufficient.5.The ENCUT should not be too high and NPAR need to be 1.The five steps are as follows: Step 1: Optimize the initial state structure of the reaction. Please provide an INCAR file for this step.",
+        "domain knowledge": "",
+        "filename": "INCAR",
+        "config": {},
+        "command": "python op.py IS POTCARagpd IS1POSCAR"
+    },
+    {
+        "task description": "I need to use VASP to calculate the transition state energy barrier for the hydrogenation of ethylene on single-metal or alloy surfaces, using the NEB (Nudged Elastic Band) method.The process consists of five steps, and I would like you to provide the corresponding INCAR files where necessary.Please note:1.For all metal surfaces, I do not want to include spin polarization.2.I do not need to optimize the unit cell.3.The initial structures I provide may not be ideal, so it may be necessary to run with a larger number of NSW.4.The force convergence criterion does not need to be too strict; 0.05 eV/Å is sufficient.5.The ENCUT should not be too high and NPAR need to be 1.Step 2: Optimize the final state (FS) structure of the reaction. Please provide an INCAR file for this calculation.",
+        "domain knowledge": "",
+        "filename": "INCAR",
+        "config": {},
+        "command": "python op.py FS POTCARagpd FS1POSCAR"
+    },
+    {
+        "task description": "Step 3: Use ASE to interpolate four intermediate images between the initial and final states. You do not need to do anything here—no INCAR file is needed.",
+        "domain knowledge": "",
+        "filename": "",
+        "config": {},
+        "command": "python nebmake.py"
+    },
+    {
+        "task description": "I need to use VASP to calculate the transition state energy barrier for the hydrogenation of ethylene on single-metal or alloy surfaces, using the NEB (Nudged Elastic Band) method.The process consists of five steps, and I would like you to provide the corresponding INCAR files where necessary.Please note:1.For all metal surfaces, I do not want to include spin polarization.2.I do not need to optimize the unit cell.3.The initial structures I provide may not be ideal, so it may be necessary to run with a larger number of NSW.4.The force convergence criterion does not need to be too strict; 0.05 eV/Å is sufficient.5.The ENCUT should not be too high and NPAR need to be 1.Step 4: Perform the NEB calculation using the interpolated images . Interpolate 4 images in between, for a total of 6 folders from 00 to 05.Please provide an INCAR file for this calculation.",
+        "domain knowledge": "",
+        "filename": "INCAR",
+        "config": {},
+        "command": "python op2.py ./"
+    },
+    {
+        "task description": "Step 5: Extract the energies of all structures and determine the reaction energy barrier. You do not need to do anything here—no INCAR file is needed.",
+        "domain knowledge": "",
+        "filename": "",
+        "command": "bash -c 'cp IS/OUTCAR 00/ && cp FS/OUTCAR 05/ && perl nebef.pl'",
+        "gt": "0"
+    }
+]

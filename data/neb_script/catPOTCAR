@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for Element in "$@"; do
+    cat /public/home/ac877eihwp/potpaw/potpaw_PBE/$Element/POTCAR >> POTCAR
+
+done
+
+echo "POTCAR order is:"
+grep VRHFIN POTCAR
