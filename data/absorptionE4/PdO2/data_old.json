@@ -1,0 +1,28 @@
+[
+    {
+        "task description": "Using VASP to calculate the adsorption energy of carbon monoxide (CO) on metal and metal oxide surfaces.  The POSCAR file path is './POSCAR and POTCAR file path is './POTCAR'. The procedure mainly consists of four steps. Step 1: Perform structural optimization and energy calculation for the CO molecule. You need to write a INCAR file for it.",
+        "domain knowledge": "ISMEAR = 0\nSIGMA  = 0.2\nEDIFFG  = -0.05\nISYM = 0\nPOTIM =0.2",
+        "filename": "INCAR",
+        "command": "python op.py CO POTCAR-CO POSCAR-CO"
+    },
+    {
+        "task description": "Step 2: Perform structural optimization and energy calculation for the metal and metal oxide surfaces. You need to write a INCAR file for it.",
+        "domain knowledge": "ISMEAR = 1\nSIGMA = 0.2\nEDIFFG  = -0.05\nIBRION = 1\nISYM =0\nPOTIM =0.2",
+        "filename": "INCAR",
+        "command": "python op.py surface POTCAR-PdO2face POSCAR-PdO2face"
+    },
+    {
+        "task description": "Step 3: Perform structural optimization and energy calculation for the combined system of CO adsorbed on the metal and metal oxide surfaces.You need to write a INCAR file for it.",
+        "domain knowledge": "ISMEAR = 1\nSIGMA = 0.2\nEDIFFG  = -0.05\nIBRION = 1\nISYM=0\nPOTIM=0.2",
+        "filename": "INCAR",
+        "command": "python op.py absorbed POTCAR-PdO2CO POSCAR-PdO2CO"
+    },
+    {
+        "task description": "Step 4: Extract the energies from the three steps and calculate the adsorption energy by subtracting the energies obtained in steps 1 and 2 from the energy obtained in step 3",
+        "domain knowledge": "",
+        "filename": "",
+        "command": "bash ./calc_absorption_energy.sh",
+        "gt": "-1.492317"
+    }
+]
+
