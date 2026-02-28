@@ -23,6 +23,7 @@ AVAILABLE_LLMS = [
     "o3",
     "o3-mini",
     "o4-mini",
+    "gpt-5.2-2025-12-11",
 
     # gemini
     "gemini-1.5-flash",
@@ -33,6 +34,7 @@ AVAILABLE_LLMS = [
     "gemini-2.5-pro-exp-03-25",
     # "gemini-2.5-pro-preview-05-06", # incompatible with openai
     "gemini-2.5-pro-preview-06-05",
+    "gemini-3-pro-preview",
     
     # mistral
     # TODO
@@ -52,6 +54,7 @@ AVAILABLE_LLMS = [
     "deepseek-v3-250324",
     "deepseek-r1",
     "deepseek-reasoner",
+    "deepseek-ai/DeepSeek-V3.2",
 
     # qwen
     "Qwen/Qwen2.5-32B-Instruct",
@@ -61,6 +64,7 @@ AVAILABLE_LLMS = [
     "Qwen/Qwen3-32B",
     "Qwen/Qwen3-30B-A3B",
     # "qwen3-235b-a22b", # stream only
+    "qwen3.5-397b-a17b",
 ]
 
 # prepend system prompt to the first message
