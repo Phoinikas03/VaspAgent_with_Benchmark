@@ -77,8 +77,8 @@ class Task():
         # create new directory and work here
         cwd = self.log_dir
         shutil.copytree(self.folder, cwd, dirs_exist_ok=True)
-        # 从固定路径复制 run_vasp.sh 到该材料目录（针对特定集群）
-        if os.path.isfile(_RUN_VASP_SCRIPT):
+        # 仅当环境变量 personalized_run_vasp 有值时，从固定路径复制 run_vasp.sh 到该材料目录（针对特定集群）
+        if os.environ.get("personalized_run_vasp") and os.path.isfile(_RUN_VASP_SCRIPT):
             run_vasp_dst = os.path.join(cwd, "run_vasp.sh")
             shutil.copy2(_RUN_VASP_SCRIPT, run_vasp_dst)
             logger.info(f"Created {run_vasp_dst} from {_RUN_VASP_SCRIPT}")

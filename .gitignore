@@ -97,10 +97,6 @@ htmlcov/
 config.local.js
 config.dev.js
 
-POSCAR
-POTCAR
-KPOINTS
-get_energy.py
-gap.py
-run_vasp.sh
+# 忽略所有 run_vasp.sh，但保留 configs/run_vasp.sh
+!configs/run_vasp.sh
 *.html
