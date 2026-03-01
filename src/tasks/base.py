@@ -8,6 +8,12 @@ import src.criteria as criteria
 
 logger = logging.getLogger(__name__)
 
+# 固定路径：复制材料到 run 目录时写入的 run_vasp.sh 脚本（针对特定集群）
+_RUN_VASP_SCRIPT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+    "configs", "run_vasp.sh"
+)
+
 class Task():
     """Load dataset, run pipelines, save results
     each pipeline is a list of components, with at most one llm call
@@ -71,6 +77,11 @@ class Task():
         # create new directory and work here
         cwd = self.log_dir
         shutil.copytree(self.folder, cwd, dirs_exist_ok=True)
+        # 从固定路径复制 run_vasp.sh 到该材料目录（针对特定集群）
+        if os.path.isfile(_RUN_VASP_SCRIPT):
+            run_vasp_dst = os.path.join(cwd, "run_vasp.sh")
+            shutil.copy2(_RUN_VASP_SCRIPT, run_vasp_dst)
+            logger.info(f"Created {run_vasp_dst} from {_RUN_VASP_SCRIPT}")
         data_json = os.path.join(cwd, self.data_json)
 
         with open(data_json, "r") as f:

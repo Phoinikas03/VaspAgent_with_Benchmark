@@ -14,10 +14,11 @@ def main(task_name, model, directory_or_folders, num_threads, prompt_keys):
     system_prompt = prompts.DEFAULT_SYSTEM_PROMPT + prompts.VASP_PROMPT + prompts.FORMAT_PROMPT
     pattern = r"```vasp(.*?)```"
 
+    task_kw = dict(log_root=log_root, prompt_keys=prompt_keys, pattern=pattern)
     if isinstance(directory_or_folders, str):
-        tasks = task_manager.from_directory(task_name, directory_or_folders, log_root=log_root, prompt_keys=prompt_keys, pattern=pattern)
+        tasks = task_manager.from_directory(task_name, directory_or_folders, **task_kw)
     elif isinstance(directory_or_folders, list):
-        tasks = task_manager.from_folders(task_name, directory_or_folders, log_root=log_root, prompt_keys=prompt_keys, pattern=pattern)
+        tasks = task_manager.from_folders(task_name, directory_or_folders, **task_kw)
     total_num = len(tasks)
     clients = ChatEngine.spawn(total_num, model=model, system_prompt=system_prompt)
     assert num_threads <= total_num
@@ -59,7 +60,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.config:
         with open(args.config, "r") as f:
-            config = json.load(f) 
+            config = json.load(f)
         task_name = config["task_name"]
         directory_or_folders = config["directory_or_folders"]
         num_threads = config["num_threads"]

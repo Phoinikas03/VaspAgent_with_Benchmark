@@ -1,7 +1,6 @@
 anthropic
 backoff
 beautifulsoup4
-transformers
 datasets
 google-genai
 openai
@@ -10,4 +9,3 @@ ipython
 pandas
 torch
 tqdm
-sentence_transformers
