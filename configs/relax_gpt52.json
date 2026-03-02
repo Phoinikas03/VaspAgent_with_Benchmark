@@ -1,7 +1,7 @@
 {
     "task_name": "relax",
-    "directory_or_folders": "data/relax1",
-    "num_threads": 1,
+    "directory_or_folders": "data/relax",
+    "num_threads": 4,
     "model": "gpt-5.2-2025-12-11",
     "prompt_keys": [
         "instruction"

@@ -1,0 +1,9 @@
+{
+    "task_name": "relax",
+    "directory_or_folders": "data/relax",
+    "num_threads": 4,
+    "model": "qwen3.5-397b-a17b",
+    "prompt_keys": [
+        "instruction"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "task_name": "relax",
+    "directory_or_folders": "data/relax",
+    "num_threads": 4,
+    "model": "gemini-3-pro-preview",
+    "prompt_keys": [
+        "instruction"
+    ]
+}

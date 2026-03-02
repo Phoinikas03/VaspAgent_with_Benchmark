@@ -1,0 +1,9 @@
+{
+    "task_name": "relax",
+    "directory_or_folders": "data/relax",
+    "num_threads": 4,
+    "model": "deepseek-ai/DeepSeek-V3.2",
+    "prompt_keys": [
+        "instruction"
+    ]
+}
